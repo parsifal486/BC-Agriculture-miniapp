@@ -1,0 +1,16 @@
+/* pages/home.wxss */
+@import "../../app.wxss";
+
+.e1111 {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.ex {
+  background-color: var(--theme-colour-main);
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
