@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postlist:["/imgs/post1.png","/imgs/post2.png","/imgs/post3.png"],
+    postlist:["/pages/img/temp/post1.png","/pages/img/temp/post2.png","/pages/img/temp/post3.png"],
   },
   
   goShop(e) {

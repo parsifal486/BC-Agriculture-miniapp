@@ -1,26 +1,28 @@
 <view class="all">
-  <image src="/imgs/logo.png" mode="heightFix" class="logo"></image>
+  <image src="/pages/img/icon/logo.png" mode="heightFix" class="logo"></image>
   <swiper class='posts' indicator-dots circular>
     <swiper-item wx:for="{{postlist}}" wx:key="index">
       <image src="{{item}}" mode="widthFix" class="post" style="width: 750rpx;"></image>
     </swiper-item>
   </swiper>
   <view class="gobuy" style="display: flex;flex-direction: row;">
-    <image src="/imgs/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
-    <image src="/imgs/btnhome-goshop.png" mode="widthFix" bind:tap="takeAway"></image>
+    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
+    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="takeAway"></image>
   </view>
   <scroll-view scroll-x style="display:flex; white-space:nowrap;">
-    <image src="/imgs/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/imgs/book2.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/imgs/book1.png" style="display: inline-block;" mode="heightFix"></image>   
-    <image src="/imgs/book2.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/imgs/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/imgs/book2.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
   </scroll-view>
   
   <scroll-view scroll-x style="display:flex; white-space:nowrap;">
-    <image src="/imgs/comments.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/imgs/comments.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
+    <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
   </scroll-view>
-  <image src="/imgs/homeintroduction.png" mode="aspectFit"></image>
+  <image src="/pages/img/temp/homeintroduction.png" mode="aspectFit"></image>
 </view>
