@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    postlist:["/imgs/post1.png","/imgs/post2.png","/imgs/post3.png"],
+  },
+  
+  goShop(e) {
+    console.log(e);
+  },
+  takeAway(e) {
+    console.log(e);
   },
 
   /**
