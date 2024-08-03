@@ -1,3 +1,30 @@
-<!--pages/menu/product/product.wxml-->
-<text>pages/menu/product/product.wxml</text>
-<view>xyf's branch</view>
+<navigator url="/pages/menu/menu" open-type="reLaunch"><image  class="hanhui" src="../product/photo/fanhui.png" mode=""/></navigator>
+<view class="swiper">
+<swiper
+autoplay
+circular
+indicator-dots
+interval="2000"
+>
+<swiper-item >
+<image src="../product/photo/1.png" mode=""/>
+</swiper-item>
+<swiper-item><image src="../product/photo/2.webp" mode=""/></swiper-item>
+<swiper-item><image src="../product/photo/3.webp" mode=""/></swiper-item>
+</swiper>
+</view>
+
+<view class="info">
+  野生粉藕 
+  <text>
+  食物属性:\n</text>
+  
+  <text>莲藕属睡莲科莲属(Nelumbo)植物中医认为，生藕性寒，甘凉入胃，可消瘀凉血、清烦热，止呕渴。适用于烦渴、酒醉、咳血、吐血等症。妇女产后忌食生冷，惟独不忌藕，就是因为藕有很好的消瘀作用，故民间有“新采嫩藕胜太医"之说。\n</text>
+  <text> 种植溯源:\n</text>
+  <text>有机种植\n</text>
+  <text>地点溯源:\n</text>
+  <text>广东省珠海市斗门区翻斗村\n</text>
+  <text>采摘时间:\n</text>
+  <text>2024-01-28 00:00:00\n</text>
+  <text>资质保障: \n</text>
+</view>
