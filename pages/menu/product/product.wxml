@@ -7,10 +7,10 @@ indicator-dots
 interval="2000"
 >
 <swiper-item >
-<image src="../product/photo/1.png" mode=""/>
+<image src="../../img/temp/1.png" mode=""/>
 </swiper-item>
-<swiper-item><image src="../product/photo/2.webp" mode=""/></swiper-item>
-<swiper-item><image src="../product/photo/3.webp" mode=""/></swiper-item>
+<swiper-item><image src="../../img/temp/2.webp" mode=""/></swiper-item>
+<swiper-item><image src="../../img/temp/3.webp" mode=""/></swiper-item>
 </swiper>
 </view>
 
