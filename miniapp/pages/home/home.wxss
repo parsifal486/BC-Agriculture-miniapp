@@ -14,3 +14,9 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.test{
+  background-color: var(--theme-colour-thicker);
+  width: 400rpx;
+  height: 300rpx;
+}
