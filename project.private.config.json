@@ -3,5 +3,18 @@
   "projectname": "BC-Agriculture-miniapp",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/menu/product/product",
+          "pathName": "pages/menu/product/product",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
