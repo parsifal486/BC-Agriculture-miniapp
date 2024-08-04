@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    sideslipMenuArr: [
+      '../img/temp/menu-1.png',
+      '../img/temp/menu-2.png',
+      '../img/temp/menu-3.png'
+    ]
   },
 
   /**
