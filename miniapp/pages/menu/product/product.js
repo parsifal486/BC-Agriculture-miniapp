@@ -1,68 +1,35 @@
 
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+      products: [
+          { price: 10.2 }
+      ],
+      cart: [],
+      totalPrice: 0,
+      total:0
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  addToCart(event) {
+      const productId = event.currentTarget.dataset.id;
+      const product = this.data.products.find(item => item.id === productId);
+      if (product) {
+          this.setData({
+              cart: [...this.data.cart, product],
+              
+              total:this.data.total+1
+          });
+      }
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-    return{
-      title:'野生粉藕'
-    }
+  removeFromCart(event) {
+      const productId = event.currentTarget.dataset.id;
+      const product = this.data.cart.find(item => item.id === productId);
+      if (product) {
+          this.setData({
+              total:this.data.total-1,
+              
+          });
+      }
+     
   }
-})
+});
