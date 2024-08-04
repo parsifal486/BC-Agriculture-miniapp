@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品市集</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/css2.css">
+</head>
+<style>
+    .main-wrapper{
+        background: #F8F8F8;
+    }
+    .AB{
+        right: 0;
+    }
+</style>
+<body>
+<!-- 开场动画 -->
+<div class="preloader-activate preloader-active open_tm_preloader">
+    <div class="preloader-area-wrap">
+        <div class="spinner d-flex justify-content-center align-items-center h-100">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+</div>
+<!-- 主体 -->
+<div class="main-wrapper">
+
+    <!-- 主标题 -->
+    <header class="main-header-area">
+        <div class="header-top bg-pronia-primary  d-lg-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="header-top-left">
+                            <span class="pronia-offer">健康菜叶子欢迎您</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-middle py-30">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="header-middle-wrap position-relative">
+
+                            <a href="" class="header-logo">
+                                <img src="./image/logo.png" alt="Header Logo">
+                            </a>
+
+                            <nav class="navbar bg-body-tertiary">
+                                <div class="container-fluid">
+                                    <form class="d-flex" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="搜索" aria-label="Search" >
+                                        <button  class="btn btn-outline-success" type="submit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                                                <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </nav>
+
+                            <div class="header-right">
+                                <ul>
+                                    <li class="dropdown d-none d-lg-block">
+                                        <a href="./personal.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="d-none d-lg-block">
+                                        <a href="./MyLove.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="minicart-wrap me-3 me-lg-0">
+                                        <a href="#miniCart" class="minicart-btn toolbar-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                            </svg>
+                                            <span class="quantity">3</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="mobile-menu_wrap d-block d-lg-none">
+                                        <a class="mobile-menu_btn toolbar-btn pl-0">
+                                            <i class="pe-7s-menu"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-menu position-relative">
+                            <nav class="main-nav">
+                                <ul>
+                                    <li class="drop-holder">
+                                        <a href="./MainPage.html">首页</a>
+                                    </li>
+
+                                    <li class="megamenu-holder">
+                                        <a >分类</a>
+                                        <ul class="drop-menu megamenu">
+                                            <li>
+                                                <span class="title">葱姜蒜类</span>
+                                                <ul>
+                                                    <li>
+                                                        <a href="./Shop.html">大葱</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">大姜</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">大蒜</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <span class="title">根茎菜类</span>
+                                                <ul>
+                                                    <li>
+                                                        <a href="./Shop.html">土豆</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">红薯</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">山药</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">芋头</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="title">菌类</span>
+                                                <ul>
+                                                    <li>
+                                                        <a href="./Shop.html">金针菇</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">猴菇</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./Shop.html">白灵菇</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html">联系我们</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-sticky py-4 py-lg-0">
+            <div class="container">
+                <div class="header-nav position-relative">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-6">
+
+                            <a href="" class="header-logo">
+                                <img src="./image/logo.png" alt="Header Logo">
+                            </a>
+
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav class="main-nav">
+                                    <ul>
+                                        <li class="drop-holder">
+                                            <a href="./MainPage.html">首页</a>
+                                        </li>
+                                        <li class="megamenu-holder">
+                                            <a >分类</a>
+                                            <ul class="drop-menu megamenu">
+                                                <li>
+                                                    <span class="title">葱姜蒜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">大葱</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大姜</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大蒜</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="title">根茎菜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">土豆</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">红薯</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">山药</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">芋头</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="title">菌类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">金针菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">猴菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">白灵菇</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="./contact.html">联系我们</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="header-right">
+                                <ul>
+
+                                    <li class="dropdown d-none d-lg-block">
+                                        <a href="./personal.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="d-none d-lg-block">
+                                        <a href="./MyLove.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="minicart-wrap me-3 me-lg-0">
+                                        <a href="#miniCart" class="minicart-btn toolbar-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                            </svg>
+                                            <span class="quantity">3</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas-minicart_wrapper" id="miniCart">
+            <div class="offcanvas-body main-wrapper1">
+                <div class="minicart-content">
+                    <div class="minicart-heading">
+                        <h4 class="mb-0">购物车</h4>
+                        <a href="#" class="button-close"><i class="pe-7s-close" data-tippy="Close" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
+                    </div>
+                    <ul class="minicart-list">
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li>
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li>
+                        <li class="minicart-product">
+                            <a class="product-item_remove" href="#">
+                                <i class="pe-7s-close" data-tippy="Remove" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder"></i>
+                            </a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥9.00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="minicart-item_total">
+                    <span>总价</span>
+                    <span class="ammount">￥19.00</span>
+                </div>
+                <div class="group-btn_wrap d-grid gap-2">
+                    <a href="checkout.html" class="btn btn-dark">支付</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="global-overlay"></div>
+    </header>
+
+    <!-- 主体 -->
+    <main class="main-content">
+        <div class="breadcrumb-area breadcrumb-height" data-bg-image="./image/背景图2.jpg" >
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-item focus-in-expand">
+                            <h2 class="breadcrumb-heading ">商品市集</h2>
+                            <ul>
+                                <li>
+                                    <a href="./MainPage.html">Home</a>
+                                </li>
+                                <li>商品集市</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop-area section-space-y-axis-100">
+            <div class="container">
+                <div class="row">
+                    <!-- 左商品 -->
+                    <div class="col-xl-9 col-lg-8 order-1 order-lg-1">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="grid-view" role="tabpanel" aria-labelledby="grid-view-tab">
+                                <div class="product-grid-view row g-y-20 ">
+                                    <div class="col-md-4 col-sm-6  ">
+
+                                        <div class="product-item AAAA">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="product-img">
+                                                <a href="./Goods_Detail.html" class="goodsDetailA">
+                                                    <img class="primary-img" src="./image/章丘大葱.jpg"
+                                                         alt="Product Images">
+                                                    <img class="secondary-img" src="./image/章丘大葱2.png"
+                                                         alt="Product Images">
+                                                </a>
+                                                <div class="product-add-action">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./MyLove.html" data-tippy="加入心愿单"
+                                                               data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-star" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="quuickview-btn" data-bs-toggle="modal"
+                                                            data-bs-target="#quickModal">
+                                                            <a href="#" data-tippy="查看详情" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-chat-square-text"
+                                                                         viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                                                        <path
+                                                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#miniCart" class="minicart-btn toolbar-btn"
+                                                               data-tippy="加入购物车" data-tippy-inertia="true"
+                                                               data-tippy-animation="shift-away" data-tippy-delay="50"
+                                                               data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                                                                <i class="bi bi-star">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                         height="16" fill="currentColor"
+                                                                         class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                                                        <path
+                                                                                d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+                                                                        <path
+                                                                                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                    </svg>
+                                                                </i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="product-content">
+                                                <a class="product-name" href="./Goods_Detail.html">章丘大葱</a>
+                                                <div class="price-box pb-1">
+                                                    <span class="new-price">￥5.00（约一斤）</span>
+                                                </div>
+                                                <div class="rating-box">
+                                                    <a>好评率:<span class="gold">99%</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-area">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">&raquo;</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- 右格栏 -->
+                    <div class="col-xl-3 col-lg-4 order-2 order-lg-2 pt-5 pt-lg-0  AB">
+                        <div class="sidebar-area">
+                            <div class="widgets-area">
+                                <div class="widgets-item widgets-filter section-space-bottom-90">
+                                    <h2 class="widgets-title mb-4">价格筛选</h2>
+                                    <div class="price-filter">
+                                        <input type="text" class="pronia-range-slider" name="pronia-range-slider" value="" data-type="double" data-min="0.50" data-from="0.50" data-to="100.00" data-max="150.00" data-grid="false">
+                                    </div>
+                                </div>
+
+                                <div class="widgets-item pt-0">
+                                    <h2 class="widgets-title mb-4">产地筛选</h2>
+                                    <ul class="widgets-category">
+                                        <li>
+                                            <a href="#grid-view">
+                                                <span>东北</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>华东</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>华北</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>华中</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>华南</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>西南</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>西北</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- "查看详情"显示 -->
+    <div class="modal quick-view-modal fade" id="quickModal" data-bs-backdrop="static" data-bs-keyboard="false"
+         tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            data-tippy="Close" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                            data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-wrap row">
+                        <div class="col-lg-6">
+                            <div class="modal-img">
+                                <div class="swiper-container modal-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" class="single-img">
+                                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" class="single-img">
+                                                <img class="img-full" src="./image/章丘大葱2.png" alt="Product Image">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-5 pt-lg-0">
+                            <div class="single-product-content">
+                                <h2 class="title">章丘大葱</h2>
+                                <div class="price-box">
+                                    <span class="new-price">￥5.00（约一斤）</span>
+                                </div>
+                                <div class="rating-box-wrap">
+                                    <div class="rating-box">
+                                        <a>好评率:<span class="gold">99%</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="selector-wrap color-option">
+                                    <span class="selector-title border-bottom-0">规格</span>
+                                    <select class="nice-select wide border-bottom-0 rounded-0">
+                                        <option value="default">一斤试吃装</option>
+                                        <option value="blue">三斤推荐装</option>
+                                        <option value="green">五斤装</option>
+                                        <option value="red">十斤装</option>
+                                    </select>
+                                </div>
+                                <div class="selector-wrap size-option">
+                                    <span class="selector-title">品质</span>
+                                    <select class="nice-select wide rounded-0">
+                                        <option value="medium">普通装（统果不挑）</option>
+                                        <option value="large">精选装（人工二次挑选）</option>
+                                    </select>
+                                </div>
+
+
+                                <table class="table table-bordered table-hover">
+                                    <tbody>
+                                    <tr>
+                                        <th>种植方法</th>
+                                        <td>有机种植</td>
+                                    </tr>
+                                    <tr>
+                                        <th>产地</th>
+                                        <td>山东章丘</td>
+                                    </tr>
+                                    <tr>
+                                        <th>采摘时间</th>
+                                        <td>2024.2.19</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="short-desc">
+                                    章丘大葱是山东省济南市章丘区的特产，也是中国重要的农产品地理标志产品。章丘大葱以其独特的品质和悠久的栽培历史而闻名，被誉为“葱中之王”。章丘大葱的栽培历史悠久，可追溯至两千七百年前的齐桓公时期，当时大葱作为战利品被引入中国。章丘大葱的主要品种为“大梧桐”，其特点是辣味稍淡、微露清甜、脆嫩爽口、风味独特、葱白特长、适易久藏。章丘大葱中含有较多的蛋白质、多种维生素、氨基酸和矿物质，特别是含有维生素A、维生素C和具有强大的杀菌能力的蒜素。
+                                </p>
+                                <ul class="quantity-with-btn">
+                                    <li class="quantity">
+                                        <div class="cart-plus-minus">
+                                            <input class="cart-plus-minus-box" value="1" type="text">
+                                        </div>
+                                    </li>
+                                    <li class="add-to-cart">
+                                        <a class="btn btn-custom-size lg-size btn-pronia-primary"
+                                           href="#miniCart" class="minicart-btn toolbar-btn">加入购物车</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 末尾 -->
+    <div class="footer-area Shop_footer">
+        <div class="footer-white section-space-top-100">
+            <div class="footer-top section-space-top-100 pb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-widget-item">
+                                <div class="footer-widget-logo">
+                                    <a href="">
+                                        <img src="./image/logo.png" alt="Logo">
+                                    </a>
+                                </div>
+                                <p class="footer-widget-desc">安全健康老实勤恳好学的蔬菜供应商
+                                </p>
+                                <li>地址:我啷个晓得</li>
+                                <li>电话:000-000-000</li>
+                                <li>邮箱:000@000.000</li>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 pt-40">
+                            <div class="footer-widget-item">
+                                <h3 class="footer-widget-title">信息</h3>
+                                <ul class="footer-widget-list-item">
+                                    <li>
+                                        <a href="#">关于我们</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">服务协议</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">服务政策</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">规则说明</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">合格证书</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 pt-40">
+                            <div class="footer-widget-item">
+                                <h3 class="footer-widget-title">附加信息</h3>
+                                <ul class="footer-widget-list-item">
+                                    <li>
+                                        <a href="#">品牌</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">优惠券</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">特价商品</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">支付方式</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">交易保障</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 pt-40">
+                            <div class="footer-widget-item">
+                                <h3 class="footer-widget-title">社区</h3>
+                                <ul class="footer-widget-list-item">
+                                    <li>
+                                        <a href="#">评论区</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright">
+                            <span class="copyright-text">©我爱蔬菜</span>>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 回到顶部 -->
+    <a class="scroll-to-top" href="">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+</div>
+
+<script src="./js/plugins.min.js"></script>
+</body>
+</html>

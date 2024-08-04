@@ -1,0 +1,693 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+    <title>VegTrace-智链惠农</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Foodano - Organic Food Store HTML Template">
+    <meta name="keywords" content="Foodano - Organic Food Store HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="./css/flaticon.min.css">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="./css/layerslider.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="./css/slick.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    .recent-post img {
+        width: 200px;
+        /* 调整这个值以设定缩小后的宽度 */
+        height: auto;
+        cursor: zoom-in;
+        /* 更改鼠标指针样式，提示用户可以点击放大 */
+    }
+
+    .zoomed-image {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 9999;
+        /* 确保图片在所有元素之上显示 */
+    }
+
+    .thumb {
+        width: 200px;
+        height: 130px;
+        overflow: hidden;
+    }
+
+    /* 确保 img 在保持比例的前提下填充 thumb 容器 */
+    .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* 保持图片纵横比并填充整个内容区域 */
+        display: block;
+        /* 让图片作为块级元素显示，以便让其独占一行 */
+        margin: 0 auto;
+        /* 垂直居中对齐（基于此处上下外边距相等） */
+    }
+</style>
+
+<body class=" ">
+    <!--滑动标题-->
+    <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px">
+                        <h3 style="position: absolute;top: 22px;left: 91px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header-->
+    <header class="header-wrapper header-layout3 header3-margin ">
+        <div class="container py-30">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px;margin-bottom: 33px">
+                        <h3 style="position: absolute;top: 60px;left: 350px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <nav class="main-menu menu-style1 mobile-menu-active menu-style2"
+                        style="margin-bottom: 10px;margin-left: 20px">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-4 text-end">
+                    <button type="button" class="vs-menu-toggle d-inline-block d-lg-none"><i
+                            class="far fa-bars"></i></button>
+                    <div class="head-top-links text-body2 d-none d-lg-block">
+                        <a href="#" class="icon-btn has-badge bg2 Out" style="margin-right: 10px">
+                            <svg width="25" height="25" fill="currentColor" t="1710389140579" class="icon"
+                                viewBox="0 0 1039 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2735">
+                                <path
+                                    d="M559.246704 939.148776h-308.549906c-84.851224 0-154.274953-69.423729-154.274952-154.274953v-539.962335c0-84.851224 69.423729-154.274953 154.274952-154.274953h308.549906c84.851224 0 154.274953 69.423729 154.274953 154.274953v9.642184c0 21.212806-17.355932 38.568738-38.568738 38.568739s-38.568738-17.355932-38.568738-38.568739v-9.642184c0-42.425612-34.711864-77.137476-77.137477-77.137477h-308.549906c-42.425612 0-77.137476 34.711864-77.137476 77.137477v539.962335c0 42.425612 34.711864 77.137476 77.137476 77.137476h308.549906c42.425612 0 77.137476-34.711864 77.137477-77.137476v-3.856874c0-21.212806 17.355932-38.568738 38.568738-38.568738s38.568738 17.355932 38.568738 38.568738v3.856874c0 84.851224-69.423729 154.274953-154.274953 154.274953z"
+                                    fill="#388CEB" p-id="2736"></path>
+                                <path
+                                    d="M840.798493 553.461394H520.677966c-21.212806 0-38.568738-17.355932-38.568738-38.568739s17.355932-38.568738 38.568738-38.568738h320.120527c21.212806 0 38.568738 17.355932 38.568739 38.568738s-17.355932 38.568738-38.568739 38.568739z"
+                                    fill="#E78E00" p-id="2737"></path>
+                                <path
+                                    d="M752.090395 740.519774c-9.642185 0-19.284369-3.856874-25.069679-9.642185-15.427495-13.499058-17.355932-38.568738-3.856874-53.996233l142.704331-160.060264 1.928437-1.928437-1.928437-1.928437-146.561205-163.917137c-13.499058-15.427495-13.499058-40.497175 3.856874-53.996234 15.427495-13.499058 40.497175-13.499058 53.996233 3.856874l144.632769 161.988701c28.926554 28.926554 28.926554 77.137476 0 106.06403l-142.704332 160.060264c-5.785311 9.642185-17.355932 13.499058-26.998117 13.499058z"
+                                    fill="#E78E00" p-id="2738"></path>
+                            </svg>
+                        </a>
+                        <a href="./Personal.html"><span class="icon-btn bg4"><i class="fal fa-user"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header大图 -->
+    <div class="breadcumb-wrapper breadcumb-layout1 bg-fluid pt-100 pb-100"
+        data-bg-src="./img/breadcumb/breadcumb-img-1.jpg">
+        <div class="container">
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title">商品</h1>
+                <ul class="breadcumb-menu-style1 mx-auto">
+                    <li><a href="./MainPage.html" class="toMainPage">Home</a></li>
+                    <li class="active">Goods</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--商品详情-->
+    <section class="vs-shop-wrapper shop-details space-top space-md-bottom">
+        <div class="container">
+            <div class="row mb-5">
+                <!-- 照片 -->
+                <div class="col-md-6 col-xl-5 mb-30 mb-md-0">
+                    <!-- 大图 -->
+                    <div class="product-big-img vs-carousel" data-slide-show="1" data-lg-slide-show="1"
+                        data-md-slide-show="1" data-sm-slide-show="1" data-fade="true" data-dots="true"
+                        data-asnavfor="#thumbproductimg" id="bigproductimg">
+                        <div class="product-img">
+                            <img src="./image/章丘大葱.jpg" alt="Shop Image" class="w-100 border15" id="vegeDetailImg">
+                        </div>
+                        <div class="product-img">
+                            <img src="./image/o5.webp" alt="Shop Image" class="w-100 border15">
+                        </div>
+                        <div class="product-img">
+                            <img src="./image/o6.webp" alt="Shop Image" class="w-100 border15">
+                        </div>
+                        <div class="product-img">
+                            <img src="./image/o7.webp" alt="Shop Image" class="w-100 border15">
+                        </div>
+                        <div class="product-img">
+                            <img src="./image/o8.jpg" alt="Shop Image" class="w-100 border15">
+                        </div>
+                    </div>
+                    <!-- 小图 -->
+                    <div class="row gx-2 product-thumb-img vs-carousel" data-slide-show="4" data-md-slide-show="3"
+                        data-sm-slide-show="3" data-xs-slide-show="2" data-arrows="true"
+                        data-next-arrow="far fa-long-arrow-right" data-prev-arrow="far fa-long-arrow-left"
+                        id="thumbproductimg" data-asnavfor="#bigproductimg" style="margin-top: 20px">
+                        <div class="col-auto">
+                            <div class="thumb border15">
+                                <img src="./image/插图1.jpg" alt="Thumb Image" class="border15">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="thumb border15">
+                                <img src="./image/o5.webp" alt="Thumb Image" class="border15">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="thumb border15">
+                                <img src="./image/o6.webp" alt="Thumb Image" class="border15">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="thumb border15">
+                                <img src="./image/o7.webp" alt="Thumb Image" class="border15">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="thumb border15">
+                                <img src="./image/o8.jpg" alt="Thumb Image" class="border15">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                商品-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-content">
+                        <h3 class="product-title mb-1" id="vegeDetailName">章丘大葱</h3>
+                        <span class="price font-theme"><strong>￥</strong><strong
+                                id="vegeDetailPrice">0.99</strong></span>
+                        <div class="mt-2">
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                        <p class="fs-xs my-4" id="vegeDetailRemark" style="color: var(--body-color)">
+                            章丘大葱，属百合科葱属，为多年生宿根草本植物。又称菜伯、和事草等。辣味稍淡，微露清甜，脆嫩可口，葱白很大，适易久藏。章丘大葱的品质特点可以用四个字概括，即：高、长、脆、甜。高：指的是章丘大葱的植株高大，长：指的是章丘大葱的主要产品部分—葱白长而直。脆：指的是章丘大葱质地脆嫩。甜：指的是章丘大葱的葱白，甘芳可口，很少辛辣，最宜生食，熟食也佳。
+                        </p>
+                        <div class="actions mb-4 pb-2">
+                            <div class="quantity style2 me-4">
+                                <input type="number" class="qty-input" value="1" min="1" max="99"
+                                    id="detailPurchaseNumber">
+                                <button class="quantity-minus qut-btn"><i class="far fa-chevron-down"></i></button>
+                                <button class="quantity-plus qut-btn"><i class="far fa-chevron-up"></i></button>
+                            </div>
+                            <a href="#" class="vs-btn shadow-none " id="detailPurchaseButton">支付</a>
+                        </div>
+                    </div>
+                </div>
+                <!--溯源消息显示-->
+                <div class="col-xl-3 d-none d-xl-block">
+                    <div class="widget   ">
+                        <h3 class="widget_title" style="color: #4E8C4B">溯源公开安全信息</h3>
+                        <div class="vs-widget-recent-post">
+                            <div class="recent-post d-flex align-items-center">
+                                <div class="media-body pl-30">
+                                    <h4>种植溯源：</h4>
+                                    <h5 class="recent-post-title h5 mb-0" style="color: var(--body-color)"> 有机种植</h5>
+                                </div>
+                            </div>
+                            <div class="recent-post d-flex align-items-center">
+                                <div class="media-body pl-30">
+                                    <h4>地点溯源：</h4>
+                                    <h5 class="recent-post-title h5 mb-0" style="color: var(--body-color);width: 300px"
+                                        id="vegeDetailPlace">山东省章丘市
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="recent-post d-flex align-items-center">
+                                <div class="media-body pl-30">
+                                    <h4>采摘时间:</h4>
+                                    <h5 class="recent-post-title h5 " style="color: var(--body-color)"
+                                        id="vegeDetailTime">
+                                        2024/3/6
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="recent-post d-flex align-items-center">
+                                <div class="media-body pl-30">
+                                    <h4>资质保障:</h4>
+                                    <img src="https://th.bing.com/th/id/R.9fb38b4a1ce1e8082e3b52a3f564c982?rik=VI%2fUAHrXbJ9aCA&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20190615%2fa6e1fdcbc3a74b9485bf5ed0f688b0c6.jpeg&ehk=X4fZvkiYT9PUVfRr6%2bcR6q1GRycgUk%2fNsXvCjAkBkIQ%3d&risl=&pid=ImgRaw&r=0"
+                                        class="recent-post-title h5 mb-0" id="vegeSafe" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 留言-->
+            <ul class="nav product-tab-style1 mb-30 justify-content-center mb-4" id="productTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab"
+                        aria-controls="reviews" aria-selected="true">商品评价</a>
+                </li>
+            </ul>
+            <div class="tab-content mb-30" id="productTabContent">
+                <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="vs-comment-area list-style-none vs-comments-layout1 pt-3 ">
+                        <ul class="comment-list">
+                            <li class="review vs-comment">
+                                <div class="vs-post-comment">
+                                    <div class="author-img">
+                                        <img src="./img/blog/comment-author-1.jpg" alt="Comment Author">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                            <span style="width:100%"> <strong class="rating">5.00</strong><span
+                                                    class="rating">1</span></span>
+                                        </div>
+                                        <h4 class="name h5">张三</h4>
+                                        <span class="commented-on">2024/3/6</span>
+                                        <p class="text">
+                                            不吹不黑，真的好吃，我是真的买家评价，因为他们家没有好评返现
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="review vs-comment">
+                                <div class="vs-post-comment">
+                                    <div class="author-img">
+                                        <img src="./img/blog/comment-author-1.jpg" alt="Comment Author">
+                                    </div>
+                                    <div class="comment-content">
+                                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                            <span style="width:100%">Rated <strong class="rating">5.00</strong> <span
+                                                    class="rating">1</span></span>
+                                        </div>
+                                        <h4 class="name h5">张三</h4>
+                                        <span class="commented-on">2024/3/6</span>
+                                        <p class="text">
+                                            不吹不黑，真的好吃，我是真的买家评价，因为他们家没有好评返现
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="vs-comment-form pt-3">
+                        <div class="form-title">
+                            <h3 class="h4 mb-lg-4 pb-lg-1">发表评论</h3>
+                        </div>
+                        <div class="row g-2">
+                            <div class="form-group rating-select d-flex align-items-center">
+                                <p class="stars">
+                                    <span>
+                                        <a class="star-1" href="#">1</a>
+                                        <a class="star-2" href="#">2</a>
+                                        <a class="star-3" href="#">3</a>
+                                        <a class="star-4" href="#">4</a>
+                                        <a class="star-5" href="#">5</a>
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="col-12 form-group mb-0">
+                                <textarea placeholder="期待您的评价" class="form-control" id="remarkText"></textarea>
+                            </div>
+                            <div class="col-12 form-group mb-0">
+                                <button class="vs-btn rounded-1" id="publishRemark">发表</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Fotter-->
+    <div class="bg2" data-bg-src="./img/footer/footer-bg-1.jpg">
+        <section class="vs-newsletter-wrpper   ">
+            <div class="container">
+                <div class="inner-wrap1 bg-fluid px-70 py-70" data-bg-src="./img/bg/newsletter-bg-1-1.png">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-title mb-30 mb-xl-0 text-center text-xl-start">
+                                <span class="sub-title3">订阅</span>
+                                <h2 class="h1 mb-0 lh-1">Or <span class="fw-light text-theme">建议</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-6">
+                            <form action="#" class="newsletter-style1">
+                                <div class="form-group m-0">
+                                    <input type="text" placeholder="你的Email" class="form-control">
+                                    <button class="vs-btn style2">Go!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-wrapper footer-layout1">
+            <div class="container">
+                <div class="widget-area pt-100">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="widget footer-widget  ">
+                                <h3 class="widget_title">联系我们</h3>
+                                <div class="vs-widget-about">
+                                    <p class="fs-md">地址：翻斗大街 双子楼花园 1101 <br>单元保安亭 </p>
+                                    <p class="mb-1 link-inherit"><i class="fas fa-paper-plane me-3"></i><a
+                                            href="mailto:3811111111111111@99.com">3811111111111111@99.com</a></p>
+                                    <p class="mb-0 link-inherit"><i class="fal fa-fax me-3"></i><a
+                                            href="tel:+123456789000">+(123)
+                                            4567 89000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">常用链接</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="./MainPage.html" class="toMainPage">首页</a></li>
+                                        <li><a href="./Contact.html">联系我们</a></li>
+                                        <li><a href="#">服务条款</a></li>
+                                        <li><a href="#">隐私政策</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">附加信息</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="#">品质保证</a></li>
+                                        <li><a href="#">交易保障</a></li>
+                                        <li><a href="#">评论区</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-4">
+                            <div class="widget footer-widget   ">
+                                <h4 class="widget_title">订阅</h4>
+                                <form class="footer-newsletter pt-2">
+                                    <input class="form-control mb-25 rounded-1" type="email" placeholder="你的 Email"
+                                        required="">
+                                    <button type="submit" class="vs-btn mask-style1 rounded-1">订阅 Go！</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center pb-35">
+                    <p class="mb-0 link-inherit">©我爱蔬菜</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--一键Top -->
+    <a href="#" class="scrollToTop"><i class="far fa-angle-up"></i></a>
+
+
+    <!-- Jquery -->
+    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="./js/slick.min.js"></script>
+    <!-- <script src="./js/app.min.js"></script> -->
+    <!-- Layerslider -->
+    <script src="./js/layerslider.utils.js"></script>
+    <script src="./js/layerslider.transitions.js"></script>
+    <script src="./js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./js/jquery.datetimepicker.min.js"></script>
+    <!-- Filter -->
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script src="./js/wow.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="./js/vscustom-carousel.min.js"></script>
+    <!-- Mobile Menu -->
+    <script src="./js/vsmenu.min.js"></script>
+    <!-- Form Js -->
+    <script src="./js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="./js/main.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            // 获取表单元素和评论列表
+            var form = $('.vs-comment-form');
+            var commentList = $('.comment-list');
+            let retrievedArray = JSON.parse(sessionStorage.getItem('personDetail'));
+            // console.log('ok', retrievedArray)
+
+            // 监听发表按钮的点击事件
+            form.find('.vs-btn').on('click', function (event) {
+                event.preventDefault(); // 阻止默认提交行为
+
+                // 获取用户输入的数据
+                var rating = $('.rating-select a.active').data('rating') || 0; // 假设星级评分链接有 data-rating 属性
+                var nickname = form.find('[placeholder="您的昵称"]').val();
+                var email = form.find('[placeholder="您的Email"]').val();
+                var reviewText = form.find('[placeholder="期待您的评价"]').val();
+
+                // 构建新的评论 HTML 片段
+                var newCommentHtml = `            <li class="review vs-comment">
+                <div class="vs-post-comment">
+                    <div class="author-img">
+                        <!-- 这里可以替换为实际获取的用户头像 -->
+                        <img src="./img/blog/comment-author-1.jpg" alt="Comment Author">
+                    </div>
+                    <div class="comment-content">
+                        <div class="star-rating" role="img" aria-label="Rated ${rating} out of 5">
+                            <span style="width:${rating * 20}%">Rated <strong class="rating">${rating}</strong> out of 5</span>
+                        </div>
+                        <h4 class="name h5">${nickname}</h4>
+                        <span class="commented-on">${new Date().toLocaleDateString()}</span>
+                        <p class="text">${reviewText}</p>
+                    </div>
+                </div>
+            </li>
+        `;
+
+                // 将新评论添加到评论列表中
+                commentList.append(newCommentHtml);
+
+                // 清空表单内容（可选）
+                form.find('textarea, input:text').val('');
+            });
+        });
+    </script>
+    <script>
+        //购买数量
+        let numberBuy = document.querySelector('.qty-input')
+        // console.log('购买数量', numberBuy.value)
+    </script>
+
+    <script src="./js/request.js"></script>
+
+
+    <script type="module">
+
+        //userId获取
+        var uId = sessionStorage.getItem('userId');
+        // console.log('userId1', uId);
+        let parseId = JSON.parse(uId);
+        // console.log('userId2', parseId);
+        // let workId = parseId.userId;
+        let toBackId = {
+            'userId': parseId
+        }
+        // console.log('userId显示', workId)
+        let classToMainPage = document.querySelectorAll('.toMainPage')
+        // console.log('nihaonihao',classToMainPage)
+        for (let i = 0; i < classToMainPage.length; i++) {
+            classToMainPage[i].href += '?userId=' + parseId
+        }
+        //获取蔬菜Id
+        const urlParams = new URLSearchParams(window.location.search);
+        const vegeId = urlParams.get('vegeId');
+        // console.log('vegeId', vegeId)
+        let retrievedArray = JSON.parse(sessionStorage.getItem('vegeDetailInfo'));
+        // console.log('retrievedArray', retrievedArray)
+        //蔬菜名
+        let vegeDetailName = document.querySelector('#vegeDetailName')
+        vegeDetailName.innerHTML = retrievedArray[vegeId - 1].commodityName
+
+
+        //蔬菜价格
+        let vegeDetailPrice = document.querySelector('#vegeDetailPrice')
+        vegeDetailPrice.innerHTML = retrievedArray[vegeId - 1].commodityPrice
+
+        //蔬菜评价
+        let vegeDetailRemark = document.querySelector('#vegeDetailRemark')
+        vegeDetailRemark.innerHTML = retrievedArray[vegeId - 1].remark
+
+        //蔬菜地点
+        let vegeDetailPlace = document.querySelector('#vegeDetailPlace')
+        vegeDetailPlace.innerHTML = retrievedArray[vegeId - 1].origin
+
+        //蔬菜采摘时间
+        let vegeDetailTime = document.querySelector('#vegeDetailTime')
+        vegeDetailTime.innerHTML = retrievedArray[vegeId - 1].createTime
+
+        //蔬菜图片
+        let vegeDetailImg = document.querySelector('#vegeDetailImg')
+        vegeDetailImg.src = retrievedArray[vegeId - 1].profileImage
+
+
+        //------------发表评论接口
+        let userId = JSON.parse(sessionStorage.getItem('userId'))
+        let toBackVegeId = retrievedArray[vegeId - 1].commodityId
+        let publishRemark = document.querySelector('#publishRemark')
+        publishRemark.addEventListener('click', function (event) {
+            let remarkText = document.querySelector('#remarkText')
+            let textToBack = remarkText.value
+            funAjax.post('/front/view/add?commodityId=' + toBackVegeId + '&userId=' + userId + '&viewContext=' + textToBack, true, '').then((res) => {
+                //  请求成功
+                if (res.code == 200) {
+                    //状态码为200，处理返回的数据，返回的数据
+                    window.alert('消息提示:评论发表成功');
+                }
+            }).catch((err) => {
+                //错误处理 错误信息在err中
+                window.alert('消息提示:评论发表失败');
+            })
+        })
+
+        let detailPurchaseNumber = document.querySelector('#detailPurchaseNumber')
+        // console.log(detailPurchaseNumber.value)
+        let toBackQuantity = detailPurchaseNumber.value
+        let toBackPrice = (vegeDetailPrice.innerHTML) * toBackQuantity
+
+        let detailOrderToBack = {
+            'userId': userId,
+            'commodityId': toBackVegeId,
+            'flag': 0,
+            'permission': 0,
+            'quantity': toBackQuantity,
+            'price': toBackPrice
+        }
+        let toBackNewOrder = {
+            detailOrderToBack
+        }
+
+        let detailPurchaseButton = document.querySelector('#detailPurchaseButton')
+        detailPurchaseButton.addEventListener('click', function (event) {
+            // funAjax.post('/front/orders/add', true, toBackNewOrder).then((res) => {
+            //     //  请求成功
+            //     if (res.code == 200) {
+            //         //状态码为200，处理返回的数据，返回的数据
+            //         window.alert('消息提示:付款成功');
+            //     }
+            // }).catch((err) => {
+            //     //错误处理 错误信息在err中
+            //     window.alert('消息提示:付款失败');
+            // })
+            let toBackQuantity = detailPurchaseNumber.value
+            let toBackPrice = (vegeDetailPrice.innerHTML) * toBackQuantity
+            let vegename = retrievedArray[vegeId - 1].commodityName
+            let urlToBack = 'http://localhost/dev-api/front/pay/giveOrderInfo?'
+            urlToBack = urlToBack + 'userid=' + userId + '&vegename=' + vegename + '&price=' + toBackPrice + '&number=' + toBackQuantity
+            // console.log(urlToBack)
+            window.open(urlToBack)
+
+        })
+        // console.log(urlToBack)
+
+
+
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#vegeSafe").on("click", function () {
+                var imgSrc = this.src;
+                if ($(".zoomed-image").length === 0) {
+                    $("<img>").addClass("zoomed-image").attr("src", imgSrc).appendTo("body");
+                } else {
+                    $(".zoomed-image").remove();
+                }
+            });
+
+            $(document).on("click", ".zoomed-image", function () {
+                $(this).remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

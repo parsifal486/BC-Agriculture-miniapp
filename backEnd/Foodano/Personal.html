@@ -1,0 +1,972 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+    <title>VegTrace-智链惠农</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Foodano - Organic Food Store HTML Template">
+    <meta name="keywords" content="Foodano - Organic Food Store HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link
+            href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap"
+            rel="stylesheet">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="./css/flaticon.min.css">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="./css/layerslider.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="./css/slick.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<style>
+    .hobby-label {
+        cursor: pointer;
+    }
+
+    .orderImg {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .select-avatar {
+        display: inline-block;
+        padding: 0.5em 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ABD373;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .custom-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    /* 优化整体布局 */
+    .myaccount-dashboard {
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+
+    /* 优惠券容器 */
+    .coupon {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 优惠券标题 */
+    .coupon h3.couponName {
+        font-size: 18px;
+        color: #333;
+        margin: 0 0 10px;
+    }
+
+    /* 优惠券金额 */
+    .coupon p.couponPrice {
+        font-size: 16px;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    /* 优惠券条件和有效期 */
+    .coupon p.couponCondition,
+    .coupon p.couponTime {
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 0;
+    }
+
+    /* 分隔线（可选） */
+    .coupon:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* hover效果（鼠标悬停时） */
+    .coupon:hover {
+        background-color: #f0f0f0;
+    }
+
+    .main-menu ul {
+        margin-left: 30px;
+    }
+
+    .head-top-links .icon-btn {
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+</style>
+
+<body class=" ">
+
+    <!--滑动标题-->
+    <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px">
+                        <h3 style="position: absolute;top: 22px;left: 91px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 固定标题 -->
+    <header class="header-wrapper header-layout3 header3-margin ">
+        <div class="container py-30">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px;margin-bottom: 33px">
+                        <h3 style="position: absolute;top: 60px;left: 350px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <nav class="main-menu menu-style1 mobile-menu-active menu-style2"
+                         style="margin-bottom: 10px;margin-left: 20px">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-4 text-end">
+                    <button type="button" class="vs-menu-toggle d-inline-block d-lg-none"><i
+                            class="far fa-bars"></i></button>
+                    <div class="head-top-links text-body2 d-none d-lg-block">
+                        <a href="http://localhost/login?redirect=%2Findex" class="icon-btn has-badge bg2 Out mr-20">
+                            <svg width="25" height="25"  fill="currentColor"
+                                 t="1710389140579" class="icon" viewBox="0 0 1039 1024"
+                                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2735" ><path d="M559.246704 939.148776h-308.549906c-84.851224 0-154.274953-69.423729-154.274952-154.274953v-539.962335c0-84.851224 69.423729-154.274953 154.274952-154.274953h308.549906c84.851224 0 154.274953 69.423729 154.274953 154.274953v9.642184c0 21.212806-17.355932 38.568738-38.568738 38.568739s-38.568738-17.355932-38.568738-38.568739v-9.642184c0-42.425612-34.711864-77.137476-77.137477-77.137477h-308.549906c-42.425612 0-77.137476 34.711864-77.137476 77.137477v539.962335c0 42.425612 34.711864 77.137476 77.137476 77.137476h308.549906c42.425612 0 77.137476-34.711864 77.137477-77.137476v-3.856874c0-21.212806 17.355932-38.568738 38.568738-38.568738s38.568738 17.355932 38.568738 38.568738v3.856874c0 84.851224-69.423729 154.274953-154.274953 154.274953z" fill="#388CEB" p-id="2736"></path><path d="M840.798493 553.461394H520.677966c-21.212806 0-38.568738-17.355932-38.568738-38.568739s17.355932-38.568738 38.568738-38.568738h320.120527c21.212806 0 38.568738 17.355932 38.568739 38.568738s-17.355932 38.568738-38.568739 38.568739z" fill="#E78E00" p-id="2737"></path><path d="M752.090395 740.519774c-9.642185 0-19.284369-3.856874-25.069679-9.642185-15.427495-13.499058-17.355932-38.568738-3.856874-53.996233l142.704331-160.060264 1.928437-1.928437-1.928437-1.928437-146.561205-163.917137c-13.499058-15.427495-13.499058-40.497175 3.856874-53.996234 15.427495-13.499058 40.497175-13.499058 53.996233 3.856874l144.632769 161.988701c28.926554 28.926554 28.926554 77.137476 0 106.06403l-142.704332 160.060264c-5.785311 9.642185-17.355932 13.499058-26.998117 13.499058z" fill="#E78E00" p-id="2738"></path></svg>
+                        </a>
+                        <a href="./Personal.html"><span class="icon-btn bg4" ><i class="fal fa-user"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header图片-->
+    <div class="breadcumb-wrapper breadcumb-layout1 bg-fluid pt-100 pb-100"
+        data-bg-src="./img/breadcumb/breadcumb-img-1.jpg">
+        <div class="container">
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title">个人中心 </h1>
+                <ul class="breadcumb-menu-style1 mx-auto">
+                    <li><a href="./MainPage.html" class="toMainPage">Home</a></li>
+                    <li class="active">个人中心</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="account-page-area section-space-y-axis-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <ul class="nav myaccount-tab-trigger" id="account-page-tab" role="tablist">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" id="account-dashboard-tab" data-bs-toggle="tab"
+                                    href="#account-dashboard" role="tab" aria-controls="account-dashboard"
+                                    aria-selected="true">我的订单</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="account-orders-tab" data-bs-toggle="tab" href="#account-orders"
+                                    role="tab" aria-controls="account-orders" aria-selected="false">我的优惠券</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="account-details-tab" data-bs-toggle="tab"
+                                    href="#account-details" role="tab" aria-controls="account-details"
+                                    aria-selected="false">我的详细信息</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="account-logout-tab" href="http://localhost/login?redirect=%2Findex" role="tab"
+                                    aria-selected="false">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <div class="tab-content myaccount-tab-content" id="account-page-tab-content">
+                            <!-- 我的订单 -->
+                            <div class="tab-pane fade show active" id="account-dashboard" role="tabpanel"
+                                aria-labelledby="account-dashboard-tab">
+                                <div class="myaccount-orders">
+                                    <h4 class="small-title">我的订单</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>订单</th>
+                                                    <th>日期</th>
+                                                    <th>状态</th>
+                                                    <th>价格</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td><a class="account-order-id" href="./shop-details.html">寿光白菜</a>
+                                                    </td>
+                                                    <td class="orderTime">2024.2.7</td>
+                                                    <td class="orderStatus">进行中</td>
+                                                    <td class="orderPrice">￥5.20（约一斤）</td>
+                                                    <td><img src="./image/寿光白菜.jpg" class="orderImg">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a class="account-order-id" href="./shop-details.html">章丘大葱</a>
+                                                    </td>
+                                                    <td class="orderTime">2024.2.7</td>
+                                                    <td class="orderStatus">已完成</td>
+                                                    <td class="orderPrice">￥5.00（约一斤）</td>
+                                                    <td><img src="./image/章丘大葱.jpg" class="orderImg">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 我的优惠券 -->
+                            <!-- 优惠券 -->
+                            <div class="tab-pane fade" id="account-orders" role="tabpanel"
+                                aria-labelledby="account-orders-tab">
+                                <div class="myaccount-dashboard">
+                                    <div class="container">
+                                        <div class="coupon">
+                                            <h3 class="couponName">春节折扣券</h3>
+                                            <p class="couponPrice">折扣金额：20元</p>
+                                            <p class="couponCondition">使用条件：无</p>
+                                            <p class="couponTime">有效期：2022-12-31</p>
+                                        </div>
+                                        <div class="coupon">
+                                            <h3 class="couponName">春节折扣券</h3>
+                                            <p class="couponPrice">折扣金额：30元</p>
+                                            <p class="couponCondition">使用条件：满三十减三十</p>
+                                            <p class="couponTime">有效期：2023-01-31</p>
+                                        </div>
+                                        <div class="coupon">
+                                            <h3 class="couponName">龙年折扣券</h3>
+                                            <p class="couponPrice">折扣金额：50元</p>
+                                            <p class="couponCondition">使用条件：生肖属龙</p>
+                                            <p class="couponTime">有效期：2023-02-28</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 我的详细信息 -->
+                            <div class="tab-pane fade" id="account-details" role="tabpanel"
+                                aria-labelledby="account-details-tab">
+
+                                <div class="myaccount-details">
+                                    <form action="#" class="myaccount-form">
+                                        <div class="myaccount-form-inner">
+
+                                            <div class="single-input single-input-half">
+                                                <label>头像</label>
+                                                <div id="avatarWrapper">
+                                                    <!-- 主显示头像 -->
+                                                    <img src="./image/头像2.webp" class="goodsDetailA"
+                                                        alt="Current Avatar" style="max-width: 100px;" id="personImg">
+
+                                                    <!-- 自定义下拉框容器 -->
+                                                    <div class="custom-dropdown" onclick="toggleDropdown()"
+                                                        style="margin-left: 15px;top: 30px">
+                                                        <span class="select-avatar">选择头像
+                                                            <i class="fas fa-chevron-down"></i>
+                                                        </span>
+
+                                                        <script>
+                                                            let personalImgURL = [
+                                                                { '头像1.webp': 'https://img0.baidu.com/it/u=4290018623,1443200838&fm=253&fmt=auto&app=120&f=JPEG?w=475&h=475' },
+                                                                { '头像2.webp': 'https://img0.baidu.com/it/u=2600885435,3610346680&fm=253&fmt=auto&app=138&f=JPEG?w=526&h=500' },
+                                                                { '头像3.webp': 'https://img0.baidu.com/it/u=2794536113,2700219306&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500' },
+                                                                { '头像4.webp': 'https://img2.baidu.com/it/u=1356066100,1222147443&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500' },
+                                                                { '头像5.jpg': 'https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2024%2F0301%2F8aab3994j00s9n7b1001rd200u000u0g007w007w.jpg&thumbnail=660x2147483647&quality=80&type=jpg' },
+                                                                { '头像6.webp': 'https://img0.baidu.com/it/u=4175532138,306165386&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500' },
+                                                                { '头像7.webp': 'https://img1.baidu.com/it/u=2981399526,4044376553&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500' },
+                                                            ]
+                                                        </script>
+                                                        <div class="dropdown-content" id="avatarDropdown"
+                                                            style="display:none;">
+                                                            <!-- 图片选项 -->
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://img0.baidu.com/it/u=4290018623,1443200838&fm=253&fmt=auto&app=120&f=JPEG?w=475&h=475')"><img
+                                                                    src="https://img0.baidu.com/it/u=4290018623,1443200838&fm=253&fmt=auto&app=120&f=JPEG?w=475&h=475"
+                                                                    alt="头像3" width="50"></a>
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://img0.baidu.com/it/u=2600885435,3610346680&fm=253&fmt=auto&app=138&f=JPEG?w=526&h=500')"><img
+                                                                    src="https://img0.baidu.com/it/u=2600885435,3610346680&fm=253&fmt=auto&app=138&f=JPEG?w=526&h=500"
+                                                                    alt="头像3" width="50"></a>
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://img0.baidu.com/it/u=2794536113,2700219306&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500')"><img
+                                                                    src="https://img0.baidu.com/it/u=2794536113,2700219306&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500"
+                                                                    alt="头像3" width="50"></a>
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://img2.baidu.com/it/u=1356066100,1222147443&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500')"><img
+                                                                    src="https://img2.baidu.com/it/u=1356066100,1222147443&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500"
+                                                                    alt="头像3" width="50"></a>
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2024%2F0301%2F8aab3994j00s9n7b1001rd200u000u0g007w007w.jpg&thumbnail=660x2147483647&quality=80&type=jpg')"><img
+                                                                    src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2024%2F0301%2F8aab3994j00s9n7b1001rd200u000u0g007w007w.jpg&thumbnail=660x2147483647&quality=80&type=jpg"
+                                                                    alt="头像3" width="50"></a>
+                                                            <a href="#"
+                                                                onclick="setAvatar('https://img0.baidu.com/it/u=4175532138,306165386&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500')"><img
+                                                                    src="https://img0.baidu.com/it/u=4175532138,306165386&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+                                                                    alt="头像3" width="50"></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="single-input single-input-half">
+                                                <label>性别</label>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <input class="form-check-input me-1" type="radio"
+                                                                    name="gender" value="male" id="male" checked>
+                                                                <label class="form-check-label" for="male">男</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <input class="form-check-input me-1" type="radio"
+                                                                    name="gender" value="female" id="female">
+                                                                <label class="form-check-label" for="female">女</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-input single-input-half">
+                                                <label>昵称*</label>
+                                                <input type="text" placeholder="王某" class="personName">
+                                            </div>
+                                            <div class="single-input single-input-half">
+                                                <label>年龄*</label>
+                                                <input type="text" placeholder="20" class="personAge">
+                                            </div>
+                                            <div class="single-input single-input-half">
+                                                <label>地址*</label>
+                                                <input type="text" placeholder="翻斗大街101" class="personAge">
+                                            </div>
+                                            <div class="single-input">
+                                                <label>手机号*</label>
+                                                <input type="email" placeholder="1011101110" class="personTel">
+                                            </div>
+                                            <div class="single-input">
+                                                <label>当前密码（留空则表示不变）</label>
+                                                <input type="password" class="personPass">
+                                            </div>
+                                            <div class="single-input">
+                                                <label>新密码(留空则表示不变)</label>
+                                                <input type="password" class="personNewPass">
+                                            </div>
+                                            <div class="single-input">
+                                                <label>确认新密码</label>
+                                                <input type="password" class="personEnsureNewPass">
+                                            </div>
+
+                                            <div class="single-input">
+                                                <label>请选择你的美食倾向</label>
+                                                <!--try-->
+                                                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3"
+                                                    id="hobbies-container">
+                                                    <form id="myForm">
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby1"
+                                                                value="花叶类">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby1">花叶类</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby2"
+                                                                value="水生根茎类">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby2">水生根茎类</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby3"
+                                                                value="辣椒类">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby3">辣椒类</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby4"
+                                                                value="花菜类">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby4">花菜类</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby5"
+                                                                value="茄类">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby5">茄类</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input class="form-check-input" type="checkbox" id="hobby6"
+                                                                value="食用菌">
+                                                            <label class="form-check-label hobby-label"
+                                                                for="hobby6">食用菌</label>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                            <div class="single-input">
+                                                <a class="btn btn-custom-size lg-size btn-pronia-primary" type="submit"
+                                                    id="changInfoButton">
+                                                    <span>保存更改</span>
+                                                </a>
+
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                            </div>
+
+                            <!-- 退出 -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <div class="bg2" data-bg-src="./img/footer/footer-bg-1.jpg">
+        <section class="vs-newsletter-wrpper   ">
+            <div class="container">
+                <div class="inner-wrap1 bg-fluid px-70 py-70" data-bg-src="./img/bg/newsletter-bg-1-1.png">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-title mb-30 mb-xl-0 text-center text-xl-start">
+                                <span class="sub-title3">订阅</span>
+                                <h2 class="h1 mb-0 lh-1">Or <span class="fw-light text-theme">建议</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-6">
+                            <form action="#" class="newsletter-style1">
+                                <div class="form-group m-0">
+                                    <input type="text" placeholder="你的Email" class="form-control">
+                                    <button class="vs-btn style2">Go!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-wrapper footer-layout1">
+            <div class="container">
+                <div class="widget-area pt-100">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="widget footer-widget  ">
+                                <h3 class="widget_title">联系我们</h3>
+                                <div class="vs-widget-about">
+                                    <p class="fs-md">地址：翻斗大街 双子楼花园 1101 <br>单元保安亭 </p>
+                                    <p class="mb-1 link-inherit"><i class="fas fa-paper-plane me-3"></i><a
+                                            href="mailto:3811111111111111@99.com">3811111111111111@99.com</a></p>
+                                    <p class="mb-0 link-inherit"><i class="fal fa-fax me-3"></i><a
+                                            href="tel:+123456789000">+(123)
+                                            4567 89000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">常用链接</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="./MainPage.html" class="toMainPage">首页</a></li>
+                                        <li><a href="./Contact.html">联系我们</a></li>
+                                        <li><a href="#">服务条款</a></li>
+                                        <li><a href="#">隐私政策</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">附加信息</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="#">品质保证</a></li>
+                                        <li><a href="#">交易保障</a></li>
+                                        <li><a href="#">评论区</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-4">
+                            <div class="widget footer-widget   ">
+                                <h4 class="widget_title">订阅</h4>
+                                <form class="footer-newsletter pt-2">
+                                    <input class="form-control mb-25 rounded-1" type="email" placeholder="你的 Email"
+                                        required="">
+                                    <button type="submit" class="vs-btn mask-style1 rounded-1">订阅 Go！</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center pb-35">
+                    <p class="mb-0 link-inherit">©我爱蔬菜</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--一键Top -->
+    <a href="#" class="scrollToTop"><i class="far fa-angle-up"></i></a>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hobbyOptions = document.querySelectorAll('.hobby-option');
+            hobbyOptions.forEach(option => {
+                const checkbox = option.querySelector('input[type="checkbox"]');
+                const label = option.querySelector('.hobby-label');
+
+                checkbox.addEventListener('change', function () {
+                    if (this.checked) {
+                        label.classList.add('selected-label');
+                        label.classList.remove('unselected-label');
+                    } else {
+                        label.classList.add('unselected-label');
+                        label.classList.remove('selected-label');
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Jquery -->
+    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="./js/slick.min.js"></script>
+
+    <script src="./js/layerslider.utils.js"></script>
+    <script src="./js/layerslider.transitions.js"></script>
+    <script src="./js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./js/jquery.datetimepicker.min.js"></script>
+    <!-- Filter -->
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script src="./js/wow.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="./js/vscustom-carousel.min.js"></script>
+    <!-- Mobile Menu -->
+    <script src="./js/vsmenu.min.js"></script>
+    <!-- Form Js -->
+    <script src="./js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.food-toggle');
+            const categories = document.querySelectorAll('#food-category-selector .option input[type="checkbox"]');
+            const selectBtn = document.querySelector('#food-category-selector .select-btn');
+
+            // 初始化时设置所有按钮为block
+            buttons.forEach(button => {
+                button.style.display = 'block';
+            });
+
+            categories.forEach(category => {
+                category.addEventListener('change', function () {
+                    const preference = this.value;
+                    buttons.forEach(button => {
+                        if (this.checked && button.getAttribute('data-food-preference') === preference) {
+                            button.style.display = 'none';
+                        } else {
+                            button.style.display = 'block';
+                        }
+                    });
+                });
+            });
+
+            // selectBtn.addEventListener('click', () => {
+            //     const optionsContainer = document.querySelector('#food-category-selector .options-container');
+            //     optionsContainer.classList.toggle('expanded');
+            // });
+        });
+    </script>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('avatarDropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function setAvatar(imageSrc) {
+            const personImg = document.querySelector('.goodsDetailA');
+            personImg.src = imageSrc;
+            toggleDropdown();
+        }
+    </script>
+    <!-- <script src="./js/p"></script> -->
+    <script src="./js/request.js"></script>
+    <script type="module">
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const userId = urlParams.get('userId');
+        // funAjax.get('/front/personInfo/myOrders', true, '').then(res => {
+        //     console.log('okk', res.data)
+        // })
+
+        //userId获取
+        var uId = sessionStorage.getItem('userId');
+        // console.log('userId1', uId);
+        let parseId = JSON.parse(uId);
+        // console.log('userId2', parseId);
+        // let workId = parseId.userId;
+        let toBackId = {
+            'userId': parseId
+        }
+        // console.log('userId显示', workId)
+        let classToMainPage=document.querySelectorAll('.toMainPage')
+        // console.log('nihaonihao',classToMainPage)
+        for(let i=0;i<classToMainPage.length;i++){
+            classToMainPage[i].href+='?userId='+parseId
+        }
+
+
+
+        // ------myDetail接口
+        funAjax.get('/front/personInfo/myDetail', true, toBackId).then(res => {
+            // console.log('okk2', res.data)
+            workMydetail(res.data)
+            sessionStorage.setItem('personDetail',JSON.stringify(res.data))
+        })
+        //-----------couponDetail接口
+        // console.log('优惠券')
+        funAjax.get('/front/personInfo/couponDetail', true, toBackId).then(res => {
+            // console.log('okk2', res.data)
+            workMycoupon(res.data)
+        })
+
+        let userId = parseId
+        //------------订单接口
+        funAjax.get('/front/personInfo/myOrders', true, toBackId).then(res => {
+            // console.log('okk3', res.data)
+            workMyOrders(res.data)
+        })
+        //订单dom事件
+        // 获取订单商品名称
+        function workMyOrders(res) {
+            let orderVegeName = document.querySelectorAll('.account-order-id')
+            for (let i = 0; i < orderVegeName.length; i++)
+                orderVegeName[i].innerHTML = res[i].commodityName
+
+            //获取订单时间
+            let orderTime = document.querySelectorAll('.orderTime')
+            for (let i = 0; i < orderTime.length; i++)
+                orderTime[i].innerHTML = res[i].createTime.split('T')[0]
+
+            //获取订单状态
+            let orderStatus = document.querySelectorAll('.orderStatus')
+            for (let i = 0; i < orderStatus.length; i++)
+                orderStatus[i].innerHTML = '已完结'
+
+
+            //获取订单价格
+            let orderPrice = document.querySelectorAll('.orderPrice')
+            for (let i = 0; i < orderPrice.length; i++)
+                orderPrice[i].innerHTML = res[i].price + '(' + res[i].quantity + '千克)'
+
+
+            //获取订单商品图片
+            let orderImg = document.querySelectorAll('.orderImg')
+            for (let i = 0; i < orderImg.length; i++)
+                orderImg[i].src = res[i].profileImage
+
+        }
+
+        //个人信息dom事件
+        function workMydetail(res) {
+            //获取个人信息昵称
+            let personName = document.querySelector('.personName')
+            personName.placeholder = res.nickname
+
+            //获取个人信息年龄
+            let personAge = document.querySelector('.personAge')
+            personAge.placeholder = res.age
+
+            //获取个人信息手机号
+            let personTel = document.querySelector('.personTel')
+            personTel.placeholder = res.phone
+
+            //获取当前密码 模糊显示
+            let personPass = document.querySelector('.personPass')
+            personPass.placeholder = res.pwd
+
+            //获取新密码 (需校验)
+            let personNewPass = document.querySelector('.personNewPass')
+            // personNewPass.placeholder += '测试'
+            // --------------------------------------------------&&&
+
+            //获取用户头像
+            let personImg = document.querySelector('#personImg')
+            personImg.src = res.profileImage
+
+            //获取用户性别
+            let inputHobby = document.querySelectorAll('.form-check-input')
+            inputHobby[res.sex].checked=true
+            
+            let love=res.love.split(',')
+            length=love.length
+
+            for(let i=2;i<inputHobby.length;i++){
+                for(let j=0;j<length;j++){
+                    if(inputHobby[i].value===love[j]){
+                        inputHobby[i].checked=true
+                    }
+                }
+            }
+        }
+
+
+
+
+        //优惠券dom事件
+        function workMycoupon(res) {
+            //获取优惠券名称
+            let couponName = document.querySelectorAll('.couponName')
+            for (let i = 0; i < 2; i++)
+                couponName[i].innerHTML = res[i].couponsName
+
+            //获取优惠券金额
+            let couponPrice = document.querySelectorAll('.couponPrice')
+            for (let i = 0; i < 2; i++)
+                couponPrice[i].innerHTML = '折扣金额:' + '减' + res[i].reductionPrice + '元'
+
+            //获取优惠券使用条件
+            let couponCondition = document.querySelectorAll('.couponCondition')
+            for (let i = 0; i < 2; i++)
+                couponCondition[i].innerHTML = '使用条件:' + '满' + res[i].reductionFull + '元'
+
+            //获取优惠券有效日期
+            let couponTime = document.querySelectorAll('.couponTime')
+            for (let i = 0; i < 2; i++)
+                couponTime[i].innerHTML = '有效期:' + res[i].createTime.split(' ')[0]
+        }
+
+
+
+        //获取修改个人信息按钮
+        let changInfoButton = document.querySelector('#changInfoButton');
+        // console.log('修改信息按钮', changInfoButton)
+        changInfoButton.addEventListener('click', function (event) {
+            // console.log('这是修改信息按钮!!!!!')
+            workButton()
+        })
+        //点击事件函数
+        function workButton() {
+            // console.log('修改信息按钮被点击了');
+            //获取个人信息昵称
+
+            let personName = document.querySelector('.personName')
+            let changeName = personName.placeholder
+            // console.log(personName.placeholder)
+            if (personName.value != '') {
+                changeName = personName.value
+            }
+
+            //获取个人信息年龄
+            let personAge = document.querySelector('.personAge')
+            let ageChange = personAge.placeholder
+            // console.log(personAge.placeholder)
+            if (personAge.value != '') {
+                ageChange = personAge.value
+            }
+
+            //获取个人信息手机号
+            let personTel = document.querySelector('.personTel')
+            let changeTel = personTel.placeholder
+            // console.log(personTel.placeholder)
+            if (personTel.value != '') {
+                changeTel = personTel.value
+            }
+
+            //获取当前密码 模糊显示
+            let personPass = document.querySelector('.personPass')
+            // console.log(personPass.placeholder)
+            let finalPass = personPass.placeholder
+
+            //获取新密码 (需校验)
+            let personNewPass = document.querySelector('.personNewPass')
+            // personNewPass.placeholder += '测试'
+            //校验密码
+            let personEnsureNewPass = document.querySelector('.personEnsureNewPass')
+            if (personNewPass.value != '') {
+                if (personNewPass.value != personEnsureNewPass.value) {
+                    window.alert('两次密码输入不一致,请检查!')
+                    return;
+                } else {
+                    finalPass = personNewPass.value
+                }
+            }
+
+
+            //获取用户头像
+            let personImg = document.querySelector('#personImg')
+            // console.log(personImg.src)
+
+            let inputHobby = document.querySelectorAll('.form-check-input')
+            // console.log('复选框', inputHobby)
+            let strHobby = ''
+            let loveList = []
+            for (let i = 2; i < inputHobby.length; i++) {
+
+                // inputHobby[i].addEventListener('change', function (event) {
+                // 检查触发事件的元素是否是一个复选框  
+                if (inputHobby[i].type === 'checkbox') {
+                    // 检查复选框是否被选中  
+                    if (inputHobby[i].checked) {
+                        // 输出被选中复选框的值  
+                        // console.log('复选框被选中: ' + inputHobby[i].value);
+                        if (strHobby === '')
+                            strHobby = inputHobby[i].value + ''
+                        else
+                            strHobby += (',' + inputHobby[i].value + '')
+
+                        loveList.push(inputHobby[i].value)
+
+
+                    } else {
+                        // 如果复选框被取消选中，则输出取消选中的信息  
+                        // console.log('复选框被取消选中: ' + inputHobby[i].value);
+                    }
+                }
+                // console.log('strHobby', strHobby)
+                // })
+            }
+
+            let sex = 0
+            for (let i = 0; i < 2; i++) {
+                // console.log('单选框进入')
+                // 检查触发事件的元素是否是一个复选框  
+                // 检查复选框是否被选中  
+                if (inputHobby[i].checked) {
+                    // 输出被选中复选框的值  
+                    // console.log('复选框被选中: ' + inputHobby[i].value);
+                    sex = i
+                }
+            }
+
+
+            let infoChange = { 'userId': parseId, 'nickname': changeName, 'pwd': finalPass, 'profileImage': personImg.src, 'age': ageChange, 'love': strHobby, 'sex': sex, 'phone': changeTel, 'loveList': loveList }
+
+            // console.log("这是我的个人信息", infoChange)
+            //发起post请求示例：
+            funAjax.post('/front/personInfo/changeUserInfo', true, infoChange).then((res) => {
+                //请求成功
+                if (res.code == 200) {
+                    //状态码为200，处理返回的数据，返回的数据
+                    window.alert('消息提示:修改成功');
+                }
+            }).catch((err) => {
+                //错误处理 错误信息在err中
+                window.alert('消息提示:修改失败');
+            });
+
+
+        }
+
+
+
+        //为按钮设置点击事件
+        // changInfoButton.addEventListener('click', workButton)
+
+        //发起post请求示例：
+        // funAjax.post(`url`, true, data).then((res) => {
+        //     //请求成功
+        //     if (res.code == 200) {
+        //         //状态码为200，处理返回的数据，返回的数据
+        //         console.log('消息提示:修改成功');
+        //     }
+        // }).catch((err) => {
+        //     //错误处理 错误信息在err中
+        //     console.log('消息提示:修改失败');
+        // });
+
+    </script>
+
+</body>
+
+</html>
