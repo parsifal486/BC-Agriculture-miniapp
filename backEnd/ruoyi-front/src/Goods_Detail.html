@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品详细信息</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/css2.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- 主标题 -->
+        <header class="main-header-area">
+            <div class="header-top bg-pronia-primary  d-lg-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="header-top-left">
+                                <span class="pronia-offer">健康菜叶子欢迎您</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-middle py-30">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="header-middle-wrap position-relative">
+
+                                <a href="" class="header-logo">
+                                    <img src="./image/logo.png" alt="Header Logo">
+                                </a>
+
+                                <nav class="navbar bg-body-tertiary">
+                                    <div class="container-fluid">
+                                        <form class="d-flex" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="搜索"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-success" type="submit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                                    <path
+                                                        d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </nav>
+
+                                <div class="header-right">
+                                    <ul>
+                                        <li class="dropdown d-none d-lg-block">
+                                            <a href="./personal.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="d-none d-lg-block">
+                                            <a href="./MyLove.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="minicart-wrap me-3 me-lg-0">
+                                            <a href="#miniCart" class="minicart-btn toolbar-btn ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                </svg>
+                                                <span class="quantity">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="mobile-menu_wrap d-block d-lg-none">
+                                            <a class="mobile-menu_btn toolbar-btn pl-0">
+                                                <i class="pe-7s-menu"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-menu position-relative">
+                                <nav class="main-nav">
+                                    <ul>
+                                        <li class="drop-holder">
+                                            <a href="./MainPage.html">首页</a>
+                                        </li>
+
+                                        <li class="megamenu-holder">
+                                            <a>分类</a>
+                                            <ul class="drop-menu megamenu">
+                                                <li>
+                                                    <span class="title">葱姜蒜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">大葱</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大姜</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大蒜</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <span class="title">根茎菜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">土豆</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">红薯</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">山药</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">芋头</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="title">菌类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">金针菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">猴菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">白灵菇</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="./contact.html">联系我们</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-sticky py-4 py-lg-0">
+                <div class="container">
+                    <div class="header-nav position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-6">
+
+                                <a href="" class="header-logo">
+                                    <img src="./image/logo.png" alt="Header Logo">
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="main-menu">
+                                    <nav class="main-nav">
+                                        <ul>
+                                            <li class="drop-holder">
+                                                <a href="./MainPage.html">首页</a>
+                                            </li>
+                                            <li class="megamenu-holder">
+                                                <a>分类</a>
+                                                <ul class="drop-menu megamenu">
+                                                    <li>
+                                                        <span class="title">葱姜蒜类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">大葱</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">大姜</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">大蒜</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span class="title">根茎菜类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">土豆</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">红薯</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">山药</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">芋头</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span class="title">菌类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">金针菇</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">猴菇</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">白灵菇</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="./contact.html">联系我们</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="header-right">
+                                    <ul>
+
+                                        <li class="dropdown d-none d-lg-block">
+                                            <a href="./personal.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="d-none d-lg-block">
+                                            <a href="./MyLove.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="minicart-wrap me-3 me-lg-0">
+                                            <a href="#miniCart" class="minicart-btn toolbar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                </svg>
+                                                <span class="quantity">3</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas-minicart_wrapper " id="miniCart">
+                <div class="offcanvas-body main-wrapper1">
+                    <div class="minicart-content">
+                        <div class="minicart-heading">
+                            <h4 class="mb-0">购物车</h4>
+                            <a href="#" class="button-close"><i class="pe-7s-close" data-tippy="Close"
+                                    data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50"
+                                    data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
+                        </div>
+                        <ul class="minicart-list">
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                        data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                        data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                           data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                           data-tippy-delay="50" data-tippy-arrow="true"
+                                                                           data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                           data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                           data-tippy-delay="50" data-tippy-arrow="true"
+                                                                           data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                           data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                           data-tippy-delay="50" data-tippy-arrow="true"
+                                                                           data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li><li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                       data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                       data-tippy-delay="50" data-tippy-arrow="true"
+                                                                       data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li><li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                       data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                       data-tippy-delay="50" data-tippy-arrow="true"
+                                                                       data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li><li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                       data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                       data-tippy-delay="50" data-tippy-arrow="true"
+                                                                       data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                           data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                           data-tippy-delay="50" data-tippy-arrow="true"
+                                                                           data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li><li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                       data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                       data-tippy-delay="50" data-tippy-arrow="true"
+                                                                       data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li><li class="minicart-product">
+                            <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                                                       data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                                                       data-tippy-delay="50" data-tippy-arrow="true"
+                                                                       data-tippy-theme="sharpborder"></i></a>
+                            <a href="./Goods_Detail.html" class="product-item_img">
+                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                <span class="product-item_quantity">1 x ￥5.00</span>
+                            </div>
+                        </li>
+
+
+
+
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#">
+                                    <i class="pe-7s-close" data-tippy="Remove" data-tippy-inertia="true"
+                                        data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i>
+                                </a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥9.00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="minicart-item_total">
+                        <span>总价</span>
+                        <span class="ammount">￥19.00</span>
+                    </div>
+                    <div class="group-btn_wrap d-grid gap-2">
+                        <a href="checkout.html" class="btn btn-dark">支付</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="global-overlay"></div>
+        </header>
+
+        <!-- 背景 -->
+
+        <div class="Goods_Detail_background ">
+            <div class="Goods_frame main-wrapper1">
+                <div class="single-product-area section-space-top-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="single-product-img">
+                                    <div class="swiper-container single-product-slider">
+                                        <div class="swiper-slide">
+                                            <a href="./image/章丘大葱.jpg" class="single-img gallery-popup" id="imgA">
+                                                <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image"
+                                                    id="vegeImg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pt-5 pt-lg-0">
+                                <div class="single-product-content">
+                                    <h2 class="title" id="vegeNameDetail">章丘大葱</h2>
+                                    <div class="price-box">
+                                        <span class="new-price">￥ 5.20（约一斤）</span>
+                                    </div>
+                                    <div class="rating-box-wrap pb-4">
+                                        <h4 class="Goods_Detail_gold"> 好评率: <a class="gold"> 99%</a></h4>
+                                    </div>
+                                    <h5 class="Goods_Detail_way"> 有机种植 </h5>
+                                    <h5 class="Goods_Detail_place">产地: <a class="place"> 山东章丘</a></h5>
+                                    <h5 class="Goods_Detail_time"> 采摘时间: <time class="vegeTime"> 2023.5.1</time></h5>
+
+                                    <div class="selector-wrap color-option">
+                                        <span class="selector-title border-bottom-0">规格</span>
+                                        <select class="nice-select wide border-bottom-0 rounded-0">
+                                            <option value="default">一斤试吃装</option>
+                                            <option value="blue">三斤推荐装</option>
+                                            <option value="green">五斤装</option>
+                                            <option value="red">十斤装</option>
+                                        </select>
+                                    </div>
+                                    <div class="selector-wrap size-option">
+                                        <span class="selector-title">品质</span>
+                                        <select class="nice-select wide rounded-0">
+                                            <option value="medium">普通装（统果不挑）</option>
+                                            <option value="large">精选装（人工二次挑选）</option>
+                                        </select>
+                                    </div>
+                                    <ul class="quantity-with-btn">
+                                        <h3 class="Goods_Detail_number">数量:</h3>
+                                        <li class="quantity">
+                                            <div class="cart-plus-minus">
+                                                <input class="cart-plus-minus-box" value="1" type="text">
+                                            </div>
+                                        </li>
+                                        <li class="add-to-cart">
+                                            <a class="btn btn-custom-size lg-size btn-pronia-primary"
+                                                href="cart.html">支付</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- 评论 -->
+                <div class="comments">
+                    <h3>用户评论</h3>
+                    <ul class="comment-list">
+                        <li class="comment">
+                            <div class="comment-author">用户A</div>
+                            <div class="comment-content">这个产品真的很棒，价廉物美！</div>
+                        </li>
+                        <li class="comment">
+                            <div class="comment-author">用户B</div>
+                            <div class="comment-content">强烈推荐！</div>
+                        </li>
+                    </ul>
+                    <form class="comment-form">
+                        <textarea class="comment-input" placeholder="请输入您的评论"></textarea>
+                        <button class="comment-btn">提交评论</button>
+                    </form>
+                </div>
+
+
+                <!--
+                                <div class="shipping-area ">
+                                    <div class="container">
+                                        <div class="shipping-bg">
+                                            <div class="row shipping-wrap">
+                                                <div class="col-lg-4 col-md-6">
+                                                    <div class="shipping-item">
+                                                        <div class="shipping-img">
+                                                            <img class="large-image" src="./image/免运费.svg" alt="Shipping Icon">
+                                                        </div>
+                                                        <div class="shipping-content">
+                                                            <h2 class="title">免运费</h2>
+                                                            <p class="short-desc mb-0">仅需一元，健康蔬菜免费配送到家</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+                                                    <div class="shipping-item">
+                                                        <div class="shipping-img">
+                                                            <img class="large-image" src="./image/可追溯小地球.svg" alt="Shipping Icon">
+                                                        </div>
+                                                        <div class="shipping-content">
+                                                            <h2 class="title">可追溯</h2>
+                                                            <p class="short-desc mb-0">可以帮您追溯到每一颗蔬菜的出生地</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                                                    <div class="shipping-item">
+                                                        <div class="shipping-img">
+                                                            <img class="large-image" src="./image/安全支付.svg" alt="Shipping Icon">
+                                                        </div>
+                                                        <div class="shipping-content">
+                                                            <h2 class="title">安全支付</h2>
+                                                            <p class="short-desc mb-0">小本买卖，概不赊账，感谢你的慷慨</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/plugins.min.js"></script>
+    <script>
+        var storedArray = sessionStorage.getItem('myArray1');
+        var workArray = JSON.parse(storedArray);
+
+        var storedArray = sessionStorage.getItem('myArray2');
+        var workArray2 = JSON.parse(storedArray);
+        //接收好评率 
+        var storedArray = sessionStorage.getItem('myArray3');
+        var workArray3 = JSON.parse(storedArray);
+
+        console.log(workArray, workArray2,'33333',workArray3)
+        // 获取URL对象  
+        var url = new URL(window.location.href);
+
+        // 获取URLSearchParams对象  
+        var params = url.searchParams;
+
+        // 获取单个参数的值  
+        var param1 = params.get('id'); // "value1"
+
+        console.log(11111, param1)
+        if (param1 >= 0 && param1 < 8) {
+            //修改图片src
+            let vegImg = document.querySelector('#vegeImg');
+            vegImg.src = workArray[param1].profileImage;
+            //修改蔬菜名
+            let vegeName=document.querySelector('#vegeNameDetail')
+            console.log('蔬菜名',vegeName)
+            vegeName.innerHTML=workArray[param1].commodityName
+            //修改蔬菜价格
+            let price = document.querySelector('.new-price');
+            price.innerHTML ='￥'+workArray[param1].commodityPrice+'(约一斤)'
+            //修改蔬菜好评率
+            let gold = document.querySelector('.gold')
+            gold.innerHTML = (workArray3[param1]*100).toFixed(2)+'%'
+            // console.log('好评率',workArray3[i])
+            //修改蔬菜原产地
+            let place = document.querySelector('.place')
+            place.innerHTML = workArray[param1].origin
+            //修改采摘时间
+            let vegeTime = document.querySelector('.vegeTime')
+            vegeTime.innerHTML = workArray[param1].createTime
+            //修改放大镜效果图片
+            let imgA = document.querySelector('#imgA')
+            imgA.href = workArray[param1].profileImage;
+        } else {
+            let vegImg = document.querySelector('#vegeImg');
+            vegImg.src = workArray2[param1-8].profileImage;
+            
+            let vegeName=document.querySelector('#vegeNameDetail')
+            vegeName.innerHTML=workArray2[param1-8].commodityName
+
+            let price = document.querySelector('.new-price');
+            price.innerHTML ='￥'+workArray2[param1-8].commodityPrice+'(约一斤)'
+
+            let gold = document.querySelector('.gold')
+            gold.innerHTML =(workArray3[param1-8]*100).toFixed(2)+'%'
+
+            let place = document.querySelector('.place')
+            place.innerHTML = workArray2[param1-8].origin
+
+            let vegeTime = document.querySelector('.vegeTime')
+            vegeTime.innerHTML = workArray2[param1-8].createTime
+
+            let imgA = document.querySelector('#imgA')
+            imgA.href = workArray2[param1-8].profileImage;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/css2.css">
+</head>
+
+<body>
+    <!-- 开场动画 -->
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="main-wrapper">
+        <!-- 主标题 -->
+        <header class="main-header-area">
+            <div class="header-top bg-pronia-primary  d-lg-block">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="header-top-left">
+                                <span class="pronia-offer">健康菜叶子欢迎您</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-middle py-30">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <div class="header-middle-wrap position-relative">
+
+                                <a href="" class="header-logo">
+                                    <img src="./image/logo.png" alt="Header Logo">
+                                </a>
+
+                                <nav class="navbar bg-body-tertiary">
+                                    <div class="container-fluid">
+                                        <form class="d-flex" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="搜索"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-success" type="submit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                                    <path
+                                                        d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </nav>
+
+                                <div class="header-right">
+                                    <ul>
+                                        <li class="dropdown d-none d-lg-block">
+                                            <a href="./personal.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="d-none d-lg-block">
+                                            <a href="./MyLove.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="minicart-wrap me-3 me-lg-0">
+                                            <a href="#miniCart" class="minicart-btn toolbar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                </svg>
+                                                <span class="quantity">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="mobile-menu_wrap d-block d-lg-none">
+                                            <a class="mobile-menu_btn toolbar-btn pl-0">
+                                                <i class="pe-7s-menu"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-menu position-relative">
+                                <nav class="main-nav">
+                                    <ul>
+                                        <li class="drop-holder">
+                                            <a href="./MainPage.html">首页</a>
+                                        </li>
+
+                                        <li class="megamenu-holder">
+                                            <a>分类</a>
+                                            <ul class="drop-menu megamenu">
+                                                <li>
+                                                    <span class="title">葱姜蒜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">大葱</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大姜</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">大蒜</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <span class="title">根茎菜类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">土豆</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">红薯</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">山药</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">芋头</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="title">菌类</span>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="./Shop.html">金针菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">猴菇</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="./Shop.html">白灵菇</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="./contact.html">联系我们</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-sticky py-4 py-lg-0">
+                <div class="container">
+                    <div class="header-nav position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-6">
+
+                                <a href="" class="header-logo">
+                                    <img src="./image/logo.png" alt="Header Logo">
+                                </a>
+
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="main-menu">
+                                    <nav class="main-nav">
+                                        <ul>
+                                            <li class="drop-holder">
+                                                <a href="./MainPage.html">首页</a>
+                                            </li>
+                                            <li class="megamenu-holder">
+                                                <a>分类</a>
+                                                <ul class="drop-menu megamenu">
+                                                    <li>
+                                                        <span class="title">葱姜蒜类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">大葱</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">大姜</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">大蒜</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span class="title">根茎菜类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">土豆</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">红薯</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">山药</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">芋头</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <span class="title">菌类</span>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="./Shop.html">金针菇</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">猴菇</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./Shop.html">白灵菇</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="./contact.html">联系我们</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="header-right">
+                                    <ul>
+
+                                        <li class="dropdown d-none d-lg-block">
+                                            <a href="./personal.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="d-none d-lg-block">
+                                            <a href="./MyLove.html">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015Zm6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343ZM7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358Z" />
+                                                </svg>
+                                            </a>
+                                        </li>
+
+                                        <li class="minicart-wrap me-3 me-lg-0">
+                                            <a href="#miniCart" class="minicart-btn toolbar-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                    fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                                </svg>
+                                                <span class="quantity">3</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offcanvas-minicart_wrapper" id="miniCart">
+                <div class="offcanvas-body">
+                    <div class="minicart-content">
+                        <div class="minicart-heading">
+                            <h4 class="mb-0">购物车</h4>
+                            <a href="#" class="button-close"><i class="pe-7s-close" data-tippy="Close"
+                                    data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50"
+                                    data-tippy-arrow="true" data-tippy-theme="sharpborder"></i></a>
+                        </div>
+                        <ul class="minicart-list">
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                        data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#"><i class="pe-7s-close" data-tippy="Remove"
+                                        data-tippy-inertia="true" data-tippy-animation="shift-away"
+                                        data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i></a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥5.00</span>
+                                </div>
+                            </li>
+                            <li class="minicart-product">
+                                <a class="product-item_remove" href="#">
+                                    <i class="pe-7s-close" data-tippy="Remove" data-tippy-inertia="true"
+                                        data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true"
+                                        data-tippy-theme="sharpborder"></i>
+                                </a>
+                                <a href="./Goods_Detail.html" class="product-item_img">
+                                    <img class="img-full" src="./image/章丘大葱.jpg" alt="Product Image">
+                                </a>
+                                <div class="product-item_content">
+                                    <a class="product-item_title" href="./Goods_Detail.html">章丘大葱</a>
+                                    <span class="product-item_quantity">1 x ￥9.00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="minicart-item_total">
+                        <span>总价</span>
+                        <span class="ammount">￥19.00</span>
+                    </div>
+                    <div class="group-btn_wrap d-grid gap-2">
+                        <a href="checkout.html" class="btn btn-dark">支付</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="global-overlay"></div>
+        </header>
+
+        <!-- 主体 -->
+        <main class="main-content">
+            <div class="breadcrumb-area breadcrumb-height" data-bg-image="./image/背景图2.jpg">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-item">
+                                <h2 class="breadcrumb-heading">个人中心</h2>
+                                <ul>
+                                    <li>
+                                        <a href="./MainPage.html">Home</a>
+                                    </li>
+                                    <li>我的账户</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-page-area section-space-y-axis-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <ul class="nav myaccount-tab-trigger" id="account-page-tab" role="tablist">
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="account-dashboard-tab" data-bs-toggle="tab"
+                                        href="#account-dashboard" role="tab" aria-controls="account-dashboard"
+                                        aria-selected="true">我的订单</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" id="account-orders-tab" data-bs-toggle="tab"
+                                        href="#account-orders" role="tab" aria-controls="account-orders"
+                                        aria-selected="false">我的优惠券</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="account-address-tab" data-bs-toggle="tab"
+                                        href="#account-address" role="tab" aria-controls="account-address"
+                                        aria-selected="false">我的地址</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="account-details-tab" data-bs-toggle="tab"
+                                        href="#account-details" role="tab" aria-controls="account-details"
+                                        aria-selected="false">我的详细信息</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="account-logout-tab" href="http://localhost/login?redirect=%2Findex" role="tab"
+                                        aria-selected="false">退出</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-9">
+                            <div class="tab-content myaccount-tab-content" id="account-page-tab-content">
+                                <!-- 我的订单 -->
+                                <div class="tab-pane fade show active" id="account-dashboard" role="tabpanel"
+                                    aria-labelledby="account-dashboard-tab">
+                                    <div class="myaccount-orders">
+                                        <h4 class="small-title">我的订单</h4>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>订单</th>
+                                                        <th>日期</th>
+                                                        <th>状态</th>
+                                                        <th>价格</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="account-order-id"
+                                                                href="./Goods_Detail.html">寿光白菜</a></td>
+                                                        <td class="orderTime">2024.2.7</td>
+                                                        <td class="orderStatus">进行中</td>
+                                                        <td class="orderPrice">￥5.20（约一斤）</td>
+                                                        <td><img src="./image/寿光白菜.jpg" class="orderImg">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a class="account-order-id"
+                                                                href="./Goods_Detail.html">章丘大葱</a></td>
+                                                        <td class="orderTime">2024.2.7</td>
+                                                        <td class="orderStatus">已完成</td>
+                                                        <td class="orderPrice">￥5.00（约一斤）</td>
+                                                        <td><img src="./image/章丘大葱.jpg" class="orderImg">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 我的优惠券 -->
+                                <!-- 优惠券 -->
+                                <div class="tab-pane fade" id="account-orders" role="tabpanel"
+                                    aria-labelledby="account-orders-tab">
+                                    <div class="myaccount-dashboard">
+                                        <div class="container">
+                                            <div class="coupon">
+                                                <h3 class="couponName">春节折扣券</h3>
+                                                <p class="couponPrice">折扣金额：20元</p>
+                                                <p class="couponCondition">使用条件：无</p>
+                                                <p class="couponTime">有效期：2022-12-31</p>
+                                            </div>
+                                            <div class="coupon">
+                                                <h3 class="couponName">春节折扣券</h3>
+                                                <p class="couponPrice">折扣金额：30元</p>
+                                                <p class="couponCondition">使用条件：满三十减三十</p>
+                                                <p class="couponTime">有效期：2023-01-31</p>
+                                            </div>
+                                            <div class="coupon">
+                                                <h3 class="couponName">龙年折扣券</h3>
+                                                <p class="couponPrice">折扣金额：50元</p>
+                                                <p class="couponCondition">使用条件：生肖属龙</p>
+                                                <p class="couponTime">有效期：2023-02-28</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- 我的地址 -->
+                                <div class="tab-pane fade" id="account-address" role="tabpanel"
+                                    aria-labelledby="account-address-tab">
+                                    <div class="myaccount-address">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>收货人</th>
+                                                        <th>地址</th>
+                                                        <th>联系方式</th>
+                                                        <th>操作</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>牛图图</td>
+                                                        <td>
+                                                            <address>翻斗花园一楼一单元101室</address>
+                                                        </td>
+                                                        <td>111-000-111</td>
+                                                        <td><a class=" account-order-id">修改</a> <a>/</a> <a
+                                                                class="account-order-id">删除</a></td>
+                                                        <td><a class=" account-order-id">设为默认</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 我的详细信息 -->
+                                <div class="tab-pane fade" id="account-details" role="tabpanel"
+                                    aria-labelledby="account-details-tab">
+
+                                    <div class="myaccount-details">
+                                        <form action="#" class="myaccount-form">
+                                            <div class="myaccount-form-inner">
+                                                <div class="single-input single-input-half">
+                                                    <label>头像</label>
+                                                    <div>
+                                                        <img src="./image/安全支付.svg " class="goodsDetailA"
+                                                            alt="Current Avatar" style="max-width: 100px;"
+                                                            id="personImg">
+                                                        <input class="col-lg-2" type="file" accept="image/*" id="avatar"
+                                                            name="avatar" onchange="previewAvatar(event)">
+                                                        <img id="avatarPreview" src="#" alt="Avatar Preview"
+                                                            style="display:none; max-width:100px;">
+                                                    </div>
+                                                </div>
+                                                <div class="single-input single-input-half">
+                                                    <label>性别</label>
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <input class="form-check-input me-1" type="radio"
+                                                                        name="gender" value="male" id="male" checked>
+                                                                    <label class="form-check-label" for="male">男</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <input class="form-check-input me-1" type="radio"
+                                                                        name="gender" value="female" id="female">
+                                                                    <label class="form-check-label"
+                                                                        for="female">女</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-input single-input-half">
+                                                    <label>昵称*</label>
+                                                    <input type="text" placeholder="王某" class="personName">
+                                                </div>
+                                                <div class="single-input single-input-half">
+                                                    <label>年龄*</label>
+                                                    <input type="text" placeholder="王某" class="personAge">
+                                                </div>
+
+                                                <div class="single-input">
+                                                    <label>手机号*</label>
+                                                    <input type="email" placeholder="王某" class="personTel">
+                                                </div>
+                                                <div class="single-input">
+                                                    <label>当前密码（留空则表示不变）</label>
+                                                    <input type="password" class="personPass">
+                                                </div>
+                                                <div class="single-input">
+                                                    <label>新密码(留空则表示不变)</label>
+                                                    <input type="password" class="personNewPass">
+                                                </div>
+                                                <div class="single-input">
+                                                    <label>确认新密码</label>
+                                                    <input type="password" class="personEnsureNewPass">
+                                                </div>
+                                                <div class="single-input">
+                                                    <label>请选择你的美食倾向</label>
+                                                    <div class="btn-group" role="group"
+                                                        aria-label="Basic radio toggle button group">
+                                                        <input type="radio" class="btn-check" name="btnradio"
+                                                            id="btnradio1" autocomplete="off">
+                                                        <label class="btn btn-outline-primary" for="btnradio1"
+                                                            data-bs-toggle="button">葱姜蒜类</label>
+
+                                                        <input type="radio" class="btn-check" name="btnradio"
+                                                            id="btnradio2" autocomplete="off">
+                                                        <label class="btn btn-outline-primary" for="btnradio2"
+                                                            data-bs-toggle="button">根茎菜类</label>
+
+                                                        <input type="radio" class="btn-check" name="btnradio"
+                                                            id="btnradio3" autocomplete="off">
+                                                        <label class="btn btn-outline-primary" for="btnradio3"
+                                                            data-bs-toggle="button">菌类</label>
+                                                    </div>
+                                                </div>
+                                                <div class="single-input">
+                                                    <button class="btn btn-custom-size lg-size btn-pronia-primary"
+                                                        type="submit" id="changInfoButton">
+                                                        <span>保存更改</span>
+                                                    </button>
+                                                </div>
+                                                <div></div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+
+                                <!-- 退出 -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 末尾 -->
+        <div class="footer-area">
+            <div class="footer-white section-space-top-100">
+                <div class="footer-top section-space-top-100 pb-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="footer-widget-item">
+                                    <div class="footer-widget-logo">
+                                        <a href="">
+                                            <img src="./image/logo.png" alt="Logo">
+                                        </a>
+                                    </div>
+                                    <p class="footer-widget-desc">安全健康老实勤恳好学的蔬菜供应商
+                                    </p>
+                                    <li>地址:我啷个晓得</li>
+                                    <li>电话:000-000-000</li>
+                                    <li>邮箱:000@000.000</li>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 pt-40">
+                                <div class="footer-widget-item">
+                                    <h3 class="footer-widget-title">信息</h3>
+                                    <ul class="footer-widget-list-item">
+                                        <li>
+                                            <a href="#">关于我们</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">服务协议</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">服务政策</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">规则说明</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">合格证书</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">帮助</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 pt-40">
+                                <div class="footer-widget-item">
+                                    <h3 class="footer-widget-title">附加信息</h3>
+                                    <ul class="footer-widget-list-item">
+                                        <li>
+                                            <a href="#">品牌</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">优惠券</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">特价商品</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">支付方式</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">交易保障</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 pt-40">
+                                <div class="footer-widget-item">
+                                    <h3 class="footer-widget-title">社区</h3>
+                                    <ul class="footer-widget-list-item">
+                                        <li>
+                                            <a href="#">评论区</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright">
+                                <span class="copyright-text">©我爱蔬菜</span>>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 回到顶部 -->
+        <a class="scroll-to-top" href="">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+    </div>
+
+    <script>
+        function previewAvatar(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('avatarPreview');
+
+            preview.style.display = 'block';
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+    <script src="./js/plugins.min.js"></script>
+    <script src="./js/request.js"></script>
+    <script type="module">
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        // funAjax.get('/front/personInfo/myOrders', true, '').then(res => {
+        //     console.log('okk', res.data)
+        // })
+
+        //userId获取
+        var uId = sessionStorage.getItem('userId');
+        console.log('userId1', uId);
+        let parseId = JSON.parse(uId);
+        console.log('userId2', parseId);
+        let workId = parseId.userId;
+
+        console.log('userId显示', workId)
+
+        // ------myDetail接口
+        funAjax.get('/front/personInfo/myDetail', true, parseId).then(res => {
+            console.log('okk2', res.data)
+            workMydetail(res.data)
+        })
+        //-----------couponDetail接口
+        console.log('优惠券')
+        funAjax.get('/front/personInfo/couponDetail', true, parseId).then(res => {
+            console.log('okk2', res.data)
+            workMycoupon(res.data)
+        })
+
+        //------------订单接口
+        funAjax.get('/front/personInfo/myOrders', true, parseId).then(res => {
+            console.log('okk3', res.data)
+            workMyOrders(res.data)
+        })
+        //订单dom事件
+        // 获取订单商品名称
+        function workMyOrders(res) {
+            let orderVegeName = document.querySelectorAll('.account-order-id')
+            for (let i = 0; i < orderVegeName.length; i++)
+                orderVegeName[i].innerHTML = res[i].commodityName
+
+            //获取订单时间
+            let orderTime = document.querySelectorAll('.orderTime')
+            for (let i = 0; i < orderTime.length; i++)
+                orderTime[i].innerHTML = res[i].createTime.split('T')[0]
+
+            //获取订单状态
+            let orderStatus = document.querySelectorAll('.orderStatus')
+            for (let i = 0; i < orderStatus.length; i++)
+                orderStatus[i].innerHTML = '已完结'
+
+
+            //获取订单价格
+            let orderPrice = document.querySelectorAll('.orderPrice')
+            for (let i = 0; i < orderPrice.length; i++)
+                orderPrice[i].innerHTML = res[i].price + '(' + res[i].quantity + '千克)'
+
+
+            //获取订单商品图片
+            let orderImg = document.querySelectorAll('.orderImg')
+            for (let i = 0; i < orderImg.length; i++)
+                orderImg[i].src = res[i].profileImage
+
+        }
+
+        //个人信息dom事件
+        function workMydetail(res) {
+            //获取个人信息昵称
+            let personName = document.querySelector('.personName')
+            personName.placeholder = res.nickname
+
+            //获取个人信息年龄
+            let personAge = document.querySelector('.personAge')
+            personAge.placeholder = res.age
+
+            //获取个人信息手机号
+            let personTel = document.querySelector('.personTel')
+            personTel.placeholder = res.phone
+
+            //获取当前密码 模糊显示
+            let personPass = document.querySelector('.personPass')
+            personPass.placeholder = res.pwd
+
+            //获取新密码 (需校验)
+            let personNewPass = document.querySelector('.personNewPass')
+            personNewPass.placeholder += '测试'
+
+            //获取用户头像
+            let personImg = document.querySelector('#personImg')
+            personImg.src = res.profileImage
+
+            //获取用户性别
+            if (res.sex == 1) {
+                let male = document.querySelector('#male')
+                male.checked = true
+            } else {
+                let female = document.querySelector('#female')
+                console.log(female)
+                male.checked = true
+            }
+        }
+
+
+        //优惠券dom事件
+        function workMycoupon(res) {
+            //获取优惠券名称
+            let couponName = document.querySelectorAll('.couponName')
+            for (let i = 0; i < 2; i++)
+                couponName[i].innerHTML =res[i].couponsName
+
+            //获取优惠券金额
+            let couponPrice = document.querySelectorAll('.couponPrice')
+            for (let i = 0; i < 2; i++)
+                couponPrice[i].innerHTML ='折扣金额:'+'减'+res[i].reductionPrice+'元'
+
+            //获取优惠券使用条件
+            let couponCondition = document.querySelectorAll('.couponCondition')
+            for (let i = 0; i < 2; i++)
+                couponCondition[i].innerHTML = '使用条件:'+'满'+res[i].reductionFull+'元'
+
+            //获取优惠券有效日期
+            let couponTime = document.querySelectorAll('.couponTime')
+            for (let i = 0; i < 2; i++)
+                couponTime[i].innerHTML = '有效期:'+res[i].createTime.split(' ')[0]
+        }
+
+        //获取修改个人信息按钮
+        let changInfoButton = document.querySelector('#changInfoButton');
+        console.log('修改信息按钮', changInfoButton)
+        //点击事件函数
+        function workButton() {
+            console.log('修改信息按钮被点击了');
+            //获取个人信息昵称
+            let personName = document.querySelector('.personName')
+            console.log(personName.placeholder)
+
+            //获取个人信息年龄
+            let personAge = document.querySelector('.personAge')
+            console.log(personAge.placeholder)
+
+            //获取个人信息手机号
+            let personTel = document.querySelector('.personTel')
+            console.log(personTel.placeholder)
+
+            //获取当前密码 模糊显示
+            let personPass = document.querySelector('.personPass')
+            console.log(personPass.placeholder)
+
+            //获取新密码 (需校验)
+            let personNewPass = document.querySelector('.personNewPass')
+            personNewPass.placeholder += '测试'
+
+            //获取用户头像
+            let personImg = document.querySelector('#personImg')
+            console.log(personImg.src)
+
+        }
+
+        //为按钮设置点击事件
+        changInfoButton.addEventListener('click', workButton)
+
+        //发起post请求示例：
+        // funAjax.post(`url`, true, data).then((res) => {
+        //     //请求成功
+        //     if (res.code == 200) {
+        //         //状态码为200，处理返回的数据，返回的数据
+        //         console.log('消息提示:修改成功');
+        //     }
+        // }).catch((err) => {
+        //     //错误处理 错误信息在err中
+        //     console.log('消息提示:修改失败');
+        // });
+
+    </script>
+</body>
+
+</html>

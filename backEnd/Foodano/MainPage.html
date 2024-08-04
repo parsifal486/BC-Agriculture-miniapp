@@ -1,0 +1,2908 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+    <title>VegTrace-智链惠农</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Foodano - Organic Food Store HTML Template">
+    <meta name="keywords" content="Foodano - Organic Food Store HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="./css/flaticon.min.css">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="./css/layerslider.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="./css/slick.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    .single-img {
+        width: 517px !important;
+        height: 388px !important;
+    }
+
+    .product-img {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .product-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .border15 {
+        border-radius: 15px;
+    }
+
+    .Sign {
+        background-color: #505050;
+        border: 1px solid #505050;
+        color: #ffffff;
+        text-align: center;
+        width: 37px;
+        height: 50px;
+        border-radius: 5px
+    }
+
+    @keyframes initAnimation {
+        to {
+            transform: rotateY(0deg);
+        }
+    }
+
+    body {
+        font-size: 14px;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    }
+
+    .tb-book {
+        width: 137px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateY(-22deg);
+        transition: 1s ease;
+    }
+
+    .tb-book> :first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 128px;
+        height: 180px;
+        transform: translateZ(22.5px);
+        background-color: #128bed;
+        border-radius: 2% 2% 2% 2%;
+        box-shadow: 5px 5px 20px #666;
+    }
+
+    .book-info-title {
+        font-size: 15px;
+        border-bottom: 1px dashed #fff;
+        color: #fff;
+        text-align: center;
+    }
+
+    .book-img {
+        height: 99px !important;
+        border-bottom: 1px solid #e6e6e6 !important;
+    }
+
+    .book-img img {
+        object-fit: cover;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        border-radius: 2% 2% 0 0;
+    }
+
+    .book-info {
+        background: #99CC99;
+        height: 81px !important;
+        padding: 8px !important;
+        border-radius: 0 0 2% 2%;
+        box-sizing: border-box;
+
+    }
+
+    .tb-book:hover {
+        animation: 1s ease 0s 1 initAnimation;
+    }
+
+    .tb-book::before {
+        position: absolute;
+        content: ' ';
+        background-color: #99CC99;
+        left: 0;
+        top: 3px;
+        width: 43px;
+        height: 174px;
+        transform: translateX(100px) rotateY(90deg);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #f9f9f900 5%, #fff 10%, #f9f9f9 15%, #fff 20%, #f9f9f9 25%, #fff 30%, #f9f9f9 35%, #fff 40%, #f9f9f9 45%, #fff 50%, #f9f9f9 55%, #fff 60%, #f9f9f9 65%, #fff 70%, #f9f9f9 75%, #fff 80%, #f9f9f9 85%, #fff 90%, #f9f9f9 95%, #fff 100%);
+    }
+
+    .tb-book::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: ' ';
+        width: 128px;
+        height: 180px;
+        transform: translateZ(-22.5px);
+        background-color: #99CC99;
+        border-radius: 0 2% 2% 0;
+        box-shadow: -2px 0 10px 2px #666;
+    }
+
+    .add-to-cart .btn {
+        background-color: #ABD373;
+    }
+
+    /*价格优惠 */
+    .vegePrice {
+        color: black;
+    }
+
+    .strikethrough {
+        font-size: 12px;
+        /* 可根据需要调整字体大小 */
+        color: #858585;
+        position: relative;
+    }
+
+    .strikethrough::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: red;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+</style>
+
+<body class=" ">
+
+    <!--滑动标题-->
+    <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px">
+                        <h3 style="position: absolute;top: 22px;left: 91px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="#blog">文章</a>
+                            </li>
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--购物车侧边栏-->
+    <div class="sidemenu-wrapper d-none d-lg-block  ">
+        <div class="sidemenu-content">
+            <button class="closeButton border-theme text-theme bg-theme-hover sideMenuCls"><i class="far fa-times"></i>
+            </button>
+            <div class="widget widget_shopping_cart">
+                <h3 class="widget_title">购物车</h3>
+                <div class="widget_shopping_cart_content">
+                    <ul class="cart_list ">
+                        <li class="mini_cart_item" style="display: none;">
+                            <a href="#" class="remove" id="remove1"><i class="fal fa-trash-alt"></i></a>
+                            <a href=" "><img src="./image/章丘大葱.jpg" alt="Cart Image" class="cartImg"><span
+                                    class="cartImgName">章丘大葱</span></a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>￥</span>0.99
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item" style="display: none;">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href=" "><img src="./image/章丘大葱.jpg" alt="Cart Image" class="cartImg"><span
+                                    class="cartImgName">章丘大葱</span></a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>￥</span>0.99
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item" style="display: none;">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href=" "><img src="./image/章丘大葱.jpg" alt="Cart Image" class="cartImg"><span
+                                    class="cartImgName">章丘大葱</span></a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>￥</span>0.99
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item" style="display: none;">
+                            <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a href=" "><img src="./image/章丘大葱.jpg" alt="Cart Image" class="cartImg"><span
+                                    class="cartImgName">章丘大葱</span></a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>￥</span>0.99
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                    <p class="total">
+                        <strong>总价:</strong>
+                        <span class="amount">
+                            <span>￥</span><span class="totalPriceShow">0</span>
+                        </span>
+                    </p>
+                    <p class="buttons">
+                        <a href="checkout.html" class="vs-btn" id="purchaseButton">支付</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 固定标题 -->
+    <header class="header-wrapper header-layout1 py-3 py-lg-0">
+        <div class="container position-relative">
+            <div class="header1-inner" style="border-radius: 15px">
+                <div class="row align-items-center">
+                    <div class="col-6 col-lg-2  col-xl-3">
+                        <div class="header-logo">
+                            <img src="./img/logo.png" style="width: 90px;height: 90px;margin-left: 18px;" alt="">
+                            <h3
+                                style="position: absolute;top: 23px;left: 146px;color: var(--theme-color);font-size: 42px">
+                                VegTrace</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-8 col-xl-5 text-end">
+                        <nav class="main-menu menu-style1 mobile-menu-active menu-style1 text-center">
+                            <ul>
+                                <li>
+                                    <a href="./MainPage.html" class="toMainPage">首页</a>
+                                </li>
+
+                                <li>
+                                    <a href="#blog">文章</a>
+                                </li>
+                                <li>
+                                    <a href="./Contact.html">联系我们</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-xl-4 text-end d-none d-lg-block">
+                        <a href="http://localhost/login?redirect=%2Findex" class="icon-btn has-badge bg2 Out mr-20">
+                            <svg width="25" height="25"  fill="currentColor"
+                                 t="1710389140579" class="icon" viewBox="0 0 1039 1024"
+                                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2735" ><path d="M559.246704 939.148776h-308.549906c-84.851224 0-154.274953-69.423729-154.274952-154.274953v-539.962335c0-84.851224 69.423729-154.274953 154.274952-154.274953h308.549906c84.851224 0 154.274953 69.423729 154.274953 154.274953v9.642184c0 21.212806-17.355932 38.568738-38.568738 38.568739s-38.568738-17.355932-38.568738-38.568739v-9.642184c0-42.425612-34.711864-77.137476-77.137477-77.137477h-308.549906c-42.425612 0-77.137476 34.711864-77.137476 77.137477v539.962335c0 42.425612 34.711864 77.137476 77.137476 77.137476h308.549906c42.425612 0 77.137476-34.711864 77.137477-77.137476v-3.856874c0-21.212806 17.355932-38.568738 38.568738-38.568738s38.568738 17.355932 38.568738 38.568738v3.856874c0 84.851224-69.423729 154.274953-154.274953 154.274953z" fill="#388CEB" p-id="2736"></path><path d="M840.798493 553.461394H520.677966c-21.212806 0-38.568738-17.355932-38.568738-38.568739s17.355932-38.568738 38.568738-38.568738h320.120527c21.212806 0 38.568738 17.355932 38.568739 38.568738s-17.355932 38.568738-38.568739 38.568739z" fill="#E78E00" p-id="2737"></path><path d="M752.090395 740.519774c-9.642185 0-19.284369-3.856874-25.069679-9.642185-15.427495-13.499058-17.355932-38.568738-3.856874-53.996233l142.704331-160.060264 1.928437-1.928437-1.928437-1.928437-146.561205-163.917137c-13.499058-15.427495-13.499058-40.497175 3.856874-53.996234 15.427495-13.499058 40.497175-13.499058 53.996233 3.856874l144.632769 161.988701c28.926554 28.926554 28.926554 77.137476 0 106.06403l-142.704332 160.060264c-5.785311 9.642185-17.355932 13.499058-26.998117 13.499058z" fill="#E78E00" p-id="2738"></path></svg>
+                        </a>
+                        <a href="./Personal.html" class="icon-btn has-badge bg3 mr-20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="icon-btn has-badge bg2 sideMenuToggler">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>
+                            <span class="badge" id="countCart">0</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--轮播图-->
+    <section class="vs-hero-wrapper hero-layout2 position-relative  ">
+        <div class="vs-hero-carousel" data-height="920" data-container="1900" data-slidertype="responsive">
+            <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
+                <img src="./img/hero/hero-bg-2-1.jpg" alt="Hero Image" class="ls-bg">
+                <img src="./img/hero/slider-shape-1.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 98%; top: 97%;"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 1000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-2.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 85%; top: 30%;"
+                     data-ls="offsetyin: top; durationin: 4000; delayin: 2000; offsetyout: top; durationout: 4000; parallax: true; parallaxlevel: 10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-3.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 70%; top: 83%; transform: rotate(30deg);"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 2000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <p class="ls-l ls-hide-tablet ls-hide-phone"
+                    style="left: 950px; top: 365px; font-size: 18px; font-family: 'Advent Pro', sans-serif; text-transform: uppercase; letter-spacing: 0.9em; font-weight: 600;"
+                    data-ls="minfontsize: 10px; durationin: 1500;  delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; texttypein: chars_asc; textshiftin: 100; textoffsetyin: -100; textrotatein: -45; parallax: true; parallaxlevel: 2;  ">
+                    Green Vegetables</p>
+                <h1 class="ls-l ls-hide-phone text-theme"
+                    style="left: 950px; top: 396px; font-size: 100px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1000; delayin: 200; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    绿色蔬菜</h1>
+                <h1 class="ls-l ls-hide-phone"
+                    style="left: 950px; top: 502px; font-size: 75px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1800; delayin: 600; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    呵护您的生活</h1>
+                <div class="ls-l ls-hide-phone" style="left: 950px; top: 640px;"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 2000; delayin: 900; parallax: true; parallaxlevel: 2;">
+                    <a href="#" class="vs-btn style2 hero-btn">更多</a>
+                </div>
+            </div>
+            <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
+                <img src="./img/hero/hero-bg-2-2.jpg" alt="Hero Image" class="ls-bg">
+                <img src="./img/hero/slider-shape-1.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 98%; top: 97%;"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 1000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-2.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 85%; top: 30%;"
+                     data-ls="offsetyin: top; durationin: 4000; delayin: 2000; offsetyout: top; durationout: 4000; parallax: true; parallaxlevel: 10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-3.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 70%; top: 83%; transform: rotate(30deg);"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 2000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <p class="ls-l ls-hide-tablet ls-hide-phone"
+                    style="left: 950px; top: 365px; font-size: 18px; font-family: 'Advent Pro', sans-serif; text-transform: uppercase; letter-spacing: 0.9em; font-weight: 600;"
+                    data-ls="minfontsize: 10px; durationin: 1500;  delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; texttypein: chars_asc; textshiftin: 100; textoffsetyin: -100; textrotatein: -45; parallax: true; parallaxlevel: 2;  ">
+                    Chasing Source</p>
+                <h1 class="ls-l ls-hide-phone text-theme"
+                    style="left: 950px; top: 396px; font-size: 100px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1000; delayin: 200; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    产地直销</h1>
+                <h1 class="ls-l ls-hide-phone"
+                    style="left: 950px; top: 502px; font-size: 75px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1800; delayin: 600; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    追溯您的蔬菜</h1>
+                <div class="ls-l ls-hide-phone" style="left: 950px; top: 640px;"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 2000; delayin: 900; parallax: true; parallaxlevel: 2;">
+                    <a href="#" class="vs-btn style2 hero-btn">更多</a>
+                </div>
+            </div>
+            <div class="ls-slide" data-ls="duration: 8000; transition2d: 5;">
+                <img src="./img/hero/hero-bg-2-3.jpg" alt="Hero Image" class="ls-bg">
+                <img src="./img/hero/slider-shape-1.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 98%; top: 97%;"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 1000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-2.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 85%; top: 30%;"
+                     data-ls="offsetyin: top; durationin: 4000; delayin: 2000; offsetyout: top; durationout: 4000; parallax: true; parallaxlevel: 10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <img src="./img/hero/slider-shape-3.png" alt="Shape" class="ls-l  ls-hide-phone"
+                     style="left: 70%; top: 83%; transform: rotate(30deg);"
+                     data-ls="offsetyin: bottom; durationin: 4000; delayin: 2000; offsetyout: bottom; durationout: 4000; parallax: true; parallaxlevel: -10; parallaxaxis: y; parallaxdurationmove: 2000; parallaxevent: scroll;">
+                <p class="ls-l ls-hide-tablet ls-hide-phone"
+                    style="left: 950px; top: 365px; font-size: 18px; font-family: 'Advent Pro', sans-serif; text-transform: uppercase; letter-spacing: 0.9em; font-weight: 600;"
+                    data-ls="minfontsize: 10px; durationin: 1500;  delayin: 0; easingin: easeInOutSine; texttransitionin: true; textstartatin: transitioninstart; texttypein: chars_asc; textshiftin: 100; textoffsetyin: -100; textrotatein: -45; parallax: true; parallaxlevel: 2;  ">
+                    Guaranteed Quality</p>
+                <h1 class="ls-l ls-hide-phone text-theme"
+                    style="left: 950px; top: 396px; font-size: 100px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1000; delayin: 200; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    品质保证</h1>
+                <h1 class="ls-l ls-hide-phone"
+                    style="left: 950px; top: 502px; font-size: 75px; text-transform: uppercase; text-shadow: 0px 16px 24px rgba(235, 225, 225, 0.52);"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 1800; delayin: 600; easingin: easeInOutSine; parallax: true; parallaxlevel: 3; ">
+                    保障您的健康</h1>
+                <div class="ls-l ls-hide-phone" style="left: 950px; top: 640px;"
+                    data-ls="offsetyin: 100; fadein: true; durationin: 2000; delayin: 900; parallax: true; parallaxlevel: 2;">
+                    <a href="#" class="vs-btn style2 hero-btn">更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--从轮播图往下：第一个展示区域(一般放置醒目信息)-->
+    <section class="vs-about-wrapper position-relative bg-fluid about-layout1 space" >
+        <div class="shape1 d-hd-inline-block d-none"><img src="./img/about/shape-1-1.png" alt="Shape Image">
+        </div>
+        <div class="shape2 d-hd-inline-block d-none ani-moving-y"><img src="./img/about/shape-1.png"
+                alt="Shape Image"></div>
+        <div class="container pt-70" style="margin-top: -90px">
+            <div class="row">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="img-box1 wow slideInUp" data-wow-delay="0.3s">
+                        <img src="./img/about/about-img-1.png" alt="About Image" style="max-width: 160%;height: auto;margin-left: -330px;margin-top: -185px">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6" style="margin-left: -50px">
+                    <div class="about-content pt-75 text-center text-lg-start ">
+                        <span class="sub-title1">透明 安全 高效</span>
+                        <h2 class="sec-title1" style="font-size: 42px">区块链架构革新农产品溯源</h2>
+                        <h2 class="sec-title2" style="font-size: 40px;width: 555px">
+                            保障食品安全、提升用户信任的创新解决方案</h2>
+                        <img src="./img/icons/sec-icon-1.png" alt="About Image">
+                        <h3 class="sub-title2 h4 mt-30">去中心化 & 不可篡改</h3>
+                        <div class="row justify-content-center justify-content-lg-start">
+                            <div class="col-md-10 col-lg-11 mb-15">
+                                <p class="text-body2">
+                                    区块链架构是一种分布式账本技术，通过将数据记录在区块链上，实现了对农产品<br />从产地到消费环节的全程可追溯性。该架构可以确保农产品的真实性和安全性，<br />提高消费者对农产品的信任度。从而为消费者提供可靠的食品安全保障，<br />促进农产品行业的可持续发展。
+                                </p>
+                            </div>
+                            <div class="mb-20 mb-sm-0 col-auto col-lg-6 col-xl-5 d-flex align-items-center">
+                                <span class="text-theme">
+                                    <i class="flaticon-eco fa-4x"></i>
+                                </span>
+                                <h4 class="text-light ms-4 mb-0">100% 溯源</h4>
+                            </div>
+                            <div class="col-auto col-lg-6 d-flex align-items-center">
+                                <span class="text-theme">
+                                    <i class="flaticon-vegetables fa-4x"></i>
+                                </span>
+                                <h4 class="text-light ms-4 mb-0">100% 可靠</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--第二个展示区域展示区块链产地-运输-经销-->
+    <section class="vs-features-wrapper position-relative space-top space-md-bottom" >
+        <div class="position-absolute start-0 top-0 ani-moving-y d-none d-hd-block"><img
+                src="./img/shape/shape-2.png" alt="Shape Image"></div>
+        <div class="container">
+            <div class="row justify-content-center justify-content-lg-between">
+                <div class="col-sm-6 col-md-4 col-xl-3 vs-feature-box1 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="feature-shape"><img src="./img/shape/feature-shape.png" alt="Shape"></div>
+                    <div class="feature-icon">
+                        <span class="badge">01</span>
+                        <svg style="height: 60%;width: 60%;" t="1710270837505" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3546" width="200" height="200"><path d="M491.1616 597.1456s-108.288 81.3056-263.424 15.2064-141.2096-226.048-8.8576-246.5792 180.4288 39.68 180.4288 39.68-75.6224-190.1056 66.7136-269.1584c31.4368-17.4592 69.2224-17.3056 100.1984 0.9728C702.3104 217.6 634.88 406.1184 634.88 406.1184s77.2608-74.7008 203.8784-31.0784c55.7056 21.1456 103.2192 87.9104 29.7472 173.2096-73.4208 85.248-241.3056 122.5216-330.5984 47.8208M251.0848 849.8176c-10.496-3.8912-12.7488-17.7664-3.9424-24.6784 39.0144-30.7712 128.256-95.4368 171.776-80.7424 56.6272 19.1488 90.7776-54.9888 164.096-10.8032 73.3184 44.1344 79.1552 1.9456 118.016 49.7152 21.4016 26.2656 38.4 39.68 55.4496 47.9744 12.288 5.9392 10.5984 23.808-2.6624 26.9824-104.0896 24.832-321.3312 59.2896-502.7328-8.448z" fill="#EFFFCF" p-id="3547"></path><path d="M791.296 363.5712C693.0944 349.8496 634.88 406.1184 634.88 406.1184s67.4304-188.5184-68.6592-268.8512c-30.976-18.2784-68.8128-18.432-100.1984-0.9728C323.6864 215.3472 399.36 405.4528 399.36 405.4528s-48.128-60.16-180.4288-39.68c-132.3008 20.48-146.2784 180.48 8.8576 246.5792 155.136 66.0992 263.424-15.2064 263.424-15.2064l46.7456-1.1264c43.008 35.9936 104.2944 45.9264 164.5056 37.12 38.2976-51.3024 66.1504-111.5648 79.8208-178.432 6.144-30.6176 9.1136-61.0816 9.0112-91.136z" fill="#F1FFD9" p-id="3548"></path><path d="M661.9648 387.0208c-17.664 9.984-27.0848 19.0976-27.0848 19.0976s67.4304-188.5184-68.6592-268.8512c-30.976-18.2784-68.8128-18.432-100.1984-0.9728C323.6864 215.3472 399.36 405.4528 399.36 405.4528s-48.128-60.16-180.4288-39.68c-132.3008 20.48-146.2784 180.48 8.8576 246.5792 40.704 17.3568 78.1312 24.4736 111.3088 25.6512 136.3456-35.1744 254.3104-125.6448 322.8672-250.9824z" fill="#F3FFE3" p-id="3549"></path><path d="M598.6816 161.8432c-9.2672-8.96-20.0192-17.2032-32.4608-24.576-30.976-18.2784-68.8128-18.432-100.1984-0.9728C323.6864 215.3472 399.36 405.4528 399.36 405.4528s-48.128-60.16-180.4288-39.68c-73.7792 11.4176-110.6432 66.2016-102.0928 123.8528 212.3776 2.6112 405.9648-128.4096 481.8432-327.7824z" fill="#F9FFF0" p-id="3550"></path><path d="M591.2576 738.3552c-2.6624-1.4848-5.4272-3.0208-8.3456-4.7616-73.3184-44.1344-107.4688 30.0032-164.096 10.8032-36.3008-12.288-104.3968 30.72-148.6848 63.1296 116.0192 19.1488 229.6832-8.2944 321.1264-69.1712z" fill="#F1FFD9" p-id="3551"></path><path d="M930.7648 435.712c-9.8304-38.7072-40.4992-71.2192-82.0736-86.9888-0.256-0.1024-0.5632-0.2048-0.8192-0.3072-72.448-24.9344-130.7648-15.4112-170.9056 0.256 10.0864-78.336-3.5328-180.7872-96.4608-235.6736-39.68-23.3984-87.6032-23.9104-128.2048-1.3312-96.8704 53.8112-109.568 155.8528-97.536 234.752-32.7168-11.264-78.592-17.9712-140.1856-8.448-70.0416 10.8544-118.3744 56.32-126.208 118.6816-9.1648 73.216 41.216 144.4864 128.3072 181.6064 165.7856 70.656 283.0336 8.6016 287.8976 5.9392a28.5184 28.5184 0 0 0 10.2912-9.5744c1.3824 1.9456 3.0208 3.7376 4.9152 5.3248 34.304 28.7232 76.7488 40.6016 121.088 40.6016 94.208 0 197.0176-53.7088 248.8832-113.92 47.4112-54.9888 48.4864-101.5296 41.0112-130.9184z m-83.6096 94.1568c-62.7712 72.8576-194.6112 118.784-271.5136 79.7696 36.5056-50.3808 125.5936-109.1584 233.0112-112.3328a28.16 28.16 0 0 0 27.3408-28.9792c-0.4608-15.5648-13.4144-27.6992-28.9792-27.3408-122.9824 3.584-218.7776 65.3312-267.4688 123.6992-2.6112-39.9872-11.6736-203.0592 5.4784-334.7456a28.21632 28.21632 0 0 0-24.2688-31.5904 28.21632 28.21632 0 0 0-31.5904 24.2688c-16.128 123.4944-10.3936 268.544-6.9632 328.0896-60.9792-69.12-172.6464-102.144-272.384-103.68h-0.4608c-15.36 0-27.904 12.3392-28.16 27.6992a28.18048 28.18048 0 0 0 27.6992 28.6208c110.08 1.7408 204.9536 42.24 243.5072 101.2224-37.7344 11.5712-114.5856 24.064-213.6064-18.1248-77.0048-32.8192-99.0208-86.6816-94.5152-122.8288 4.608-36.9152 34.1504-63.0784 78.8992-69.9904 109.4656-16.9472 150.784 25.7024 154.2656 29.5936 8.448 11.2128 23.5008 14.08 35.7888 7.2704 12.3904-6.8608 17.408-22.272 12.2368-35.3792-2.7136-6.8096-64.5632-168.2432 54.1696-234.1888 22.9888-12.7488 49.9712-12.544 72.2432 0.6144 114.176 67.4304 58.8288 228.352 56.4224 235.1104a28.1088 28.1088 0 0 0 11.264 33.1264 28.06784 28.06784 0 0 0 34.816-3.4304c0.6656-0.6144 65.8944-62.0544 174.6944-24.832 18.7904 7.2192 40.8576 23.6032 47.0528 48.0256 6.0416 23.552-3.9936 51.3024-28.9792 80.3328zM768.7168 805.888c-10.0352-4.864-24.32-13.824-45.9264-40.3968-25.856-31.744-45.2096-35.2768-67.84-36.6592-13.1072-0.768-28.0064-1.6384-57.4976-19.4048-54.272-32.6656-94.8224-14.3872-124.416-1.0752-20.5312 9.2672-31.8464 13.8752-45.2096 9.3696-41.8304-14.1312-108.4928 14.5408-198.1952 85.2992a42.4704 42.4704 0 0 0-15.6672 39.8848c2.3552 15.1552 12.8 27.9552 27.1872 33.3312 83.0464 30.976 172.288 41.3696 254.5664 41.3696 112.6912 0 212.224-19.456 264.5504-32 17.664-4.2496 30.3616-18.5856 32.3072-36.608 2.048-18.176-7.3216-35.1232-23.8592-43.1104z m-483.8912 25.8048c65.3824-48.384 110.0288-65.6896 124.9792-60.6208 34.9696 11.8272 63.488-1.024 86.4256-11.3664 26.0096-11.7248 43.2128-19.456 72.192-2.048 41.3696 24.9344 66.56 26.4192 83.2512 27.392 12.9024 0.768 15.2064 0.9216 27.4432 15.9744 12.3904 15.2576 24.1152 27.3408 35.9936 36.9152-95.2832 19.712-273.152 43.7248-430.2848-6.2464z" fill="#333333" p-id="3552"></path></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title h4 fw-semibold mb-2">产地溯源</h3>
+                        <p class="text-body2 mb-0">
+                            每一款产品均源自原生态生产基地，为您提供新鲜、健康的产品，全程可追溯，品质看得见。</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 vs-feature-box1 wow slideInUp" data-wow-delay="0.4s">
+                    <div class="feature-shape"><img src="./img/shape/feature-shape.png" alt="Shape"></div>
+                    <div class="feature-icon">
+                        <span class="badge">02</span>
+                        <svg style="height: 60%;width: 60%;" t="1710271148061" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="28272" width="200" height="200"><path d="M714.752 417.792m-252.928 0a252.928 252.928 0 1 0 505.856 0 252.928 252.928 0 1 0-505.856 0Z" fill="#E9EAEB" p-id="28273"></path><path d="M620.544 251.904H468.992l-4.096-8.192c-4.096-9.216-13.312-18.432-25.6-18.432-4.096 0-7.168 0-10.24 2.048l-13.312 5.12-5.12-14.336c-8.192-20.48-28.672-34.816-50.176-34.816-29.696 0-54.272 32.768-54.272 54.272v14.336H157.696v-28.672h120.832c8.192-33.792 40.96-68.608 80.896-68.608 29.696 0 57.344 16.384 71.68 41.984h7.168c18.432 0 36.864 10.24 47.104 26.624h134.144v28.672zM967.68 324.608h-64.512l-5.12-7.168c-6.144-8.192-20.48-22.528-38.912-20.48l-9.216 1.024-5.12-8.192c-8.192-14.336-23.552-23.552-38.912-23.552-25.6 0-45.056 23.552-45.056 44.032v14.336H606.208v-28.672h126.976c7.168-31.744 37.888-58.368 72.704-58.368 22.528 0 45.056 11.264 59.392 30.72 22.528 1.024 40.96 13.312 53.248 27.648h50.176v28.672z" fill="#BCC0C4" p-id="28274"></path><path d="M953.344 729.088c0-16.384 7.168-79.872-34.816-90.112-4.096-7.168-19.456-39.936-31.744-68.608-12.288-26.624-38.912-44.032-68.608-44.032H707.584v274.432h239.616s20.48-13.312 20.48-28.672c0-14.336 3.072-37.888-14.336-43.008z" fill="#A3D4FF" p-id="28275"></path><path d="M707.584 801.792h239.616s20.48-13.312 20.48-28.672c0-15.36 4.096-38.912-14.336-43.008 0-16.384 7.168-79.872-34.816-90.112-4.096-7.168-19.456-39.936-31.744-68.608-12.288-26.624-38.912-44.032-68.608-44.032H707.584" fill="#7AC3F4" p-id="28276"></path><path d="M951.296 816.128H707.584v-28.672h235.52c5.12-4.096 10.24-11.264 10.24-14.336v-7.168c0-11.264 0-21.504-4.096-22.528l-11.264-3.072v-16.384c1.024-29.696 0-64.512-23.552-70.656l-6.144-2.048-3.072-6.144c-3.072-6.144-14.336-29.696-32.768-69.632-10.24-21.504-31.744-34.816-55.296-34.816H707.584V512h110.592c34.816 0 66.56 20.48 80.896 52.224 17.408 37.888 25.6 55.296 29.696 63.488 39.936 15.36 39.936 67.584 38.912 93.184 15.36 11.264 14.336 32.768 14.336 46.08v6.144c0 21.504-22.528 37.888-26.624 40.96l-4.096 2.048z" fill="#004EA2" p-id="28277"></path><path d="M851.968 641.024l-23.552-50.176c-2.048-4.096-5.12-6.144-9.216-6.144h-54.272v72.704h76.8c8.192-1.024 13.312-9.216 10.24-16.384z" fill="#FFFFFF" p-id="28278"></path><path d="M841.728 670.72h-91.136v-101.376H819.2c9.216 0 18.432 6.144 22.528 14.336l23.552 50.176c4.096 8.192 3.072 17.408-2.048 24.576-4.096 8.192-12.288 12.288-21.504 12.288z m-62.464-28.672h57.344l-20.48-43.008h-36.864v43.008z" fill="#004EA2" p-id="28279"></path><path d="M244.736 396.288v405.504h462.848V396.288z" fill="#FFFFFF" p-id="28280"></path><path d="M721.92 816.128H229.376V670.72h29.696v115.712h433.152V410.624H259.072V512h-29.696V381.952h492.544z" fill="#004EA2" p-id="28281"></path><path d="M229.376 555.008h28.672v87.04h-28.672z" fill="#004EA2" p-id="28282"></path><path d="M432.128 801.792c0 31.744-25.6 57.344-58.368 57.344-31.744 0-58.368-25.6-58.368-57.344s25.6-57.344 58.368-57.344c32.768-1.024 58.368 24.576 58.368 57.344z" fill="#E9EAEB" p-id="28283"></path><path d="M374.784 873.472c-39.936 0-72.704-32.768-72.704-71.68s32.768-71.68 72.704-71.68 72.704 32.768 72.704 71.68-32.768 71.68-72.704 71.68z m0-115.712c-23.552 0-43.008 19.456-43.008 43.008s19.456 43.008 43.008 43.008 43.008-19.456 43.008-43.008-19.456-43.008-43.008-43.008z" fill="#004EA2" p-id="28284"></path><path d="M866.304 801.792c0 31.744-25.6 57.344-58.368 57.344-31.744 0-58.368-25.6-58.368-57.344s25.6-57.344 58.368-57.344c32.768-1.024 58.368 24.576 58.368 57.344z" fill="#E9EAEB" p-id="28285"></path><path d="M807.936 873.472c-39.936 0-72.704-32.768-72.704-71.68s32.768-71.68 72.704-71.68 72.704 32.768 72.704 71.68-32.768 71.68-72.704 71.68z m0-115.712c-23.552 0-43.008 19.456-43.008 43.008s19.456 43.008 43.008 43.008 43.008-19.456 43.008-43.008-18.432-43.008-43.008-43.008zM113.664 613.376h274.432v28.672H113.664zM186.368 497.664h361.472v28.672H186.368zM186.368 381.952H634.88v28.672H186.368z" fill="#004EA2" p-id="28286"></path><path d="M129.024 381.952h28.672v28.672h-28.672z" fill="#004EA2" p-id="28287"></path><path d="M70.656 381.952h28.672v28.672H70.656z" fill="#004EA2" p-id="28288"></path><path d="M56.32 613.376h28.672v28.672H56.32z" fill="#004EA2" p-id="28289"></path><path d="M129.024 497.664h28.672v28.672h-28.672z" fill="#004EA2" p-id="28290"></path></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title h4 fw-semibold mb-2">物流溯源</h3>
+                        <p class="text-body2 mb-0">依托物流网络和配送团队，提供实时追踪的物流服务，让您的商品安全快速到达。</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 vs-feature-box1 wow slideInUp" data-wow-delay="0.5s">
+                    <div class="feature-icon">
+                        <span class="badge">03</span>
+                        <svg style="height: 60%;width: 60%;" t="1710271319226" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="42733" width="200" height="200"><path d="M565.370023 772.592126c-57.039628 44.171437-100.880349 6.115667-105.80831 1.507159-8.99688-8.535108-23.163358-8.270946-31.763994 0.660406-8.644664 8.952853-8.381525 23.207385 0.572352 31.852048 15.26613 14.727567 45.315117 32.094709 82.183179 32.09471 25.143552 0 53.43248-8.062073 82.402291-30.499496 9.833395-7.621802 11.636457-21.766778 4.025917-31.599149-7.634089-9.834419-21.800566-11.627242-31.611435-4.015678zM353.90801 534.644248c-18.654167 0-33.788216 15.122786-33.788215 33.788216v45.050954c0 18.664406 15.134049 33.788216 33.788215 33.788216s33.788216-15.12381 33.788216-33.788216v-45.050954c0-18.664406-15.134049-33.788216-33.788216-33.788216zM646.739213 534.644248c-18.654167 0-33.788216 15.122786-33.788216 33.788216v45.050954c0 18.664406 15.134049 33.788216 33.788216 33.788216s33.788216-15.12381 33.788216-33.788216v-45.050954c0-18.664406-15.134049-33.788216-33.788216-33.788216z" fill="#74E8AE" p-id="42734"></path><path d="M871.993985 455.805078c0-191.994881-168.412754-360.407634-360.407635-360.407635s-360.407634 168.412754-360.407634 360.407635c-24.777001 0-45.050954 20.271906-45.050954 45.050954v157.67834c0 24.777001 20.273953 45.050954 45.050954 45.050954h22.525477c24.777001 0 45.050954-20.273953 45.050954-45.050954v-90.101908a23.549362 23.549362 0 0 0 1.231734-0.032765c175.523637-9.523157 298.44619-137.44227 358.872831-217.791671 37.21516 32.154095 136.422481 110.490537 232.969747 125.673732-4.651511 7.084263-7.411906 15.512887-7.411906 24.574272v157.67834c0 10.760011 3.978818 20.536068 10.333051 28.30531-11.008815 82.724815-82.915257 149.847665-214.276673 199.74774-3.798615-14.498216-16.92892-25.323756-32.573888-25.323756h-112.627386c-18.583519 0-33.788216 15.204697-33.788215 33.788216s15.204697 33.788216 33.788215 33.788216h112.627386c12.477067 0 23.304654-6.931704 29.156159-17.058953 140.968532-51.288464 221.16435-122.013343 238.379957-210.670549 4.444686 1.477467 9.10746 2.474731 14.031325 2.47473h22.525477c24.777001 0 45.050954-20.273953 45.050954-45.050954v-157.67834c0.001024-24.779049-20.272929-45.050954-45.04993-45.050954z m-259.483258-199.957637c-10.910522-5.983586-24.615227-1.980194-30.576288 8.941591-1.339242 2.44811-136.912922 245.37719-363.179292 258.517734v-22.450734c0-17.009807-9.66343-31.715872-23.669157-39.378629 0.494537-1.856304 1.14368-3.659366 1.14368-5.672325 0-167.995009 147.361671-315.35668 315.35668-315.35668 160.277985 0 301.446174 134.190411 314.109588 292.405266-89.171197-10.391412-189.215032-91.837394-220.761963-119.358407 9.823156-15.07364 15.430976-25.109764 16.508103-27.081767 5.983586-10.911546 1.97917-24.593726-8.931351-30.566049z" fill="#22C67F" p-id="42735"></path></svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title h4 fw-semibold mb-2">售后溯源</h3>
+                        <p class="text-body2 mb-0">
+                            遇到问题，只需联系我们的客服，即可享受到及时、高效的解决方案，保障您的权益。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--商品 第三个区域展示相关推荐和动态定价-->
+    <section class="vs-shop-wrapper position-relative space-md-bottom ">
+        <div class="ani-moving-y position-absolute end-0 bottom-0 d-none d-hd-block"><img
+                src="./img/shape/shape-1.png" alt="Shape"></div>
+        <div class="container">
+            <div class="section-title text-center  wow fadeIn" data-wow-delay="0.3s">
+                <h2 class="sec-title1" style="letter-spacing: 10px;font-size: 55px">特色商品</h2>
+                <h3 class="sec-title2" style="letter-spacing: 10px;font-size: 52px">促销</h3>
+                <img src="./img/icons/sec-icon-1.png" alt="Section Icon">
+            </div>
+            <div class="filter-menu-style1 filter-menu-active text-center mb-65">
+                <button class="active" data-filter="*" data-bg-src="./img/shape/shape-filter.png">
+                    <i class="flaticon-salad"></i>
+                    个性推荐 All
+                </button>
+                <button data-filter=".meat" data-bg-src="./img/shape/shape-filter.png">
+                    <i class="flaticon-salvsadbox-1"></i>
+                    临期特价
+                </button>
+                <button data-filter=".freshfood" data-bg-src="./img/shape/shape-filter.png">
+                    <i class="flaticon-vegetables"></i>
+                    新品上市
+                </button>
+            </div>
+
+            <div class="row filter-active">
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item meat season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=1"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" class="Acart"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=1" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme">
+                                <strong class="vegePrice">￥0.99</strong>
+                                <strong class="strikethrough">￥25.1</strong>
+                            </span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item freshfood">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-tag2">新品</div>
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=2"><img src="./image/寿光白菜.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="" id="Acart1"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=2" class="vegeName">寿光白菜</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥1.11</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=3"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart2"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=3" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥0.99</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item freshfood">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-tag2">新品</div>
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=4"><img src="./image/寿光白菜.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="" id="Acart3"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=4" class="vegeName">寿光白菜</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥1.11</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=5"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart4"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=5" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥0.99</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item meat">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=6"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart5"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=6" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme">
+                                <strong class="vegePrice">￥0.99</strong>
+                                <strong class="strikethrough">￥35.9</strong>
+                            </span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=7"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart6"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=7" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme">
+                                <strong class="vegePrice">￥0.99</strong>
+                            </span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item freshfood">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-tag2">新品</div>
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=8"><img src="./image/寿光白菜.jpg" alt="Product Image"
+                                    class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="" id="Acart7"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"><i class="bi bi-star">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                            <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                            <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=8" class="vegeName">寿光白菜</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥1.11</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=9"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                                                        class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart8"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                   data-bs-target="#quickModal"><i class="bi bi-star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                        <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=9" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥0.99</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item meat">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=10"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                                                        class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart9"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                   data-bs-target="#quickModal"><i class="bi bi-star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                        <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=10" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme">
+                                <strong class="vegePrice">￥0.99</strong>
+                                <strong class="strikethrough">￥22.5</strong>
+                            </span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item season">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=11"><img src="./image/章丘大葱.jpg" alt="Product Image"
+                                                                        class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="#" id="Acart10"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                   data-bs-target="#quickModal"><i class="bi bi-star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                        <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=11" class="vegeName">章丘大葱</a>
+                            </h4>
+                            <span class="price font-theme">
+                                <strong class="vegePrice">￥0.99</strong>
+                            </span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 grid-item freshfood">
+                    <div class="vs-product-box1 thumb_swap">
+                        <div class="product-tag2">新品</div>
+                        <div class="product-img border15">
+                            <a href="./shop-details.html?vegeId=12"><img src="./image/寿光白菜.jpg" alt="Product Image"
+                                                                        class="w-100 Mytest"></a>
+                        </div>
+                        <div class="product-content border15">
+                            <div class="actions-btn">
+                                <a href="" id="Acart11"><i class="fal fa-cart-plus sideMenuToggler"></i></a>
+                                <a href="#" class="quuickview-btn" data-bs-toggle="modal"
+                                   data-bs-target="#quickModal"><i class="bi bi-star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                         fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                                        <path
+                                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                        <path
+                                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                                    </svg>
+                                </i>
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#chartModal" class="priceCharts">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <h4 class="product-title h5 mb-0"><a href="./shop-details.html?vegeId=12" class="vegeName">寿光白菜</a>
+                            </h4>
+                            <span class="price font-theme"><strong class="vegePrice">￥1.11</strong></span>
+                            <p class="m-0 rating fs-xs text-theme lh-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- "折线图"显示 -->
+    <div class="modal fade" id="chartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 600px;height: 560px">
+                <div class="modal-header">
+                    <h5 class="modal-title">价格波动</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="chart" style="width: 580px;height:400px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- "查看详情"显示 -->
+    <div class="modal quick-view-modal fade" id="quickModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="quickModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="height: 650px">
+                <div class="modal-header">
+                    <h5 class="modal-title">商品详情</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        data-tippy="Close" data-tippy-inertia="true" data-tippy-animation="shift-away"
+                        data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme="sharpborder">
+                    </button>
+                </div>
+                <div class="modal-body" style="margin-top: -18px">
+                    <div class="modal-wrap row">
+                        <div class="col-lg-6">
+                            <div class="modal-img" style="height: 90%">
+                                <div class="swiper-container modal-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img class="img-full single-img" src="./image/章丘大葱.jpg"
+                                                    alt="Product Image" id="detailVegeImg1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pt-5 pt-lg-0">
+                            <div class="single-product-content">
+                                <h2 class="title" id="detailVegeName">章丘大葱</h2>
+                                <div class="price-box">
+                                    <span class="new-price" id="detailVegePrice">￥5.00（约一斤）</span>
+                                </div>
+                                <div class="rating-box-wrap" style="margin-top: -12px">
+                                    <div class="rating-box">
+                                        <a>好评率:<span class="gold">99%</span></a>
+                                    </div>
+                                </div>
+                                <div class="selector-wrap color-option" style="margin-top: -28px">
+                                    <span class="selector-title border-bottom-0">规格</span>
+                                    <select class="nice-select wide border-bottom-0 rounded-0">
+                                        <option value="default">一斤试吃装</option>
+                                        <option value="blue">三斤推荐装</option>
+                                        <option value="green">五斤装</option>
+                                        <option value="red">十斤装</option>
+                                    </select>
+                                </div>
+                                <div class="selector-wrap size-option">
+                                    <span class="selector-title">品质</span>
+                                    <select class="nice-select wide rounded-0">
+                                        <option value="medium">普通装（统果不挑）</option>
+                                        <option value="large">精选装（人工二次挑选）</option>
+                                    </select>
+                                </div>
+                                <table class="table table-bordered table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <th>种植方法</th>
+                                            <td>有机种植</td>
+                                        </tr>
+                                        <tr>
+                                            <th>产地</th>
+                                            <td id="detailVegePlace">山东章丘</td>
+                                        </tr>
+                                        <tr>
+                                            <th>采摘时间</th>
+                                            <td id="detailVegeTime">2024.2.19</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="short-desc" id="detailVegeInfo">
+                                    章丘大葱是山东省济南市章丘区的特产，也是中国重要的农产品地理标志产品。章丘大葱以其独特的品质和悠久的栽培历史而闻名，被誉为“葱中之王”。章丘大葱的栽培历史悠久，可追溯至两千七百年前的齐桓公时期，当时大葱作为战利品被引入中国。章丘大葱的主要品种为“大梧桐”，其特点是辣味稍淡、微露清甜、脆嫩爽口、风味独特、葱白特长、适易久藏。章丘大葱中含有较多的蛋白质、多种维生素、氨基酸和矿物质，特别是含有维生素A、维生素C和具有强大的杀菌能力的蒜素。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top: -44px">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第四个区域展示用户评论-->
+    <section class="vs-testimonial-wrapper position-relative space-md-bottom">
+        <div class="shape1 position-absolute ani-moving-y d-none d-hd-block"><img src="./img/shape/shape-4.png"
+                alt="Shape"></div>
+        <div class="shape2 position-absolute ani-moving-y d-none d-hd-block"><img src="./img/shape/shape-3.png"
+                alt="Shape"></div>
+        <div class="container">
+            <div class="section-title text-center  wow fadeIn" data-wow-delay="0.3s">
+                <h2 class="sec-title1" style="letter-spacing: 10px;font-size: 55px">用户评论</h2>
+                <h3 class="sec-title2" style="letter-spacing: 10px;font-size: 52px">节选</h3>
+                <img src="./img/icons/sec-icon-1.png" alt="Section Image">
+            </div>
+            <div class="row justify-content-center  wow fadeIn" data-wow-delay="0.3s">
+                <div class="row vs-carousel" data-slide-show="3" data-lg-slide-show="3" data-sm-slide-show="1"
+                    id="slideBox1">
+                    <div class="col-xl-6">
+                        <div class="testimonial-box">
+                            <span class="quote-icon"><i class="flaticon-left-quote"></i></span>
+                            <div class="d-flex align-items-center mb-2 mb-lg-4">
+                                <div class="author-img">
+                                    <img src="./img/testimonial/author-1.jpg" alt="Author">
+                                </div>
+                                <div class="ps-4">
+                                    <h4 class="author-name mb-0">王小明 </h4>
+                                    <span class="author-degi font-theme fw-medium text-body2">新晋客户</span>
+                                    <div class="vs-rating fs-xs lh-base">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star "></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testi-text fs-xs text-body2">
+                                朋友推荐来的，第一次试用，不吹不黑，真的很不错。食品健康安全，还有追溯程序，可以看见蔬菜店全链条活动。</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="testimonial-box">
+                            <span class="quote-icon"><i class="flaticon-left-quote"></i></span>
+                            <div class="d-flex align-items-center mb-2 mb-lg-4">
+                                <div class="author-img">
+                                    <img src="./img/testimonial/author-2.jpg" alt="Author">
+                                </div>
+                                <div class="ps-4">
+                                    <h4 class="author-name mb-0">李华</h4>
+                                    <span class="author-degi font-theme fw-medium text-body2">组织者</span>
+                                    <div class="vs-rating fs-xs lh-base">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star "></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testi-text fs-xs text-body2">
+                                深知乡村商品流通难度大，物品难以保护，因此特地建建立此网站，希望可以助力乡村发展，推进蔬菜走向全国，走向世界 </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="testimonial-box">
+                            <span class="quote-icon"><i class="flaticon-left-quote"></i></span>
+                            <div class="d-flex align-items-center mb-2 mb-lg-4">
+                                <div class="author-img">
+                                    <img src="./img/testimonial/author-3.jpg" alt="Author">
+                                </div>
+                                <div class="ps-4">
+                                    <h4 class="author-name mb-0">张三</h4>
+                                    <span class="author-degi font-theme fw-medium text-body2">法律顾问</span>
+                                    <div class="vs-rating fs-xs lh-base">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star "></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testi-text fs-xs text-body2">
+                                我愿以律师的名义保证本网站内可以满足乡村的物流需求，促进乡村发展，同时给予消费者绿色、健康、合规、安全的食品 </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="testimonial-box">
+                            <span class="quote-icon"><i class="flaticon-left-quote"></i></span>
+                            <div class="d-flex align-items-center mb-2 mb-lg-4">
+                                <div class="author-img">
+                                    <img src="./img/testimonial/author-2.jpg" alt="Author">
+                                </div>
+                                <div class="ps-4">
+                                    <h4 class="author-name mb-0">李华</h4>
+                                    <span class="author-degi font-theme fw-medium text-body2">组织者</span>
+                                    <div class="vs-rating fs-xs lh-base">
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star active"></i>
+                                        <i class="fas fa-star "></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testi-text fs-xs text-body2">
+                                深知乡村商品流通难度大，物品难以保护，因此特地建建立此网站，希望可以助力乡村发展，推进蔬菜走向全国，走向世界 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer -->
+    <div class="bg2" data-bg-src="./img/footer/footer-bg-1.jpg">
+        <!--图片轮播 可以考虑用3D图书替代-->
+        <div class="vs-gallery-wrapper " id="blog">
+            <div class="container">
+                <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.3s" data-slide-show="5"
+                    data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="3" data-xs-slide-show="2">
+                    <div class="tb-report el-row" style="margin-left: -1px; margin-right: 0;">
+                        <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://pic1.zhimg.com/70/v2-34f0aeb4bc516d8a98d68f193b2fc48c_1440w.avis?source=172ae18b&biz_tag=Post"
+                                            alt=""
+                                            src="https://pic1.zhimg.com/70/v2-34f0aeb4bc516d8a98d68f193b2fc48c_1440w.avis?source=172ae18b&biz_tag=Post"
+                                            lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">中国居民平衡膳食指南</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./blog-details.html">
+                        <div class="tb-report el-row" style="margin-left: -7.5px; margin-right: -7.5px;">
+                        <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://cdn.pixabay.com/photo/2015/09/16/20/10/dough-943245_640.jpg"
+                                            alt=""
+                                            src="https://cdn.pixabay.com/photo/2015/09/16/20/10/dough-943245_640.jpg"
+                                            lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">烹饪宝典之教你做饭36计</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <a href="./blog-details.html">
+                    <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                        <div class="tb-book-container">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://cdn.pixabay.com/photo/2017/02/28/20/59/carrots-2106825_640.jpg"
+                                            alt=""
+                                            src="https://cdn.pixabay.com/photo/2017/02/28/20/59/carrots-2106825_640.jpg"
+                                            lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">健康饮食指南之蔬菜篇</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                    <a href="./blog-details.html">
+                    <div class="tb-report el-row" style="margin-left: -7.5px; margin-right: -7.5px;">
+                        <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://cdn.pixabay.com/photo/2016/01/02/01/59/oranges-1117628_640.jpg"
+                                            alt=""
+                                            src="https://cdn.pixabay.com/photo/2016/01/02/01/59/oranges-1117628_640.jpg"
+                                            lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">论全链条下农产品的可行性</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                    <a href="./blog-details.html">
+                    <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                        <div class="tb-book-container">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581_1280.jpg"
+                                            alt=""
+                                            src="https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581_1280.jpg"
+                                            lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">绿色农业发展观</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                    <a href="./blog-details.html">
+                    <div class="el-col el-col-4" style="padding-left: 7.5px; padding-right: 7.5px;">
+                        <div class="tb-book-container">
+                            <div class="tb-book">
+                                <div class="boutique-free">
+                                    <div class="book-img">
+                                        <img data-src="https://data.hanghangcha.com/logo/image/news/87/2.png" alt=""
+                                            src="https://data.hanghangcha.com/logo/image/news/87/2.png" lazy="loaded">
+                                    </div>
+                                    <div class="book-info">
+                                        <div class="book-info-title limit2">2024年中国快餐行业研究报告</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-wrapper footer-layout1">
+            <div class="container">
+                <div class="widget-area pt-100">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="widget footer-widget  ">
+                                <h3 class="widget_title">联系我们</h3>
+                                <div class="vs-widget-about">
+                                    <p class="fs-md">地址：翻斗大街 双子楼花园 1101 <br>单元保安亭 </p>
+                                    <p class="mb-1 link-inherit"><i class="fas fa-paper-plane me-3"></i><a
+                                            href="mailto:3811111111111111@99.com">3811111111111111@99.com</a></p>
+                                    <p class="mb-0 link-inherit"><i class="fal fa-fax me-3"></i><a
+                                            href="tel:+123456789000">+(123)
+                                            4567 89000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">常用链接</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="./MainPage.html">首页</a></li>
+                                        <li><a href="./Contact.html">联系我们</a></li>
+                                        <li><a href="#">服务条款</a></li>
+                                        <li><a href="#">隐私政策</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">附加信息</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="#">品质保证</a></li>
+                                        <li><a href="#">交易保障</a></li>
+                                        <li><a href="#">评论区</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-4">
+                            <div class="widget footer-widget   ">
+                                <h4 class="widget_title">订阅</h4>
+                                <form class="footer-newsletter pt-2">
+                                    <input class="form-control mb-25 rounded-1" type="email" placeholder="你的 Email"
+                                        required="">
+                                    <button type="submit" class="vs-btn mask-style1 rounded-1">订阅 Go！</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center pb-35">
+                    <p class="mb-0 link-inherit">©我爱蔬菜</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--一键Top -->
+    <a href="#" class="scrollToTop"><i class="far fa-angle-up"></i></a>
+    <!---显示详情内的 + --->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 获取相关DOM元素
+            const decreaseBtn = document.querySelector('.quantity__decrease');
+            const increaseBtn = document.querySelector('.quantity__increase');
+            const quantityInput = document.querySelector('.cart-plus-minus-box');
+
+            // 减少数量的事件处理函数
+            function decrementQuantity() {
+                let currentValue = parseInt(quantityInput.value, 10);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            }
+
+            // 增加数量的事件处理函数
+            function incrementQuantity() {
+                let currentValue = parseInt(quantityInput.value, 10);
+                quantityInput.value = currentValue + 1;
+            }
+
+            // 绑定点击事件
+            //报错,暂时注掉
+            // decreaseBtn.addEventListener('click', decrementQuantity);
+            // increaseBtn.addEventListener('click', incrementQuantity);
+        });
+    </script>
+    <!-- Jquery -->
+    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="./js/slick.min.js"></script>
+    <!-- <script src="./js/app.min.js"></script> -->
+    <!-- Layerslider -->
+    <script src="./js/layerslider.utils.js"></script>
+    <script src="./js/layerslider.transitions.js"></script>
+    <script src="./js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./js/jquery.datetimepicker.min.js"></script>
+    <!-- Filter -->
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script src="./js/wow.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="./js/vscustom-carousel.min.js"></script>
+    <!-- Mobile Menu -->
+    <script src="./js/vsmenu.min.js"></script>
+    <!-- Form Js -->
+    <script src="./js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="./js/main.js"></script>
+    <script src="./js/request.js"></script>
+    <!-- chart js   -->
+    <script src="./js/echarts.js"></script>
+    <script>
+        //获取用户Id
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+        // console.log('userId', userId)
+        sessionStorage.setItem('userId', JSON.stringify(userId));
+
+        function workCharts(resData) {
+            let commodityId = 102900005118817;
+            let priceC = document.querySelectorAll('.priceCharts')
+            for (let i = 0; i < priceC.length; i++){
+                priceC[i].addEventListener('click', function (event) {
+                    commodityId = resData[i].commodityId
+                    // console.log('商品ID循环测试',commodityId)
+                    funAjax.get('/front/commodityDetail/getSevenPrice?commodityId=' + commodityId, true, '').then(res => {
+                        initChart(res.data)
+                    });
+
+                })
+            }
+                
+                // console.log('商品ID', commodityId)
+
+        }
+
+
+        function initChart(data) {
+            // 基于准备好的dom，初始化echarts实例
+            const myChart = echarts.init(document.getElementById('chart'));
+            const prices = Object.values(data);
+            // 计算 y 轴的最小值和最大值
+            const minValue = Math.min(...prices) - 3;
+            const maxValue = Math.max(...prices) + 3;
+            // 指定图表的配置项和数据
+            const option = {
+                tooltip: {},
+                legend: {
+                    data: ['动态定价','原始售价']
+                },
+                xAxis: {
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                },
+                yAxis: {
+                    type: 'value',
+                    min: Math.round(minValue),
+                    max: Math.round(maxValue)
+                },
+                series: [
+                    {
+                        name: '动态定价',
+                        data: [data.day1.toFixed(2), data.day2.toFixed(2), data.day3.toFixed(2), data.day4.toFixed(2), data.day5.toFixed(2), data.day6.toFixed(2), data.day7.toFixed(2)],
+                        type: 'line',
+                        smooth: true,
+                        itemStyle: {
+                            normal: {
+                                color: '#bdd239'
+                            }
+                        }
+                    },
+                    {
+                        name: '原始售价',
+                        data: [data.cost,data.cost,data.cost,data.cost,data.cost,data.cost,data.cost],
+                        type: 'line',
+                        smooth: true,
+                        itemStyle: {
+                            normal: {
+                                color: '#3399ff'
+                            }
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        };
+
+        funAjax.get('/front/userDetail/byLove?userId=' + userId, true, '').then(res => {
+            // console.log('这是推荐的数据', res.data)
+            sessionStorage.setItem('vegeDetailInfo', JSON.stringify(res.data));
+            workByLove(res.data)
+            workCharts(res.data)
+            //----------------------------详情信息
+            let vegeDetail = document.querySelectorAll(".quuickview-btn")
+            // console.log('vegeDetail', vegeDetail)
+            for (let i = 0; i < vegeDetail.length; i++) {
+                vegeDetail[i].addEventListener('click', function (event) {
+                    let detailVegeName = document.querySelector('#detailVegeName')
+                    detailVegeName.innerHTML = res.data[i].commodityName
+
+                    let detailVegePrice = document.querySelector('#detailVegePrice')
+                    detailVegePrice.innerHTML = '￥' + res.data[i].commodityPrice
+
+                    let detailVegeInfo = document.querySelector('#detailVegeInfo')
+                    detailVegeInfo.innerHTML = res.data[i].remark
+
+                    let detailVegeImg1 = document.querySelector('#detailVegeImg1')
+                    detailVegeImg1.src = res.data[i].profileImage
+
+                    // let detailVegeImg2 = document.querySelector('#detailVegeImg2')
+                    // detailVegeImg2.src = res.data[i].profileImage
+
+                    let detailVegePlace = document.querySelector('#detailVegePlace')
+                    detailVegePlace.innerHTML = res.data[i].origin
+
+                    let detailVegeTime = document.querySelector('#detailVegeTime')
+                    detailVegeTime.innerHTML = res.data[i].createTime
+
+                })
+            }
+
+        })
+
+        //-------------------沙河模拟测试
+        // let orderId = 111
+        // funAjax.get('/front/ali/pay?orderId=' + orderId, true, '').then(res => {
+        //     console.log('这是沙盒模拟', res.data)
+
+        // })
+        let purchaseButton = document.querySelector('#purchaseButton')
+        // console.log('支付按钮', purchaseButton)
+        purchaseButton.addEventListener('click', function (event) {
+            let orderToBack = []
+            event.preventDefault()
+            for (let i = 0; i < 4; i++) {
+                if (cartRemoveButton[i].parentNode.style.display == 'block') {
+                    let orderInfor = { 'vegeName': cartImgName[i].innerHTML, 'price': cartPrice[i].innerHTML.split('￥')[1], 'userId': userId }
+                    orderToBack.push(orderInfor)
+                }
+
+            }
+            //console.log("订单信息", orderToBack)
+            //let dataToBackOrderJSON = JSON.stringify(orderToBack)
+            //console.log(dataToBackOrderJSON)
+            let urlToBack='http://localhost/dev-api/front/pay/giveOrderInfo?'
+            let backPrice=''
+            let backVegeName=''
+            for(let i=0;i<orderToBack.length;i++){
+                if(i===0){
+                    backPrice+=orderToBack[i].price
+                    backVegeName+=orderToBack[i].vegeName
+                }else{
+                    backPrice=backPrice+','+orderToBack[i].price
+                    backVegeName=backVegeName+','+orderToBack[i].vegeName
+                }
+            }
+            // console.log('价格,蔬菜',backPrice,backVegeName)
+            urlToBack=urlToBack+'userid='+userId+'&'+'vegename='+backVegeName+'&'+'price='+backPrice
+      
+            var params = {
+                'orderToBack': orderToBack
+            }
+            // console.log('params',params)
+            // window.alert('消息提示:支付成功')
+            // ------------------------*
+            window.open(urlToBack)
+            // window.open('/front/pay/giveOrderInfo', true, params).then((res) => {
+            //     console.log('这是giveOrder数据', res.data)
+            //     // window.onload = function () {
+            //     //     var code = res.data;
+            //
+            //     //     // 创建一个新的浏览器窗口
+            //     //     var newWindow = window.open("", "_blank");
+            //     //     // 写入HTML代码到新窗口的document中
+            //     //     if (newWindow) { // 确保窗口没有被浏览器阻止
+            //     //         newWindow.document.write(code);
+            //     //         newWindow.document.close(); // 关闭文档流，使页面可以渲染
+            //     //     } else {
+            //     //         console.log("新窗口被阻止或无法打开");
+            //     //     }
+            //     // }
+            // })
+        })
+
+
+
+
+        let badge = document.querySelector('.badge')
+        // console.log('badge', badge)
+        let title = document.querySelectorAll('.vegeName')
+        // title[0].innerHTML += '测试'
+        // console.log('你好', title)
+
+        let price = document.querySelectorAll('.vegePrice')
+        // price[0].innerHTML += '测试'
+        // console.log('你好你好', price)
+        //蔬菜背景图片
+        // let img = document.querySelectorAll('.w-100.img_swap')
+        // console.log('okok', img)
+        // img[6].src = './image/寿光白菜.jpg'
+
+        //蔬菜图片
+        let imgOuter = document.querySelectorAll('[class="w-100 Mytest"]')
+        // console.log('aaaaa', imgOuter)
+        imgOuter[0].src = './image/寿光白菜.jpg'
+
+        function workByLove(res) {
+            for (let i = 0; i < 12; i++) {
+                title[i].innerHTML = res[i].commodityName;
+            }
+
+            for (let i = 0; i < 12; i++) {
+                price[i].innerHTML = '￥' + res[i].commodityPrice;
+            }
+
+            for (let i = 0; i < 12; i++) {
+                // console.log(i, res[i].profileImage)
+                imgOuter[i].src = res[i].profileImage;
+            }
+        }
+
+        //--------------------------------------------*
+
+        //是否显示功能-dom获取
+        let qua = document.querySelectorAll('.quantity');
+        // console.log('qua', qua)
+
+        let Acart = document.querySelector('.Acart')
+        // console.log('Acart', Acart)
+        let totalPrice = 0
+        sessionStorage.setItem('totalPrice', JSON.stringify(totalPrice));
+        //点击购物车按钮后将商品放入session中
+        //先定义session中要存的数组
+        //待展示的图片
+        let myArrayImg = [];
+        sessionStorage.setItem('myArrayImg', JSON.stringify(myArrayImg));
+        //待展示的价格
+        let myArrayPrice = []
+        sessionStorage.setItem('myArrayPrice', JSON.stringify(myArrayPrice));
+
+        let myTitle = []
+        sessionStorage.setItem('myTitle', JSON.stringify(myTitle));
+
+        Acart.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[0];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            // cartImg[length-1].src = updatedArray[0];
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[0];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+
+
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            // cartPrice[length-1].innerHTML = updatedArray[0]
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum.toFixed(2)
+
+            //是否显示----实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[0]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+
+
+
+
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log(updatedArray);
+
+
+            // console.log('结束')
+
+        })
+
+        let Acart1 = document.querySelector('#Acart1')
+        // console.log('Acart1', Acart1)
+        Acart1.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[1];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[1];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[1]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart2 = document.querySelector('#Acart2')
+        // console.log('Acart2', Acart2)
+        Acart2.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[2];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[2];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+
+            let myName = title[2]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart3 = document.querySelector('#Acart3')
+        Acart3.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[3];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[3];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[3]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart4 = document.querySelector('#Acart4')
+        Acart4.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[4];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[4];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+
+            let myName = title[4]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart5 = document.querySelector('#Acart5')
+        Acart5.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[5];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[5];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[5]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart6 = document.querySelector('#Acart6')
+        Acart6.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[6];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[6];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[6]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart7 = document.querySelector('#Acart7')
+        Acart7.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[7];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImg[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[7];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[7]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart8 = document.querySelector('#Acart8')
+        // console.log('Acart8', Acart8)
+        Acart8.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[8];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[8];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[8]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart9 = document.querySelector('#Acart9')
+        // console.log('Acart9', Acart9)
+        Acart9.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[9];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[9];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[9]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart10 = document.querySelector('#Acart10')
+        // console.log('Acart10', Acart10)
+        Acart10.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[10];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[10];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[10]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+        let Acart11 = document.querySelector('#Acart11')
+        // console.log('Acart11', Acart11)
+        Acart11.addEventListener('click', function (event) {
+            event.preventDefault();
+            // console.log('这是购物车按钮')
+            //将点击的商品价格放入待展示的购物车侧栏session中
+            let cartImgShow = imgOuter[11];
+            // console.log(cartImgShow.src)
+            let retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            retrievedArray.push(cartImgShow.src);
+            sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+            let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+            let length = updatedArray.length;
+            for (let i = 0; i < length; i++) {
+                cartImg[i].src = updatedArray[i];
+                // cartImgName[i].innerHTML = title[i].innerHTML
+            }
+            // console.log(updatedArray);
+
+            let cartImgPrice = price[11];
+            // console.log(cartImgPrice.innerHTML)
+            retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            retrievedArray.push(cartImgPrice.innerHTML);
+            sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+            for (let i = 0; i < length; i++)
+                cartPrice[i].innerHTML = updatedArray[i];
+            // console.log(updatedArray);
+
+            let sum = 0
+            for (let i = 0; i < length; i++) {
+                sum += parseFloat(updatedArray[i].split('￥')[1])
+                // console.log(updatedArray[i].split('￥')[1])
+            }
+            let totalPriceShow = document.querySelector('.totalPriceShow')
+            // console.log('sum',totalPriceShow)
+            totalPriceShow.innerHTML = sum
+
+
+            //是否显示实现
+            for (let i = 0; i < length; i++) {
+                qua[i].parentNode.style.display = 'block'
+            }
+
+            let myName = title[11]
+            retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            retrievedArray.push(myName.innerHTML);
+            sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+            updatedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+            // console.log('updatedArray-myname', updatedArray)
+            for (let i = 0; i < length; i++) {
+                cartImgName[i].innerHTML = updatedArray[i]
+            }
+            // sessionStorage.setItem('totalPrice', JSON.stringify(sum));
+            for (let i = 0; i < cartRemoveButton.length; i++) {
+                cartRemoveButton[i].addEventListener('click', function (event) {
+                    cartRemoveButton[i].parentNode.style.display = 'none'
+                    // let total=parseFloat(totalPriceShow.innerHTML)
+                    // console.log('总的金额',total)
+                    // console.log('待减的金额',cartPrice[i].innerHTML.split('￥')[1])
+                    // total-=parseFloat(cartPrice[i].innerHTML.split('￥')[1])
+                    // totalPriceShow.innerHTML = total
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayImg', JSON.stringify(retrievedArray));
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    retrievedArray.splice(i, 1);
+                    sessionStorage.setItem('myArrayPrice', JSON.stringify(retrievedArray));
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    retrievedArray = JSON.parse(sessionStorage.getItem('myTitle'));
+                    retrievedArray.splice(i, 1);
+                    // retrievedArray.push(cartImgPrice.innerHTML);
+                    sessionStorage.setItem('myTitle', JSON.stringify(retrievedArray));
+
+
+                    updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+                    length = updatedArray.length
+                    let sum = 0;
+                    for (let i = 0; i < length; i++) {
+                        if (qua[i].parentNode.style.display == 'block') {
+                            sum += parseFloat(updatedArray[i].split('￥')[1])
+                        }
+
+                    }
+
+                    totalPriceShow.innerHTML = sum
+
+
+
+                })
+            }
+            let cartCount=document.querySelector('#countCart')
+            cartCount.innerHTML=length
+            // console.log('结束')
+
+        })
+
+
+
+
+        let cartRemoveButton = document.querySelectorAll('.remove')
+        // console.log('cartRemoveCart', cartRemoveButton)
+
+        for (let i = 0; i < cartRemoveButton.length; i++) {
+            cartRemoveButton[i].addEventListener('click', function (event) {
+                cartRemoveButton[i].parentNode.style.display = 'none'
+            })
+        }
+        //购物车--数据同步
+        //cart-dom获取
+        let cart = document.querySelectorAll(".mini_cart_item")
+        //cart图片-dom获取
+        let cartImg = document.querySelectorAll('.cartImg')
+        let updatedArray = JSON.parse(sessionStorage.getItem('myArrayImg'));
+
+        //cart-price-dom获取
+        let cartPrice = document.querySelectorAll('.amount')
+        updatedArray = JSON.parse(sessionStorage.getItem('myArrayPrice'));
+        // console.log('test', updatedArray);
+
+        let cartImgName = document.querySelectorAll('.cartImgName')
+        // console.log('cartImgName', cartImgName)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

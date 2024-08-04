@@ -1,0 +1,764 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+    <title>VegTrace-智链惠农</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Foodano - Organic Food Store HTML Template">
+    <meta name="keywords" content="Foodano - Organic Food Store HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/plugins.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link
+            href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap"
+            rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="./css/flaticon.min.css">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="./css/layerslider.min.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="./css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="./css/slick.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    .vs-shop-wrapper {
+        background-image: url('./image/Contact-背景.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    /*流光按钮*/
+    .sidebar-area {
+        background-color: #f5f7fa;
+        padding: 20px;
+    }
+
+    .fence-content ul li a {
+        font-size: 20px;
+        color: white;
+        display: inline-block;
+        position: relative;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fence-content ul li a:before,
+    .fence-content ul li a:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(90deg, white, #698C4C, #59EF7D);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+        transform: scaleX(0);
+    }
+
+    .fence-content ul li a:before {
+        transform-origin: left;
+    }
+
+    .fence-content ul li a:hover:before,
+    .fence-content ul li a:hover:after {
+        transform: scaleX(1);
+    }
+
+    .chat-container {
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        width: 870px;
+        box-sizing: border-box;
+        position: relative;
+
+    }
+
+    .chat-messages {
+        height: 500px;
+        width: 870px;
+        overflow-y: auto;
+        background-color: #F4F5F7;
+        padding: 10px;
+    }
+
+    .chat-message {
+        margin-bottom: 10px;
+        width: 870px;
+        max-width: 50%;
+        word-wrap: break-word;
+        padding: 10px;
+        border-radius: 6px;
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .chat-message.receiver {
+        background-color: #e6f2ff;
+    }
+
+    .chat-message.sender {
+        background-color: #d9f0d9;
+        text-align: right;
+        right: -49%;
+    }
+
+    .chat-message::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .chat-message.receiver::before {
+        left: -12px;
+        border-width: 0 12px 12px 0;
+        border-color: transparent #e6f2ff transparent transparent;
+    }
+
+    .chat-message.sender::before {
+        right: -12px;
+        border-width: 0 0 12px 12px;
+        border-color: transparent transparent transparent #d9f0d9;
+    }
+
+    .separator-line {
+        height: 2px;
+        background-color: #ccc;
+        width: 870px;
+    }
+
+    .input-container {
+        height: 80px;
+        width: 100%;
+    }
+
+    .chat-input-wrapper {
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+        height: 50px;
+
+    }
+
+    .chat-input {
+        box-sizing: border-box;
+        width: 870px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        outline: none;
+        padding: 10px;
+        font-size: 14px;
+        background-color: white;
+    }
+
+    .send-button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 36px;
+        min-width: 80px;
+        padding: 0 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #6AAB73;
+        color: white;
+        border: none;
+        transition: all 0.3s ease;
+
+        /* 添加流光效果 */
+        background-image: linear-gradient(to right, #6AAB73, rgba(255, 255, 255, 0.2), #214283);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 200% 100%;
+    }
+
+    .send-button:hover {
+        background-position: right center;
+    }
+
+    .sidebar-fence {
+        border: 4px solid #BDD239;
+        padding: 10px;
+    }
+
+    .fence-content {
+        padding: 10px;
+    }
+
+    .fence-content ul {
+        padding: 10px;
+    }
+
+    .fence-content ul li {
+        padding: 30px;
+    }
+
+    .contactTop {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EDF3CD;
+        height: 45px;
+        width: 890px;
+    }
+
+    .contactMain {
+        overflow: visible;
+        background-color: transparent;
+        width: 890px;
+        top: 40px;
+        position: relative;
+        height: 700px;
+        overflow-y: auto;
+    }
+
+    .contactMain span {
+        font-size: 20px;
+        font-weight: bold;
+        color: black
+    }
+
+    .Serve_message {
+        position: absolute;
+        /*background-color: rgba(233, 245, 253, 0.5);*/
+        z-index: 3;
+        height: 100%;
+
+        padding: 8px 0 8px 0;
+    }
+
+    .inner-container {
+        position: relative;
+        margin-bottom: 8px;
+        background-color: rgba(233, 245, 253, 0.5);
+        width: 890px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .inner-container .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .inner-container .title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .inner-container .time {
+        font-size: 14px;
+        color: #888;
+        text-align: center;
+    }
+
+    .inner-container .bottom {
+        margin-top: 10px;
+    }
+
+    .inner-container .text {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .inner-container a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    .inner-container a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body class=" ">
+
+    <!--滑动标题-->
+    <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px">
+                        <h3 style="position: absolute;top: 22px;left: 91px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 固定标题 -->
+    <header class="header-wrapper header-layout3 header3-margin ">
+        <div class="container py-30">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <div class="logo">
+                        <img src="./img/logo.png" style="width: 70px;height: 70px;margin-bottom: 33px">
+                        <h3 style="position: absolute;top: 60px;left: 350px;color: var(--theme-color)">VegTrace</h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <nav class="main-menu menu-style1 mobile-menu-active menu-style2"
+                        style="margin-bottom: 10px;margin-left: 20px">
+                        <ul>
+                            <li>
+                                <a href="./MainPage.html" class="toMainPage">首页</a>
+                            </li>
+
+                            <li>
+                                <a href="./Contact.html">联系我们</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-4 text-end">
+                    <button type="button" class="vs-menu-toggle d-inline-block d-lg-none"><i
+                            class="far fa-bars"></i></button>
+                    <div class="head-top-links text-body2 d-none d-lg-block">
+                        <a href="http://localhost/login?redirect=%2Findex" class="icon-btn has-badge bg2 Out mr-20">
+                            <svg width="25" height="25"  fill="currentColor"
+                                 t="1710389140579" class="icon" viewBox="0 0 1039 1024"
+                                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2735" ><path d="M559.246704 939.148776h-308.549906c-84.851224 0-154.274953-69.423729-154.274952-154.274953v-539.962335c0-84.851224 69.423729-154.274953 154.274952-154.274953h308.549906c84.851224 0 154.274953 69.423729 154.274953 154.274953v9.642184c0 21.212806-17.355932 38.568738-38.568738 38.568739s-38.568738-17.355932-38.568738-38.568739v-9.642184c0-42.425612-34.711864-77.137476-77.137477-77.137477h-308.549906c-42.425612 0-77.137476 34.711864-77.137476 77.137477v539.962335c0 42.425612 34.711864 77.137476 77.137476 77.137476h308.549906c42.425612 0 77.137476-34.711864 77.137477-77.137476v-3.856874c0-21.212806 17.355932-38.568738 38.568738-38.568738s38.568738 17.355932 38.568738 38.568738v3.856874c0 84.851224-69.423729 154.274953-154.274953 154.274953z" fill="#388CEB" p-id="2736"></path><path d="M840.798493 553.461394H520.677966c-21.212806 0-38.568738-17.355932-38.568738-38.568739s17.355932-38.568738 38.568738-38.568738h320.120527c21.212806 0 38.568738 17.355932 38.568739 38.568738s-17.355932 38.568738-38.568739 38.568739z" fill="#E78E00" p-id="2737"></path><path d="M752.090395 740.519774c-9.642185 0-19.284369-3.856874-25.069679-9.642185-15.427495-13.499058-17.355932-38.568738-3.856874-53.996233l142.704331-160.060264 1.928437-1.928437-1.928437-1.928437-146.561205-163.917137c-13.499058-15.427495-13.499058-40.497175 3.856874-53.996234 15.427495-13.499058 40.497175-13.499058 53.996233 3.856874l144.632769 161.988701c28.926554 28.926554 28.926554 77.137476 0 106.06403l-142.704332 160.060264c-5.785311 9.642185-17.355932 13.499058-26.998117 13.499058z" fill="#E78E00" p-id="2738"></path></svg>
+                        </a>
+                        <a href="./Personal.html"><span class="icon-btn bg4" ><i class="fal fa-user"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header图片-->
+    <div class="breadcumb-wrapper breadcumb-layout1 bg-fluid pt-100 pb-100"
+        data-bg-src="./img/breadcumb/breadcumb-img-1.jpg">
+        <div class="container">
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title">客服中心 </h1>
+                <ul class="breadcumb-menu-style1 mx-auto">
+                    <li><a href="./MainPage.html" class="toMainPage">Home</a></li>
+                    <li class="active">help</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Main-->
+    <section class="vs-shop-wrapper position-relative  space-md-bottom "
+        style="background: url('./img/bg/bg-1-1.jpg'); margin: 60px 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xl-3 " style="margin-top: 200px;">
+                    <aside class="sidebar-area sidebar-fence">
+                        <div class="fence-content">
+                            <ul>
+                                <li><a href="#Serve_message" onclick="updateServeTop(this)"
+                                        style="font-size:20px;color:var(--success-color) ">系统消息</a></li>
+                                <hr style="border-top: 3px solid #79838A; margin: 0;"/>
+                                <li><a href="#Serve_My" onclick="updateServeTop(this)"
+                                        style="font-size:20px;color:var(--success-color)">我的客服</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="col-lg-8 col-xl-9" style="margin-top: 200px;">
+                    <div id="contactTop" class="contactTop">
+                        <span id="currentTitle" style=" font-size: 20px; font-weight: bold; color: black; " >系统消息</span>
+                    </div>
+
+                    <div id="contactMain" class="contactMain">
+                        <!-- 系统消息 -->
+                        <div id="Serve_message" class="Serve_message main-wrapper1">
+                            <div class="inner-container">
+                                <div class="top">
+                                    <span class="title">VegTrace正式开业了！！快来看！！！！</span>
+                                    <span class="time">2024.2.23</span>
+                                </div>
+                                <div class="bottom">
+                                    <span class="text" style="color: var(--body-color)">VegTrace是一个专注于售卖并提供追溯健康蔬菜的平台
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="inner-container">
+                                <div class="top">
+                                    <span class="title">最新健康爽文发布</span>
+                                    <span class="time">2024.2.23</span>
+                                </div>
+                                <div class="bottom">
+                                    <span class="text" style="color: var(--body-color)">一起来加入这场专属于文章的狂欢吧！敬请见证！<br>链接直达&gt;&gt;&gt;
+                                        <a href="./blog-details.html" target="_blank" class="im-dynamic-link">
+                                            <i class="bp-icon-font icon-link"></i> 网页链接
+                                        </a>
+                                    </span>
+                                    <span class="text">
+                                        <br>链接直达&gt;&gt;&gt;
+                                        <a href="#" target="_blank" class="im-dynamic-link" style="font-size: 16px">
+                                            <i class="bp-icon-font icon-link"></i> 网页链接
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--客服-->
+                        <div id="Serve_My" class="Serve_My main-wrapper1">
+                            <div class="chat-container">
+                                <!--                            消息-->
+                                <div class="chat-messages">
+                                    <!--<div class="chat-message sender">
+                                    <div class="message-text">你好</div>
+                                </div>
+                                <div class="chat-message receiver">
+                                    <div class="message-text">您好，有什么问题呢？</div>
+                                </div>
+                                <div class="chat-message sender">
+                                    <div class="message-text">我需要帮助</div>
+                                </div>
+                                <div class="chat-message receiver">
+                                    <div class="message-text">请告知我您的诉求</div>
+                                </div>-->
+                                </div>
+                                <!--                            界限-->
+                                <div class="separator-line"></div>
+                                <!--                            发送-->
+                                <div class="input-container" style="height: 200px;">
+                                    <div class="chat-input-wrapper">
+                                        <input type="text" class="chat-input" placeholder="请输入你的问题">
+                                        <button class="send-button" id="sendMessageBtn">发送</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <div class="bg2" data-bg-src="./img/footer/footer-bg-1.jpg">
+        <section class="vs-newsletter-wrpper" style="margin-top: -100px; position: relative; z-index: 999;">
+            <div class="container">
+                <div class="inner-wrap1 bg-fluid px-70 py-70" data-bg-src="./img/bg/newsletter-bg-1-1.png">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-title mb-30 mb-xl-0 text-center text-xl-start">
+                                <span class="sub-title3">订阅</span>
+                                <h2 class="h1 mb-0 lh-1">Or <span class="fw-light text-theme">建议</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-6">
+                            <form action="#" class="newsletter-style1">
+                                <div class="form-group m-0">
+                                    <input type="text" placeholder="你的Email" class="form-control">
+                                    <button class="vs-btn style2">Go!</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-wrapper footer-layout1">
+            <div class="container">
+                <div class="widget-area pt-100">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="widget footer-widget  ">
+                                <h3 class="widget_title">联系我们</h3>
+                                <div class="vs-widget-about">
+                                    <p class="fs-md">地址：翻斗大街 双子楼花园 1101 <br>单元保安亭 </p>
+                                    <p class="mb-1 link-inherit"><i class="fas fa-paper-plane me-3"></i><a
+                                            href="mailto:3811111111111111@99.com">3811111111111111@99.com</a></p>
+                                    <p class="mb-0 link-inherit"><i class="fal fa-fax me-3"></i><a
+                                            href="tel:+123456789000">+(123)
+                                            4567 89000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">常用链接</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="./MainPage.html" class="toMainPage">首页</a></li>
+                                        <li><a href="./Contact.html">联系我们</a></li>
+                                        <li><a href="#">服务条款</a></li>
+                                        <li><a href="#">隐私政策</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu footer-widget  ">
+                                <h3 class="widget_title">附加信息</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="#">品质保证</a></li>
+                                        <li><a href="#">交易保障</a></li>
+                                        <li><a href="#">评论区</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-4">
+                            <div class="widget footer-widget   ">
+                                <h4 class="widget_title">订阅</h4>
+                                <form class="footer-newsletter pt-2">
+                                    <input class="form-control mb-25 rounded-1" type="email" placeholder="你的 Email"
+                                        required="">
+                                    <button type="submit" class="vs-btn mask-style1 rounded-1">订阅 Go！</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center pb-35">
+                    <p class="mb-0 link-inherit">©我爱蔬菜</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--一键Top -->
+    <a href="#" class="scrollToTop"><i class="far fa-angle-up"></i></a>
+
+    <!-- Jquery -->
+    <script src="./js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="./js/slick.min.js"></script>
+
+    <script src="./js/layerslider.utils.js"></script>
+    <script src="./js/layerslider.transitions.js"></script>
+    <script src="./js/layerslider.kreaturamedia.jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./js/jquery.datetimepicker.min.js"></script>
+    <!-- Filter -->
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <!-- Jquery UI -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script src="./js/wow.min.js"></script>
+    <!-- Custom Carousel -->
+    <script src="./js/vscustom-carousel.min.js"></script>
+    <!-- Mobile Menu -->
+    <script src="./js/vsmenu.min.js"></script>
+    <!-- Form Js -->
+    <script src="./js/ajax-mail.js"></script>
+    <!-- Main Js File -->
+    <script src="./js/main.js"></script>
+
+
+
+    <script>
+        <!--更换侧栏-->
+        document.addEventListener('DOMContentLoaded', function () {
+            // 获取所有的链接元素
+            const links = document.querySelectorAll('.fence-content ul li a');
+            const mainWrappers = document.querySelectorAll('.main-wrapper1');
+            mainWrappers.forEach(wrapper => wrapper.style.display = 'none');
+            // 遍历链接元素并添加点击事件监听器
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // 阻止默认的锚点跳转行为
+
+                    // 获取当前点击按钮的文字
+                    const clickedTitle = this.textContent;
+
+                    // 更新contactTop中的文字
+                    document.getElementById('currentTitle').textContent = clickedTitle;
+
+                    // 获取要显示的对应id
+                    const targetId = this.getAttribute('href').slice(1);
+
+                    // 隐藏所有main-wrapper1类别的内容
+                    const mainWrappers = document.querySelectorAll('.main-wrapper1');
+                    mainWrappers.forEach(wrapper => wrapper.style.display = 'none');
+
+                    // 显示与点击按钮匹配的内容
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+
+
+            document.getElementById('currentTitle').textContent = '系统消息';
+            document.getElementById('Serve_message').style.display = 'block';
+        });
+
+        document.getElementById('sendMessageBtn').addEventListener('click', function () {
+            // 获取输入框的内容
+            const messageInput = document.querySelector('.chat-input');
+            const newMessageText = messageInput.value.trim();
+
+            if (newMessageText) {
+                // 创建并插入sender的新消息
+                const newSenderMessageDiv = createChatMessage(newMessageText, 'sender');
+                const chatMessages = document.querySelector('.chat-messages');
+                chatMessages.appendChild(newSenderMessageDiv);
+
+                // 根据sender的输入模拟receiver回复
+                let receiverReply;
+                switch (true) {
+                    case /你好/.test(newMessageText):
+                        receiverReply = "你好！有什么可以为您服务的吗？";
+                        break;
+                    case /帮助/.test(newMessageText):
+                        receiverReply = "请问您具体需要哪方面的帮助？";
+                        break;
+                    case /饿了/.test(newMessageText):
+                        receiverReply = "饿了就请去吃饭捏，饿坏了肚子可不好。";
+                        break;
+                    case /渴了/.test(newMessageText):
+                        receiverReply = "我们每天应该保持水的供应，喝杯热水吧。";
+                        break;
+                    case /吃什么/.test(newMessageText):
+                        receiverReply = "这边建议吃一些绿色蔬菜，有助于保持身体健康，您可以从我们这边购买蔬菜，有安全保障的哦~";
+                        break;
+                    case /谢谢/.test(newMessageText):
+                        receiverReply = "不客气，为您服务是我的荣幸。";
+                        break;
+                    default:
+                        receiverReply = "抱歉，我不太明白您的意思，请您重新描述一下问题。";
+                }
+
+                // 创建并插入receiver的新回复
+                const newReceiverMessageDiv = createChatMessage(receiverReply, 'receiver');
+                chatMessages.appendChild(newReceiverMessageDiv);
+
+                // 滚动到底部查看最新消息
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // 清空输入框内容
+                messageInput.value = '';
+            }
+        });
+
+        // 新建一个创建聊天消息元素的函数
+        function createChatMessage(textContent, messageType) {
+            const newMessageDiv = document.createElement('div');
+            newMessageDiv.classList.add('chat-message', messageType);
+
+            const newTextSpan = document.createElement('div');
+            newTextSpan.classList.add('message-text');
+            newTextSpan.textContent = textContent;
+
+            newMessageDiv.appendChild(newTextSpan);
+
+            return newMessageDiv;
+        }
+
+    </script>
+
+    <script>
+
+    </script>
+
+    <script src="./js/request.js"></script>
+
+    <script type="module">
+
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const userId = urlParams.get('userId');
+        // funAjax.get('/front/personInfo/myOrders', true, '').then(res => {
+        //     console.log('okk', res.data)
+        // })
+
+        //userId获取
+        var uId = sessionStorage.getItem('userId');
+        // console.log('userId1', uId);
+        let parseId = JSON.parse(uId);
+        // console.log('userId2', parseId);
+        // let workId = parseId.userId;
+        let toBackId = {
+            'userId': parseId
+        }
+
+        let classToMainPage=document.querySelectorAll('.toMainPage')
+        // console.log('nihaonihao',classToMainPage)
+        for(let i=0;i<classToMainPage.length;i++){
+            classToMainPage[i].href+='?userId='+parseId
+        }
+
+        funAjax.get('/front/message/list', true, '').then(res => {
+            // console.log('系统公告',res.data)
+            let title = document.querySelectorAll('.title')
+            // console.log('title', title)
+
+            let time = document.querySelectorAll('.time')
+            // console.log('time', time)
+
+            let text = document.querySelectorAll('.text')
+            // console.log('text', text)
+            let length = title.length
+            for (let i = 0; i < length; i++) {
+                title[i].innerHTML = res.data[i].title
+                time[i].innerHTML = res.data[i].createTime
+                text[i].innerHTML = res.data[i].chatContext
+            }
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
