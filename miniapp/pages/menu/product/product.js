@@ -1,4 +1,4 @@
-// pages/menu/product/product.js
+
 Page({
 
   /**
@@ -61,6 +61,8 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {
-
+    return{
+      title:'野生粉藕'
+    }
   }
 })

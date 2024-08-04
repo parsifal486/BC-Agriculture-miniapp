@@ -1,4 +1,5 @@
-<navigator url="/pages/menu/menu" open-type="reLaunch"><image  class="hanhui" src="../product/photo/fanhui.png" mode=""/></navigator>
+<navigator url="/pages/menu/menu" open-type="reLaunch"><image  class="hanhui" src="../../img/temp/fanhui.png" mode=""/></navigator>
+<button class="button" open-type="share" size="mini" ><image src="../../img/temp/zhuanfa.png"></image></button>
 <view class="swiper">
 <swiper
 autoplay
