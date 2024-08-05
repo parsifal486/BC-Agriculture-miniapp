@@ -56,6 +56,7 @@ public class AgricultureClient {
         Agriculture agriculture = Agriculture.load(contractAddress, client, cryptoKeyPair);
         Agriculture.Struct0 set = new Agriculture.Struct0(id, name, origin, x, y, partition, bagging, growTime, irrigateTime, fertilizeTime, weedingTime, temperature, farming, pickingTime, remark, supervisor, delete);
         agriculture.addOrigin(set);
+
     }
 
     /**
@@ -65,7 +66,9 @@ public class AgricultureClient {
      * @return 商品信息
      */
     public Agriculture.Struct0 queryCommodity(BigInteger id) throws ContractException {
+        System.out.println("-----------------------------------------------------");
         Agriculture agriculture = Agriculture.load(contractAddress, client, cryptoKeyPair);
+
         return agriculture.getOrigin(id);
     }
 

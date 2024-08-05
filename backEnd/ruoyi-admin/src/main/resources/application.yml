@@ -157,15 +157,16 @@ xss:
 fisco:
   nodeList: 8.152.7.205:20200
   groupId: 1
-  certPath: ruoyi-admin/src/main/resources/sdk
+  #certPath: ruoyi-admin/src/main/resources/sdk
+  certPath: /root/project/sdk
   contractAddress:
     # Asset合约地址(一定要加引号 不然注解@Value会把按照16进制数字进行转换赋值)
     asset: "0xe9f6d3bad86b10b025ae373bafa51d145cbcea22"
   # 测试用户地址
   account:
     # 测试用户秘钥地址
-    accountAddress: ruoyi-admin\src\main\resources\account
+    accountAddress: /root/project/account
     # 测试用户文件地址
-    accountFilePath: ruoyi-admin\src\main\resources\account\Max_key_0xa346d03183a095bffa7d4aaf72ac2197241f5e75.pem
+    accountFilePath: /root/project/account/Max_key_0xe692a26635a201e3f11f544afcc68a2e4b6c55c1.pem
 
 

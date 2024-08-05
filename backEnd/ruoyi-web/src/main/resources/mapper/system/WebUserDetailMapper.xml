@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.WebUserDetailMapper">
+    
+    <resultMap type="WebUserDetail" id="WebUserDetailResult">
+        <result property="userId"    column="user_id"    />
+        <result property="nickname"    column="nickname"    />
+        <result property="pwd"    column="pwd"    />
+        <result property="profileImage"    column="profile_image"    />
+        <result property="age"    column="age"    />
+        <result property="love"    column="love"    />
+        <result property="sex"    column="sex"    />
+        <result property="phone"    column="phone"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="permission"    column="permission"    />
+    </resultMap>
+
+    <sql id="selectWebUserDetailVo">
+        select user_id, nickname, pwd, profile_image, age, love, sex, phone, create_time, update_time, permission from web_user_detail
+    </sql>
+
+    <select id="selectWebUserDetailList" parameterType="WebUserDetail" resultMap="WebUserDetailResult">
+        select user_id, nickname, pwd, profile_image, age, love, sex, phone, create_time, update_time, permission from web_user_detail
+        <where>  
+            <if test="nickname != null  and nickname != ''"> and nickname like concat('%', #{nickname}, '%')</if>
+            <if test="userId != null  and userId != ''"> and user_id = #{userId}</if>
+            <if test="age != null  and age != ''"> and age = #{age}</if>
+            <if test="love != null  and love != ''"> and love = #{love}</if>
+            <if test="sex != null  and sex != ''"> and sex = #{sex}</if>
+            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="params.beginCreateTime != null and params.beginCreateTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginCreateTime},'%y%m%d')
+            </if>
+            <if test="params.endCreateTime != null and params.endCreateTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endCreateTime},'%y%m%d')
+            </if>
+            <if test="params.beginUpdateTime != null and params.beginUpdateTime != ''"><!-- 开始时间检索 -->
+                and date_format(update_time,'%y%m%d') &gt;= date_format(#{params.beginUpdateTime},'%y%m%d')
+            </if>
+            <if test="params.endUpdateTime != null and params.endUpdateTime != ''"><!-- 结束时间检索 -->
+                and date_format(update_time,'%y%m%d') &lt;= date_format(#{params.endUpdateTime},'%y%m%d')
+            </if>
+        </where>
+    </select>
+
+    <select id="selectWebUserDetailByUserId" parameterType="Long" resultMap="WebUserDetailResult">
+        <include refid="selectWebUserDetailVo"/>
+        where user_id = #{userId}
+    </select>
+
+    <select id="selectWebUserDetailByNickname" parameterType="String" resultMap="WebUserDetailResult">
+        <include refid="selectWebUserDetailVo"/>
+        where user_id = #{userId}
+    </select>
+
+    <insert id="insertWebUserDetail" parameterType="WebUserDetail" useGeneratedKeys="true" keyProperty="userId">
+        insert into web_user_detail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">nickname,</if>
+            <if test="pwd != null">pwd,</if>
+            <if test="profileImage != null">profile_image,</if>
+            <if test="age != null">age,</if>
+            <if test="love != null">love,</if>
+            <if test="sex != null">sex,</if>
+            <if test="phone != null">phone,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+            permission,
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="nickname != null">#{nickname},</if>
+            <if test="pwd != null">#{pwd},</if>
+            <if test="profileImage != null">#{profileImage},</if>
+            <if test="age != null">#{age},</if>
+            <if test="love != null">#{love},</if>
+            <if test="sex != null">#{sex},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            0,
+         </trim>
+    </insert>
+
+    <update id="updateWebUserDetail" parameterType="WebUserDetail">
+        update web_user_detail
+        <trim prefix="SET" suffixOverrides=",">
+<!--            <if test="userId != null">user_id = #{userId},</if>-->
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="pwd != null">pwd = #{pwd},</if>
+            <if test="profileImage != null">profile_image = #{profileImage},</if>
+            <if test="age != null">age = #{age},</if>
+            <if test="love != null">love = #{love},</if>
+            <if test="sex != null">sex = #{sex},</if>
+            <if test="phone != null">phone = #{phone},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="permission != null "> permission = #{permission}</if>
+        </trim>
+        where user_id = #{userId}
+    </update>
+
+    <delete id="deleteWebUserDetailByUserId" parameterType="Long">
+        delete from web_user_detail where user_id = #{userId}
+    </delete>
+
+    <delete id="deleteWebUserDetailByUserIds" parameterType="String">
+        delete from web_user_detail where user_id in 
+        <foreach item="userId" collection="array" open="(" separator="," close=")">
+            #{userId}
+        </foreach>
+    </delete>
+</mapper>

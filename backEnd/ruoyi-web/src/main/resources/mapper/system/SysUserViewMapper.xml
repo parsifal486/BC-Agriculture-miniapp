@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.SysUserViewMapper">
+    
+    <resultMap type="SysUserView" id="SysUserViewResult">
+        <result property="viewId"    column="view_id"    />
+        <result property="commodityId"    column="commodity_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="viewContext"    column="view_context"    />
+        <result property="loveFlag"    column="love_flag"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="permission"    column="permission"    />
+        <result property="auditFlag"    column="audit_flag"    />
+    </resultMap>
+
+    <sql id="selectSysUserViewVo">
+        select view_id, commodity_id, user_id, view_context, love_flag, create_time, permission,audit_flag from sys_user_view
+    </sql>
+
+    <select id="selectSysUserViewList" parameterType="SysUserView" resultMap="SysUserViewResult">
+        <include refid="selectSysUserViewVo"/>
+        <where>
+            <if test="viewId != null "> and view_id = #{viewId}</if>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="viewContext != null  and viewContext != ''"> and view_context like concat('%', #{viewContext}, '%')</if>
+            <if test="loveFlag != null "> and love_flag = #{loveFlag}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="auditFlag != null "> and audit_flag = #{auditFlag}</if>
+            <if test="params.beginTime != null and params.beginTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+            </if>
+        </where>
+    </select>
+    
+    <select id="selectAllSysUserViewList" resultMap="SysUserViewResult">
+        <include refid="selectSysUserViewVo"/>
+    </select>
+
+    <select id="selectSysUserViewByViewId" parameterType="Long" resultMap="SysUserViewResult">
+        <include refid="selectSysUserViewVo"/>
+        where view_id = #{viewId}
+    </select>
+
+    <insert id="insertSysUserView" parameterType="SysUserView" useGeneratedKeys="true" keyProperty="viewId">
+        insert into sys_user_view
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">commodity_id,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="viewContext != null">view_context,</if>
+            <if test="loveFlag != null">love_flag,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="permission != null">permission,</if>
+            <if test="auditFlag != null">auditFlag,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">#{commodityId},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="viewContext != null">#{viewContext},</if>
+            <if test="loveFlag != null">#{loveFlag},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="permission != null">#{permission},</if>
+            <if test="auditFlag != null">0,</if>
+         </trim>
+    </insert>
+
+    <update id="updateSysUserView" parameterType="SysUserView">
+        update sys_user_view
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="commodityId != null">commodity_id = #{commodityId},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="viewContext != null">view_context = #{viewContext},</if>
+            <if test="loveFlag != null">love_flag = #{loveFlag},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="permission != null">permission = #{permission},</if>
+            <if test="auditFlag != null">audit_flag = #{auditFlag},</if>
+        </trim>
+        where view_id = #{viewId}
+    </update>
+
+    <delete id="deleteSysUserViewByViewId" parameterType="Long">
+        delete from sys_user_view where view_id = #{viewId}
+    </delete>
+
+    <delete id="deleteSysUserViewByViewIds" parameterType="String">
+        delete from sys_user_view where view_id in 
+        <foreach item="viewId" collection="array" open="(" separator="," close=")">
+            #{viewId}
+        </foreach>
+    </delete>
+
+
+    <insert id="insertFrontView">
+        insert into sys_user_view
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">commodity_id,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="viewContext != null">view_context,</if>
+           love_flag,
+            create_time,
+            permission,
+            audit_flag,
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">#{commodityId},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="viewContext != null">#{viewContext},</if>
+            1,
+            CURDATE(),
+            0,
+            0,
+        </trim>
+    </insert>
+</mapper>

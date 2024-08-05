@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.WebUserMessageMapper">
+    
+    <resultMap type="WebUserMessage" id="WebUserMessageResult">
+        <result property="messageId"    column="message_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="chatFlag"    column="chat_flag"    />
+        <result property="chatName"    column="chat_name"    />
+        <result property="chatContext"    column="chat_context"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="permission"    column="permission"    />
+        <result property="title"    column="title"    />
+        <result property="url"    column="url"    />
+    </resultMap>
+
+    <sql id="selectWebUserMessageVo">
+        select message_id, user_id, chat_flag, chat_name, chat_context, create_time, update_time, permission,title,url from web_user_message
+    </sql>
+
+    <select id="selectWebUserMessageList" parameterType="WebUserMessage" resultMap="WebUserMessageResult">
+        <include refid="selectWebUserMessageVo"/>
+        <where>
+            <if test="messageId != null "> and message_id = #{messageId}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+             and chat_flag = 0
+            <if test="chatName != null  and chatName != ''"> and chat_name like concat('%', #{chatName}, '%')</if>
+            <if test="chatContext != null  and chatContext != ''"> and chat_context like concat('%', #{chatContext}, '%')</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="title != null "> and title = #{title}</if>
+            <if test="url != null "> and url = #{url}</if>
+            <if test="params.beginTime != null and params.beginTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+            </if>
+        </where>
+    </select>
+    
+    <select id="selectWebUserMessageByMessageId" parameterType="Long" resultMap="WebUserMessageResult">
+        <include refid="selectWebUserMessageVo"/>
+        where message_id = #{messageId}
+    </select>
+        
+    <insert id="insertWebUserMessage" parameterType="WebUserMessage" useGeneratedKeys="true" keyProperty="messageId">
+        insert into web_user_message
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            user_id,
+            chat_flag,
+            <if test="chatName != null">chat_name,</if>
+            <if test="chatContext != null">chat_context,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+            permission,
+            <if test="title != null ">title, </if>
+            <if test="url != null "> url,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            100001,
+            0,
+            <if test="chatName != null">#{chatName},</if>
+            <if test="chatContext != null">#{chatContext},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            0,
+            <if test="title != null ">#{title},</if>
+            <if test="url != null ">  #{url},</if>
+         </trim>
+    </insert>
+
+    <update id="updateWebUserMessage" parameterType="WebUserMessage">
+        update web_user_message
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="chatFlag != null">chat_flag = #{chatFlag},</if>
+            <if test="chatName != null">chat_name = #{chatName},</if>
+            <if test="chatContext != null">chat_context = #{chatContext},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="permission != null">permission = #{permission},</if>
+            <if test="title != null "> title = #{title},</if>
+            <if test="url != null "> url = #{url},</if>
+        </trim>
+        where message_id = #{messageId}
+    </update>
+
+    <delete id="deleteWebUserMessageByMessageId" parameterType="Long">
+        delete from web_user_message where message_id = #{messageId}
+    </delete>
+
+    <delete id="deleteWebUserMessageByMessageIds" parameterType="String">
+        delete from web_user_message where message_id in 
+        <foreach item="messageId" collection="array" open="(" separator="," close=")">
+            #{messageId}
+        </foreach>
+    </delete>
+
+
+    <select id="selectWebUserMessage" parameterType="Long" resultMap="WebUserMessageResult">
+        select message_id,   chat_context, create_time, update_time, permission,title,url from web_user_message
+        where user_id = 200001 and chat_flag = 0 and permission=0
+    </select>
+
+</mapper>
