@@ -16,8 +16,8 @@ Page({
       if (product) {
           this.setData({
               cart: [...this.data.cart, product],
-              
-              total:this.data.total+1
+              total:this.data.total+1,
+              totalPrice:this.data.total*this.data.price
           });
       }
   },
@@ -27,9 +27,10 @@ Page({
       if (product) {
           this.setData({
               total:this.data.total-1,
-              
+              totalPrice:this.data.total*this.data.price
           });
       }
      
   }
+
 });
