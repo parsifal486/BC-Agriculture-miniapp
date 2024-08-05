@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.WebUserOrdersMapper">
+    
+    <resultMap type="WebUserOrders" id="WebUserOrdersResult">
+        <result property="ordersId"    column="orders_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="commodityId"    column="commodity_id"    />
+        <result property="date"    column="date"    />
+        <result property="flag"    column="flag"    />
+        <result property="price"    column="price"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="permission"    column="permission"    />
+        <result property="quantity"    column="quantity"    />
+    </resultMap>
+
+
+
+    <sql id="selectWebUserOrdersVo">
+        select orders_id, user_id, commodity_id, date, flag, price, create_time, update_time, permission,quantity from web_user_orders
+    </sql>
+
+    <select id="selectWebUserOrdersList" parameterType="WebUserOrders" resultMap="WebUserOrdersResult">
+        <include refid="selectWebUserOrdersVo"/>
+        <where>
+            <if test="ordersId != null "> and orders_id = #{ordersId}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="date != null "> and date = #{date}</if>
+            <if test="flag != null "> and flag = #{flag}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="params.beginTime != null and params.beginTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+            </if>
+        </where>
+    </select>
+    
+    <select id="selectWebUserOrdersByOrdersId" parameterType="Long" resultMap="WebUserOrdersResult">
+        <include refid="selectWebUserOrdersVo"/>
+        where orders_id = #{ordersId}
+    </select>
+
+    <select id="getAveragePrice" parameterType="Long" resultType="Float">
+        SELECT AVG(commodity_id) FROM web_user_orders where orders_id = #{ordersId} ;
+    </select>
+
+
+    <insert id="insertWebUserOrders" parameterType="WebUserOrders" useGeneratedKeys="true" keyProperty="ordersId">
+        insert into web_user_orders
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="commodityId != null">commodity_id,</if>
+            <if test="date != null">date,</if>
+            <if test="flag != null">flag,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="permission != null">permission,</if>
+            <if test="quantity != null">quantity,</if>
+            <if test="price != null">price,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="commodityId != null">#{commodityId},</if>
+            <if test="date != null">#{date},</if>
+            <if test="flag != null">#{flag},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="permission != null">#{permission},</if>
+            <if test="quantity != null">#{quantity},</if>
+            <if test="price != null">#{price},</if>
+         </trim>
+    </insert>
+
+    <update id="updateWebUserOrders" parameterType="WebUserOrders">
+        update web_user_orders
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="commodityId != null">commodity_id = #{commodityId},</if>
+            <if test="date != null">date = #{date},</if>
+            <if test="flag != null">flag = #{flag},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="permission != null">permission = #{permission},</if>
+        </trim>
+        where orders_id = #{ordersId}
+    </update>
+
+    <delete id="deleteWebUserOrdersByOrdersId" parameterType="Long">
+        delete from web_user_orders where orders_id = #{ordersId}
+    </delete>
+
+    <delete id="deleteWebUserOrdersByOrdersIds" parameterType="String">
+        delete from web_user_orders where orders_id in 
+        <foreach item="ordersId" collection="array" open="(" separator="," close=")">
+            #{ordersId}
+        </foreach>
+    </delete>
+
+    <select id="selectByUserid" parameterType="Long" resultMap="WebUserOrdersResult">
+        <include refid="selectWebUserOrdersVo"></include>
+        where user_id = #{uid}
+    </select>
+
+
+    <select id="getMaxId" resultType="Long" >
+    select MAX(orders_id) from web_user_orders
+    </select>
+
+    <select id="iflove1" parameterType="Long" resultType="Boolean">
+        SELECT 1 FROM web_user_orders WHERE commodity_id = #{commodityId}  and  DATE_FORMAT(date,'%Y-%m-%d')&gt;='2024-04-05'  LIMIT 1
+    </select>
+
+    <select id="iflove2" parameterType="Long" resultType="Boolean">
+        SELECT 1 FROM web_user_orders WHERE commodity_id = #{commodityId}  and DATE_FORMAT(date,'%Y-%m-%d')&gt;='2024-04-08'  LIMIT 1
+    </select>
+
+    <select id="getMidPriceByIdANDTime"  resultType="Float">
+        SELECT AVG(price) FROM web_user_orders where   commodity_Id = #{commodityId}  and  DATE_SUB('2024-04-08', INTERVAL 7 DAY) &lt;= date(date);
+
+    </select>
+
+    <select id="getMidQuanByIdANDTime"  resultType="Float">
+        SELECT AVG(quantity) FROM web_user_orders where   commodity_Id = #{commodityId}  and  DATE_SUB('2024-04-08', INTERVAL 7 DAY) &lt;= date(date);
+
+    </select>
+
+    <select id="selectWebUserOrdersList1" parameterType="WebUserOrders" resultMap="WebUserOrdersResult">
+        <include refid="selectWebUserOrdersVo"/>
+        <where>
+            <if test="ordersId != null "> and orders_id = #{ordersId}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="date != null "> and date = #{date}</if>
+            <if test="flag != null "> and flag = #{flag}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+        </where>
+    </select>
+
+
+    <select id="selectWebUserOrdersList2" parameterType="WebUserOrders" resultMap="WebUserOrdersResult">
+        <include refid="selectWebUserOrdersVo"/>
+        <where>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="date != null "> and date_format(create_time,'%Y-%m-%d') = date_format(#{date},'%Y-%m-%d')</if>
+        </where>
+        LIMIT 1
+    </select>
+
+</mapper>

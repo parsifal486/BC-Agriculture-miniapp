@@ -99,17 +99,24 @@ public class BlockController extends BaseController {
 
     @RequestMapping("/findAllBlockOrigin")
     public TableDataInfo findAllBlockOrigin() throws ContractException {
+        System.out.println("____________________执行方法1_______________________");
         startPage();
         Agriculture.Struct0 struct0=null;
         List<Agriculture.Struct0> list=new ArrayList<>();
         for (Long l:sysUserViewMapper.selectAllOriginId())
         {
+        System.out.println("____________________执行方法2_______________________"+BigInteger.valueOf(l));
+        }
+        for (Long l:sysUserViewMapper.selectAllOriginId())
+        {
+
             struct0=agricultureClient.queryCommodity(BigInteger.valueOf(l));
             if (struct0!=null)
             {
                 list.add(struct0);
             }
         }
+        System.out.println("____________________执行方法3_______________________");
         TableDataInfo tableDataInfo=new TableDataInfo(list, (int) PageUtils.page.getTotal());
         return tableDataInfo;
     }

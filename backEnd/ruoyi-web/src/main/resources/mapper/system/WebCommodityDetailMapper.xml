@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.WebCommodityDetailMapper">
+    
+    <resultMap type="WebCommodityDetail" id="WebCommodityDetailResult">
+        <result property="commodityId"    column="commodity_id"    />
+        <result property="partitionId"    column="partition_id"    />
+        <result property="partitionName"    column="partition_name"    />
+        <result property="commodityPrice"    column="commodity_price"    />
+        <result property="commodityName"    column="commodity_name"    />
+        <result property="remark"    column="remark"    />
+        <result property="profileImage"    column="profile_image"    />
+        <result property="origin"    column="origin"    />
+        <result property="selling"    column="selling"    />
+        <result property="expirationFlag"    column="expiration_flag"    />
+        <result property="expirationTime"    column="expiration_time"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="permission"    column="permission"    />
+        <result property="lossRate"    column="loss_rate"    />
+    </resultMap>
+
+    <sql id="selectWebCommodityDetailVo">
+        select commodity_id, partition_id, partition_name, commodity_price, commodity_name, remark, profile_image, origin, selling, expiration_flag, expiration_time, create_time, update_time, permission, loss_rate from web_commodity_detail
+    </sql>
+
+    <select id="selectWebCommodityDetailList" parameterType="WebCommodityDetail" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        <where>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="partitionId != null "> and partition_id = #{partitionId}</if>
+            <if test="partitionName != null  and partitionName != ''"> and partition_name like concat('%', #{partitionName}, '%')</if>
+            <if test="commodityPrice != null "> and commodity_price = #{commodityPrice}</if>
+            <if test="commodityName != null  and commodityName != ''"> and commodity_name like concat('%', #{commodityName}, '%')</if>
+            <if test="profileImage != null  and profileImage != ''"> and profile_image = #{profileImage}</if>
+            <if test="origin != null  and origin != ''"> and origin = #{origin}</if>
+            <if test="selling != null "> and selling = #{selling}</if>
+            <if test="expirationFlag != null "> and expiration_flag = #{expirationFlag}</if>
+            <if test="expirationTime != null "> and expiration_time = #{expirationTime}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="lossRate != null "> and loss_rate = #{lossRate}</if>
+            <if test="params.beginTime != null and params.beginTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+            </if>
+             and commodity_id!=10
+        </where>
+    </select>
+
+
+
+
+    <select id="selectWebCommodityDetailList1" parameterType="WebCommodityDetail" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        <where>
+            <if test="commodityId != null "> and commodity_id = #{commodityId}</if>
+            <if test="partitionId != null "> and partition_id = #{partitionId}</if>
+            <if test="partitionName != null  and partitionName != ''"> and partition_name like concat('%', #{partitionName}, '%')</if>
+            <if test="commodityPrice != null "> and commodity_price = #{commodityPrice}</if>
+            <if test="commodityName != null  and commodityName != ''"> and commodity_name like concat('%', #{commodityName}, '%')</if>
+            <if test="profileImage != null  and profileImage != ''"> and profile_image = #{profileImage}</if>
+            <if test="origin != null  and origin != ''"> and origin = #{origin}</if>
+            <if test="selling != null "> and selling = #{selling}</if>
+            <if test="expirationFlag != null "> and expiration_flag = #{expirationFlag}</if>
+            <if test="expirationTime != null "> and expiration_time = #{expirationTime}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="lossRate != null "> and loss_rate = #{lossRate}</if>
+            and commodity_id!=10
+        </where>
+    </select>
+
+
+
+    <select id="selectWebCommodityDetailByCommodityId" parameterType="Long" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        where commodity_id = #{commodityId}
+    </select>
+
+    <select id="selectByExpiration" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        WHERE expiration_flag = 1 LIMIT 8
+    </select>
+
+    <select id="selectWebCommodityDetailByPartitionName" parameterType="String" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        where partition_name = #{partitionName}
+    </select>
+
+    <select id="selectMaxId"  resultType="Long">
+        select MAX(commodity_id) from web_commodity_detail
+    </select>
+
+    <select id="selectWebCommodityDetailByCommodityName" parameterType="String" resultMap="WebCommodityDetailResult">
+        <include refid="selectWebCommodityDetailVo"/>
+        where commodity_name = #{commodityName}
+    </select>
+        
+    <insert id="insertWebCommodityDetail" parameterType="WebCommodityDetail">
+        insert into web_commodity_detail
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">commodity_id,</if>
+            <if test="partitionId != null">partition_id,</if>
+            <if test="partitionName != null">partition_name,</if>
+            <if test="commodityPrice != null">commodity_price,</if>
+            <if test="commodityName != null">commodity_name,</if>
+            <if test="remark != null">remark,</if>
+            <if test="profileImage != null">profile_image,</if>
+            <if test="origin != null">origin,</if>
+            <if test="selling != null">selling,</if>
+            expiration_flag,
+            <if test="expirationTime != null">expiration_time,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+            permission,
+            <if test="lossRate != null">loss_rate,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="commodityId != null">#{commodityId},</if>
+            <if test="partitionId != null">#{partitionId},</if>
+            <if test="partitionName != null">#{partitionName},</if>
+            <if test="commodityPrice != null">#{commodityPrice},</if>
+            <if test="commodityName != null">#{commodityName},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="profileImage != null">#{profileImage},</if>
+            <if test="origin != null">#{origin},</if>
+            <if test="selling != null">#{selling},</if>
+            0,
+            <if test="expirationTime != null">#{expirationTime},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            0,
+            <if test="lossRate != null">#{lossRate},</if>
+         </trim>
+    </insert>
+
+
+
+    <update id="updateWebCommodityDetail" parameterType="WebCommodityDetail">
+        update web_commodity_detail
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="partitionId != null">partition_id = #{partitionId},</if>
+            <if test="partitionName != null">partition_name = #{partitionName},</if>
+            <if test="commodityPrice != null">commodity_price = #{commodityPrice},</if>
+            <if test="commodityName != null">commodity_name = #{commodityName},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="profileImage != null">profile_image = #{profileImage},</if>
+            <if test="origin != null">origin = #{origin},</if>
+            <if test="selling != null">selling = #{selling},</if>
+            <if test="expirationFlag != null">expiration_flag = #{expirationFlag},</if>
+            <if test="expirationTime != null">expiration_time = #{expirationTime},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="permission != null">permission = #{permission},</if>
+            <if test="lossRate != null">loss_rate = #{lossRate},</if>
+        </trim>
+        where commodity_id = #{commodityId}
+    </update>
+
+    <delete id="deleteWebCommodityDetailByCommodityId" parameterType="Long">
+        delete from web_commodity_detail where commodity_id = #{commodityId}
+    </delete>
+
+    <delete id="deleteWebCommodityDetailByCommodityIds" parameterType="String">
+        delete from web_commodity_detail where commodity_id in 
+        <foreach item="commodityId" collection="array" open="(" separator="," close=")">
+            #{commodityId}
+        </foreach>
+    </delete>
+
+
+    <select id="selectPartitionList"  resultType="String">
+        select distinct commodity_name from web_commodity_detail where  commodity_id !=0 and commodity_name != ''
+    </select>
+
+    <select id="selectPartitionById"  resultType="String">
+        select distinct partition_name from web_commodity_detail where partition_Id = #{partitionId}
+    </select>
+
+</mapper>

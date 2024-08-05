@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.web.mapper.WebUserCouponsMapper">
+    
+    <resultMap type="WebUserCoupons" id="WebUserCouponsResult">
+        <result property="couponsId"    column="coupons_id"    />
+        <result property="couponsName"    column="coupons_name"    />
+        <result property="userId"    column="user_id"    />
+        <result property="expirationTime"    column="expiration_time"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="expirationFlag"    column="expiration_flag"    />
+        <result property="permission"    column="permission"    />
+        <result property="reductionFull"    column="reduction_full"    />
+        <result property="reductionPrice"    column="reduction_price"    />
+    </resultMap>
+
+    <sql id="selectWebUserCouponsVo">
+        select coupons_id, coupons_name, user_id,reduction_full,reduction_price, expiration_time, create_time, update_time, expiration_flag, permission from web_user_coupons
+    </sql>
+
+    <select id="selectWebUserCouponsList" parameterType="WebUserCoupons" resultMap="WebUserCouponsResult">
+        <include refid="selectWebUserCouponsVo"/>
+        <where>
+            <if test="couponsId != null "> and coupons_id = #{couponsId}</if>
+            <if test="couponsName != null  and couponsName != ''"> and coupons_name like concat('%', #{couponsName}, '%')</if>
+            <if test="expirationTime != null "> and expiration_time = #{expirationTime}</if>
+            <if test="expirationFlag != null "> and expiration_flag = #{expirationFlag}</if>
+            <if test="permission != null "> and permission = #{permission}</if>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="reductionFull != null "> and reduction_full = #{reductionFull}</if>
+            <if test="reductionPrice != null "> and reduction_price = #{reductionPrice}</if>
+            <if test="params.beginTime != null and params.beginTime != ''"><!-- 开始时间检索 -->
+                and date_format(create_time,'%y%m%d') &gt;= date_format(#{params.beginTime},'%y%m%d')
+            </if>
+            <if test="params.endTime != null and params.endTime != ''"><!-- 结束时间检索 -->
+                and date_format(create_time,'%y%m%d') &lt;= date_format(#{params.endTime},'%y%m%d')
+            </if>
+        </where>
+    </select>
+    
+    <select id="selectWebUserCouponsByCouponsId" parameterType="Long" resultMap="WebUserCouponsResult">
+        <include refid="selectWebUserCouponsVo"/>
+        where coupons_id = #{couponsId}
+    </select>
+        
+    <insert id="insertWebUserCoupons" parameterType="WebUserCoupons" useGeneratedKeys="true" keyProperty="couponsId">
+        insert into web_user_coupons
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="couponsName != null">coupons_name,</if>
+            <if test="expirationTime != null">expiration_time,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+            expiration_flag,
+            permission,
+            <if test="userId != null">user_id,</if>
+            <if test="reductionFull != null">reduction_full,</if>
+            <if test="reductionPrice != null">reduction_price,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="couponsName != null">#{couponsName},</if>
+            <if test="expirationTime != null">#{expirationTime},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            0,
+            0,
+            <if test="userId != null">#{userId},</if>
+            <if test="reductionFull != null">#{reductionFull},</if>
+            <if test="reductionPrice != null">#{reductionPrice},</if>
+         </trim>
+    </insert>
+
+    <update id="updateWebUserCoupons" parameterType="WebUserCoupons">
+        update web_user_coupons
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="couponsName != null">coupons_name = #{couponsName},</if>
+            <if test="expirationTime != null">expiration_time = #{expirationTime},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="expirationFlag != null">expiration_flag = #{expirationFlag},</if>
+            <if test="permission != null">permission = #{permission},</if>
+            <if test="userId != null ">  user_id = #{userId},</if>
+            <if test="reductionFull != null ">  reduction_full = #{reductionFull},</if>
+            <if test="reductionPrice != null "> reduction_price = #{reductionPrice},</if>
+        </trim>
+        where coupons_id = #{couponsId}
+    </update>
+
+    <delete id="deleteWebUserCouponsByCouponsId" parameterType="Long">
+        delete from web_user_coupons where coupons_id = #{couponsId}
+    </delete>
+
+    <delete id="deleteWebUserCouponsByCouponsIds" parameterType="String">
+        delete from web_user_coupons where coupons_id in 
+        <foreach item="couponsId" collection="array" open="(" separator="," close=")">
+            #{couponsId}
+        </foreach>
+    </delete>
+    <select id="selectByUid" parameterType="Long" resultMap="WebUserCouponsResult">
+        <include refid="selectWebUserCouponsVo"></include>
+        where permission = 0
+    </select>
+
+</mapper>
