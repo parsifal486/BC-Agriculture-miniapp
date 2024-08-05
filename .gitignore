@@ -1,0 +1,4 @@
+miniapp/node_modules
+miniapp/.app.yaml
+miniapp/package-lock.json
+backEnd/ruoyi-ui/node_modules

@@ -2,7 +2,11 @@
   "pages": [
     "pages/home/home",
     "pages/menu/menu",
-    "pages/menu/product/product"
+    "pages/menu/product/product",
+    "pages/userCenter/user",
+    "pages/userCenter/editProfile/editProfile",
+    "pages/userCenter/discountTicket/discountTicket",
+    "pages/userCenter/purchaseOrder/purchaseOrder"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
