@@ -2,3 +2,6 @@ miniapp/node_modules
 miniapp/.app.yaml
 miniapp/package-lock.json
 backEnd/ruoyi-ui/node_modules
+backEnd/ruoyi-admin/src/main/resources/application.yml
+backEnd/ruoyi-admin/src/main/resources/application-druid.yml
+backEnd/ruoyi-ui/node_modules
