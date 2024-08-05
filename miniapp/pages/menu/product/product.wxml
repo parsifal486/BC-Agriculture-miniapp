@@ -14,7 +14,8 @@ interval="2000"
 <swiper-item><image src="../../img/temp/3.webp" mode=""/></swiper-item>
 </swiper>
 </view>
-
+<view class="back"><image src="../../img/temp/back.jpg"></image></view>
+<view class="katong"><image src="../../img/temp/katong.jpg"></image></view>
 <view class="info">
   野生粉藕 
   <text>
@@ -34,7 +35,7 @@ interval="2000"
         <block wx:for="{{products}}" wx:key="id">
             <view class="product-item">
                 <text> ￥{{item.price}}</text>
-                <button bindtap="removeFromCart" data-id="{{item.id}}">-</button>
+                <button class="btn" bindtap="removeFromCart" data-id="{{item.id}}">-</button>
                 <view wx:if="{{total >= 0}}"> 
                 <view class="total">{{total}}</view>
                 </view>
@@ -42,12 +43,11 @@ interval="2000"
                   <view class="total">0</view>
                   
                </view>
-                <button bindtap="addToCart" data-id="{{item.id}}">+</button>
+                <button class="btn" bindtap="addToCart" data-id="{{item.id}}">+</button>
             </view>
         </block>
-        
     </view>
-   
+
 </view>
-<view class="lijizhifu"><button >立即支付</button></view>
-<view class="gouwuche"><button >加入购物车</button></view>
+<view class="lijizhifu"><button class="btn"><text>立即支付</text></button></view>
+<view class="gouwuche"><button class="btn"><text>加入购物车</text></button></view>
