@@ -1,2 +1,32 @@
 <!--pages/menu/menu.wxml-->
-<text>pages/menu/menu.wxml</text>
+<!-- 搜索栏 -->
+<view>
+  <view class="search-bar">
+    <image class="icon-search" src="../img/icon/search.png"></image>
+    <input class="search-input" type="text" placeholder="输入搜索内容"/>
+  </view>
+<!-- 左侧边栏 -->
+  <view class="cehuaDa">
+    <view class="sideslipMenuItemlist">  
+      <block wx:for="{{sideslipMenuArr}}" wx:key="index">  
+        <view class="sideslipMenuItem" catchtap="itemClick" data-index="{{index}}">  
+          <image class="img" src="{{item}}" mode="aspectFit"></image>  
+        </view>  
+      </block>  
+    </view>
+  </view>
+  <!-- 右侧商品栏 -->
+  <view class="product-container">  
+    <image src="../img/temp/market-1.png" class="product-image"></image>  
+    <image src="../img/icon/ic_img_add.png" class="product-add"></image>
+    <view class="product-info">  
+      <text class="product-name">野生莲藕</text>  
+      <text class="product-price">¥888</text> 
+      
+  </view>  
+  <image src="../img/icon/ic-img-market.png" class="cart-icon"></image>
+</view>
+
+
+</view>
+

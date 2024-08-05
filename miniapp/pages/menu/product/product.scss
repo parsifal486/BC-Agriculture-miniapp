@@ -1,5 +1,9 @@
 /* pages/menu/product/product.wxss */page{
-  height: 100vh;
+ background-image: url('/pages/img/temp/zhuanfa.png');
+ background-size: 1000px;
+ background-position: center;
+ width: 100%;
+ height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -20,7 +24,7 @@
 .info{
   height: 600rpx;
   border-radius: 16px;
-  border: 3px solid rgb(9, 244, 252);
+  border: 3px dotted rgb(35, 151, 11);
  font-size: 20px;
  font-family: '楷体';
   font-weight: bold;
@@ -38,5 +42,107 @@
   width: 100rpx;
   height: 100rpx;
   z-index: 100;
+  position: absolute;
+}
+.button{
+  position: absolute;
+  transform: translate(960%,15%);
+  z-index: 1000;
+  width: 70rpx;
+  height: 70rpx;
+ image{
+   display: flex;
+   transform: translate(-42%,0%);
+   width: 70rpx;
+   height: 70rpx;
+ }
+}
+
+.container {
+  padding: 20rpx;
+}
+.product-list, .cart {
+  margin-bottom: 20rpx;
+  font-size: 80rpx;
+}
+.product-item, .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+  button{
+    background: rgb(0,0,0,0);
+    border-radius: 20rpx;
+    border: 2px solid black;
+  }
+}
+.total {
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: right;
+}
+.lijizhifu{
+  width: 300rpx;
+  height: 100rpx;
+  position: absolute;
+  z-index: 100;
+  transform: translate(10%,1280%);
+  button{
+    background: rgb(0,0,0,0);
+    border: 2px solid black;
+    text{
+      font-family: 'kaiti';
+      font-weight: bold;
+      font-size: 40rpx;
+     
+    }
+    border-radius: 100px;
+    height: 100rpx;
+}
+}
+.gouwuche{
+  button{
+    background: rgb(0,0,0,0);
+    border: 2px solid black;
+  
+    text{
+      font-family: 'kaiti';
+      font-weight: bold;
+      font-size: 40rpx;
+      opacity: 1;
+    }
+    border-radius: 100px;
+    height: 100rpx;
+   
+   
+}
+  width: 300rpx;
+  height: 100rpx;
+  position: absolute;
+  z-index: 100;
+  transform: translate(140%,1280%);
+}
+.btn:hover{
+  background-color: rgb(34, 145, 20);
+  color:white;
+
+}
+.back{
+  image{
+    width: 750rpx;
+    height: 1000rpx;
+  }
+  
+  z-index: -10;
+  transform: translate(0%,45%);
+  position: absolute;
+}
+.katong{
+  image{
+    width: 300rpx;
+    height: 300rpx;
+  }
+  z-index: 0;
+  transform: translate(140%,243%);
   position: absolute;
 }
