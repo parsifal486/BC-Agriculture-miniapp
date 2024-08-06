@@ -69,7 +69,7 @@ public class WebUserDetailController extends BaseController
     /**
      * 查询【请填写功能名称】列表
      */
-    @PreAuthorize("@ss.hasPermi('system:detail:list')")
+//    @PreAuthorize("@ss.hasPermi('system:detail:list')")
     @GetMapping("/web/userDetail/list")
     public TableDataInfo list(WebUserDetail webUserDetail)
     {
