@@ -1,1 +1,6 @@
-/* pages/userProfile/user.wxss */
+@import "../../app.wxss";
+
+.custom-cell {
+  --td-cell-group-title-bg-color: #a6618f;
+  --td-cell-height: 50rpx;
+}
