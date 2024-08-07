@@ -3,7 +3,6 @@ package com.ruoyi.web.service.impl;
 import java.util.List;
 import com.ruoyi.common.utils.DateUtils;
 import com.ruoyi.web.domain.SysUserView;
-import com.ruoyi.web.domain.WebUserOrders;
 import com.ruoyi.web.mapper.SysUserViewMapper;
 import com.ruoyi.web.service.ISysUserViewService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 【请填写功能名称】Service业务层处理
- * 
+ *
  * @author ruoyi
  * @date 2024-01-30
  */
@@ -23,7 +22,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 查询【请填写功能名称】
-     * 
+     *
      * @param viewId 【请填写功能名称】主键
      * @return 【请填写功能名称】
      */
@@ -35,7 +34,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 查询【请填写功能名称】列表
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 【请填写功能名称】
      */
@@ -56,7 +55,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 新增【请填写功能名称】
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 结果
      */
@@ -69,7 +68,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 修改【请填写功能名称】
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 结果
      */
@@ -97,7 +96,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 批量删除【请填写功能名称】
-     * 
+     *
      * @param viewIds 需要删除的【请填写功能名称】主键
      * @return 结果
      */
@@ -109,7 +108,7 @@ public class SysUserViewServiceImpl implements ISysUserViewService
 
     /**
      * 删除【请填写功能名称】信息
-     * 
+     *
      * @param viewId 【请填写功能名称】主键
      * @return 结果
      */
