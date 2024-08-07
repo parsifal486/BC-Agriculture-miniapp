@@ -7,30 +7,14 @@ function wxPromisify(fn) {
   return function (options = {}) {
       return new Promise((resolve, reject) => {
           options.success = function (res) {
-              // 隐藏导航栏加载指示器并解决 promise
-              wx.hideNavigationBarLoading();
               resolve(res);
           };
           options.fail = function (res) {
-              // 隐藏导航栏加载指示器，记录错误并拒绝 promise
-              wx.hideNavigationBarLoading();
               console.error(res);
               reject(res);
           };
           fn(options);
       });
-  };
-}
-
-// 如果 Promise.prototype.finally 不可用，则进行 polyfill
-if (!Promise.prototype.finally) {
-  Promise.prototype.finally = function (callback) {
-      const P = this.constructor;
-      wx.hideNavigationBarLoading();
-      return this.then(
-          value => P.resolve(callback()).then(() => value),
-          reason => P.resolve(callback()).then(() => { throw reason; })
-      );
   };
 }
 

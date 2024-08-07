@@ -4,6 +4,6 @@ page {
   --theme-colour-thicker: #468585;
 
   --button-main: #6196A6; 
-  --button-lighter: #5F5D9C;  
-  --button-thicker: #A4CE95;
+  --button-lighter: #A4CE95;  
+  --button-thicker:  #5F5D9C;
 }

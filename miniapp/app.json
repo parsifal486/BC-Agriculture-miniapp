@@ -6,7 +6,8 @@
     "pages/userCenter/user",
     "pages/userCenter/editProfile/editProfile",
     "pages/userCenter/discountTicket/discountTicket",
-    "pages/userCenter/purchaseOrder/purchaseOrder"
+    "pages/userCenter/purchaseOrder/purchaseOrder",
+    "pages/userCenter/devTeam/devTeam"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -15,5 +16,23 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true
+  },
+  "usingComponents": {
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/menu/menu"
+      },
+      {
+        "pagePath": "pages/userCenter/user"
+      }
+    ]
   }
 }

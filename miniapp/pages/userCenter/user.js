@@ -1,4 +1,6 @@
 // pages/userProfile/user.js
+import {getRequest} from "../../utils/wxRequest";
+
 Page({
 
   /**
@@ -12,7 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    getRequest("http://localhost/dev-api/web/message/list",null).then(
+      (res)=>{
+        console.log(res);
+      }
+    );
   },
 
   /**
