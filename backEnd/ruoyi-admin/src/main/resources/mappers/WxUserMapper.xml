@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ruoyi.wx.mappers.WxUserMapper">
+    <insert id="insert">
+        insert into web_user_detail (open_id,create_time,update_time)
+        values
+            (#{openId},#{createTime},#{updateTime})
+    </insert>
+
+    <select id="queryUserByOpenId" resultType="com.ruoyi.wx.info.WebUserDetail">
+        select * from web_user_detail where open_id= #{openId}
+    </select>
+
+</mapper>

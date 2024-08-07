@@ -5,15 +5,15 @@ import com.ruoyi.web.domain.SysUserView;
 
 /**
  * 【请填写功能名称】Service接口
- * 
+ *
  * @author ruoyi
  * @date 2024-01-30
  */
-public interface ISysUserViewService 
+public interface ISysUserViewService
 {
     /**
      * 查询【请填写功能名称】
-     * 
+     *
      * @param viewId 【请填写功能名称】主键
      * @return 【请填写功能名称】
      */
@@ -21,7 +21,7 @@ public interface ISysUserViewService
 
     /**
      * 查询【请填写功能名称】列表
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 【请填写功能名称】集合
      */
@@ -29,7 +29,7 @@ public interface ISysUserViewService
 
     /**
      * 新增【请填写功能名称】
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 结果
      */
@@ -37,7 +37,7 @@ public interface ISysUserViewService
 
     /**
      * 修改【请填写功能名称】
-     * 
+     *
      * @param sysUserView 【请填写功能名称】
      * @return 结果
      */
@@ -45,7 +45,7 @@ public interface ISysUserViewService
 
     /**
      * 批量删除【请填写功能名称】
-     * 
+     *
      * @param viewIds 需要删除的【请填写功能名称】主键集合
      * @return 结果
      */
@@ -53,7 +53,7 @@ public interface ISysUserViewService
 
     /**
      * 删除【请填写功能名称】信息
-     * 
+     *
      * @param viewId 【请填写功能名称】主键
      * @return 结果
      */

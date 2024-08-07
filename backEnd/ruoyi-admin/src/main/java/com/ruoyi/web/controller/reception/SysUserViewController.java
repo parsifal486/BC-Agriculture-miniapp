@@ -7,16 +7,13 @@ import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.web.domain.SysUserView;
-import com.ruoyi.web.domain.WebCommodityDetail;
 import com.ruoyi.web.mapper.SysUserViewMapper;
 import com.ruoyi.web.service.ISysUserViewService;
 import com.ruoyi.web.service.impl.WebCommodityDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
