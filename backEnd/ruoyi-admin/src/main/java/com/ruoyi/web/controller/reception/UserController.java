@@ -10,6 +10,7 @@ import com.ruoyi.wx.result.Result;
 import com.ruoyi.wx.service.UserService;
 import com.ruoyi.wx.service.WxUserService;
 
+import com.ruoyi.wx.utils.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,8 @@ import java.util.Map;
 @RequestMapping("/wx/user")
 public class UserController {
     @Resource
+    private JwtProperties jwtProperties;
+    @Resource
     private WxUserService wxUserService;
     @Resource
     private UserService userService;
@@ -32,15 +35,15 @@ public class UserController {
     public Result login(@PathVariable String code){
         log.info("code值："+code);
         User login = wxUserService.login(code);
-//        Map<String,Object> claims = new HashMap<>();
-//        claims.put("userId",login.getUserId());
-//
-//
-//        String jwt = JwtUtil.createJWT(jwtProperties.getAdminSecretKey(), jwtProperties.getAdminTtl(), claims);
-//        UserVo userVo =new UserVo();
-//        userVo= (UserVo) login;
-//        userVo.setToken(jwt);
-        return Result.success(login);
+        Map<String,Object> claims = new HashMap<>();
+        claims.put("userId",login.getUserId());
+
+
+        String jwt = JwtUtil.createJWT(jwtProperties.getAdminSecretKey(), jwtProperties.getAdminTtl(), claims);
+        UserVo userVo =new UserVo();
+        userVo= (UserVo) login;
+        userVo.setToken(jwt);
+        return Result.success(userVo);
     }
     @PostMapping("/userInformation/{id}")
     public Result queryInformationById(@PathVariable String id){

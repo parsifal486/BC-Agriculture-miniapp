@@ -14,9 +14,9 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-//            //添加拦截器并指定要拦截的URL路径
+            //添加拦截器并指定要拦截的URL路径
 //                registry.addInterceptor(jwtTokenAdminInterceptor)
-//                .addPathPatterns("/wx/**")  // 只拦截/admin/路径下的请求
-//                .excludePathPatterns("/wx/commodity/");  // 排除登录路径
+//                .addPathPatterns("/wx/**")
+//                .excludePathPatterns("/wx/user/login/*");
     }
 }
