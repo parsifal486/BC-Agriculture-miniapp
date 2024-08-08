@@ -30,7 +30,14 @@ server:
       max: 800
       # Tomcat启动初始化的线程数，默认值10
       min-spare: 100
-
+max:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: maxthinking
+    # 设置jwt过期时间
+    admin-ttl: 7200000000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
 # 日志配置
 logging:
   level:

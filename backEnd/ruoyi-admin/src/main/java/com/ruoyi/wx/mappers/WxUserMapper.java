@@ -1,13 +1,13 @@
 package com.ruoyi.wx.mappers;
 
-import com.ruoyi.wx.info.WebUserDetail;
+import com.ruoyi.wx.pojo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface WxUserMapper {
 
-    WebUserDetail queryUserByOpenId(String openId);
+    User queryUserByOpenId(String openId);
 
 
-    void insert(WebUserDetail webUserDetail);
+    void insert(User webUserDetail);
 }
