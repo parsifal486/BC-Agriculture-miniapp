@@ -1,6 +1,47 @@
 @import "../../app.wxss";
 
-.custom-cell {
-  --td-cell-group-title-bg-color: #a6618f;
-  --td-cell-height: 50rpx;
+page {
+  background-color: var(--main--gray--bg);
+}
+
+.usr-navibar{
+  --td-navbar-bg-color: transparent ;
+}
+
+.avatar-container{
+  width: 92%;
+  height: 240rpx;
+  margin-left: 4%;
+  margin-top: 50rpx;
+  margin-bottom: 25rpx;
+  background-color: var(--prime-white);
+  border-radius: 23rpx;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container .my-avatar {
+  --td-avatar-border-color: black;
+  --td-avatar-border-width-large: 15srpx;
+  margin-left: 30rpx;
+}
+
+.userProfile{
+  margin-left: 40rpx
+}
+
+.userName{
+  font-weight: 800;
+  margin-left: 30rpx;
+}
+
+.userDetail{
+  font-weight: 100;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+}
+
+.order-panel{
+  margin-top: 25rpx;
+  margin-bottom:25rpx;
 }

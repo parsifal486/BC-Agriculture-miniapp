@@ -1,7 +1,6 @@
-@import "../app.wxss";
 
 
-.wrapper {
-  
-  --td-tab-bar-item-active-color: var(--td-brand-color, #d9006d);
+.custom-tar-bar{
+  --td-tab-bar-active-color: #468585;
 }
+

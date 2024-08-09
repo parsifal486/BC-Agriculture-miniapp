@@ -3,20 +3,42 @@ Component({
   data: {
     value:"home",
     list: [
-      { id:1, value:"home", label: '首页', icon: 'broccoli', path:"pages/home/home", props: {} },
-      { id:2, value:"menu", label: '菜单', icon: 'map-edit', path:"pages/menu/menu", props: {} },
-      { id:3, value:"user", label: '用户', icon: 'user', path:"pages/userCenter/user", props:{count: '2'} }
+      { value:"home", label: '首页', icon: 'broccoli', path:"pages/home/home", props: {} },
+      { value:"menu", label: '菜单', icon: 'map-edit', path:"pages/menu/menu", props: {} },
+      { value:"user", label: '用户', icon: 'user', path:"pages/userCenter/user", props:{count: '2'} }
     ]
   },
-  methods: {
-    onTabItemTap(e) {
-      if(this.data.value != e.currentTarget.dataset.value){
-        this.setData({
-          value: e.currentTarget.dataset.value,
-        });
-        const path = e.currentTarget.dataset.path;
-        wx.switchTab({ url: `/${path}` });
+  lifetimes:{
+    ready(){
+      const pages = getCurrentPages();
+      const curPage = pages[pages.length - 1];
+      console.log("curP:",curPage);
+      if (curPage) {
+        const nameRe = /pages\/(\w+)\/(\w+)/.exec(curPage.route);
+        if (nameRe[2]) {
+          this.setData({
+            value: nameRe[2]
+          })
+        }
       }
+    }
+  },
+  
+  methods: {
+    handleChange(e) {
+
+      console.log("bindchange:e ",e);
+      const pageIndex = e.detail.value;
+      const pagePath = this.data.list[pageIndex].path;
+      console.log("pagePath",pagePath);
+
+      const pathRe = /pages\/(\w+)\/(\w+)/.exec(pagePath);
+      const curPage = pathRe[2];
+      console.log("curPage:",curPage);
+      this.setData({ value: curPage });
+      wx.switchTab({
+        url: "/"+pagePath
+      })
     }
   }
 });

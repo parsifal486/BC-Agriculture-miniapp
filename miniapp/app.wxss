@@ -6,4 +6,9 @@ page {
   --button-main: #6196A6; 
   --button-lighter: #A4CE95;  
   --button-thicker:  #5F5D9C;
+
+  --main--gray--bg: rgb(169, 189, 181);
+
+  --prime-white:#ffffff; 
+  --grey-1:#f3f3f3;
 }
