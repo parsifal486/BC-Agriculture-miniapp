@@ -13,4 +13,6 @@ public interface CommodityService {
 
 
     PageResult queryAll();
+
+    PageResult queryCommodityByType(String partitionName);
 }
