@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    avatar:'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
     messages:[]
   },
 
@@ -14,15 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    getRequest("http://localhost/dev-api/web/message/list").then(
-      (res)=>{
-        console.log(res);
-        this.setData({
-          messages:res.data.rows
-        })
-        console.log("messages:",messages)
-      }
-    );
+    
   },
 
   /**

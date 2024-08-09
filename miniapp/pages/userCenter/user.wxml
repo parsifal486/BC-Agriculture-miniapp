@@ -1,14 +1,25 @@
-<t-cell class="custom-cell"  title="单行标题" hover arrow />
-<t-cell title="单行标题" hover required arrow />
-<t-cell title="单行标题" hover arrow ariaLabel="单行标题，有16条消息">
-  <t-badge count="{{16}}" slot="note" />
-</t-cell>
-<t-cell title="单行标题" hover>
-  <t-switch defaultValue="{{true}}" slot="note" />
-</t-cell>
-<t-cell title="单行标题" hover note="辅助信息" arrow />
-<t-cell title="单行标题" hover arrow leftIcon="lock-on" bordered="{{false}}" />
+<t-navbar class="usr-navibar" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" left-arrow>
+  <view slot="left" class="custom-title">个人中心</view>
+</t-navbar>
 
-<view class="array">
-  {{messages}}
+<view class="avatar-container">  
+      <t-avatar class="my-avatar" image="{{avatar}}" size="large" />
+      <view class="userprofile"> 
+        <view class="userName">Max</view>
+        <view class="userDetail">帅气温柔男大</view>
+      </view>
 </view>
+
+<view class="order-panel">
+<t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon>
+  <t-collapse-panel header="我的订单" value="{{0}}">
+    西红柿: 正在运输中
+  </t-collapse-panel>
+</t-collapse>
+</view>
+
+<t-cell-group class="test" theme="card">
+  <t-cell custom-style="--td-tab-bar-item-color: red" title="编辑基本信息" leftIcon="personal-information" hover arrow />
+  <t-cell title="我的优惠券" leftIcon="sinister-smile" hover arrow />
+  <t-cell title="联系我们" leftIcon="service" hover arrow />
+</t-cell-group>
