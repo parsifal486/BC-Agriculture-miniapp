@@ -11,4 +11,7 @@ page {
 
   --prime-white:#ffffff; 
   --grey-1:#f3f3f3;
+
+  
+
 }
