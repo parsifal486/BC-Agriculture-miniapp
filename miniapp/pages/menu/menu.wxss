@@ -69,15 +69,15 @@
 .product-container {  
   display: flex;   
   padding: 10px;  
-  border: 1px solid rgb(192, 190, 190); 
+  
   position: relative;
 }  
   
 .product-image {  
   width: 100px;  
   height: 100px;  
-  margin-right: 10px;  
-  margin-left: 100px;
+  margin-right: 30px;  
+
 }  
   
 .product-info {  
@@ -99,11 +99,12 @@
   color: #f60;  
 }
 .product-add {
-  position: absolute;
   bottom: 10px; 
   right: 10px; 
   width: 20px; 
-  height: 20px;   
+  height: 20px; 
+  margin-top: 20px;
+  margin-left: 90px;
 }
 
 .cart-icon {  
@@ -112,4 +113,38 @@
   right: 20px;  
   width: 40px;   
   height: 40px;  
+}
+
+/* TDesign */
+page {
+  background-color: var(--td-bg-color-container) !important;
+}
+
+page .round-image {
+  border-radius: 12rpx;
+}
+
+.side-bar-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.side-bar-wrapper .content {
+  flex: 1;
+}
+
+.side-bar-wrapper .section {
+  padding: 32rpx 0;
+}
+
+/* .side-bar-wrapper .title {
+  padding-left: 40rpx;
+  margin-bottom: 8rpx;
+  line-height: 52rpx;
+  color: var(--td-text-color-primary);
+} */
+
+.side-bar-wrapper .image {
+  width: 96rpx;
+  height: 96rpx;
 }
