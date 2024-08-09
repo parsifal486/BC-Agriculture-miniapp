@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.http.ResponseEntity;
 
 import java.io.Serializable;
 @Data
@@ -26,4 +27,6 @@ public class UserVo extends User implements Serializable {
     private  String address;
     private String[] loveList;
     private String token;
+    private ResponseEntity<byte[]> responseEntity;
+
 }

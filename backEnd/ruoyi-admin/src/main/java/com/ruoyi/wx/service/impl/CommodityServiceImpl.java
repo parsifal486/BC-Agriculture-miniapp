@@ -24,4 +24,12 @@ public class CommodityServiceImpl implements CommodityService {
         pageResult.setRecords(commodityMapper.queryAll());
         return pageResult;
     }
+
+    @Override
+    public PageResult queryCommodityByType(String partitionName) {
+        PageResult pageResult = new PageResult();
+        pageResult.setRecords(commodityMapper.queryByType(partitionName));
+
+        return pageResult;
+    }
 }
