@@ -4,13 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ruoyi.wx.mappers.WxUserMapper">
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="user_id">
         insert into web_user_detail (open_id,create_time,update_time)
         values
             (#{openId},#{createTime},#{updateTime})
     </insert>
 
-    <select id="queryUserByOpenId" resultType="com.ruoyi.wx.info.WebUserDetail">
+    <select id="queryUserByOpenId" resultType="com.ruoyi.wx.pojo.entity.User">
         select * from web_user_detail where open_id= #{openId}
     </select>
 
