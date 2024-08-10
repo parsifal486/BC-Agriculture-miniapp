@@ -17,13 +17,13 @@ public class User extends BaseEntity
 
     /** $column.columnComment */
     private Long userId;
-    private Long openId;
+    private String openId;
 
-    public Long getOpenId() {
+    public String getOpenId() {
         return openId;
     }
 
-    public void setOpenId(Long openId) {
+    public void setOpenId(String openId) {
         this.openId = openId;
     }
 

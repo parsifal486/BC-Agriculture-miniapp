@@ -14,7 +14,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class UserVo extends User implements Serializable {
     private Long userId;
-    private Long openId;
+    private String openId;
     private String nickname;
     private String pwd;
     private String profileImage;

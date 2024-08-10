@@ -37,16 +37,19 @@ private CommonMapper commonMapper;
     @Override
     public ResponseEntity<byte[]> getImageBytesById(Long id) {
         String fileAddress= commonMapper.getAddressById(id);
-        File file = new File(fileAddress);
-        if(file.exists()){
-            try {
-                byte[] imageBytes = Files.readAllBytes(Paths.get(fileAddress));
-                return ResponseEntity.ok().body(imageBytes);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        if(fileAddress!=null){
+            File file = new File(fileAddress);
+            if(file.exists()){
+                try {
+                    byte[] imageBytes = Files.readAllBytes(Paths.get(fileAddress));
+                    return ResponseEntity.ok().body(imageBytes);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
 
+            }
         }
+
             return ResponseEntity.ok().body(null);
 
 

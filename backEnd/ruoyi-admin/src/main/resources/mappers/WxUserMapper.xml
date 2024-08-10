@@ -10,8 +10,6 @@
             (#{openId},#{createTime},#{updateTime})
     </insert>
 
-    <select id="queryUserByOpenId" resultType="com.ruoyi.wx.pojo.entity.User">
-        select * from web_user_detail where open_id= #{openId}
-    </select>
+
 
 </mapper>

@@ -33,19 +33,29 @@ public class UserController {
     //微信小程序登录授权
     @GetMapping("/login/{code}")
     public Result login(@PathVariable String code){
-        log.info("code值："+code);
+        System.out.println("_________________________________"+code+"________________________________________");
         UserVo userVo =new UserVo();
         User user = wxUserService.login(code);
         //获取token
         Map<String,Object> claims = new HashMap<>();
         claims.put("userId",user.getUserId());
         String jwt = JwtUtil.createJWT(jwtProperties.getAdminSecretKey(), jwtProperties.getAdminTtl(), claims);
+        System.out.println("_______________________________jwt:"+jwt+"_________________________________________");
         //读取照片
         userVo.setResponseEntity(common.getImageBytesById(user.getUserId()));
         //设置UserVo的值返回给前端
-
-        userVo= (UserVo) user;
         userVo.setToken(jwt);
+        userVo.setAddress(user.getAddress());
+        userVo.setUserId(user.getUserId());
+        userVo.setOpenId(user.getOpenId());
+        userVo.setNickname(user.getNickname());
+        userVo.setPwd(user.getPwd());
+        userVo.setAge(user.getAge());
+        userVo.setLove(user.getLove());
+        userVo.setSex(user.getSex());
+        userVo.setPhone(user.getPhone());
+        userVo.setPermission(user.getPermission());
+        userVo.setLoveList(user.getLoveList());
         return Result.success(userVo);
     }
     @GetMapping("/userInformation/{id}")
