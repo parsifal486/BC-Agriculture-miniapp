@@ -25,6 +25,14 @@
   align-items:center;
   justify-content:space-around;
 }
+.gobuy{
+  background-color: var(--main--gray--bg);
+  justify-content: space-evenly;
+}
+.gobuy image{
+  width:45%;
+  margin:10rpx;
+}
 scroll-view{
   height:250rpx;
   width:750rpx;

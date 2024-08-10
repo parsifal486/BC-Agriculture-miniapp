@@ -1,5 +1,9 @@
 <view class="all">
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" style="height:100rpx;">
+  <view slot="left">
   <image src="/pages/img/icon/logo.png" mode="heightFix" class="logo"></image>
+  </view>
+  </t-navbar>
   <swiper class='posts' indicator-dots circular>
     <swiper-item wx:for="{{postlist}}" wx:key="index">
       <image src="{{item}}" mode="widthFix" class="post" style="width: 750rpx;"></image>
