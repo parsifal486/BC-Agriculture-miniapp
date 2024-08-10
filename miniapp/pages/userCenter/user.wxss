@@ -45,3 +45,9 @@ page {
   margin-top: 25rpx;
   margin-bottom:25rpx;
 }
+
+.button-example {
+  margin: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}

@@ -23,3 +23,7 @@
   <t-cell title="我的优惠券" leftIcon="sinister-smile" hover arrow />
   <t-cell title="联系我们" leftIcon="service" hover arrow />
 </t-cell-group>
+
+<view class="button-example">
+  <t-button theme="primary" size="large" bind:tap="getWxcode">获取code</t-button>
+</view>

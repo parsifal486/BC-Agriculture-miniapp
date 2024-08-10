@@ -65,5 +65,13 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+  getWxcode(){
+    wx.login({
+      success: (res) => {
+        console.log("code: ",res.code);
+      },
+    })
   }
 })
