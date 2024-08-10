@@ -1,4 +1,5 @@
 import {getCacheItem, setCacheItem} from "./utils/cache"
+import {userLogin} from "./utils/backEndApi"
 App(
   {
     onLaunch:function(){
@@ -6,12 +7,10 @@ App(
     var user = getCacheItem("userInfo");
     console.log("user statu", user)
     if(user === undefined){
-      getUser().then(result =>{
-        setCacheItem("userInfo",userToAdd, 0.5);
-      } )
+      userLogin();
+      setCacheItem("isMarkReload", true, 24)
     }
-
-    setCacheItem("isMarkReload", true, 24)
+    
     }
   }
 )

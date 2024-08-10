@@ -1,4 +1,24 @@
-<navigator url="/pages/menu/menu" open-type="reLaunch"><image  class="hanhui" src="../../img/temp/fanhui.png" mode=""/></navigator>
+<t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="标题文字">
+  <view slot="capsule" class="custom-capsule">
+    <t-icon
+      size="20"
+      bind:tap="onBack"
+      aria-role="button"
+      aria-label="返回"
+      name="chevron-left"
+      class="custom-capsule__icon back"
+    />
+    <t-icon
+      size="20"
+      bind:tap="onGoHome"
+      aria-role="button"
+      aria-label="首页"
+      name="home"
+      class="custom-capsule__icon home"
+    />
+  </view>
+</t-navbar>
+
 <button class="button" open-type="share" size="mini" ><image src="../../img/temp/zhuanfa.png"></image></button>
 <view class="swiper">
 <swiper
