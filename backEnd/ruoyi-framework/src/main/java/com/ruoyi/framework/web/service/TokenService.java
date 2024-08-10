@@ -114,6 +114,7 @@ public class TokenService
     public String createToken(LoginUser loginUser)
     {
         String token = IdUtils.fastUUID();
+        System.out.println("ruoyi token："+token);
         loginUser.setToken(token);
         setUserAgent(loginUser);
         refreshToken(loginUser);
