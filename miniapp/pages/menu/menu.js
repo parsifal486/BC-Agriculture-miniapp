@@ -101,6 +101,18 @@ Page({
     ],
     navbarHeight: 0,
   },
+  onGoHome() {
+    // Code to navigate to the home page
+    wx.navigateTo({
+      url: '../home/home.wxml'
+    });
+  },
+  onBack() {
+    // Code to navigate back, typically using wx.navigateBack
+    wx.navigateBack({
+      delta: 1 // Go back by one page in the navigation stack
+    });
+  },
   onLoad() {
     const query = wx.createSelectorQuery().in(this);
     const { sideBarIndex } = this.data;
@@ -132,4 +144,15 @@ Page({
       this.setData({ sideBarIndex: index });
     }
   },
+  methods: {
+    onBack() {  
+      wx.navigateBack();
+    },
+    onGoHome() {
+      wx.reLaunch({
+        url: '../home/home.wxml',
+      });
+    },
+  },
 });
+

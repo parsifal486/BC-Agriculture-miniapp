@@ -69,7 +69,7 @@
 .product-container {  
   display: flex;   
   padding: 10px;  
-  
+  background-color: #f3f0f0;
   position: relative;
 }  
   
@@ -127,6 +127,7 @@ page .round-image {
 .side-bar-wrapper {
   display: flex;
   height: 100vh;
+  background-color:#f7f2f2 ;
 }
 
 .side-bar-wrapper .content {
@@ -148,3 +149,31 @@ page .round-image {
   width: 96rpx;
   height: 96rpx;
 }
+
+/* 导航栏 */
+.custom-capsule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-capsule__icon {
+  flex: 1;
+  position: relative;
+}
+
+.custom-capsule__icon.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: #e7e7e7;
+}
+
+
+

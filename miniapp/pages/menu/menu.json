@@ -1,9 +1,12 @@
 {
+  "component": true,
   "navigationBarBackgroundColor": "#fff",
+  "styleIsolation": "apply-shared",
   "usingComponents": {
     "t-side-bar": "tdesign-miniprogram/side-bar/side-bar",
-    "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item"
-
-
+    "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item",
+    "t-navbar": "tdesign-miniprogram/navbar/navbar",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-search": "tdesign-miniprogram/search/search"
   }
 }
