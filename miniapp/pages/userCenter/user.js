@@ -8,6 +8,8 @@ Page({
    */
   data: {
     avatar:'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
+    // avatar:'',
+    nickName:'',
     messages:[]
   },
 
@@ -15,21 +17,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    
+   
+      
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    wx.getUserInfo({
+      success:(res)=>{
+        console.log(res.userInfo),
+        this.setData({
+          nickName:res.userInfo.nickName,
+          avatar:res.userInfo.avatarUrl
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    
   },
 
   /**
@@ -73,5 +85,19 @@ Page({
         console.log("code: ",res.code);
       },
     })
-  }
+  },
+// getInformation(){
+//     wx.getUserInfo({
+//       success:(res)=>{
+//         console.log(res.userInfo),
+//         this.setData({
+//           nickName:res.userInfo.nickName,
+//           avatar:res.userInfo.avatarUrl
+//         })
+//       }
+//     })
+// }
+  
+  
+
 })
