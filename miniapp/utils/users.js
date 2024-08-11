@@ -12,7 +12,8 @@ async function getUser() {
   console.log("wx_code", wx_code);
   let userRes = (await api.userOp({
     op: 'get',
-    wx_code: wx_code
+    wx_code: wx_code,
+    // Admin-Token: "2a5c2c43-97b1-4bb6-ba9e-303afaba0ade"
   })).result;
 
   console.log(userRes);
