@@ -9,8 +9,20 @@
     "miniprogram": {
       "list": [
         {
+<<<<<<< HEAD
           "name": "pages/userCenter/discountTicket/discountTicket",
           "pathName": "pages/userCenter/discountTicket/discountTicket",
+=======
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+>>>>>>> 23988f550a28d5d315a51c55a84aea459ed519b9
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -46,5 +58,5 @@
       ]
     }
   },
-  "libVersion": "3.5.2"
+  "libVersion": "3.5.3"
 }

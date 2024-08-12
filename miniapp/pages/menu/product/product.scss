@@ -10,7 +10,7 @@
 }
 .swiper{
   swiper{
-    height: 480rpx;
+    height: 600rpx;
     border-radius: 16px;
     overflow: hidden;
     swiper-item{
@@ -22,13 +22,17 @@
   }
 }
 .info{
-  height: 600rpx;
-  border-radius: 16px;
+  height:650rpx;
+  border-radius: 100px;
   border: 3px dotted rgb(35, 151, 11);
  font-size: 20px;
  font-family: '楷体';
   font-weight: bold;
- 
+ transform: translate(0%,-8%);
+z-index: -40;
+.body{
+  transform: translate(8%,11%);
+}
  text{
    font-weight: normal;
    font-size:12px;
@@ -59,6 +63,12 @@
 }
 
 .container {
+  width: 100%;
+  position: absolute;
+  
+  height: 400rpx;
+  transform: translate(-3%,300%);
+  border-radius: 100rpx;
   padding: 20rpx;
 }
 .product-list, .cart {
@@ -70,63 +80,27 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10rpx;
-  button{
-    background: rgb(0,0,0,0);
-    border-radius: 20rpx;
-    border: 2px solid black;
-  }
+ 
 }
 .total {
-  font-size: 60rpx;
+  font-size: 50rpx;
   font-weight: bold;
   text-align: right;
 }
 .lijizhifu{
-  width: 300rpx;
-  height: 100rpx;
-  position: absolute;
-  z-index: 100;
-  transform: translate(10%,1280%);
-  button{
-    background: rgb(0,0,0,0);
-    border: 2px solid black;
-    text{
-      font-family: 'kaiti';
-      font-weight: bold;
-      font-size: 40rpx;
-     
-    }
-    border-radius: 100px;
-    height: 100rpx;
-}
+  background-color: white;
+  transform: translate(10%,60%);
+   font-family: 'kaiti';
+   color: black;
 }
 .gouwuche{
-  button{
-    background: rgb(0,0,0,0);
-    border: 2px solid black;
-  
-    text{
-      font-family: 'kaiti';
-      font-weight: bold;
-      font-size: 40rpx;
-      opacity: 1;
-    }
-    border-radius: 100px;
-    height: 100rpx;
+  background-color: rgb(32, 255, 32);
+  transform: translate(0%,60%);
+   font-family: 'kaiti';
    
-   
-}
-  width: 300rpx;
-  height: 100rpx;
-  position: absolute;
-  z-index: 100;
-  transform: translate(140%,1280%);
-}
-.btn:hover{
-  background-color: rgb(34, 145, 20);
-  color:white;
 
 }
+
 .back{
   image{
     width: 750rpx;
@@ -139,11 +113,11 @@
 }
 .katong{
   image{
-    width: 300rpx;
-    height: 300rpx;
+    width: 250rpx;
+    height: 250rpx;
   }
   z-index: 0;
-  transform: translate(140%,243%);
+  transform: translate(160%,420%);
   position: absolute;
 }
 .custom-capsule {
@@ -168,4 +142,33 @@
   width: 1px;
   height: 18px;
   background: #e7e7e7;
+}
+.divider-demo__title {
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0 32rpx 16rpx;
+  line-height: 40rpx;
+}
+
+.demo-5 {
+  margin: 0 32rpx;
+}
+
+.button-example {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 32rpx 32rpx;
+}
+
+.external-class {
+  border-radius: 0 !important;
+}
+.price{
+  transform: translate(10%,50%);
+}
+.btn{
+  transform: translate(80%,50%);
+}
+.total{
+  transform: translate(160%,50%);
 }

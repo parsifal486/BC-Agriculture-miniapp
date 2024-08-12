@@ -1,2 +1,28 @@
-<!--pages/userCenter/editProfile/editProfile.wxml-->
-<text>pages/userCenter/editProfile/editProfile.wxml</text>
+
+<view class="touxiang">
+<text> 头像</text>
+<t-avatar class="avatar-example" image="{{image}}" />
+</view>
+<view class="container">
+  <view class="profile">
+    <image class="avatar" src="{{avatarUrl}}" />
+    <view class="nickname-container">
+      <text class="nickname" bindtap="showEditModal">{{nickname}}</text>
+    </view>
+  </view>
+<view class="nicheng">昵称</view>
+<view class="dizhi">地址</view>
+<view class="shoujihao">手机号</view>
+<view class="gerenpianhao">个人偏好</view>
+  <!-- 弹出窗口的输入框 -->
+  <view wx:if="{{showModal}}" class="modal">
+    <view class="modal-content">
+      <input class="modal-input" value="{{newNickname}}" bindinput="onInput" placeholder="请输入新的昵称" />
+      <view class="modal-buttons">
+        <button bindtap="onConfirm" class="modal-button">确定</button>
+        <button bindtap="onCancel" class="modal-button">取消</button>
+      </view>
+    </view>
+  </view>
+</view>
+
