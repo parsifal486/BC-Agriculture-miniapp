@@ -1,1 +1,37 @@
 /* pages/userCenter/discountTicket/discountTicket.wxss */
+.custom-capsule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-capsule__icon {
+  flex: 1;
+  position: relative;
+}
+
+.custom-capsule__icon.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: #7ac987;
+}
+.all{
+  background-color: #7ac987;
+}
+.card{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.title{
+  font-size: 24px;      /* 文字变大 */
+  font-weight: bold;    /* 文字加粗（可选） */
+  text-align:right;  /* 使文字居中 */
+  margin: 20px 0;
+}

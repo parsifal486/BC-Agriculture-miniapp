@@ -64,3 +64,15 @@ Page({
 
   }
 })
+Component({
+  methods: {
+    onBack() {
+      wx.navigateBack();
+    },
+    onGoHome() {
+      wx.reLaunch({
+        url: '../user.js',
+      });
+    },
+  },
+});
