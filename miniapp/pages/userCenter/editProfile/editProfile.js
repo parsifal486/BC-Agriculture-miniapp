@@ -1,66 +1,52 @@
-// pages/userCenter/editProfile/editProfile.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    nickname: '你的昵称',
+    showModal: false,
+    newNickname: ''
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  // 显示修改昵称的弹出窗口
+  showEditModal: function () {
+    this.setData({
+      showModal: true
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  // 处理输入框内容
+  onInput: function (e) {
+    this.setData({
+      newNickname: e.detail.value
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  // 确认修改昵称
+  onConfirm: function () {
+    const { newNickname } = this.data;
+    if (newNickname.trim()) {
+      this.setData({
+        nickname: newNickname,
+        showModal: false,
+        newNickname: '' // 清空输入框
+      });
+    } else {
+      wx.showToast({
+        title: '昵称不能为空',
+        icon: 'none'
+      });
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  // 取消修改昵称
+  onCancel: function () {
+    this.setData({
+      showModal: false,
+      newNickname: '' // 清空输入框
+    });
   }
-})
+});
+
+// Component({
+//   data: {
+//     image: 'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
+//   },
+// });

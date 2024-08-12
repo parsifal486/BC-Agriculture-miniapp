@@ -1,1 +1,97 @@
-/* pages/userCenter/editProfile/editProfile.wxss */
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile {
+  transform: translate(50%,500%);
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nickname-container {
+  display: flex;
+  align-items: center;
+}
+
+.nickname {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+}
+
+.modal-input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-button {
+  flex: 1;
+  margin: 0 5px;
+}
+.touxiang{
+  transform: translate(5%,300%);
+  font-size: 50rpx;
+  font-family: 'kaiti';
+}
+.avatar-example {
+  margin-right: 64rpx;
+  transform: translate(350%,-15%);
+}
+.nicheng{
+  transform: translate(-284%,420%);
+  font-size: 50rpx;
+  font-family: 'kaiti';
+}
+.dizhi{
+  transform: translate(-284%,1000%);
+  font-size: 50rpx;
+  font-family: 'kaiti';
+}
+.shoujihao{
+  transform: translate(-180%,1200%);
+  font-size: 50rpx;
+  font-family: 'kaiti';
+}
+.gerenpianhao{
+  transform: translate(-120%,1400%);
+  font-size: 50rpx;
+  font-family: 'kaiti';
+}

@@ -9,6 +9,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/user",
           "pathName": "pages/userCenter/user",
           "query": "",
@@ -39,5 +53,5 @@
       ]
     }
   },
-  "libVersion": "3.5.2"
+  "libVersion": "3.5.3"
 }

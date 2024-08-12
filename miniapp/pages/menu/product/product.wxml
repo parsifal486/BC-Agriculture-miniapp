@@ -34,27 +34,30 @@ interval="2000"
 <swiper-item><image src="../../img/temp/3.webp" mode=""/></swiper-item>
 </swiper>
 </view>
-<view class="back"><image src="../../img/temp/back.jpg"></image></view>
+
 <view class="katong"><image src="../../img/temp/katong.jpg"></image></view>
 <view class="info">
-  野生粉藕 
-  <text>
+
+  <view class="body">野生粉藕 
+  <text >
   食物属性:\n</text>
   
-  <text>莲藕属睡莲科莲属(Nelumbo)植物中医认为，生藕性寒，甘凉入胃，可消瘀凉血、清烦热，止呕渴。适用于烦渴、酒醉、咳血、吐血等症。妇女产后忌食生冷，惟独不忌藕，就是因为藕有很好的消瘀作用，故民间有“新采嫩藕胜太医"之说。\n</text>
+  <text>莲藕属睡莲科莲属(Nelumbo)植物中医认为，生藕性寒，甘凉入胃，\n可消瘀凉血、清烦热，止呕渴。适用于烦渴、酒醉、咳血、吐血等症。\n妇女产后忌食生冷，惟独不忌藕，就是因为藕有很好的消瘀作用，\n故民间有“新采嫩藕胜太医"之说。\n</text>
   <text> 种植溯源:\n</text>
   <text>有机种植\n</text>
   <text>地点溯源:\n</text>
   <text>广东省珠海市斗门区翻斗村\n</text>
   <text>采摘时间:\n</text>
   <text>2024-01-28 00:00:00\n</text>
-  <text>资质保障: \n</text>
+  </view>
+
 </view>
+<t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
 <view class="container">
     <view class="product-list">
         <block wx:for="{{products}}" wx:key="id">
             <view class="product-item">
-                <text> ￥{{item.price}}</text>
+                <text class="price"> ￥{{item.price}}</text>
                 <button class="btn" bindtap="removeFromCart" data-id="{{item.id}}">-</button>
                 <view wx:if="{{total >= 0}}"> 
                 <view class="total">{{total}}</view>
@@ -69,5 +72,7 @@ interval="2000"
     </view>
 
 </view>
-<view class="lijizhifu"><button class="btn"><text>立即支付</text></button></view>
-<view class="gouwuche"><button class="btn"><text>加入购物车</text></button></view>
+<view class="button-example">
+  <t-button class="lijizhifu" theme="primary" size="large" shape="round">立即支付</t-button>
+  <t-button class="gouwuche" size="large" shape="round">加入购物车</t-button>
+</view>

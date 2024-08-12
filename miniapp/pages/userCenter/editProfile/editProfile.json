@@ -1,3 +1,10 @@
+
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "个人资料",
+  
+  "component": true,
+  "usingComponents": {
+    "t-avatar": "tdesign-miniprogram/avatar/avatar"
+  }
 }
+
