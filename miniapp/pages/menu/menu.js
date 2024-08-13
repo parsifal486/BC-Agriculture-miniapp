@@ -108,7 +108,7 @@ queryCommodityById(value)
 {
   console.log(value)
   wx.request({
-    url: 'http://49.232.136.246:8080/wx/commodity/queryCommodityByType',
+    url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
     data: {
       partitionName: "花叶类"
     },
@@ -183,7 +183,7 @@ queryCommodityById(value)
       this.setData({ navbarHeight, scrollTop: this.offsetTopList[sideBarIndex] });
     });
     wx.request({
-      url: 'http://49.232.136.246:8080/wx/commodity/queryAllType',
+      url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
       method: 'get',
       success:(res2)=>{
       console.log(res2.data.data.records);
