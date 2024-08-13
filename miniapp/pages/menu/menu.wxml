@@ -61,21 +61,23 @@
       show-scrollbar="{{false}}"
     >
       <view class="title">{{item.title || item.label}}</view>
-      <!-- <t-cell-group>
+      <t-cell-group>
         <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
           <t-cell title="{{cargo.label}}{{index}}">
-            <t-image shape="round" src="{{cargo.image}}" slot="image" lazy t-class="image" />
+            <t-image shape="round" src="{{cargo.image}}" slot="image" lazy 
+            style="width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" />
           </t-cell>
         </block>
-      </t-cell-group> -->
-      <view class="product-container">  
+      </t-cell-group>
+<!-- 右侧商品栏 -->
+    <!-- <view class="product-container">  
       <image src="../img/temp/market-1.png" class="product-image"></image>  
       <view class="product-info">  
         <text class="product-name">野生莲藕</text>  
         <text class="product-price">¥888</text> 
         <image src="../img/icon/ic_img_add.png" class="product-add"></image>
-    </view>
-  </view>
+      </view>
+    </view> -->
     </scroll-view>
   </view>
 </view>

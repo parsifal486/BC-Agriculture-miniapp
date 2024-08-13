@@ -146,7 +146,7 @@ page .round-image {
   margin-bottom: 8rpx;
   color: var(--td-text-color-primary);
 }
-.side-bar-wrapper .image {
+.side-bar-wrapper.image {
   width: 500rpx;
   height: 96rpx;
   border: 2rpx solid #e7e7e7;
