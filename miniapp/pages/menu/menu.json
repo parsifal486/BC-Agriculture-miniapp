@@ -7,6 +7,8 @@
     "t-side-bar-item": "tdesign-miniprogram/side-bar-item/side-bar-item",
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
     "t-icon": "tdesign-miniprogram/icon/icon",
-    "t-search": "tdesign-miniprogram/search/search"
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group"
+   
   }
 }

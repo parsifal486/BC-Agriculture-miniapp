@@ -1,42 +1,11 @@
 {
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "projectname": "miniapp",
-  "setting": {
-    "compileHotReLoad": true,
-    "urlCheck": false
-  },
   "condition": {
     "miniprogram": {
       "list": [
         {
-<<<<<<< HEAD
           "name": "pages/userCenter/discountTicket/discountTicket",
           "pathName": "pages/userCenter/discountTicket/discountTicket",
-=======
-          "name": "pages/userCenter/editProfile/editProfile",
-          "pathName": "pages/userCenter/editProfile/editProfile",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/userCenter/editProfile/editProfile",
-          "pathName": "pages/userCenter/editProfile/editProfile",
->>>>>>> 23988f550a28d5d315a51c55a84aea459ed519b9
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/userCenter/user",
-          "pathName": "pages/userCenter/user",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/home/home",
-          "pathName": "pages/home/home",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -47,16 +16,8 @@
           "query": "",
           "launchMode": "default",
           "scene": null
-        },
-        {
-          "name": "pages/menu/product/product",
-          "pathName": "pages/menu/product/product",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
         }
       ]
     }
-  },
-  "libVersion": "3.5.3"
+  }
 }
