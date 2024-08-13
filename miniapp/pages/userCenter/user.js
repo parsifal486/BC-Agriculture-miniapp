@@ -9,7 +9,7 @@ Page({
   data: {
     avatar:'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
     // avatar:'',
-    nickName:'',
+    nickName:'test',
     messages:[]
   },
 
@@ -26,15 +26,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    wx.getUserInfo({
-      success:(res)=>{
-        console.log(res.userInfo),
-        this.setData({
-          nickName:res.userInfo.nickName,
-          avatar:res.userInfo.avatarUrl
-        })
-      }
-    })
+    // wx.getUserInfo({
+    //   success:(res)=>{
+    //     console.log(res.userInfo),
+    //     this.setData({
+    //       nickName:res.userInfo.nickName,
+    //       avatar:res.userInfo.avatarUrl
+    //     })
+    //   }
+    // })
   },
 
   /**

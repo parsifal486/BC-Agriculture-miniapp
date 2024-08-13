@@ -43,13 +43,14 @@
   <!-- <t-navbar title="TDesign" leftArrow /> -->
 </view>
 <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
-  <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+  <t-side-bar value="{{sideBarIndex}}"  bind:change="onSideBarChange">
     <t-side-bar-item
       wx:for="{{categories}}"
       wx:key="label"
       value="{{item.value || index}}"
       label="{{item.label}}"
-
+      bind:tap="queryCommodityById"
+      data-param="{{item.value}}"
       badge-props="{{item.badgeProps}}"
     />
   </t-side-bar>
