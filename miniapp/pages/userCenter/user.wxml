@@ -27,6 +27,3 @@
 <view class="button-example">
   <t-button theme="primary" size="large" bind:tap="getWxcode">获取code</t-button>
 </view>
-<view class="button-example">
-  <t-button theme="primary" size="large" bind:tap="getInformation">获取信息</t-button>
-</view>

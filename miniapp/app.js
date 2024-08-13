@@ -3,6 +3,7 @@ import {userLogin} from "./utils/backEndApi";
 App(
   {
     onLaunch:function(){
+      
     //检查缓存中是否存在了用户,不存在则获取用户信息
     // var user = getCacheItem("userInfo");
     // console.log("user statu", user)
@@ -35,7 +36,7 @@ App(
           success:res2=>{
             console.log(res2.data.data);
             //存储到本地
-            wx.setStorageSync('userId',res2.data.data.userId);
+            // wx.setStorageSync('userId',res2.data.data.userId);
             //请求登录接口
 
           }

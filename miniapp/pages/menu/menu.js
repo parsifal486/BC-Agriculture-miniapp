@@ -69,6 +69,8 @@
 //   }
 // })
 // <!-- TDesign侧边栏 -->
+import config from "../../config";
+import {backendUrl} from "../../config"
 const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);
 
@@ -77,29 +79,86 @@ Page({
   data: {
     sideBarIndex: 1,
     scrollTop: 0,
+    information:[
+
+    ],
     categories: [
-      {
-        label: '个性推荐',
-        icon: 'app',
-        badgeProps: {},
-        items,
-      },
-      {
-        label: '临期特价',
-        icon: 'app',
-        badgeProps: {
-          dot: true,
-        },
-        items: items.slice(0, 9),
-      },
-      {
-        label: '新品上市',
-        icon: 'app',
-        badgeProps: {},
-        items: items.slice(0, 9),
-      },
+      // {
+      //   label: '个性推荐',
+        
+      // },
+      // {
+      //   label: '临期特价',
+      //   icon: 'app',
+      //   badgeProps: {
+      //     dot: true,
+      //   },
+      //   items: items.slice(0, 9),
+      // },
+      // {
+      //   label: '新品上市',
+      //   icon: 'app',
+      //   badgeProps: {},
+      //   items: items.slice(0, 9),
+      // },
     ],
     navbarHeight: 0,
+  },
+queryCommodityById(value)
+{
+  console.log(value)
+  wx.request({
+    url: 'http://49.232.136.246:8080/wx/commodity/queryCommodityByType',
+    data: {
+      partitionName: "花叶类"
+    },
+    success:(res)=>
+    {
+      console.log(res.data.data.records);
+      var information=[];
+      res.data.data.records.forEach(item=>{
+        var obj={
+          commodityName: item.commodityName,
+          commodityPrice: item.commodityPrice,
+          remark: item.remark,
+          orgin: item.orgin,
+        }
+        information.push(obj)
+      })
+      this.setData({
+        informations:information
+      })
+        console.log(information)
+      
+    }
+     
+  })
+},
+  getCategries(res) {
+    // todo 发请求
+  
+    var categries = [];
+    var obj={
+      label:"全部",
+      icon: 'app',
+        badgeProps: {},
+          items:items.slice(0, 9),
+    }
+    categries.push(obj)
+    res.data.data.records.forEach(item => {
+        var obj = {
+          label: item,
+          icon: 'app',
+        badgeProps: {},
+          items:items.slice(0, 9),
+        }
+        
+        categries.push(obj)
+    })
+    
+    this.setData({
+      categories:categries
+    })
   },
   onGoHome() {
     // Code to navigate to the home page
@@ -123,6 +182,17 @@ Page({
       this.offsetTopList = rects.map((item) => item.top - navbarHeight);
       this.setData({ navbarHeight, scrollTop: this.offsetTopList[sideBarIndex] });
     });
+    wx.request({
+      url: 'http://49.232.136.246:8080/wx/commodity/queryAllType',
+      method: 'get',
+      success:(res2)=>{
+      console.log(res2.data.data.records);
+      this.getCategries(res2);
+        
+      }
+    })
+
+
   },
   onSideBarChange(e) {
     const { value } = e.detail;

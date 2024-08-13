@@ -1,4 +1,5 @@
 
 module.exports = {
-  backendUrl: "http://localhost:8080/dev-api/wx",
+  backendUrl: "http://49.232.136.246:8080/wx",
+
 }
