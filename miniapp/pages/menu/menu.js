@@ -1,108 +1,55 @@
-// // pages/menu/menu.js
-// Page({
-
-//   /**
-//    * 页面的初始数据
-//    */
-//   data: {
-//     sideslipMenuArr: [
-//       '../img/temp/menu-1.png',
-//       '../img/temp/menu-2.png',
-//       '../img/temp/menu-3.png'
-//     ]
-//   },
-
-//   /**
-//    * 生命周期函数--监听页面加载
-//    */
-//   onLoad(options) {
-
-//   },
-
-//   /**
-//    * 生命周期函数--监听页面初次渲染完成
-//    */
-//   onReady() {
-
-//   },
-
-//   /**
-//    * 生命周期函数--监听页面显示
-//    */
-//   onShow() {
-
-//   },
-
-//   /**
-//    * 生命周期函数--监听页面隐藏
-//    */
-//   onHide() {
-
-//   },
-
-//   /**
-//    * 生命周期函数--监听页面卸载
-//    */
-//   onUnload() {
-
-//   },
-
-//   /**
-//    * 页面相关事件处理函数--监听用户下拉动作
-//    */
-//   onPullDownRefresh() {
-
-//   },
-
-//   /**
-//    * 页面上拉触底事件的处理函数
-//    */
-//   onReachBottom() {
-
-//   },
-
-//   /**
-//    * 用户点击右上角分享
-//    */
-//   onShareAppMessage() {
-
-//   }
-// })
 // <!-- TDesign侧边栏 -->
 import config from "../../config";
 import {backendUrl} from "../../config"
 const image = 'https://tdesign.gtimg.com/mobile/demos/example2.png';
 const items = new Array(12).fill({ label: '标题文字', image }, 0, 12);
 
-Page({
+Page({    
   offsetTopList: [],
   data: {
     sideBarIndex: 1,
     scrollTop: 0,
-    information:[
-
-    ],
     categories: [
-      // {
-      //   label: '个性推荐',
-        
-      // },
-      // {
-      //   label: '临期特价',
-      //   icon: 'app',
-      //   badgeProps: {
-      //     dot: true,
-      //   },
-      //   items: items.slice(0, 9),
-      // },
-      // {
-      //   label: '新品上市',
-      //   icon: 'app',
-      //   badgeProps: {},
-      //   items: items.slice(0, 9),
-      // },
+      {
+        label: '个性推荐',
+        title: '个性推荐',
+        badgeProps: {},
+        items,
+      },
+      {
+        label: '临期特价',
+        title: '临期特价',
+        badgeProps: {
+          dot: true,
+        },
+        items: items.slice(0, 10),
+      },
+      {
+        label: '新品上市',
+        title: '新品上市',
+        badgeProps: {},
+        items: items.slice(0, 6),
+      },
     ],
     navbarHeight: 0,
+  },
+  onLoad() {
+    this.getCustomNavbarHeight();
+  },
+
+  getCustomNavbarHeight() {
+    const query = wx.createSelectorQuery();
+    query.select('.custom-navbar').boundingClientRect();
+    query.exec((res) => {
+      const { height = 0 } = res[0] || {};
+      this.setData({ navbarHeight: height });
+    });
+  },
+
+  onSideBarChange(e) {
+    const { value } = e.detail;
+
+    this.setData({ sideBarIndex: value, scrollTop: 0 });
   },
 queryCommodityById(value)
 {

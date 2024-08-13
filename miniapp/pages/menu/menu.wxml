@@ -27,61 +27,60 @@
     <image class="icon-search" src="../img/icon/search.png"></image>
     <input class="search-input" type="text" placeholder="输入搜索内容"/>
   </view>
-
-<!-- 左侧边栏 -->
-  <!-- <view class="cehuaDa">
-    <view class="sideslipMenuItemlist">  
-      <block wx:for="{{sideslipMenuArr}}" wx:key="index">  
-        <view class="sideslipMenuItem" catchtap="itemClick" data-index="{{index}}">  
-          <image class="img" src="{{item}}" mode="aspectFit"></image>  
-        </view>  
-      </block>  
-    </view>
-  </view> -->
-  <!-- TDesign侧边栏 -->
-<view class="custom-navbar">
-  <!-- <t-navbar title="TDesign" leftArrow /> -->
-</view>
-<view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
-  <t-side-bar value="{{sideBarIndex}}"  bind:change="onSideBarChange">
-    <t-side-bar-item
-      wx:for="{{categories}}"
-      wx:key="label"
-      value="{{item.value || index}}"
-      label="{{item.label}}"
-      bind:tap="queryCommodityById"
-      data-param="{{item.value}}"
-      badge-props="{{item.badgeProps}}"
-    />
-  </t-side-bar>
-  <!-- <scroll-view class="content" scroll-y scroll-with-animation scroll-top="{{scrollTop}}"        bind:scroll="onScroll">
-    <view wx:for="{{categories}}" wx:key="label" class="section">
-      <view class="title">{{item.title || item.label}}</view> 
-      <t-grid column="{{3}}" border="{{false}}">
-        <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
-          <t-grid-item
-            text="{{cargo.label}}"
-            image="{{cargo.image}}"
-            image-props="{{ { shape: 'round', lazy: true } }}"
-          >
-          </t-grid-item>
-        </block>
-      </t-grid>
-    </view>
-  </scroll-view> -->
   <!-- 右侧商品栏 -->
-  <view class="product-container">  
+  <!-- <view class="product-container">  
     <image src="../img/temp/market-1.png" class="product-image"></image>  
     <view class="product-info">  
       <text class="product-name">野生莲藕</text>  
       <text class="product-price">¥888</text> 
       <image src="../img/icon/ic_img_add.png" class="product-add"></image>
   </view>
-</view>
-
-    
+</view>  
   <image src="../img/icon/ic-img-market.png" class="cart-icon"></image>
-</view>
+</view> --> 
 
+<view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
+  <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+    <t-side-bar-item
+      wx:for="{{categories}}"
+      wx:key="label"
+      value="{{item.value || index}}"
+      label="{{item.label}}"
+      disabled="{{item.disabled}}"
+      badge-props="{{item.badgeProps}}"
+    />
+  </t-side-bar>
+  <view class="content" style="transform: translateY(-{{sideBarIndex * 100}}%)">
+    <scroll-view
+      wx:for="{{categories}}"
+      wx:key="label"
+      class="section"
+      scroll-y
+      scroll-top="{{scrollTop}}"
+      scroll-with-animation
+      show-scrollbar="{{false}}"
+    >
+      <view class="title">{{item.title || item.label}}</view>
+      <t-cell-group>
+        <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
+          <t-cell title="{{cargo.label}}{{index}}">
+            <t-image shape="round" src="{{cargo.image}}" slot="image" lazy 
+            style="width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" />
+          </t-cell>
+        </block>
+      </t-cell-group>
+<!-- 右侧商品栏 -->
+    <!-- <view class="product-container">  
+      <image src="../img/temp/market-1.png" class="product-image"></image>  
+      <view class="product-info">  
+        <text class="product-name">野生莲藕</text>  
+        <text class="product-price">¥888</text> 
+        <image src="../img/icon/ic_img_add.png" class="product-add"></image>
+      </view>
+    </view> -->
+    </scroll-view>
+  </view>
+</view>
+  <image src="../img/icon/ic-img-market.png" class="cart-icon"></image>
 </view>
 
