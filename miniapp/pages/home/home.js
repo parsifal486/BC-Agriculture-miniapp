@@ -8,6 +8,7 @@ Page({
     postlist:["/pages/img/temp/post1.png","/pages/img/temp/post2.png","/pages/img/temp/post3.png"],
   },
   
+  
   goShop(e) {
     console.log(e);
   },

@@ -40,7 +40,7 @@
 </view> --> 
 
 <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
-  <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+  <t-side-bar bind:tap="getAllCommodity" value="{{sideBarIndex}}" bind:change="onSideBarChange">
     <t-side-bar-item
       wx:for="{{categories}}"
       wx:key="label"
@@ -62,8 +62,8 @@
     >
       <view class="title">{{item.title || item.label}}</view>
       <t-cell-group>
-        <block wx:for="{{item.items}}" wx:key="index" wx:for-item="cargo">
-          <t-cell title="{{cargo.label}}{{index}}">
+        <block  wx:for="{{commodityNames}}" wx:key="index" wx:for-item="cargo">
+          <t-cell  title="{{cargo.commodityName}}">
             <t-image shape="round" src="{{cargo.image}}" slot="image" lazy 
             style="width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" />
           </t-cell>
