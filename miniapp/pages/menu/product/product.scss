@@ -95,7 +95,7 @@ z-index: -40;
 }
 .gouwuche{
   background-color: rgb(32, 255, 32);
-  transform: translate(0%,60%);
+  transform: translate(0%,61%);
    font-family: 'kaiti';
    
 
@@ -171,4 +171,43 @@ z-index: -40;
 }
 .total{
   transform: translate(160%,50%);
+}
+
+.textarea-example {
+  padding: 32rpx 32rpx 48rpx;
+  background-color: var(--bg-color-demo);
+}
+
+.external-class {
+  padding-top: 24rpx !important;
+  padding-bottom: 24rpx !important;
+}
+
+.textarea-example__label {
+  display: block;
+  color: var(--td-text-color-primary);
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding-bottom: 16rpx;
+}
+.demo {
+  padding: 0 32rpx 48rpx;
+  height: 1000rpx;
+  width: 75%;
+}
+
+.demo:last-child {
+  padding-bottom: 0;
+}
+
+.demo-desc {
+  font-size: 14px;
+  color: var(--td-text-color-secondary);
+  margin-bottom: 32rpx;
+}
+
+.demo .margin-16:not(:last-child) {
+  margin-right: 32rpx;
+  height: 50px;
+  font-size: 18px;
 }

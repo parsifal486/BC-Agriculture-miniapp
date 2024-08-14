@@ -35,12 +35,20 @@ interval="2000"
 </swiper>
 </view>
 
-<view class="katong"><image src="../../img/temp/katong.jpg"></image></view>
+<view class="demo">
+
+<t-tag class="margin-16" variant="light">种植溯源 :   有机种植</t-tag>
+<text>\n\n</text>
+<t-tag class="margin-16" variant="light">地点溯源 : 广东省珠海市斗门区翻斗村</t-tag>
+<text>\n\n</text>
+<t-tag class="margin-16" variant="light">采摘时间 : 2024-01-28 00:00:00</t-tag>
+
+</view>
 <view class="info">
 
   <view class="body">野生粉藕 
   <text >
-  食物属性:\n</text>
+  食物属性:</text>
   
   <text>莲藕属睡莲科莲属(Nelumbo)植物中医认为，生藕性寒，甘凉入胃，\n可消瘀凉血、清烦热，止呕渴。适用于烦渴、酒醉、咳血、吐血等症。\n妇女产后忌食生冷，惟独不忌藕，就是因为藕有很好的消瘀作用，\n故民间有“新采嫩藕胜太医"之说。\n</text>
   <text> 种植溯源:\n</text>
@@ -76,3 +84,11 @@ interval="2000"
   <t-button class="lijizhifu" theme="primary" size="large" shape="round">立即支付</t-button>
   <t-button class="gouwuche" size="large" shape="round">加入购物车</t-button>
 </view>
+
+
+
+
+
+
+
+

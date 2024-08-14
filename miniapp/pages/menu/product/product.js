@@ -7,8 +7,8 @@ Page({
       ],
       cart: [],
       totalPrice: 0,
-      total:0
-
+      total:0,
+    
   },
   addToCart(event) {
       const productId = event.currentTarget.dataset.id;
@@ -42,5 +42,8 @@ Page({
   },
 
 });
+ //import SkylineBehavior from '@behaviors/skyline.js';
 
-
+// Component({
+//   behaviors: [SkylineBehavior],
+// });

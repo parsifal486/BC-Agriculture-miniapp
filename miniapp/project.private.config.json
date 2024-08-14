@@ -4,6 +4,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/menu/product/product",
+          "pathName": "pages/menu/product/product",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/discountTicket/discountTicket",
           "pathName": "pages/userCenter/discountTicket/discountTicket",
           "query": "",

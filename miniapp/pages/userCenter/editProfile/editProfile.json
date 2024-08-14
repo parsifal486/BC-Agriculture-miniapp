@@ -1,9 +1,9 @@
-
 {
-  "navigationBarTitleText": "个人资料",
-  
   "component": true,
   "usingComponents": {
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-icon": "tdesign-miniprogram/icon/icon",
     "t-avatar": "tdesign-miniprogram/avatar/avatar"
   }
 }
