@@ -10,27 +10,12 @@ Page({
     sideBarIndex: 1,
     scrollTop: 0,
     categories: [
-      {
-        label: '个性推荐',
-        title: '个性推荐',
-        badgeProps: {},
-        items,
-      },
-      {
-        label: '临期特价',
-        title: '临期特价',
-        badgeProps: {
-          dot: true,
-        },
-        items: items.slice(0, 10),
-      },
-      {
-        label: '新品上市',
-        title: '新品上市',
-        badgeProps: {},
-        items: items.slice(0, 6),
-      },
+      
     ],
+    commodityNames:[
+     { commodityName: "111"}
+  ,]
+    ,
     navbarHeight: 0,
   },
   onLoad() {
@@ -51,36 +36,83 @@ Page({
 
     this.setData({ sideBarIndex: value, scrollTop: 0 });
   },
-queryCommodityById(value)
-{
-  console.log(value)
-  wx.request({
-    url: 'http://49.232.136.246:8080/wx/commodity/queryCommodityByType',
-    data: {
-      partitionName: "花叶类"
-    },
-    success:(res)=>
-    {
-      console.log(res.data.data.records);
-      var information=[];
-      res.data.data.records.forEach(item=>{
-        var obj={
-          commodityName: item.commodityName,
-          commodityPrice: item.commodityPrice,
-          remark: item.remark,
-          orgin: item.orgin,
-        }
-        information.push(obj)
-      })
-      this.setData({
-        informations:information
-      })
-        console.log(information)
+// queryCommodityById(value)
+// {
+//   console.log(value)
+//   wx.request({
+//     url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
+//     data: {
+//       partitionName: "花叶类"
+//     },
+//     success:(res)=>
+//     {
+//       console.log(res.data.data.records);
+//       var information=[];
+//       res.data.data.records.forEach(item=>{
+//         var obj={
+//           commodityName: item.commodityName,
+//           commodityPrice: item.commodityPrice,
+//           remark: item.remark,
+//           orgin: item.orgin,
+//         }
+//         information.push(obj)
+//       })
+//       this.setData({
+//         informations:information
+//       })
+//         console.log(information)
       
-    }
+//     }
      
-  })
+//   })
+// },
+getAllCommodity(){
+//发请求
+wx.request({
+  url: 'http://49.232.136.246:8090/wx/commodity/queryAllCommodity',
+  success:(res)=>{
+    console.log(res.data.data.records)
+    var commodity=[];
+    res.data.data.records.forEach(item=>{
+      var obj={
+        commodityName: item.commodityName,
+      }
+      commodity.push(obj)
+    })
+    this.setData({
+      commodityNames:commodity
+    })
+     
+    
+   
+  }
+})
 },
+getCategriess(){
+  //发请求
+  wx.request({
+    url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
+  //接收数据
+  success:(res)=>{
+    //打印数据
+    console.log(res.data.data.records)
+    //将获取的数据转化成你要的数据
+    var ojb=[];
+    var obj1={
+      label:"全部",
+      icon: 'app',
+        badgeProps: {},
+          items:items.slice(0, 9),
+    }
+  }
+  })
+  
+  },
+
+
+
+
+
   getCategries(res) {
     // todo 发请求
   
@@ -93,13 +125,14 @@ queryCommodityById(value)
     }
     categries.push(obj)
     res.data.data.records.forEach(item => {
+      //把数据放进去 我们定义的变量当中：object
         var obj = {
           label: item,
           icon: 'app',
         badgeProps: {},
           items:items.slice(0, 9),
         }
-        
+        //把含有数据的obejct放入数组
         categries.push(obj)
     })
     
@@ -130,7 +163,7 @@ queryCommodityById(value)
       this.setData({ navbarHeight, scrollTop: this.offsetTopList[sideBarIndex] });
     });
     wx.request({
-      url: 'http://49.232.136.246:8080/wx/commodity/queryAllType',
+      url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
       method: 'get',
       success:(res2)=>{
       console.log(res2.data.data.records);

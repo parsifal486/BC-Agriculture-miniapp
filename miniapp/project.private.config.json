@@ -33,5 +33,8 @@
         }
       ]
     }
+  },
+  "setting": {
+    "urlCheck": false
   }
 }
