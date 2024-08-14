@@ -42,8 +42,13 @@ Page({
   },
 
 });
- //import SkylineBehavior from '@behaviors/skyline.js';
-
-// Component({
-//   behaviors: [SkylineBehavior],
-// });
+Component({
+  methods: {
+    handleClick(e) {
+      console.log(e);
+    },
+    handleMove(e) {
+      console.log(e);
+    },
+  },
+});

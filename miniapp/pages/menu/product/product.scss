@@ -10,7 +10,7 @@
 }
 .swiper{
   swiper{
-    height: 600rpx;
+    height: 450rpx;
     border-radius: 16px;
     overflow: hidden;
     swiper-item{
@@ -22,7 +22,7 @@
   }
 }
 .info{
-  height:650rpx;
+  height:600rpx;
   border-radius: 100px;
   border: 3px dotted rgb(35, 151, 11);
  font-size: 20px;
@@ -31,7 +31,7 @@
  transform: translate(0%,-8%);
 z-index: -40;
 .body{
-  transform: translate(8%,11%);
+  transform: translate(8%,5%);
 }
  text{
    font-weight: normal;
@@ -210,4 +210,12 @@ z-index: -40;
   margin-right: 32rpx;
   height: 50px;
   font-size: 18px;
+}
+.shop{
+  color: white;
+
+}
+.cart{
+
+
 }
