@@ -7,7 +7,7 @@ page {
   font-family: 'kaiti';
 }
 .on{
-  transform: translate(0%,300%);
+  transform: translate(0%,150%);
   font-size: 50rpx;
   font-family: 'kaiti';
 }
@@ -41,4 +41,11 @@ border-radius: 10px;
  width: 120rpx;
  height: 103rpx;
  border-radius: 50%;
+}
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25rpx;
+  align-items: center;
 }

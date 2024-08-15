@@ -1,14 +1,12 @@
-<view class="container">
-  <button class="avatar" open-type="chooseAvatar" bindchooseavatar="OnchooseAvatar"> 
- <image src="{{pic}}"></image>
-</button>
-<input type="nickname" placeholder="请输入昵称"/>
-</view>
-
+<t-cell-group class="on" theme="card">
+  <t-cell title="头像" leftIcon="" rightIcon="town"  hover arrow />
+  <t-cell title="昵称" leftIcon="" hover arrow />
+  
+</t-cell-group>
 
 <t-cell-group class="down" theme="card">
-  <t-cell title="地址" leftIcon="service" hover arrow />
-  <t-cell title="手机号" leftIcon="service" hover arrow />
+  <t-cell title="地址" leftIcon="town" hover arrow />
+  <t-cell title="手机号" leftIcon="mobile" hover arrow />
   <t-cell title="个人偏好" leftIcon="service" hover arrow />
 </t-cell-group>
 

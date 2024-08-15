@@ -51,3 +51,26 @@ page {
   display: flex;
   justify-content: space-between;
 }
+.container{
+  height: 200rpx;
+  margin: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+border-radius: 10px;
+ transform: translate(0%,0%);
+ background-color: white;
+}
+.container button{
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.container button image{
+ width: 120rpx;
+ height: 103rpx;
+ border-radius: 50%;
+}

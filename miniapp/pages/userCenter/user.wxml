@@ -2,12 +2,18 @@
   <view slot="left" class="custom-title">个人中心</view>
 </t-navbar>
 
-<view class="avatar-container">  
+<!-- <view class="avatar-container">  
       <t-avatar class="my-avatar" image="{{avatar}}" size="large" />
       <view class="userprofile"> 
         <view class="userName">{{nickName}}</view>
         <view class="userDetail">帅气温柔男大</view>
       </view>
+</view> -->
+<view class="container">
+  <button class="avatar" open-type="chooseAvatar" bindchooseavatar="OnchooseAvatar"> 
+ <image src="{{pic}}"></image>
+</button>
+<input type="nickname" placeholder="请输入昵称"/>
 </view>
 
 <view class="order-panel">

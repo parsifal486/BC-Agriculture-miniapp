@@ -1,6 +1,6 @@
 // pages/userProfile/user.js
 import {getRequest} from "../../utils/wxRequest";
-
+const defaultAvatarUrl ='https://tdesign.gtimg.com/mobile/demos/avatar1.png'
 Page({
 
   /**
@@ -10,6 +10,7 @@ Page({
     avatar:'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
     // avatar:'',
     nickName:'test',
+    pic:defaultAvatarUrl,
     messages:[]
   },
 
@@ -20,6 +21,13 @@ Page({
    
       
   
+  },
+  OnchooseAvatar:function(e){
+    console.log(e.detail.avatarUrl);
+    var pic=e.detail.avatarUrl
+    this.setData({
+      pic
+    })
   },
 
   /**
