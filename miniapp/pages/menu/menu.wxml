@@ -27,48 +27,51 @@
     <image class="icon-search" src="../img/icon/search.png"></image>
     <input class="search-input" type="text" placeholder="输入搜索内容"/>
   </view>
-  <!-- 右侧商品栏 -->
-  <!-- <view class="product-container">  
-    <image src="../img/temp/market-1.png" class="product-image"></image>  
-    <view class="product-info">  
-      <text class="product-name">野生莲藕</text>  
-      <text class="product-price">¥888</text> 
-      <image src="../img/icon/ic_img_add.png" class="product-add"></image>
-  </view>
-</view>  
-  <image src="../img/icon/ic-img-market.png" class="cart-icon"></image>
-</view> --> 
 
 <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
-  <t-side-bar bind:tap="getAllCommodity" value="{{sideBarIndex}}" bind:change="onSideBarChange">
-    <t-side-bar-item
-      wx:for="{{categories}}"
+<!-- 左侧种类栏 -->
+<!-- bind:tap="getAllCommodity" -->
+  <t-side-bar  value="{{sideBarIndex}}" bind:change="onSideBarChange">
+  <!--  wx:for="{{categories}}"
       wx:key="label"
       value="{{item.value || index}}"
       label="{{item.label}}"
       disabled="{{item.disabled}}"
-      badge-props="{{item.badgeProps}}"
+      badge-props="{{item.badgeProps}}" -->
+    <t-side-bar-item
+    wx:for="{{categories}}"
+    wx:key="index"
+    value="{{index}}"
+    label="{{item.label}}"
     />
   </t-side-bar>
-  <view class="content" style="transform: translateY(-{{sideBarIndex * 100}}%)">
-    <scroll-view
-      wx:for="{{categories}}"
+  <view class="content" >
+    <!-- wx:for="{{categories}}"
       wx:key="label"
-      class="section"
+      class="section" -->
+    <scroll-view
+    class="section"
+    
+    
       scroll-y
       scroll-top="{{scrollTop}}"
       scroll-with-animation
       show-scrollbar="{{false}}"
     >
-      <view class="title">{{item.title || item.label}}</view>
+      <view class="title">{{categories[sideBarIndex].label}}</view>
+<!-- 右侧菜品显示 -->
       <t-cell-group>
         <block  wx:for="{{commodityNames}}" wx:key="index" wx:for-item="cargo">
-          <t-cell  title="{{cargo.commodityName}}">
+          <t-cell  title="{{cargo.commodityName}}" >
+            <!-- <view slot="footer" style="text-align: right; color: #888;">
+              ￥{{cargo.commodityPrice}}
+            </view> -->
             <t-image shape="round" src="{{cargo.image}}" slot="image" lazy 
             style="width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" />
           </t-cell>
         </block>
       </t-cell-group>
+    </scroll-view>
 <!-- 右侧商品栏 -->
     <!-- <view class="product-container">  
       <image src="../img/temp/market-1.png" class="product-image"></image>  
@@ -78,7 +81,7 @@
         <image src="../img/icon/ic_img_add.png" class="product-add"></image>
       </view>
     </view> -->
-    </scroll-view>
+    
   </view>
 </view>
   <image src="../img/icon/ic-img-market.png" class="cart-icon"></image>

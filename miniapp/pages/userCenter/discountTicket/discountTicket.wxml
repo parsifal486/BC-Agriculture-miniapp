@@ -1,5 +1,6 @@
 <!--pages/userCenter/discountTicket/discountTicket.wxml-->
 <view class="all">
+<!-- //导航栏 -->
   <view class="block">
     <t-navbar
       t-class-placeholder="t-navbar-placeholder"
@@ -9,39 +10,30 @@
       left-arrow
       bind:go-back="handleBack"/>
   </view>
-  <view class="card">
+  <!-- 优惠券 -->
+  <block wx:for="{{coupons}}" wx:key="id">
+  <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
+    <t-cell class="card">
+      <view class="card-title">
+        <view class="title">{{item.type}}</view>
+        <view class="sub-title">折扣金额：减{{item.discountAmount}}元</view>
+        <view class="sub-title">使用条件：满{{item.conditionAmount}}</view>
+        <view class="sub-title">有效期至：{{item.expiryDate}}</view>
+      </view>
+    </t-cell>
+  </t-cell-group>
+  </block>
+  <!-- <view class="card">
   <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
     <t-cell class="card">
       <view slot="title">
         <view class="title">品类券</view>
-        <view class="sub-title">折扣金额：减50元</view>
-        <view class="sub-title">使用条件：满15</view>
-        <view class="sub-title">有效期至：2024-8-12</view>
+        <view class="sub-title">折扣金额：减{{item.discountAmount}}元</view>
+        <view class="sub-title">使用条件：满{{item.conditionAmount}}</view>
+        <view class="sub-title">有效期至：{{item.expiryDate}}</view>
       </view>
     </t-cell> 
   </t-cell-group>
-  
-  <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
-    <t-cell>
-      <view slot="title">
-        <view class="title">品类券</view>
-        <view class="sub-title">折扣金额：减50元</view>
-        <view class="sub-title">使用条件：满15</view>
-        <view class="sub-title">有效期至：2024-8-12</view>
-      </view>
-    </t-cell> 
-  </t-cell-group>
-  
-  <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
-    <t-cell>
-      <view slot="title">
-        <view class="title">品类券</view>
-        <view class="sub-title">折扣金额：减50元</view>
-        <view class="sub-title">使用条件：满15</view>
-        <view class="sub-title">有效期至：2024-8-12</view>
-      </view>
-    </t-cell> 
-  </t-cell-group>
-</view>
+</view> -->
 
 </view>
