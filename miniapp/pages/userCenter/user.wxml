@@ -25,7 +25,7 @@
 </view>
 
 <t-cell-group class="test" theme="card">
-  <t-cell custom-style="--td-tab-bar-item-color: red" title="编辑基本信息" leftIcon="personal-information" hover arrow />
+  <button bindtap="goToNextPage"> <t-cell custom-style="--td-tab-bar-item-color: red" title="编辑基本信息" leftIcon="personal-information" hover arrow /></button>
   <t-cell title="我的优惠券" leftIcon="sinister-smile" hover arrow />
   <t-cell title="联系我们" leftIcon="service" hover arrow />
 </t-cell-group>

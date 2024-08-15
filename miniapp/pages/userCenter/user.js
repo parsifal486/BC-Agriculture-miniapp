@@ -29,7 +29,11 @@ Page({
       pic
     })
   },
-
+  goToNextPage: function() {
+    wx.navigateTo({
+      url: '/pages/userCenter/editProfile/editProfile'  // 确保路径与你的小程序页面结构一致
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
