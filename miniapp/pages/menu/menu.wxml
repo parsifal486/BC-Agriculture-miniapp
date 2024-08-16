@@ -45,13 +45,13 @@
     label="{{item.label}}"
     />
   </t-side-bar>
-  <view class="content" >
+  <view class="content" style="transform: translateY(-{{sideBarIndex * 100}}%)">
     <!-- wx:for="{{categories}}"
       wx:key="label"
       class="section" -->
     <scroll-view
     class="section"
-    
+    wx:for="{{categories}}"
     
       scroll-y
       scroll-top="{{scrollTop}}"

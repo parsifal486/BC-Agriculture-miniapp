@@ -30,7 +30,11 @@ Page({
     const {value } = e.detail;
     this.setData({ sideBarIndex: value, scrollTop: 0 });
     const selectedCategory = this.data.categories[value].label; // 获取选中的种类名称
-    this.queryCommodityByType(selectedCategory);  // 根据选中的种类获取对应的商品
+    if (selectedCategory === "全部") {
+      this.getAllCommodity(); // 获取所有商品
+    } else {
+      this.queryCommodityByType(selectedCategory); // 根据选中的种类加载对应商品数据
+    }  // 根据选中的种类获取对应的商品
   },
 // queryCommodityById(value)
 // {
@@ -99,11 +103,13 @@ wx.request({
     res.data.data.records.forEach(item=>{
       var obj={
         commodityName: item.commodityName,
+        commodityPrice: item.commodityPrice,
       }
       commodity.push(obj)
     })
     this.setData({
-      commodityNames:commodity
+      commodityNames:commodity,
+      commodityPrice:commodity,
     })
   }
 })
@@ -133,14 +139,6 @@ wx.request({
 getCategories(res) {
   var categories = [];
 
-  // 添加“全部”分类项
-  categories.push({
-    label: "全部",
-    icon: 'app',
-    badgeProps: {},
-    items: [] // “全部”可以初始化为空数组或根据需求赋值
-  });
-
   // 处理服务器返回的分类数据
   res.data.data.records.forEach((item) => {
     categories.push({
@@ -155,33 +153,6 @@ getCategories(res) {
   });
 },
 
-  // getCategories(res) {
-  //   // todo 发请求
-  
-  //   var categories = [];
-  //   var obj={
-  //     label:"全部",
-  //     icon: 'app',
-  //       badgeProps: {},
-  //         items:items.slice(0, 9),
-  //   }
-  //   categories.push(obj)
-  //   res.data.data.records.forEach(item => {
-  //     //把数据放进去 我们定义的变量当中：object
-  //       var obj = {
-  //         label: item,
-  //         icon: 'app',
-  //       badgeProps: {},
-  //         items:items.slice(0, 9),
-  //       }
-  //       //把含有数据的obejct放入数组
-  //       categories.push(obj)
-  //   })
-    
-  //   this.setData({
-  //     categories:categories
-  //   })
-  // },
   onGoHome() {
     // Code to navigate to the home page
     wx.navigateTo({
@@ -221,19 +192,6 @@ getCategories(res) {
     }
   });
   },
-
-  // loadCategories() {
-  //   // 发起请求获取左侧种类数据
-  //   wx.request({
-  //     url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
-  //     success: (res) => {
-  //       this.getCategories(res);
-  //       this.setData({
-  //         categories: res.data.data.categories
-  //       });
-  //     }
-  //   });
-  // },
 
   onScroll(e) {
     const { scrollTop } = e.detail;
