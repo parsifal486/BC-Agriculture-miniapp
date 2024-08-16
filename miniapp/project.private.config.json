@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/QRcode/QRcode",
+          "pathName": "pages/QRcode/QRcode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/mydingdan/mydingdan",
           "pathName": "pages/userCenter/mydingdan/mydingdan",
           "query": "",

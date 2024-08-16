@@ -11,7 +11,7 @@
   </swiper>
   <view class="gobuy" style="display: flex;flex-direction: row;">
     <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
-    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="takeAway"></image>
+    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
   </view>
   <scroll-view scroll-x style="display:flex; white-space:nowrap;">
     <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>

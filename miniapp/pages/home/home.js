@@ -12,8 +12,17 @@ Page({
   goShop(e) {
     console.log(e);
   },
-  takeAway(e) {
-    console.log(e);
+  QRscan(e) {
+    // console.log(e);
+    wx.scanCode({
+      success (res) {
+        wx.setStorageSync('scanResult', res);
+        wx.navigateTo({
+            url: '/pages/QRcode/QRcode'
+          });
+          
+      }
+    })
   },
 
   /**

@@ -98,6 +98,7 @@ Page({
         console.log("code: ",res.code);
       },
     })
+    
   },
 // getInformation(){
 //     wx.getUserInfo({

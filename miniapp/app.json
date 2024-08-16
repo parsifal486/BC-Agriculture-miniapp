@@ -8,7 +8,8 @@
     "pages/userCenter/discountTicket/discountTicket",
     "pages/userCenter/purchaseOrder/purchaseOrder",
     "pages/userCenter/devTeam/devTeam",
-    "pages/userCenter/mydingdan/mydingdan"
+    "pages/userCenter/mydingdan/mydingdan",
+    "pages/QRcode/QRcode"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

@@ -1,0 +1,33 @@
+<view class="product-card">
+  <image class="product-image" src="{{product.imageUrl}}" mode="aspectFill"></image>
+  <view class="product-info">
+    <view class="product-detail">
+      <text class="label">商品编号:</text>
+      <text class="value">{{product.productNumber}}</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">商品名称:</text>
+      <text class="value">{{product.productName}}</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">源产地:</text>
+      <text class="value">{{product.location}}</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">培育周期:</text>
+      <text class="value">{{product.time}}周</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">温度:</text>
+      <text class="value">{{product.temperature}}摄氏度</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">产出时间:</text>
+      <text class="value">{{product.shippingDate}}</text>
+    </view>
+    <view class="product-detail">
+      <text class="label">负责人:</text>
+      <text class="value">{{product.manager}}</text>
+    </view>
+  </view>
+</view>

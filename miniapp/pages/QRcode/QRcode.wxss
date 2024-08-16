@@ -1,0 +1,37 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 180px 20px 20px; /* 上边距增大，底部边距减少 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f8f8f8;
+}
+
+.product-image {
+  width: 100%;
+  height: 400rpx;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.value {
+  color: #555;
+  font-size: 28rpx;
+}
