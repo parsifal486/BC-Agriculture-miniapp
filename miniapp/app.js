@@ -36,11 +36,11 @@ App(
           success:res2=>{
             console.log(res2.data.data);
             //存储到本地
-            // wx.setStorageSync('userId',res2.data.data.userId);
+            wx.setStorageSync('userId',res2.data.data.userId);
+            wx.setStorageSync('token',res2.data.data.token);
             //请求登录接口
 
           }
-
         })
       },
     })
