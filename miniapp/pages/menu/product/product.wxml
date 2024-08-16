@@ -1,87 +1,82 @@
 <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="标题文字">
   <view slot="capsule" class="custom-capsule">
-    <t-icon
-      size="20"
-      bind:tap="onBack"
-      aria-role="button"
-      aria-label="返回"
-      name="chevron-left"
-      class="custom-capsule__icon back"
-    />
-   <t-icon
-      size="20"
-      bind:tap="onGoHome"
-      aria-role="button"
-      aria-label="首页"
-      name="home"
-      class="custom-capsule__icon home"
-    />
+    <t-icon size="20" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon back" />
+    <t-icon size="20" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon home" />
   </view>
 </t-navbar>
 
-<button class="button" open-type="share" size="mini" ><image src="../../img/temp/zhuanfa.png"></image></button>
-<view class="swiper">
-<swiper
-autoplay
-circular
-indicator-dots
-interval="2000"
+<!-- <view class="swiper">
+  <swiper autoplay circular indicator-dots interval="2000">
+    <swiper-item>
+      <image src="../../img/temp/1.png" mode="" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../img/temp/2.webp" mode="" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../img/temp/3.webp" mode="" />
+    </swiper-item>
+  </swiper>
+</view> -->
+
+<t-swiper class = "product-swiper"
+  current="{{current}}"
+  autoplay="{{autoplay}}"
+  duration="{{duration}}"x
+  interval="{{interval}}"
+  navigation="{{ { type: 'dots' } }}"
+  list="{{productImg}}"
+  bind:click="onTap"
+  bind:change="onChange"
+  bind:image-load="onImageLoad"
 >
-<swiper-item >
-<image src="../../img/temp/1.png" mode=""/>
-</swiper-item>
-<swiper-item><image src="../../img/temp/2.webp" mode=""/></swiper-item>
-<swiper-item><image src="../../img/temp/3.webp" mode=""/></swiper-item>
-</swiper>
-</view>
+</t-swiper>
 
-<view class="info">
-
-  <view class="body">野生粉藕 
-  <text >
-  食物属性:</text>
+<scroll-view class="product-detail">
   
-  <text>\n莲藕属睡莲科莲属(Nelumbo)植物中医认为，\n生藕性寒，甘凉入胃，可消瘀凉血、清烦热，止呕渴。适用\n于烦渴、酒醉、咳血、吐血等症。妇女产后忌食生冷，惟独\n不忌藕，就是因为藕有很好的消瘀作用，故民间有\n“新采嫩藕胜太医"之说。\n</text>
-  <view class="demo">
+  <view class="info">
 
-<t-tag class="margin-16" variant="light">种植溯源 :   有机种植</t-tag>
-<t-tag class="margin-16" variant="light">地点溯源 : 广东省珠海市斗门区翻斗村</t-tag>
-<t-tag class="margin-16" variant="light">采摘时间 : 2024-01-28 00:00:00</t-tag>
+  <view class="body">野生粉藕
+      <text>
+        食物属性:</text>
 
-</view>
-  </view>
+      <text>\n莲藕属睡莲科莲属(Nelumbo)植物中医认为，\n生藕性寒，甘凉入胃，可消瘀凉血、清烦热，止呕渴。适用\n于烦渴、酒醉、咳血、吐血等症。妇女产后忌食生冷，惟独\n不忌藕，就是因为藕有很好的消瘀作用，故民间有\n“新采嫩藕胜太医"之说。\n</text>
+      <view class="demo">
 
-</view>
-<t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
-<view class="container">
-    <view class="product-list">
-        <block wx:for="{{products}}" wx:key="id">
-            <view class="product-item">
-                <text class="price"> ￥{{item.price}}</text>
-                <button class="btn" bindtap="removeFromCart" data-id="{{item.id}}">-</button>
-                <view wx:if="{{total >= 0}}"> 
-                <view class="total">{{total}}</view>
-                </view>
-                <view wx:else>
-                  <view class="total">0</view>
-                  
-               </view>
-                <button class="btn" bindtap="addToCart" data-id="{{item.id}}">+</button>
-            </view>
-        </block>
+        <t-tag class="margin-16" variant="light">种植溯源 : 有机种植</t-tag>
+        <t-tag class="margin-16" variant="light">地点溯源 : 广东省珠海市斗门区翻斗村</t-tag>
+        <t-tag class="margin-16" variant="light">采摘时间 : 2024-01-28 00:00:00</t-tag>
+
+      </view>
     </view>
 
-</view>
+  </view>
+  <t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
+  <view class="container">
+    <view class="product-list">
+      <block wx:for="{{products}}" wx:key="id">
+        <view class="product-item">
+          <text class="price"> ￥{{item.price}}</text>
+          <button class="btn" bindtap="removeFromCart" data-id="{{item.id}}">-</button>
+          <view wx:if="{{total >= 0}}">
+            <view class="total">{{total}}</view>
+          </view>
+          <view wx:else>
+            <view class="total">0</view>
 
+          </view>
+          <button class="btn" bindtap="addToCart" data-id="{{item.id}}">+</button>
+        </view>
+      </block>
+    </view>
+  </view>
 
-  <t-fab class="cart" icon="cart-add" button-props="{{fabButton}}" bind:click="handleClick" text="加入购物车" />
+  <view>
+    <t-fab class="cart" icon="cart-add" button-props="{{fabButton}}" bind:click="handleClick" text="加入购物车" />
+
+    <t-fab class="shop" icon="shop" button-props="{{fabButton}}" bind:click="handleClick" text="立即购买" />  
+
+  </view>
   
-  <t-fab class="shop" icon="shop" button-props="{{fabButton}}" bind:click="handleClick" text="立即购买" />
 
-
-
-
-
-
-
-
+</scroll-view>

@@ -8,6 +8,11 @@ Page({
       cart: [],
       totalPrice: 0,
       total:0,
+      productImg:[
+        "/pages/img/temp/1.png",
+        "/pages/img/temp/2.webp",
+        "/pages/img/temp/3.webp"
+      ]
     
   },
   addToCart(event) {
