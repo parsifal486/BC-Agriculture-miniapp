@@ -8,7 +8,7 @@
       name="chevron-left"
       class="custom-capsule__icon back"
     />
-    <t-icon
+   <t-icon
       size="20"
       bind:tap="onGoHome"
       aria-role="button"
@@ -75,15 +75,9 @@ interval="2000"
 
 
   <t-fab class="cart" icon="cart-add" button-props="{{fabButton}}" bind:click="handleClick" text="加入购物车" />
-<t-fab
-  icon="shop"
-  text="立即购买"
-  bind:click="handleClick"
-  bind:move="handleMove"
-  aria-label="增加"
-  usingCustomNavbar
-  draggable
-></t-fab>
+  
+  <t-fab class="shop" icon="shop" button-props="{{fabButton}}" bind:click="handleClick" text="立即购买" />
+
 
 
 

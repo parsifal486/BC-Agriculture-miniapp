@@ -7,7 +7,8 @@
     "pages/userCenter/editProfile/editProfile",
     "pages/userCenter/discountTicket/discountTicket",
     "pages/userCenter/purchaseOrder/purchaseOrder",
-    "pages/userCenter/devTeam/devTeam"
+    "pages/userCenter/devTeam/devTeam",
+    "pages/userCenter/mydingdan/mydingdan"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

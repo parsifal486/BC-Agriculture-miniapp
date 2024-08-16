@@ -4,6 +4,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/mydingdan/mydingdan",
+          "pathName": "pages/userCenter/mydingdan/mydingdan",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/menu/menu",
+          "pathName": "pages/menu/menu",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/editProfile/editProfile",
           "pathName": "pages/userCenter/editProfile/editProfile",
           "query": "",
@@ -20,13 +34,6 @@
         {
           "name": "pages/userCenter/discountTicket/discountTicket",
           "pathName": "pages/userCenter/discountTicket/discountTicket",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/menu/menu",
-          "pathName": "pages/menu/menu",
           "query": "",
           "launchMode": "default",
           "scene": null

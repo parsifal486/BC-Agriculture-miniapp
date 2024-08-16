@@ -29,7 +29,7 @@
  font-family: '楷体';
   font-weight: bold;
  transform: translate(0%,-8%);
-z-index: -40;
+z-index: 40;
 .body{
   transform: translate(8%,5%);
 }
@@ -64,10 +64,10 @@ z-index: -40;
 
 .container {
   width: 100%;
-  position: absolute;
+
   
   height: 400rpx;
-  transform: translate(-3%,300%);
+  transform: translate(-3%,-10%);
   border-radius: 100rpx;
   padding: 20rpx;
 }
@@ -87,19 +87,7 @@ z-index: -40;
   font-weight: bold;
   text-align: right;
 }
-.lijizhifu{
-  background-color: white;
-  transform: translate(10%,60%);
-   font-family: 'kaiti';
-   color: black;
-}
-.gouwuche{
-  background-color: rgb(32, 255, 32);
-  transform: translate(0%,61%);
-   font-family: 'kaiti';
-   
 
-}
 
 .back{
   image{
@@ -213,6 +201,8 @@ z-index: -40;
 }
 .shop{
   color: white;
+display: flex;
+
 
 }
 .cart{

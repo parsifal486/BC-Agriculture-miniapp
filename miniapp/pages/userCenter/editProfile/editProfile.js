@@ -13,6 +13,15 @@ OnchooseAvatar:function(e){
     pic
   })
 },
-
+onBack() {
+  wx.reLaunch({
+    url: 'pages/menu/menu',
+  });
+},
+onGoHome() {
+  wx.reLaunch({
+    url: '/pages/home/home',
+  });
+},
 
 })

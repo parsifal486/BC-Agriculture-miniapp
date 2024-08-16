@@ -40,15 +40,15 @@ Page({
       url: '/pages/home/home',
     });
   },
-
+ 
 });
-Component({
-  methods: {
-    handleClick(e) {
-      console.log(e);
-    },
-    handleMove(e) {
-      console.log(e);
-    },
-  },
-});
+// Component({
+//   methods: {
+//     handleClick(e) {
+//       console.log(e);
+//     },
+//     handleMove(e) {
+//       console.log(e);
+//     },
+//   },
+// });
