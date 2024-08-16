@@ -3,10 +3,34 @@
   flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
-  margin: 180px 20px 20px; /* 上边距增大，底部边距减少 */
+  margin: -90px 20px 0px 20px; /* 上边距增大，底部边距减少 */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #f8f8f8;
+  /* position: relative; 
+  top: 200px;  */
 }
+.local-image {
+  width:100%; /* 图片宽度设置为容器宽度的80% */
+  height: 40%px; /* 高度自动调整以保持纵横比 */
+  object-fit: cover; 
+}
+.local-image2 {
+  width:100%; /* 图片宽度设置为容器宽度的80% */
+  height: 150px; /* 高度自动调整以保持纵横比 */
+  object-fit: cover; 
+  
+}
+/* 主容器样式 */
+
+/* 本地图片样式 */
+/* .local-image {
+  width: 100%; 
+  height: 300px; 
+  border-radius: 10px; 
+  border: 1px solid #ddd; 
+  margin-bottom: 0px; 
+  object-fit: cover; 
+} */
 
 .product-image {
   width: 100%;
