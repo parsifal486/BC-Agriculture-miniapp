@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.OrderMapper">
+<insert id="insertOrders" useGeneratedKeys="true" keyProperty="user_id">
+    insert into
+        web_order_detali
+        (user_id,price,create_time,update_time,flag,permission,quantity)
+    values
+        (#{userId},#{price},#{createTime},#{updateTime},#{flag},#{permission},#{quantity})
+</insert>
+    <insert id="insertOrdersItems">
+        insert into web_order_item
+        (order_id,commodity_id,price,quantity)
+        values
+        (#{orderId},#{commodityId},#{price},#{quantity})
+    </insert>
+
+</mapper>

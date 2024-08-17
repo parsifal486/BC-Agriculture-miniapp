@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sky.mapper.WxUserMapper">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="user_id">
+        insert into web_user_detail (open_id,create_time,update_time)
+        values
+            (#{openId},#{createTime},#{updateTime})
+    </insert>
+    <update id="update">
+        update web_user_detail
+
+        <set>
+            <if test="nickname!=null">nickname=#{nickname}</if>
+            <if test="phone!=null">phone=#{phone}</if>
+            <if test="address!=null">address=#{address}</if>
+        </set>
+        where user_id=${userId}
+    </update>
+
+
+
+</mapper>
