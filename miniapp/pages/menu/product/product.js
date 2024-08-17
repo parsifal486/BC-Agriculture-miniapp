@@ -8,6 +8,8 @@ Page({
       cart: [],
       totalPrice: 0,
       total:0,
+      autoplay:true,
+      interval:2000,
       productImg:[
         "/pages/img/temp/1.png",
         "/pages/img/temp/2.webp",
@@ -57,3 +59,4 @@ Page({
 //     },
 //   },
 // });
+

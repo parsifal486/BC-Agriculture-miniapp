@@ -11,123 +11,79 @@ background-color: var(--main--gray--bg);
 
 .product-detail{
   width: 92%;
-  height: 600rpx;
+  height: 1500rpx;
   z-index: 3;
   background-color: var(--grey-1);
   padding: 30rpx;
   border-radius: 30rpx;
-  transform: translate(0%,-3%);
+  transform: translate(0%,-1%);
 }
 
-/* 
-.swiper {
-  height: 450rpx;
-  border-radius: 16px;
-  overflow: hidden;
+
+.stepper-example {
+  padding: 32rpx;
+  background-color: var(--bg-color-demo);
+  
 }
 
-.swiper-item image {
+.floating {
+  position: fixed;
+  bottom: 0;  /* 悬浮部分距离底部的距离 */
+  right: 0;   /* 悬浮部分距离右侧的距离 */
   width: 100%;
-  height: 100%;
+  height: 300rpx;
+  background-color:white; /* 背景颜色 */
 }
-
-.info {
-  height: 600rpx;
-  border-radius: 100px;
-  border: 3px solid rgb(35, 151, 11);
-  font-size: 20px;
-  font-family: '楷体';
-  font-weight: bold;
-  transform: translate(0%, -8%);
-  z-index: 40;
-}
-
-.info .body {
-  transform: translate(8%, 5%);
-}
-
-.info text {
-  font-weight: normal;
-  font-size: 12px;
-}
-
-.info text:nth-of-type(odd) {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.hanhui {
-  width: 100rpx;
-  height: 100rpx;
-  z-index: 100;
-  position: absolute;
-}
-
-.button {
-  position: absolute;
-  transform: translate(960%, 15%);
-  z-index: 1000;
-  width: 70rpx;
-  height: 70rpx;
-}
-
-.button image {
-  display: flex;
-  transform: translate(-42%, 0%);
-  width: 70rpx;
-  height: 70rpx;
-}
-
-.container {
-  width: 100%;
-  height: 400rpx;
-  transform: translate(-3%, -10%);
-  border-radius: 100rpx;
-  padding: 20rpx;
-}
-
-.product-list,
-.cart {
-  margin-bottom: 20rpx;
-  font-size: 80rpx;
-}
-
-.product-item,
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10rpx;
-}
-
-.total {
+.price{
   font-size: 50rpx;
-  font-weight: bold;
-  text-align: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.stepper-example{
+  transform: translate(65%,-80%);
+}
+/* 基本样式 */
+.info {
+  padding: 2px;
+  background-color: #f9f9f9;
 }
 
-.back image {
-  width: 750rpx;
-  height: 1000rpx;
+.body {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.back {
-  z-index: -10;
-  transform: translate(0%, 45%);
-  position: absolute;
+.title {
+  font-size: 26px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15px;
+  display: block;
 }
 
-.katong image {
-  width: 250rpx;
-  height: 250rpx;
+.description {
+  font-size: 18px;
+  font-family: "Georgia", serif;
+  color: #444444;
+  line-height: 1.6;
+  white-space: pre-line; /* 保持文本换行符 */
 }
 
-.katong {
-  z-index: 0;
-  transform: translate(160%, 420%);
-  position: absolute;
+.demo {
+  margin-top: 25px;
 }
 
+.tag {
+  display: block;
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
 .custom-capsule {
   width: 100%;
   display: flex;
@@ -150,25 +106,4 @@ background-color: var(--main--gray--bg);
   width: 1px;
   height: 18px;
   background: #e7e7e7;
-} */
-.stepper-example {
-  padding: 32rpx;
-  background-color: var(--bg-color-demo);
-  
-}
-
-.floating {
-  position: fixed;
-  bottom: 0;  /* 悬浮部分距离底部的距离 */
-  right: 0;   /* 悬浮部分距离右侧的距离 */
-  width: 100%;
-  height: 300rpx;
-  background-color:white; /* 背景颜色 */
-}
-.price{
-  font-size: 50rpx;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.stepper-example{
-  transform: translate(65%,-80%);
 }
