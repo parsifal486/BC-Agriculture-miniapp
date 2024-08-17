@@ -59,13 +59,6 @@
 .sideslipMenuItem {
   font-size: 100rpx;
 }
-
-/* .img{
-  width: 100%;  
-  margin-bottom: 0px;
-  height: 100px;
-  padding-top: 0px;
-} */
 .product-container {  
   display: flex;   
   padding: 10px;  
@@ -175,6 +168,20 @@ page .round-image {
   width: 1px;
   height: 18px;
   background: #e7e7e7;
+}
+
+
+.custom-title {  
+  font-size: 16px; /* 主标题字体大小 */  
+  color: #333; /* 主标题字体颜色 */  
+  /* 其他样式... */  
+}  
+  
+.view-right{
+  display: flex; 
+  align-items: center; 
+  padding: var(--td-cell-vertical-padding, 32rpx) var(--td-cell-horizontal-padding, 32rpx); 
+  border-bottom: 1rpx solid #e7e7e7;
 }
 
 

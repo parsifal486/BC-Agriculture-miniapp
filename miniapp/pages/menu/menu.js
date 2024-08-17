@@ -82,6 +82,7 @@ wx.request({
         var obj = {
           commodityName: item.commodityName,
           commodityPrice: item.commodityPrice, 
+          profileImage: item.profileImage
         };
         filteredCommodities.push(obj);
       });

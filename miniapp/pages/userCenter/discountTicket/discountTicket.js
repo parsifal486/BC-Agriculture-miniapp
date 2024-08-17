@@ -6,56 +6,51 @@ Page({
     coupons: [] // 存储优惠券的数组
   },
 
-  onLoad: function (options) {
-    // 假设在页面加载时获取优惠券数据
+  onLoad(options) {
+    console.log("函数已执行");
+    // 在页面加载时获取优惠券数据
     this.getUserCoupons(200003);
+    
   },
 
-  // success:(res)=>{
-  //   console.log(res.data.data.records);
-  //     var filteredCommodities = [];
-  //     res.data.data.records.forEach(item => {
-  //       var obj = {
-  //         commodityName: item.commodityName,
-  //         commodityPrice: item.commodityPrice, 
-  //       };
-  //       filteredCommodities.push(obj);
-  //     });
-  //     this.setData({
-  //       commodityNames: filteredCommodities  // 更新页面数据
-  //     });
-  //   }
 
-  getUserCoupons: function (userId) {
-    wx.request({
-      url: `http://49.232.136.246:8090/wx/user/selectCouponsById`,
-      method: 'GET',
-      data: { userId: 200003 },
-      success: (res) => {
+getUserCoupons: function (userId) {
+  
+  wx.request({
+    url: `http://49.232.136.246:8090/wx/user/selectCouponsById`,
+    method: 'GET',
+    data: { userId: userId },
+
+    success: (res) => {
+      if (res.statusCode === 200 && res.data && res.data.data && res.data.data.records) {
         console.log(res.data.data.records);
-        // if (res.statusCode === 200) {
-        //   // 成功获取数据后，更新 coupons 数据
-        //   this.setData({
-        //     coupons: res.data
-        //   });
-        // } 
-        var filteredCommodities = [];
-        res.data.data.records.forEach(item => {
-        var obj = {
-          couponsName: item.couponsName,
-          reductionPrice: item.reductionPrice, 
-          reductionFull:item.reductionFull,
-          createTime:item.createTime,
-          updateTime:item.updateTime
-        };
-        filteredCommodities.push(obj);
-      });
-      this.setData({
-        coupons: filteredCommodities  // 更新页面数据
-      });
-      },
-    });
-  }
+
+        // 处理返回的优惠券数据
+        var filteredCommodities = res.data.data.records.map(item => {
+          return {
+            couponsName: item.couponsName,
+            reductionPrice: item.reductionPrice, 
+            reductionFull: item.reductionFull,
+            createTime: item.createTime,
+            updateTime: item.updateTime
+          };
+        });
+
+        // 更新页面数据
+        this.setData({
+          coupons: filteredCommodities
+        });
+      } else {
+        console.error("Failed to fetch data:", res);
+      }
+    },
+    fail: (err) => {
+      console.error("Request failed:", err);
+    }
+  });
+}
+
+
 });
 
 Component({
@@ -63,7 +58,7 @@ Component({
     onBack() {
       wx.navigateBack();
     },
-    onGoHome() {
+    onGoHome() {    
       wx.reLaunch({
         url: '../user.js',
       });

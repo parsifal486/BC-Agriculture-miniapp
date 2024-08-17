@@ -12,7 +12,7 @@
   </view>
   <!-- 优惠券 -->
   <block wx:for="{{coupons}}" wx:key="id">
-  <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
+  <!-- <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
     <t-cell class="card">
       <view slot="title">
         <view class="title">{{item.couponsName}}</view>
@@ -22,7 +22,14 @@
         <view class="sub-title">有效期至：{{item.updateTime}}</view>
       </view>
     </t-cell>
-  </t-cell-group>
+  </t-cell-group> -->
+  <view class="card">
+    <view class="title">{{item.couponsName}}</view>
+    <view class="sub-title">折扣金额：减{{item.reductionPrice}}元</view>
+    <view class="sub-title">使用条件：满{{item.reductionFull}}</view>
+    <view class="sub-title">生效时间：{{item.createTime}}</view>
+    <view class="sub-title">有效期至：{{item.updateTime}}</view>
+  </view>
   </block>
   <!-- <view class="card">
   <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
