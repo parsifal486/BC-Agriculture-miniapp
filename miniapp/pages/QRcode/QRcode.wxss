@@ -1,3 +1,39 @@
+/* .custom-capsule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-capsule__icon {
+  flex: 1;
+  position: relative;
+}
+
+.custom-capsule__icon.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 18px;
+  background: #e7e7e7;
+} */
+/* 页面样式 */
+.back-button {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 7px;
+  color: #000;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
