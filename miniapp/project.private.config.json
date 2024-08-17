@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/editProfile/editProfile",
+          "pathName": "pages/userCenter/editProfile/editProfile",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/mydingdan/mydingdan",
           "pathName": "pages/userCenter/mydingdan/mydingdan",
           "query": "",
@@ -56,7 +63,9 @@
     }
   },
   "setting": {
-    "urlCheck": false
+    "urlCheck": false,
+    "compileHotReLoad": true
   },
-  "libVersion": "3.5.3"
+  "libVersion": "3.5.3",
+  "projectname": "miniapp"
 }

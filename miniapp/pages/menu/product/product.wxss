@@ -4,9 +4,13 @@ page{
 background-color: var(--main--gray--bg);
 }
 
+.product-navbar{
+  --td-navbar-bg-color: rgb(0,0,0,0);
+}
+
 .product-swiper{
   z-index: -1;
-  
+  margin-top: -170rpx;
 }
 
 .product-detail{
@@ -19,6 +23,14 @@ background-color: var(--main--gray--bg);
   transform: translate(0%,-1%);
 }
 
+.floating {
+  position: fixed;
+  bottom: 0;  /* 悬浮部分距离底部的距离 */
+  right: 0;   /* 悬浮部分距离右侧的距离 */
+  width: 100%;
+  height: 230rpx;
+  background-color:white; /* 背景颜色 */
+}
 
 .stepper-example {
   padding: 32rpx;
@@ -26,20 +38,21 @@ background-color: var(--main--gray--bg);
   
 }
 
-.floating {
-  position: fixed;
-  bottom: 0;  /* 悬浮部分距离底部的距离 */
-  right: 0;   /* 悬浮部分距离右侧的距离 */
-  width: 100%;
-  height: 300rpx;
-  background-color:white; /* 背景颜色 */
+
+.price-operation{
+  display: flex;
+  align-items: center; 
+  margin-left:50rpx;
+  margin-top: 30rpx;
 }
+
+.stepper-conatiner{
+  margin-left: 40rpx;
+}
+
 .price{
   font-size: 50rpx;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.stepper-example{
-  transform: translate(65%,-80%);
+  margin-right: 300rpx;
 }
 /* 基本样式 */
 .info {
@@ -84,12 +97,7 @@ background-color: var(--main--gray--bg);
   font-size: 16px;
   margin-bottom: 10px;
 }
-.custom-capsule {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .custom-capsule__icon {
   flex: 1;
@@ -107,3 +115,14 @@ background-color: var(--main--gray--bg);
   height: 18px;
   background: #e7e7e7;
 }
+
+.button-container{
+  margin-left: 50rpx;
+}
+
+.cart{
+  margin-right:90rpx ;
+}
+
+
+

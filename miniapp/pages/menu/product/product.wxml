@@ -1,9 +1,9 @@
-<t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="标题文字">
-  <view slot="capsule" class="custom-capsule">
-    <t-icon size="20" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon back" />
-    <t-icon size="20" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon home" />
-  </view>
-</t-navbar>
+<t-navbar
+  t-class-placeholder="t-navbar-placeholder"
+  t-class-content="t-navbar-content"
+  class="product-navbar"
+  left-arrow
+/>
 
 <!-- <view class="swiper">
   <swiper autoplay circular indicator-dots interval="2000">
@@ -40,37 +40,21 @@
     </view>
   </view>
 </view>
-  <!-- <t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
-  <view class="container">
-    <view class="product-list">
-      <block wx:for="{{products}}" wx:key="id">
-        <view class="product-item">
-          <text class="price"> ￥{{item.price}}</text>
-          <button class="btn" bindtap="removeFromCart" data-id="{{item.id}}">-</button>
-          <view wx:if="{{total >= 0}}">
-            <view class="total">{{total}}</view>
-          </view>
-          <view wx:else>
-            <view class="total">0</view>
-
-          </view>
-          <button class="btn" bindtap="addToCart" data-id="{{item.id}}">+</button>
-        </view>
-      </block>
-    </view>
-  </view> -->
 
 
 </scroll-view>
 
 <view class="floating">
-  <text class="price"> ￥{{price}}</text>
-     <view class="stepper-example">
-     <t-stepper rdefaultValue="0" theme="filled" />
+  <view class="price-operation">
+    <text class="price"> ￥{{price}}</text>
+    <view class="stepper-conatiner">
+      <t-stepper rdefaultValue="0" theme="filled" />
     </view>
+  </view>
+  
 
-
+  <view class="button-container">
     <t-button class="cart" icon="cart-add" theme="primary" size="large" shape="round">加入购物车</t-button>
     <t-button class="shop" icon="shop" theme="primary" size="large" shape="round">立即购买</t-button>
-
   </view>
+</view>
