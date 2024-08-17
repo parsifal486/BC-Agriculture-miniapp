@@ -2,9 +2,9 @@
 
 Page({
   data: {
-      products: [
-          { price: 10.2 }
-      ],
+      
+           price: 10.2 ,
+      
       cart: [],
       totalPrice: 0,
       total:0,

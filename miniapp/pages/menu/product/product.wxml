@@ -19,24 +19,14 @@
   </swiper>
 </view> -->
 
-<t-swiper class = "product-swiper"
-  current="{{current}}"
-  autoplay="{{autoplay}}"
-  duration="{{duration}}"x
-  interval="{{interval}}"
-  navigation="{{ { type: 'dots' } }}"
-  list="{{productImg}}"
-  bind:click="onTap"
-  bind:change="onChange"
-  bind:image-load="onImageLoad"
->
+<t-swiper class="product-swiper" current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" x interval="{{interval}}" navigation="{{ { type: 'dots' } }}" list="{{productImg}}" bind:click="onTap" bind:change="onChange" bind:image-load="onImageLoad">
 </t-swiper>
 
 <scroll-view class="product-detail">
-  
+
   <view class="info">
 
-  <view class="body">野生粉藕
+    <view class="body">野生粉藕
       <text>
         食物属性:</text>
 
@@ -51,7 +41,7 @@
     </view>
 
   </view>
-  <t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
+  <!-- <t-divider t-class="{{skylineRender?'skyline-dashed':''}}" dashed />
   <view class="container">
     <view class="product-list">
       <block wx:for="{{products}}" wx:key="id">
@@ -69,14 +59,19 @@
         </view>
       </block>
     </view>
-  </view>
+  </view> -->
 
-  <view>
-    <t-fab class="cart" icon="cart-add" button-props="{{fabButton}}" bind:click="handleClick" text="加入购物车" />
-
-    <t-fab class="shop" icon="shop" button-props="{{fabButton}}" bind:click="handleClick" text="立即购买" />  
-
-  </view>
-  
 
 </scroll-view>
+
+<view class="floating">
+  <text class="price"> ￥{{price}}</text>
+     <view class="stepper-example">
+     <t-stepper rdefaultValue="0" theme="filled" />
+    </view>
+
+
+    <t-button class="cart" icon="cart-add" theme="primary" size="large" shape="round">加入购物车</t-button>
+    <t-button class="shop" icon="shop" theme="primary" size="large" shape="round">立即购买</t-button>
+
+  </view>

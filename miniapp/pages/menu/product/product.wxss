@@ -10,10 +10,13 @@ background-color: var(--main--gray--bg);
 }
 
 .product-detail{
+  width: 92%;
+  height: 600rpx;
   z-index: 3;
   background-color: var(--grey-1);
   padding: 30rpx;
   border-radius: 30rpx;
+  transform: translate(0%,-3%);
 }
 
 /* 
@@ -148,3 +151,24 @@ background-color: var(--main--gray--bg);
   height: 18px;
   background: #e7e7e7;
 } */
+.stepper-example {
+  padding: 32rpx;
+  background-color: var(--bg-color-demo);
+  
+}
+
+.floating {
+  position: fixed;
+  bottom: 0;  /* 悬浮部分距离底部的距离 */
+  right: 0;   /* 悬浮部分距离右侧的距离 */
+  width: 100%;
+  height: 300rpx;
+  background-color:white; /* 背景颜色 */
+}
+.price{
+  font-size: 50rpx;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.stepper-example{
+  transform: translate(65%,-80%);
+}
