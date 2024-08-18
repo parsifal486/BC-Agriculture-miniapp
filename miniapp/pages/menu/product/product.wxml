@@ -48,7 +48,7 @@
   <view class="price-operation">
     <text class="price"> ￥{{price}}</text>
     <view class="stepper-conatiner">
-      <t-stepper rdefaultValue="0" theme="filled" />
+      <t-stepper   min="1" size = "large" rdefaultValue="0" theme="filled" />
     </view>
   </view>
   

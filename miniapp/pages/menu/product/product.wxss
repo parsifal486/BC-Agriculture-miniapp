@@ -43,11 +43,11 @@ background-color: var(--main--gray--bg);
   display: flex;
   align-items: center; 
   margin-left:50rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
 }
 
 .stepper-conatiner{
-  margin-left: 40rpx;
+  margin-left: 4rpx;
 }
 
 .price{
@@ -117,6 +117,7 @@ background-color: var(--main--gray--bg);
 }
 
 .button-container{
+  margin-top: 10rpx;
   margin-left: 50rpx;
 }
 
