@@ -13,15 +13,21 @@ Page({
     console.log(e);
   },
   QRscan(e) {
-    // console.log(e);
+    console.log(e);
     wx.scanCode({
       success (res) {
-        wx.setStorageSync('scanResult', res);
+        console.log(res.rawData)
+        const decodedString = atob(res.rawData); // 使用 atob() 解码 Base64
+        console.log(decodedString)
+        wx.setStorageSync('scanResult', decodedString);
         wx.navigateTo({
             url: '/pages/QRcode/QRcode'
           });
           
+      },fail(err){
+        console.log("扫描失败",err)
       }
+      
     })
   },
 

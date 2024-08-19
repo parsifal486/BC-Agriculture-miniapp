@@ -57,8 +57,8 @@
       <text class="value">{{product.temperature}}摄氏度</text>
     </view>
     <view class="product-detail">
-      <text class="label">产出时间:</text>
-      <text class="value">{{product.shippingDate}}</text>
+      <text class="label">经纬度:</text>
+      <text class="value">{{product.originX}}{{product.originY}}</text>
     </view>
     <view class="product-detail">
       <text class="label">负责人:</text>

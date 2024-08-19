@@ -15,4 +15,6 @@ public interface CommodityService {
     PageResult queryCommodityByType(String partitionName);
 
     List<String> queryAllType();
+
+    String getImgById(String commodityId);
 }

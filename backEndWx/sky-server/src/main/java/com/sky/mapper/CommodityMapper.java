@@ -15,4 +15,6 @@ public interface CommodityMapper {
     List<Commodity> queryByType(String partitionName);
     @Select("select DISTINCT partition_name from web_commodity_detail ")
     List<String> queryAllType();
+    @Select("select profile_image from  web_commodity_detail where commodity_id=#{commodityId}")
+    String getImgById(String commodityId);
 }

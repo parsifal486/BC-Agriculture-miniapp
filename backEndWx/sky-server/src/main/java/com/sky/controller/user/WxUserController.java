@@ -67,13 +67,6 @@ public class WxUserController {
 
     //头像修改
 
-
-
-
-
-
-
-
     //昵称修改
     //地址修改
     //手机号修改
