@@ -72,3 +72,14 @@ border-radius: 10px;
   height: 18px;
   background: #e7e7e7;
 }
+.choosePart{
+  border-radius: 15rpx;
+  margin: 30rpx;
+  margin-top: 700rpx;
+  background-color: #e7e7e7;
+  display: flex;
+  flex-wrap: wrap;
+}
+.choosePart view{
+  margin-left: 10rpx;
+}
