@@ -1,9 +1,9 @@
-package com.sky.pojo.entity;
+package com.sky.pojo.vo;
 
 import lombok.Data;
 
 @Data
-public class OrderItems {
+public class OrderItemVo {
     private String commodityName;
 
     private String profile;

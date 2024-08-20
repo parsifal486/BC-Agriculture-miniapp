@@ -2,21 +2,16 @@ package com.sky.service.impl;
 
 import com.sky.mapper.OrderMapper;
 import com.sky.pojo.dto.OrderDto;
-import com.sky.pojo.entity.Commodity;
 import com.sky.pojo.entity.Order;
-import com.sky.pojo.entity.OrderItems;
+import com.sky.pojo.entity.OrderItem;
+import com.sky.pojo.vo.OrderItemVo;
 import com.sky.pojo.vo.OrderVo;
-import com.sky.result.PageResult;
-import com.sky.result.Result;
 import com.sky.service.OrderService;
 import com.sky.utils.ThreadLocalUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static com.sky.utils.DateUtils.getNowDate;
@@ -27,23 +22,25 @@ public class OrderServiceImpl implements OrderService {
     @Resource
     private OrderMapper orderMapper;
 
-
+//    private static final Long USER_ID= ThreadLocalUtils.getCurrentId();
+        private static final Long USER_ID=200021L;
     @Override
     public void insertOrders(List<OrderDto> list) {
-        List<OrderDto> res=new ArrayList<>();
+        List<OrderItem> res=new ArrayList<>();
         double totalAmount=new Double(0.0);
         for (OrderDto order : list) {
-            OrderDto orderDto = new OrderDto();
-            orderDto.setPrice(orderMapper.getPriceById(order.getCommondityId()));
-            orderDto.setQuantity(order.getQuantity());
-            orderDto.setCommondityId(order.getCommondityId());
-            res.add(orderDto);
-            totalAmount+=orderMapper.getPriceById(order.getCommondityId())*order.getQuantity();
+            OrderItem orderItem = new OrderItem();
+//            OrderDto orderDto = new OrderDto();
+            orderItem.setPrice(orderMapper.getPriceById(order.getCommodityId()));
+            orderItem.setQuantity(order.getQuantity());
+            orderItem.setCommodityId(order.getCommodityId());
+            res.add(orderItem);
+            totalAmount+=orderMapper.getPriceById(order.getCommodityId())*order.getQuantity();
 
         }
         Order order = new Order();
-        order.setUserId(ThreadLocalUtils.getCurrentId());
-
+//        order.setUserId(ThreadLocalUtils.getCurrentId());
+        order.setUserId(USER_ID);
         order.setPrice(totalAmount);
         order.setCreateTime(getNowDate());
         order.setUpdateTime(getNowDate());
@@ -52,10 +49,14 @@ public class OrderServiceImpl implements OrderService {
         order.setPermission(1L);
         order.setQuantity(1.0F);
 
-        Long orderId=orderMapper.insertOrders(order);
+        orderMapper.insertOrders(order);
 
-        for (OrderDto re : res) {
-            re.setOrderId(orderId);
+
+        for (OrderItem re : res) {
+            re.setOrderId(order.getOrdersId());
+
+            re.setUserId(USER_ID);
+//            re.setUserId(ThreadLocalUtils.getCurrentId());
             orderMapper.insertOrdersItems(re);
         }
 
@@ -77,16 +78,18 @@ public class OrderServiceImpl implements OrderService {
             //将订单的第二部分放进去
             List<OrderDto> orderDtoList=new ArrayList<>();
             orderDtoList=orderMapper.selectOrderItems(order.getOrdersId());
-            List<OrderItems> orderItemsList=new ArrayList<>();
+            List<OrderItemVo> orderItemVoList =new ArrayList<>();
             for (OrderDto orderDto : orderDtoList) {
-                OrderItems orderItems = new OrderItems();
-                orderItems.setCommodityName(orderMapper.selectNameById(orderDto.getCommondityId()));
-                orderItems.setProfile(orderMapper.selectProfileById(orderDto.getCommondityId()));
-                orderItems.setPrice(orderDto.getPrice());
-                orderItems.setQuantity(orderDto.getQuantity());
-                orderItemsList.add(orderItems);
+                OrderItemVo orderItemVo = new OrderItemVo();
+                orderItemVo.setCommodityName(orderMapper.selectNameById(orderDto.getCommodityId()));
+                orderItemVo.setProfile(orderMapper.selectProfileById(orderDto.getCommodityId()));
+                orderItemVo.setPrice(orderDto.getPrice());
+                orderItemVo.setQuantity(orderDto.getQuantity());
+                orderItemVoList.add(orderItemVo);
+
             }
-            orderVo1.setList(orderItemsList);
+            orderVo1.setList(orderItemVoList);
+            orderVoList.add(orderVo1);
         }
         return orderVoList;
 
