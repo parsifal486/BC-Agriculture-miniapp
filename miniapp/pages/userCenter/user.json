@@ -8,6 +8,8 @@
     "t-navbar": "tdesign-miniprogram/navbar/navbar",
     "t-collapse": "tdesign-miniprogram/collapse/collapse",
     "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
-    "t-button": "tdesign-miniprogram/button/button"
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-stepper": "tdesign-miniprogram/stepper/stepper",
+    "t-divider": "tdesign-miniprogram/divider/divider"
   }
 }

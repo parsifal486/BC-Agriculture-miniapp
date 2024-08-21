@@ -1,32 +1,36 @@
-<view class="all">
-  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" style="height:100rpx;">
+<t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
   <view slot="left">
-  <image src="/pages/img/icon/logo.png" mode="heightFix" class="logo"></image>
+    <t-image
+      style="width: 70rpx; height: 70rpx;"
+      src="/pages/img/icon/logo.png"
+      aria-label="导航栏图片"
+    />
   </view>
-  </t-navbar>
-  <swiper class='posts' indicator-dots circular>
-    <swiper-item wx:for="{{postlist}}" wx:key="index">
-      <image src="{{item}}" mode="widthFix" class="post" style="width: 750rpx;"></image>
-    </swiper-item>
-  </swiper>
-  <view class="gobuy" style="display: flex;flex-direction: row;">
-    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
-    <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
-  </view>
-  <scroll-view scroll-x style="display:flex; white-space:nowrap;">
-    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
-  </scroll-view>
-  
-  <scroll-view scroll-x style="display:flex; white-space:nowrap;">
-    <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
-    <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
-  </scroll-view>
-  <image src="/pages/img/temp/homeintroduction.png" mode="aspectFit"></image>
+</t-navbar>
+
+<swiper class='posts' indicator-dots circular>
+  <swiper-item wx:for="{{postlist}}" wx:key="index">
+    <image src="{{item}}" mode="widthFix" class="post" style="width: 750rpx;"></image>
+  </swiper-item>
+</swiper>
+
+<view class="gobuy" style="display: flex;flex-direction: row;">
+  <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
+  <image src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
 </view>
+<scroll-view scroll-x style="display:flex; white-space:nowrap;">
+  <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book1.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/book2.png" style="display: inline-block;" mode="heightFix"></image>
+</scroll-view>
+
+<scroll-view scroll-x style="display:flex; white-space:nowrap;">
+  <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
+  <image src="/pages/img/temp/comments.png" style="display: inline-block;" mode="heightFix"></image>
+</scroll-view>
+<image src="/pages/img/temp/homeintroduction.png" mode="aspectFit"></image>

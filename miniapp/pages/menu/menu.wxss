@@ -184,5 +184,93 @@ page .round-image {
   border-bottom: 1rpx solid #e7e7e7;
 }
 
+.item-stepper{
+    padding: 32rpx;
+    display: flex;
+    background-color: var(--bg-color-demo);
+    justify-content: space-between;
+    
+}
 
 
+.block {
+  width: 100vw;
+  height: 240px;
+  background: var(--td-bg-color-container);
+  border-top-left-radius: 16rpx;
+  border-top-right-radius: 16rpx;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 116rpx;
+}
+
+
+/* 弹出层内容的整体样式 */
+.cart-block {
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx 20rpx 0 0;
+  box-shadow: 0 -10rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 购物车项的样式 */
+.classItem {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+/* 商品图片的样式 */
+.cart-item-image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  border: 2rpx solid #e7e7e7;
+  border-radius: 5rpx;
+}
+
+/* 商品详情区域的样式 */
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 商品名称的样式 */
+.cart-item-name {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+/* 商品价格的样式 */
+.cart-item-price {
+  font-size: 28rpx;
+  color: #999;
+} 
+
+.summrization {
+  text-align: right;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-right: 16px;
+}
+
+.cartOp{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  
+} 
+
+.clear-cart{
+  margin-left: 100rpx;
+  margin-right: 150rpx;
+  
+}

@@ -5,7 +5,7 @@ page {
 }
 
 .usr-navibar{
-  --td-navbar-bg-color: transparent ;
+  --td-navbar-bg-color: transparent;
 }
 
 .avatar-container{
@@ -19,6 +19,7 @@ page {
   display: flex;
   align-items: center;
 }
+
 
 .avatar-container .my-avatar {
   --td-avatar-border-color: black;
@@ -61,6 +62,7 @@ border-radius: 10px;
  transform: translate(0%,0%);
  background-color: white;
 }
+
 .container button{
   width: 150rpx;
   height: 150rpx;
@@ -69,8 +71,31 @@ border-radius: 10px;
   align-items: center;
   background-color: white;
 }
+
+
 .container button image{
  width: 120rpx;
  height: 103rpx;
  border-radius: 50%;
+}
+
+.stepper-example {
+  padding: 32rpx;
+  background-color: var(--bg-color-demo);
+}
+
+.orders-panel{
+  display: flex;
+  align-items:baseline;
+}
+
+.commodity-title{
+  font-size: 40rpx;
+}
+
+.commodity-detail{
+  font-style: grey;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
 }

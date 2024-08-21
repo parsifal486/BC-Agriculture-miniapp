@@ -4,6 +4,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/user",
+          "pathName": "pages/userCenter/user",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/editProfile/editProfile",
           "pathName": "pages/userCenter/editProfile/editProfile",
           "query": "",

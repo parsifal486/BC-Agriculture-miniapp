@@ -1,12 +1,21 @@
 /* pages/home.wxss */
 @import "../../app.wxss";
-
+ 
 .e1111 {
   background-color: #f0f0f0;
   color: #333;
   padding: 10px;
+
   border-radius: 5px;
 }
+
+.custom-image{
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 5rpx;
+}
+
+
 
 .ex {
   background-color: var(--theme-colour-main);
@@ -15,16 +24,12 @@
   border-radius: 5px;
 }
 
-.logo{
-  height:100rpx;
-  margin-left: 50rpx;
-}
+
 .posts{
   height:400rpx;
   width:750rpx;
-  align-items:center;
-  justify-content:space-around;
 }
+
 .gobuy{
   background-color: var(--main--gray--bg);
   justify-content: space-evenly;
@@ -44,3 +49,4 @@ scroll-view image{
   margin:10rpx;
   align-items:center;
 }
+

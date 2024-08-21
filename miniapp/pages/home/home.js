@@ -12,6 +12,7 @@ Page({
   goShop(e) {
     console.log(e);
   },
+  
   QRscan(e) {
     // console.log(e);
     wx.scanCode({

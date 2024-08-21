@@ -19,7 +19,15 @@
 <view class="order-panel">
 <t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon>
  <t-collapse-panel header="我的订单" value="{{0}}">
-    西红柿: 正在运输中
+    <view class="orders-panel" wx:for="{{recentOrder}}" wx:key="index">
+      <view class="commodity-title">
+        {{item.commodityName}}: 
+      </view>
+      <view class="commodity-detail">
+        正在运输中...
+      </view>
+      <t-divider />
+    </view>
   </t-collapse-panel>
 </t-collapse>
 </view>
