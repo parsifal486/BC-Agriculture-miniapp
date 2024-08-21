@@ -1,6 +1,5 @@
 package com.sky.pojo.vo;
 
-import com.sky.pojo.entity.OrderItems;
 import lombok.Data;
 
 import java.util.Date;
@@ -13,6 +12,6 @@ public class OrderVo {
 
     private double price;
 
-    private List<OrderItems> list;
+    private List<OrderItemVo> list;
 
 }

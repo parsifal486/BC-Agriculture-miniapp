@@ -10,6 +10,8 @@ Page({
       total:0,
       autoplay:true,
       interval:2000,
+      duration:300,
+      
       productImg:[
         "/pages/img/temp/1.png",
         "/pages/img/temp/2.webp",

@@ -39,4 +39,10 @@ public class CommodityServiceImpl implements CommodityService {
         List<String> objects = commodityMapper.queryAllType();
         return objects;
     }
+
+    @Override
+    public String getImgById(String commodityId) {
+        String Url=commodityMapper.getImgById(commodityId);
+        return Url;
+    }
 }

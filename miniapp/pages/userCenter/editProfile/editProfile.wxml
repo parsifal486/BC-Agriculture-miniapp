@@ -19,16 +19,30 @@
   </view>
 </t-navbar>
 <t-cell-group class="on" theme="card">
-  <t-cell title="头像" leftIcon="" rightIcon="town"  hover arrow />
-  <t-cell title="昵称" leftIcon="" hover arrow />
-  
+  <t-cell title="头像" image="{{avatar}}" leftIcon="" rightIcon="town"  hover arrow />
+  <t-cell title="昵称" hover note="{{nickName}}" leftIcon="" hover arrow />
 </t-cell-group>
 
 <t-cell-group class="down" theme="card">
-  <t-cell title="地址" leftIcon="town" hover arrow />
-  <t-cell title="手机号" leftIcon="mobile" hover arrow />
-  <t-cell title="个人偏好" leftIcon="service" hover arrow />
+  <t-cell title="地址" hover note="{{address}}" leftIcon="town" hover arrow />
+  <t-cell title="手机号" hover note="{{telephoneNumber}}" leftIcon="mobile" hover arrow />
+  <t-cell title="个人偏好" hover note="{{preference}}" leftIcon="service" bind:tap="changelove" hover arrow />
 </t-cell-group>
+<view class="choosePart" wx:if="{{isOpen}}">
+<view>花叶类</view>
+<t-switch bind:tap="changevegetable" data-kind="花叶类" defaultValue="{{huaye}}" slot="note" />
+<view>辣椒类</view>
+<t-switch bind:tap="changevegetable" data-kind="辣椒类" defaultValue="{{lajiao}}" slot="note" />
+<view>水生根茎类</view>
+<t-switch bind:tap="changevegetable" data-kind="水生根茎类" defaultValue="{{shuisheng}}" slot="note" />
+<view>花菜类</view>
+<t-switch bind:tap="changevegetable" data-kind="花菜类" defaultValue="{{huacai}}" slot="note" />
+<view>食用菌</view>
+<t-switch bind:tap="changevegetable" data-kind="食用菌" defaultValue="{{jun}}" slot="note" />
+<view>茄类</view>
+<t-switch bind:tap="changevegetable" data-kind="茄类" defaultValue="{{qie}}" slot="note" />
+<t-button bind:tap="ok">保存</t-button>
+</view>
 
 
 

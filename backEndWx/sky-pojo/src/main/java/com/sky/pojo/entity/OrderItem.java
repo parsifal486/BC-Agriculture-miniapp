@@ -1,14 +1,12 @@
-package com.sky.pojo.dto;
+package com.sky.pojo.entity;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
 @Data
-public class OrderDto {
-    private Long Id;
+public class OrderItem {
     private Long orderId;
+    private Long userId;
     private Long commodityId;
     private double price;
     private Long quantity;
-
 }

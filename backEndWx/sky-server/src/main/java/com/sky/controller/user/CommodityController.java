@@ -5,6 +5,7 @@ import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.CommodityService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.ResultType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,5 +42,10 @@ public class CommodityController {
         PageResult pageResult=new PageResult();
         pageResult.setRecords(list);
         return Result.success(pageResult);
+    }
+    @GetMapping("/selectImgById")
+    public Result selectImgById(@RequestParam String commodityId){
+        String url=commodityService.getImgById(commodityId);
+        return Result.success(url);
     }
 }

@@ -2,6 +2,7 @@ package com.sky.mapper;
 
 import com.sky.pojo.dto.OrderDto;
 import com.sky.pojo.entity.Order;
+import com.sky.pojo.entity.OrderItem;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -19,9 +20,9 @@ public interface OrderMapper {
 
     Long insertOrders(Order order);
 
-    void insertOrdersItems(OrderDto res);
+    void insertOrdersItems(OrderItem res);
 
-    @Select("select order_id,create_time,price,quantity from web_user_orders where user_id=#{userId}")
+    @Select("select orders_id,create_time,price,quantity from web_user_orders where user_id=#{userId}")
     List<Order> selectOrderById(Long userId);
     @Select("select * from  web_order_item where order_id=#{orderId}")
     List<OrderDto> selectOrderItems(Long orderId);

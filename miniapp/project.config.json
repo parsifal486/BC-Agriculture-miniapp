@@ -21,7 +21,10 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "compileWorklet": true,
+    "condition": true,
+    "swc": true
   },
   "condition": {},
   "editorSetting": {

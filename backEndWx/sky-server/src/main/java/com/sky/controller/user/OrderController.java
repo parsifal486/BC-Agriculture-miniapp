@@ -26,6 +26,7 @@ public class OrderController {
     //根据用户id存入订单信息（产生订单信息
     @PostMapping("/insertorder")
     public Result insertOrder(@RequestBody List<OrderDto> list){
+        System.out.println(list);
         orderService.insertOrders(list);
         return Result.success();
     }
