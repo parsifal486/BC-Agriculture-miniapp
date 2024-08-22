@@ -32,14 +32,17 @@ App(
         console.log("code: ",res.code);
         //传给后台
         wx.request({
-          url: `http://49.232.136.246:8090/wx/user/login/${res.code}`,
+          url: `http://49.232.136.246:8090/wx/user/login`,
+          method: 'get',
+          data:{
+            code: res.code
+          },
           success:res2=>{
             console.log(res2.data.data);
             //存储到本地
             wx.setStorageSync('userId',res2.data.data.userId);
             wx.setStorageSync('token',res2.data.data.token);
             //请求登录接口
-
           }
         })
       },

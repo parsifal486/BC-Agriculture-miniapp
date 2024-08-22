@@ -16,18 +16,31 @@ Page({
    
 
   onLoad() {
-    wx.request({
-      url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
-      method: 'get',
-      success: (res) => {
-        console.log("menu page init data ==>",res.data.data.records);
-        this.getCategories(res);
-        if (res.data.data.records.length > 0) {
-          const defaultCategory = res.data.data.records[0];
-          this.queryCommodityByType(defaultCategory);
-        }
+    wx.getStorage({
+      key: "token",
+      success:res =>{
+        let token = res.data;
+        console.log("get token from storage==>",token)
+        wx.request({
+          url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
+          method: 'get',
+          header:{
+            'token': token
+          },
+          success: (res) => {
+            console.log("menu page init data ==>",res.data.data.records);
+            this.getCategories(res);
+            if (res.data.data.records.length > 0) {
+              const defaultCategory = res.data.data.records[0];
+              this.queryCommodityByType(defaultCategory);
+            }
+          }
+        });
+        
       }
-    });
+
+    })
+    
   },
 
   getCustomNavbarHeight() {
@@ -61,30 +74,39 @@ Page({
 
   //根据类型查询菜品信息，点不同的种类显示不同的菜品
   queryCommodityByType(partitionName) {
-    wx.request({
-      url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
-      method: 'GET',
-      data: {
-        partitionName: partitionName // 传递商品类型作为查询参数
-      },
-      success: (res) => {
-        console.log("commodity==>",res.data.data.records);
-        var filteredCommodities = [];
-        res.data.data.records.forEach(item => {
-          var obj = {
-            commodityId: item.commodityId,
-            commodityName: item.commodityName,
-            commodityPrice: item.commodityPrice,
-            profileImage: item.profileImage
-          };
-          filteredCommodities.push(obj);
-        });
-        console.log("currentCate==>(commodityNames)",filteredCommodities);
-        this.setData({
-          commodityNames: filteredCommodities // 更新页面数据
-        });
+    wx.getStorage({
+      key: 'token',
+      success:res =>{
+        let token = res.data;
+        wx.request({
+          url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
+          method: 'GET',
+          header:{token},
+          data: {
+            partitionName: partitionName // 传递商品类型作为查询参数
+          },
+          success: (res) => {
+            console.log("commodity==>",res.data.data.records);
+            var filteredCommodities = [];
+            res.data.data.records.forEach(item => {
+              var obj = {
+                commodityId: item.commodityId,
+                commodityName: item.commodityName,
+                commodityPrice: item.commodityPrice,
+                profileImage: item.profileImage
+              };
+              filteredCommodities.push(obj);
+            });
+            console.log("currentCate==>(commodityNames)",filteredCommodities);
+            this.setData({
+              commodityNames: filteredCommodities // 更新页面数据
+            });
+          }
+        })
       }
     })
+
+    
   },
 
   //查询菜品所有信息
@@ -110,22 +132,22 @@ Page({
     })
   },
 
-  getCategories(res) {
-    var categories = [];
-
-    // 处理服务器返回的分类数据
-    res.data.data.records.forEach((item) => {
-      categories.push({
-        label: item, // 假设返回的数据项中有label字段
-        icon: 'app',
-        badgeProps: {},
-        items: [] // 根据需求填充items
-      });
-    });
-    this.setData({
-      categories: categories
-    });
-  },
+  getCategories(res) {
+      var categories = [];
+    
+      // 处理服务器返回的分类数据
+      res.data.data.records.forEach((item) => {
+        categories.push({
+          label: item,  // 假设返回的数据项中有label字段
+          icon: 'app',
+          badgeProps: {},
+          items: [] // 根据需求填充items
+        });
+      });
+      this.setData({
+        categories: categories
+      });
+    },
 
   onGoHome() {
     wx.navigateTo({
@@ -275,18 +297,28 @@ Page({
         quantity:item.quantity
       };
       orderToSend.push(obj);
-    })
-    wx.request({
-      url: 'http://49.232.136.246:8090/wx/order/insertorder',
-      method: 'post',
-      data:orderToSend ,
-      success: res=>{
-        console.log("订单提交成功!===>",res);
-      } ,
-      fail:err=> {
-        console.error("订单提交错误!==>",err);
+    });
+    wx.getStorage({
+      key:'token',
+      success:res=>{
+        let token = res.data;
+        wx.request({
+          url: 'http://49.232.136.246:8090/wx/order/insertorder',
+          method: 'post',
+          header: {
+            token
+          },
+          data:orderToSend ,
+          success: res=>{
+            console.log("订单提交成功!===>",res);
+          } ,
+          fail:err=> {
+            console.error("订单提交错误!==>",err);
+          }
+        })    
       }
     })
+    
 
 
   }

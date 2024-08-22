@@ -56,37 +56,47 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    wx.request({
-      url: 'http://49.232.136.246:8090/wx/order/selectorder',
-      method: 'get',
-      data:{
-        userId:'200021'
-      },
-      success:res=>{
-        console.log("获取订单信息成功==>",res.data.data.records);
-
-        var lastIndex = res.data.data.records.length-1;
-        console.log("list==>",typeof(res.data.data.records[lastIndex].list),res.data.data.records[lastIndex].list);
-        this.setData({
-          recentOrder: res.data.data.records[lastIndex].list,
-          orders: res.data.data.records
-        });
-
-        //订单信息写入缓存
-        wx.setStorage({
-          key: "userOrder",
-          data:res.data.data.records
-        });
-
-        //获取最新订单消息
-  
-        console.log("recentOrder==>",this.data.recentOrder,"==>", res.data.data.records[lastIndex]);
-       
-      },
-      fail:err=>{
-        console.log("获取订单信息出错误==>",res.data.data.records[res.data.data.records.length-1]);
+    wx.getStorage({
+      key: 'token',
+      success:res =>{
+        let token = res.data;
+        
+        wx.request({
+          url: 'http://49.232.136.246:8090/wx/order/selectorder',
+          method: 'get',
+          header:{'token':token},
+          data:{
+            
+          },
+          success:res=>{
+            console.log("获取订单信息成功==>",res.data.data.records);
+    
+            var lastIndex = res.data.data.records.length-1;
+            console.log("list==>",typeof(res.data.data.records[lastIndex].list),res.data.data.records[lastIndex].list);
+            this.setData({
+              recentOrder: res.data.data.records[lastIndex].list,
+              orders: res.data.data.records
+            });
+    
+            //订单信息写入缓存
+            wx.setStorage({
+              key: "userOrder",
+              data:res.data.data.records
+            });
+    
+            //获取最新订单消息
+      
+            console.log("recentOrder==>",this.data.recentOrder,"==>", res.data.data.records[lastIndex]);
+           
+          },
+          fail:err=>{
+            console.log("获取订单信息出错误==>",res.data.data.records[res.data.data.records.length-1]);
+          }
+        })
       }
-    })
+    });
+    
+    
   },
 
   /**
