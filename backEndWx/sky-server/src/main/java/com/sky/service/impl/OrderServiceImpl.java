@@ -22,8 +22,8 @@ public class OrderServiceImpl implements OrderService {
     @Resource
     private OrderMapper orderMapper;
 
-//    private static final Long USER_ID= ThreadLocalUtils.getCurrentId();
-        private static final Long USER_ID=200021L;
+    private static final Long USER_ID= ThreadLocalUtils.getCurrentId();
+//        private static final Long USER_ID=200021L;
     @Override
     public void insertOrders(List<OrderDto> list) {
         List<OrderItem> res=new ArrayList<>();

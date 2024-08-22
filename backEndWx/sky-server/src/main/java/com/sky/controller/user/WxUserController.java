@@ -31,8 +31,8 @@ public class WxUserController {
     @Resource
     private WxCommonService common;
     //微信小程序登录授权
-    @GetMapping("/login/{code}")
-    public Result login(@PathVariable String code){
+    @GetMapping("/login")
+    public Result login(@RequestParam String code){
         System.out.println("_________________________________"+code+"________________________________________");
         UserVo userVo =new UserVo();
         User user = wxUserService.login(code);
