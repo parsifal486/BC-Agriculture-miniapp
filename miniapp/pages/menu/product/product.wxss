@@ -121,9 +121,7 @@ background-color: var(--main--gray--bg);
   margin-left: 50rpx;
 }
 
-.cart{
-  margin-right:90rpx ;
-}
+
 
 
 

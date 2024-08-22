@@ -1,2 +1,3 @@
-<!--pages/userCenter/devTeam/devTeam.wxml-->
-<text>pages/userCenter/devTeam/devTeam.wxml</text>
+<view class="block">
+    <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="我的优惠券" left-arrow bind:go-back="handleback" />
+  </view>

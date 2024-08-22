@@ -1,47 +1,16 @@
-<!--pages/userCenter/discountTicket/discountTicket.wxml-->
 <view class="all">
-<!-- //导航栏 -->
+  <!-- //导航栏 -->
   <view class="block">
-    <t-navbar
-      t-class-placeholder="t-navbar-placeholder"
-      t-class-content="t-navbar-content"
-      class="block"
-      title="优惠券"
-      left-arrow
-      bind:go-back="handleBack"/>
+    <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="我的优惠券" left-arrow bind:go-back="handleback" />
   </view>
   <!-- 优惠券 -->
   <block wx:for="{{coupons}}" wx:key="id">
-  <!-- <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
-    <t-cell class="card">
-      <view slot="title">
-        <view class="title">{{item.couponsName}}</view>
-        <view class="sub-title">折扣金额：减{{item.reductionPrice}}元</view>
-        <view class="sub-title">使用条件：满{{item.reductionFull}}</view>
-        <view class="sub-title">生效时间：{{item.createTime}}</view>
-        <view class="sub-title">有效期至：{{item.updateTime}}</view>
-      </view>
-    </t-cell>
-  </t-cell-group> -->
-  <view class="card">
-    <view class="title">{{item.couponsName}}</view>
-    <view class="sub-title">折扣金额：减{{item.reductionPrice}}元</view>
-    <view class="sub-title">使用条件：满{{item.reductionFull}}</view>
-    <view class="sub-title">生效时间：{{item.createTime}}</view>
-    <view class="sub-title">有效期至：{{item.updateTime}}</view>
-  </view>
+    <view class="card">
+      <view class="title">{{item.couponsName}}</view>
+      <view class="sub-title">折扣金额：减{{item.reductionPrice}}元</view>
+      <view class="sub-title">使用条件：满{{item.reductionFull}}</view>
+      <view class="sub-title">生效时间：{{item.createTime}}</view>
+      <view class="sub-title">有效期至：{{item.updateTime}}</view>
+    </view>
   </block>
-  <!-- <view class="card">
-  <t-cell-group theme="card" class="card" style="margin-bottom: 40px;">
-    <t-cell class="card">
-      <view slot="title">
-        <view class="title">品类券</view>
-        <view class="sub-title">折扣金额：减{{item.discountAmount}}元</view>
-        <view class="sub-title">使用条件：满{{item.conditionAmount}}</view>
-        <view class="sub-title">有效期至：{{item.expiryDate}}</view>
-      </view>
-    </t-cell> 
-  </t-cell-group>
-</view> -->
-
 </view>

@@ -26,17 +26,15 @@
 
   <view class="info">
   <view class="body">
-    <text class="title">野生粉藕</text>
+    <text class="title">{{commodityName}}</text>
     <text class="description">
       食物属性：
-        莲藕属睡莲科莲属(Nelumbo)植物中医认为，生藕性寒，甘凉入胃，可消瘀凉血、清烦热，止呕渴。
-        适用于烦渴、酒醉、咳血、吐血等症。
-        妇女产后忌食生冷，惟独不忌藕，就是因为藕有很好的消瘀作用，故民间有“新采嫩藕胜太医”之说。
+        {{commodityRemark}}
     </text>
     <view class="demo">
-      <text class="tag">种植溯源 : 有机种植</text>
-      <text class="tag">地点溯源 : 广东省珠海市斗门区翻斗村</text>
-      <text class="tag">采摘时间 : 2024-01-28 00:00:00</text>
+      <text class="tag">种植溯源 : {{commodityOrigin}}</text>
+      <text class="tag">品类 : {{commodityPartition}}</text>
+      <text class="tag">采摘时间 : {{commodityUpdateTime}}</text>
     </view>
   </view>
 </view>
@@ -54,7 +52,7 @@
   
 
   <view class="button-container">
-    <t-button class="cart" icon="cart-add" theme="primary" size="large" shape="round">加入购物车</t-button>
+    <t-button class="cart" style="margin-right:90rpx ;" icon="cart-add" theme="primary" size="large" shape="round">加入购物车</t-button>
     <t-button class="shop" icon="shop" theme="primary" size="large" shape="round">立即购买</t-button>
   </view>
 </view>

@@ -12,6 +12,7 @@ Page({
     shoppingCart: [],
     popVisible: false,
     totalPrice: 0,
+    commodityRemark:"",
   },
    
 
@@ -20,7 +21,6 @@ Page({
       key: "token",
       success:res =>{
         let token = res.data;
-        console.log("get token from storage==>",token)
         wx.request({
           url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
           method: 'get',
@@ -28,7 +28,6 @@ Page({
             'token': token
           },
           success: (res) => {
-            console.log("menu page init data ==>",res.data.data.records);
             this.getCategories(res);
             if (res.data.data.records.length > 0) {
               const defaultCategory = res.data.data.records[0];
@@ -86,18 +85,20 @@ Page({
             partitionName: partitionName // 传递商品类型作为查询参数
           },
           success: (res) => {
-            console.log("commodity==>",res.data.data.records);
             var filteredCommodities = [];
             res.data.data.records.forEach(item => {
               var obj = {
                 commodityId: item.commodityId,
                 commodityName: item.commodityName,
                 commodityPrice: item.commodityPrice,
-                profileImage: item.profileImage
+                commodityOrigin: item.origin,
+                commodityRemark: item.remark,
+                commodityPartition: item.partitionName,
+                commodityUpdateTime: item.updateTime,
+                profileImage: item.profileImage,
               };
               filteredCommodities.push(obj);
             });
-            console.log("currentCate==>(commodityNames)",filteredCommodities);
             this.setData({
               commodityNames: filteredCommodities // 更新页面数据
             });
@@ -115,7 +116,6 @@ Page({
     wx.request({
       url: 'http://49.232.136.246:8090/wx/commodity/queryAllCommodity',
       success: (res) => {
-        console.log("res==>",res.data.data.records);
         var commodity = [];
         res.data.data.records.forEach(item => {
           var obj = {
@@ -195,8 +195,6 @@ Page({
   onStepperChange(e){
     const { commodity } = e.currentTarget.dataset;
     const count = e.detail.value;
-    console.log("stepperChange==>e==>",e);
-    console.log("stepperChange==>",e.currentTarget.dataset);
 
     //购物车当前状态
     let shoppingCart = this.data.shoppingCart;
@@ -317,9 +315,28 @@ Page({
           }
         })    
       }
-    })
+    });
+  },
+
+  navigateToDetail: function(e) {
+    var aimCommodityId = e.currentTarget.dataset.commodityId;
+    var aimCommodity = this.data.commodityNames.find(eachCommodity => eachCommodity.commodityId===aimCommodityId);
+    wx.setStorage({
+      key: "currentCommodity",
+      data: {
+        aimCommodity
+      },
+      success: () => {
+        // 确保数据存储完成后再进行页面跳转
+        wx.navigateTo({
+          url: '/pages/menu/product/product'
+        });
+      },
+      fail: (err) => {
+        console.error("Failed to set storage:", err);
+
+      }
+    });
     
-
-
   }
 });

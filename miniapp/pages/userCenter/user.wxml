@@ -2,18 +2,12 @@
   <view slot="left" class="custom-title">个人中心</view>
 </t-navbar>
 
-<!-- <view class="avatar-container">  
+<view class="avatar-container">  
       <t-avatar class="my-avatar" image="{{avatar}}" size="large" />
       <view class="userprofile"> 
         <view class="userName">{{nickName}}</view>
         <view class="userDetail">帅气温柔男大</view>
       </view>
-</view> -->
-<view class="container">
-  <button class="avatar" open-type="chooseAvatar" bindchooseavatar="OnchooseAvatar"> 
- <image src="{{pic}}"></image>
-</button>
-<input type="nickname" placeholder="请输入昵称"/>
 </view>
 
 <view class="order-panel">
@@ -33,10 +27,19 @@
 </view>
 
 <t-cell-group class="test" theme="card">
-  <!-- <button bindtap="goToNextPage"></button> -->
-  <t-cell bindtap="goToNextPage" custom-style="--td-tab-bar-item-color: red" title="编辑基本信息" leftIcon="personal-information" hover arrow />
-  <t-cell title="我的优惠券" leftIcon="sinister-smile" hover arrow />
-  <t-cell title="联系我们" leftIcon="service" hover arrow />
+  <navigator url="/pages/userCenter/discountTicket/discountTicket">
+    <t-cell  title="编辑基本信息" leftIcon="personal-information" hover arrow />
+  </navigator>
+  
+  <navigator url="/pages/userCenter/discountTicket/discountTicket">
+    <t-cell  title="我的优惠券" leftIcon="sinister-smile" hover arrow />
+  </navigator>
+
+  <navigator url="/pages/userCenter/devTeam/devTeam">
+    <t-cell title="联系我们" leftIcon="service" hover arrow />
+  </navigator>
+  
+
 </t-cell-group>
 
 <view class="button-example">
