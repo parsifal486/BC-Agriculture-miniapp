@@ -26,7 +26,7 @@
   background-color: #FFFFFF; /* 卡片的背景颜色 */
   border-radius: 20rpx; /* 圆角 */
   padding: 40rpx; /* 内边距 */
-  margin-bottom: 40rpx; /* 卡片之间的间距 */
+  margin:20rpx 20rpx;
   box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* 卡片的阴影效果 */
 }
 .title {

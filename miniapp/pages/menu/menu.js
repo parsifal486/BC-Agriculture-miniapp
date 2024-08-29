@@ -13,6 +13,7 @@ Page({
     popVisible: false,
     totalPrice: 0,
     commodityRemark:"",
+    itemToCart:{}
   },
    
 
@@ -40,6 +41,21 @@ Page({
 
     })
     
+  },
+
+  onShow() {
+    if(Object.keys(this.data.itemToCart).length !== 0){
+      console.log("this.data.itemToCart===>",this.data.itemToCart)
+      let itemToAdd = this.data.itemToCart;
+      let cart = this.data.shoppingCart;
+      cart.push(itemToAdd);
+
+      this.setData({
+        itemToCart:{},
+        shoppingCart:cart
+      });
+      this.calculateTotalPrice(); 
+    }
   },
 
   getCustomNavbarHeight() {
@@ -244,6 +260,7 @@ Page({
     this.setData({
       totalPrice: totalPrice.toFixed(2) // 保留两位小数
     });
+    return totalPrice;
   },
 
   //清空购物车

@@ -9,9 +9,25 @@ Page({
   },
 
   onLoad(options) {
-    console.log("函数已执行");
-    // 在页面加载时获取优惠券数据
-    this.getUserCoupons(200003);
+    wx.getStorage({
+      key: 'token',
+      success: (token)=>{
+        wx.request({
+          url: 'http://49.232.136.246:8090/wx/user/selectCouponsById',
+          method: 'GET',
+          header:{
+            "token": token.data
+          },
+          success:(res)=>{
+            this.setData({
+              coupons: res.data.data.records
+            })
+            console.log("discountTicket==>", res.data.data);
+            console.log("token.data==>", this.data.coupons);
+          }
+        })
+      }
+    })
 
   },
 
@@ -66,6 +82,7 @@ Page({
       }
     });
   },
+
 
 
 });

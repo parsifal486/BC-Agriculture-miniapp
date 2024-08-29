@@ -9,7 +9,8 @@
     "pages/userCenter/purchaseOrder/purchaseOrder",
     "pages/userCenter/devTeam/devTeam",
     "pages/userCenter/mydingdan/mydingdan",
-    "pages/QRcode/QRcode"
+    "pages/QRcode/QRcode",
+    "pages/home/article/article"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

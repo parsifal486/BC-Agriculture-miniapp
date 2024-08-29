@@ -1,0 +1,57 @@
+<view class="block">
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="项目简介" left-arrow bind:go-back="handleback" />
+</view>
+
+<view class="container">
+  <view class="article-header">
+    <text class="article-title">智链生鲜\n</text>
+    <text class="article-date">SmartChainFresh：重新定义生鲜购物的未来</text>
+  </view>
+  <view class="container">
+    <view class="article-content">
+      <view class="paragraph">
+        随着科技的不断进步和人们生活品质的提升，传统的生鲜市场已不再能满足现代消费者对食品安全、质量保障和透明消费的需求。应运而生的智链生鲜，作为一款线上生鲜超市小程序，不仅满足了用户对高品质农产和水产品的需求，更通过创新的区块链技术，为消费者提供了一个全新的购物体验。
+      </view>
+
+      <view class="paragraph sub-heading">
+        区块链技术：溯源保真，确保食品安全
+      </view>
+      <view class="paragraph">
+        智链生鲜最大的亮点在于其对区块链技术的应用。在传统的供应链中，信息不对称和数据造假问题屡见不鲜。而通过区块链技术，智链生鲜实现了农产和水产品从农场到餐桌的全程溯源。每一件商品的生产、加工、运输、销售等各个环节信息都被永久记录在区块链中，无法篡改，消费者可以随时查询，确保所购买的商品安全可靠。
+      </view>
+
+      <view class="paragraph sub-heading">
+        优质生鲜，尽在掌握
+      </view>
+      <view class="paragraph">
+        智链生鲜精选优质农产品和水产品，从源头严格把控质量，为消费者带来新鲜、健康的食品。用户可以通过小程序轻松浏览、选购各种生鲜商品，从绿色蔬菜到海鲜水产，应有尽有。而每一件商品的详细溯源信息都可通过简单扫描获得，让消费者买得放心，吃得安心。
+      </view>
+
+      <view class="paragraph sub-heading">
+        高效便捷的购物体验
+      </view>
+      <view class="paragraph">
+        智链生鲜的小程序设计简洁高效，用户可以随时随地通过手机完成生鲜商品的选购。智能推荐功能根据用户的购买历史和偏好，推荐个性化的商品选择。订单下达后，系统会迅速处理并安排最快的配送服务，确保新鲜商品尽早送达消费者手中。
+      </view>
+
+      <view class="paragraph sub-heading">
+        环保与可持续发展
+      </view>
+      <view class="paragraph">
+        智链生鲜不仅关注食品安全，还注重环保与可持续发展。通过优化供应链，减少了中间环节，降低了碳足迹。同时，智链生鲜还鼓励使用环保包装，并致力于减少浪费，为绿色地球贡献一份力量。
+      </view>
+
+      <view class="paragraph sub-heading">
+        展望未来
+      </view>
+      <view class="paragraph">
+        智链生鲜不仅是一款小程序，更是一种生活方式的升级。它通过区块链技术、优质的生鲜商品和高效的购物体验，为消费者带来了全新的生鲜购物体验。未来，智链生鲜将继续创新，进一步提升食品安全和用户体验，致力于成为消费者信赖的生鲜购物首选。
+      </view>
+
+      <view class="paragraph">
+        智链生鲜，重新定义您的餐桌，守护您的健康，让科技为美好生活赋能。
+      </view>
+    </view>
+  </view>
+
+</view>

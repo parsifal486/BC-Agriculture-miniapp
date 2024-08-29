@@ -1,4 +1,4 @@
-// pages/userCenter/devTeam/devTeam.js
+// pages/home/article/article.js
 Page({
 
   /**
@@ -61,13 +61,13 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {
-
+    
   },
 
   handleBack() {
-    // 使用 wx.navigateBack 返回到上一个页面
+
     wx.navigateBack({
-      delta: 1, // 返回的页面层级，默认为1，即返回到上一个页面
+      delta: 1, 
       success: (res) => {
         console.log('Successfully navigated back', res);
       },

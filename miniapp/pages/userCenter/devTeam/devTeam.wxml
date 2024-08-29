@@ -1,3 +1,8 @@
 <view class="block">
-    <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="我的优惠券" left-arrow bind:go-back="handleback" />
-  </view>
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="开发团队" left-arrow bind:go-back="handleback" />
+</view>
+
+<view class="displayMoudle">
+  <text class="content">张三, 里斯\n</text>
+  <text class="content">@SmartChainFresh Co. Ltd</text>
+</view>

@@ -1,1 +1,14 @@
-/* pages/userCenter/devTeam/devTeam.wxss */
+@import "../../../app.wxss";
+page{
+  background-color: var(--main--gray--bg);
+}
+
+.displayMoudle{
+  height:300rpx;
+  background-color:white;
+  width: 80%;
+  border-radius: 20rpx;
+  margin: 5%;
+  padding: 5%;
+}
+

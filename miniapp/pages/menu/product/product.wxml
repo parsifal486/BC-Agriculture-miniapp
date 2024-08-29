@@ -46,13 +46,13 @@
   <view class="price-operation">
     <text class="price"> ￥{{price}}</text>
     <view class="stepper-conatiner">
-      <t-stepper   min="1" size = "large" rdefaultValue="0" theme="filled" />
+      <t-stepper   min="0" size = "large" rdefaultValue="0" theme="filled" bind:change="onStepperChange" />
     </view>
   </view>
   
 
   <view class="button-container">
-    <t-button class="cart" style="margin-right:90rpx ;" icon="cart-add" theme="primary" size="large" shape="round">加入购物车</t-button>
-    <t-button class="shop" icon="shop" theme="primary" size="large" shape="round">立即购买</t-button>
+    <t-button class="cart" style="margin-right:90rpx ;" icon="cart-add" theme="primary" size="large" shape="round" bind:tap="addToCart">加入购物车</t-button>
+    <t-button class="shop" icon="shop" theme="primary" size="large" shape="round" bind:tap="onBuyNow">立即购买</t-button>
   </view>
 </view>

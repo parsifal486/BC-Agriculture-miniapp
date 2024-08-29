@@ -5,7 +5,7 @@ Component({
     list: [
       { value:"home", label: '首页', icon: 'broccoli', path:"pages/home/home", props: {} },
       { value:"menu", label: '菜单', icon: 'map-edit', path:"pages/menu/menu", props: {} },
-      { value:"user", label: '用户', icon: 'user', path:"pages/userCenter/user", props:{count: '2'} }
+      { value:"user", label: '用户', icon: 'user', path:"pages/userCenter/user", props:{} }
     ]
   },
   lifetimes:{

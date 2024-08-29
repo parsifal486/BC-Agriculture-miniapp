@@ -87,5 +87,12 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+
+
+  toArticlePage(){
+    wx.navigateTo({
+      url: '/pages/home/article/article',
+    })
   }
 })

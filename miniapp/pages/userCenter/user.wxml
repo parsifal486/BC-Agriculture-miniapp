@@ -2,44 +2,45 @@
   <view slot="left" class="custom-title">个人中心</view>
 </t-navbar>
 
-<view class="avatar-container">  
-      <t-avatar class="my-avatar" image="{{avatar}}" size="large" />
-      <view class="userprofile"> 
-        <view class="userName">{{nickName}}</view>
-        <view class="userDetail">帅气温柔男大</view>
-      </view>
+<view class="avatar-container">
+  <button style="display: flex;align-items: center;justify-content: center;width:150rpx;height: 150rpx;padding: 0;border: none;background-color: var(--prime-white);margin-left:70rpx;" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <t-avatar class="my-avatar" image="{{avatar}}" size="large" />
+  </button>
+  <view class="userprofile">
+    <view class="userName">{{nickName}}</view>
+    <view class="userDetail">{{prefer}}</view>
+  </view>
 </view>
 
 <view class="order-panel">
-<t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon>
- <t-collapse-panel header="我的订单" value="{{0}}">
-    <view class="orders-panel" wx:for="{{recentOrder}}" wx:key="index">
-      <view class="commodity-title">
-        {{item.commodityName}}: 
+  <t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon>
+    <t-collapse-panel header="我的订单" value="{{0}}">
+      <view class="orders-panel" wx:for="{{recentOrder}}" wx:key="index">
+        <view class="commodity-title">
+          {{item.commodityName}}:
+        </view>
+        <view class="commodity-detail">
+          正在运输中...
+        </view>
+        <t-divider />
       </view>
-      <view class="commodity-detail">
-        正在运输中...
-      </view>
-      <t-divider />
-    </view>
-  </t-collapse-panel>
-</t-collapse>
+    </t-collapse-panel>
+  </t-collapse>
 </view>
 
 <t-cell-group class="test" theme="card">
-  <navigator url="/pages/userCenter/discountTicket/discountTicket">
-    <t-cell  title="编辑基本信息" leftIcon="personal-information" hover arrow />
+  <navigator url="/pages/userCenter/editProfile/editProfile">
+    <t-cell title="编辑基本信息" leftIcon="personal-information" hover arrow />
   </navigator>
-  
+
   <navigator url="/pages/userCenter/discountTicket/discountTicket">
-    <t-cell  title="我的优惠券" leftIcon="sinister-smile" hover arrow />
+    <t-cell title="我的优惠券" leftIcon="sinister-smile" hover arrow />
   </navigator>
 
   <navigator url="/pages/userCenter/devTeam/devTeam">
     <t-cell title="联系我们" leftIcon="service" hover arrow />
   </navigator>
   
-
 </t-cell-group>
 
 <view class="button-example">

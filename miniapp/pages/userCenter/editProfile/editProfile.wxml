@@ -2,30 +2,15 @@
   <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="编辑资料" left-arrow bind:go-back="handleBack" />
 </view>
 
-<t-cell-group class="on" style="margin: 30rpx;" theme="card">
-  <t-cell title="头像" image="{{avatar}}" leftIcon="" rightIcon="town" hover arrow />
-  <t-cell title="昵称" hover note="{{nickName}}" leftIcon="" hover arrow />
-</t-cell-group>
-
-<t-cell-group class="down" style="margin: 30rpx;" theme="card">
-  <t-cell title="地址" hover note="{{address}}" leftIcon="town" hover arrow />
-  <t-cell title="手机号" hover note="{{telephoneNumber}}" leftIcon="mobile" hover arrow />
-  <t-cell title="个人偏好" hover note="{{preference}}" leftIcon="service" bind:tap="changelove" hover arrow />
-</t-cell-group>
+<view class="page">
+  <view class="input-container">
+    <t-input style="border-radius:32rpx 32rpx 0rpx 0rpx;" prefixIcon="town" label="当前地址" placeholder="{{address}}" bindchange="onInputChange" data-field="address" />
+    <t-input prefixIcon="call" label="手机号" placeholder="{{phone}}" bindchange="onInputChange" data-field="phone" />
+    <t-input style="border-radius:0rpx 0rpx 32rpx 32rpx;" prefixIcon="face-retouching" label="个人偏好" placeholder="{{love}}" bind:tap="preferToast" data-field="love" disabled="ture" />
+  </view>
+</view>
 
 
-<view class="choosePart" wx:if="{{isOpen}}">
-  <view>花叶类</view>
-  <t-switch bind:tap="changevegetable" data-kind="花叶类" defaultValue="{{huaye}}" slot="note" />
-  <view>辣椒类</view>
-  <t-switch bind:tap="changevegetable" data-kind="辣椒类" defaultValue="{{lajiao}}" slot="note" />
-  <view>水生根茎类</view>
-  <t-switch bind:tap="changevegetable" data-kind="水生根茎类" defaultValue="{{shuisheng}}" slot="note" />
-  <view>花菜类</view>
-  <t-switch bind:tap="changevegetable" data-kind="花菜类" defaultValue="{{huacai}}" slot="note" />
-  <view>食用菌</view>
-  <t-switch bind:tap="changevegetable" data-kind="食用菌" defaultValue="{{jun}}" slot="note" />
-  <view>茄类</view>
-  <t-switch bind:tap="changevegetable" data-kind="茄类" defaultValue="{{qie}}" slot="note" />
-  <t-button bind:tap="ok">保存</t-button>
+<view class="button-example">
+  <t-button  theme="primary" size="large" block bindtap="submitChanges" disabled="{{!isFormValid}}">提交修改</t-button>
 </view>

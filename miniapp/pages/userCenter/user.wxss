@@ -4,6 +4,7 @@ page {
   background-color: var(--main--gray--bg);
 }
 
+
 .usr-navibar{
   --td-navbar-bg-color: transparent;
 }
@@ -16,30 +17,21 @@ page {
   margin-bottom: 25rpx;
   background-color: var(--prime-white);
   border-radius: 23rpx;
-  display: flex;
+  display:flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-
-.avatar-container .my-avatar {
-  --td-avatar-border-color: black;
-  --td-avatar-border-width-large: 15srpx;
-  margin-left: 30rpx;
-}
-
-.userProfile{
-  margin-left: 40rpx
+.userprofile{
+ margin-right: 200rpx;
 }
 
 .userName{
   font-weight: 800;
-  margin-left: 30rpx;
 }
 
 .userDetail{
   font-weight: 100;
-  font-size: 24rpx;
-  margin-left: 30rpx;
 }
 
 .order-panel{
@@ -63,26 +55,6 @@ border-radius: 10px;
  background-color: white;
 }
 
-.container button{
-  width: 150rpx;
-  height: 150rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
-
-.container button image{
- width: 120rpx;
- height: 103rpx;
- border-radius: 50%;
-}
-
-.stepper-example {
-  padding: 32rpx;
-  background-color: var(--bg-color-demo);
-}
 
 .orders-panel{
   display: flex;

@@ -9,7 +9,8 @@ Page({
   data: {
     avatar:defaultAvatarUrl,
     // avatar:'',
-    nickName:'test',
+    nickName:'游客',
+    prefer:'喜好未知',
     messages:[],
     recentOrder:[],
     orders:[],
@@ -20,7 +21,7 @@ Page({
    */
   onLoad(options) {
     wx.getStorage({
-      key: 'token',
+      key:'token',
       success:res =>{
         let token = res.data;
         
@@ -30,7 +31,16 @@ Page({
           method: 'get',
           header:{'token':token},
           success:res=>{
-            console.log("userinfo==>",res);
+            console.log("userinfo==>",res.data.data);
+            wx.setStorage({
+              key: "userInfo",
+              data: res.data.data
+            });
+            this.setData({
+              nickName:res.data.data.nickname,
+              prefer:"喜欢"+res.data.data.love
+            })
+
           }
         })
 
@@ -87,10 +97,6 @@ Page({
    */
   onShow() {
 
-    wx.getStorage({
-      key: "needFreshUser"
-    });
-
     
     
     
@@ -137,6 +143,12 @@ Page({
         console.log("code: ",res.code);
       },
     })
-    
   },
+
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatar:avatarUrl,
+    })
+  }
 })

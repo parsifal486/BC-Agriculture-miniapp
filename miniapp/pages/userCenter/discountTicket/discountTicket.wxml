@@ -3,6 +3,7 @@
   <view class="block">
     <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="我的优惠券" left-arrow bind:go-back="handleback" />
   </view>
+  
   <!-- 优惠券 -->
   <block wx:for="{{coupons}}" wx:key="id">
     <view class="card">

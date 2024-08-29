@@ -1,3 +1,14 @@
 page {
   background-color: var(--main--gray--bg);
 }
+
+.input-container{
+  margin:  32rpx;
+  border-radius: 25rpx;
+}
+
+.button-example{
+  width: 90%;
+  margin: 0% 5%;
+}
+
