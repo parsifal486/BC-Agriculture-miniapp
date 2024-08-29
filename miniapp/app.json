@@ -24,6 +24,7 @@
     "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
     "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item"
   },
+  "lazyCodeLoading": "requiredComponents",
   "tabBar": {
     "custom": true,
     "list": [

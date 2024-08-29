@@ -37,7 +37,7 @@
               </view>
 
               <view class="item-stepper">
-                <t-stepper class="stepper-q" defaultValue="0" theme="filled" disable-input="true" size="small" bind:change="onStepperChange" data-commodity="{{commodity}}" />
+                <t-stepper class="stepper-q" value="{{commodity.quantity}}" theme="filled" disable-input="true" size="small" bind:change="onStepperChange" data-commodity="{{commodity}}" />
               </view>
             </view>
           </block>

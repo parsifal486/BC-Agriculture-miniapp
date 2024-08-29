@@ -12,20 +12,20 @@ Page({
     shoppingCart: [],
     popVisible: false,
     totalPrice: 0,
-    commodityRemark:"",
-    itemToCart:{}
+    commodityRemark: "",
+    itemToCart: {}
   },
-   
+
 
   onLoad() {
     wx.getStorage({
       key: "token",
-      success:res =>{
+      success: res => {
         let token = res.data;
         wx.request({
           url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
           method: 'get',
-          header:{
+          header: {
             'token': token
           },
           success: (res) => {
@@ -36,25 +36,38 @@ Page({
             }
           }
         });
-        
+
       }
 
     })
-    
+
   },
 
   onShow() {
-    if(Object.keys(this.data.itemToCart).length !== 0){
-      console.log("this.data.itemToCart===>",this.data.itemToCart)
+    if (Object.keys(this.data.itemToCart).length !== 0) {
+      console.log("this.data.itemToCart===>", this.data.itemToCart)
       let itemToAdd = this.data.itemToCart;
       let cart = this.data.shoppingCart;
-      cart.push(itemToAdd);
+
+      // 找到购物车中是否已经存在相同 id 的对象
+      const existence = cart.find(element => element.id === item.id);
+
+      if (existence) {
+        // 如果存在，增加其 quantity
+        existence.quantity += item.quantity;
+      } else {
+        // 如果不存在，将新对象添加到数组中
+        cart.push(itemToAdd);
+      }
+
+
 
       this.setData({
-        itemToCart:{},
-        shoppingCart:cart
+        itemToCart: {},
+        shoppingCart: cart
       });
-      this.calculateTotalPrice(); 
+      this.calculateTotalPrice();
+      this.updateStepperValues();
     }
   },
 
@@ -91,12 +104,14 @@ Page({
   queryCommodityByType(partitionName) {
     wx.getStorage({
       key: 'token',
-      success:res =>{
+      success: res => {
         let token = res.data;
         wx.request({
           url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
           method: 'GET',
-          header:{token},
+          header: {
+            token
+          },
           data: {
             partitionName: partitionName // 传递商品类型作为查询参数
           },
@@ -112,6 +127,7 @@ Page({
                 commodityPartition: item.partitionName,
                 commodityUpdateTime: item.updateTime,
                 profileImage: item.profileImage,
+                quantity: 0
               };
               filteredCommodities.push(obj);
             });
@@ -123,7 +139,7 @@ Page({
       }
     })
 
-    
+
   },
 
   //查询菜品所有信息
@@ -148,22 +164,22 @@ Page({
     })
   },
 
-  getCategories(res) {
-      var categories = [];
-    
-      // 处理服务器返回的分类数据
-      res.data.data.records.forEach((item) => {
-        categories.push({
-          label: item,  // 假设返回的数据项中有label字段
-          icon: 'app',
-          badgeProps: {},
-          items: [] // 根据需求填充items
-        });
-      });
-      this.setData({
-        categories: categories
-      });
-    },
+  getCategories(res) {
+    var categories = [];
+
+    // 处理服务器返回的分类数据
+    res.data.data.records.forEach((item) => {
+      categories.push({
+        label: item, // 假设返回的数据项中有label字段
+        icon: 'app',
+        badgeProps: {},
+        items: [] // 根据需求填充items
+      });
+    });
+    this.setData({
+      categories: categories
+    });
+  },
 
   onGoHome() {
     wx.navigateTo({
@@ -176,7 +192,7 @@ Page({
       delta: 1 // Go back by one page in the navigation stack
     });
   },
-  
+
 
   onScroll(e) {
     const {
@@ -208,8 +224,10 @@ Page({
       url: '../home/home.wxml',
     });
   },
-  onStepperChange(e){
-    const { commodity } = e.currentTarget.dataset;
+  onStepperChange(e) {
+    const {
+      commodity
+    } = e.currentTarget.dataset;
     const count = e.detail.value;
 
     //购物车当前状态
@@ -217,24 +235,24 @@ Page({
     const index = shoppingCart.findIndex(item => item.commodityId === commodity.commodityId);
 
     //购物车中已经存在
-    if(index !== -1){
+    if (index !== -1) {
       if (count > 0) {
         shoppingCart[index].quantity = count; // 更新数量
       } else {
         shoppingCart.splice(index, 1); // 数量为 0，移除该商品
       }
-    }else{
+    } else {
       // 如果商品不在购物车中，并且数量大于 0，则添加
-    if (count > 0) {
-      shoppingCart.push({
-        ...commodity,
-        quantity: count
-      });
-      this.setData({
-        shoppingCart: shoppingCart
-      });
-      this.calculateTotalPrice();
-    }
+      if (count > 0) {
+        shoppingCart.push({
+          ...commodity,
+          quantity: count
+        });
+        this.setData({
+          shoppingCart: shoppingCart
+        });
+        this.calculateTotalPrice();
+      }
     }
   },
   handlePopup() {
@@ -266,8 +284,8 @@ Page({
   //清空购物车
   clearCart() {
     this.setData({
-      shoppingCart: [], 
-      totalPrice: 0,    
+      shoppingCart: [],
+      totalPrice: 0,
     });
     console.log('Shopping cart cleared.');
   },
@@ -276,7 +294,7 @@ Page({
   //结账
   checkOut() {
     const shoppingCart = this.data.shoppingCart;
-  
+
     if (shoppingCart.length === 0) {
       wx.showToast({
         title: '购物车为空',
@@ -284,7 +302,7 @@ Page({
       });
       return;
     }
-  
+
     wx.showModal({
       title: '确认结账',
       content: `总金额为：￥${this.data.totalPrice}，确认要结账吗？`,
@@ -304,18 +322,18 @@ Page({
     });
   },
 
-  sendOrderDetail(){
+  sendOrderDetail() {
     let orderToSend = [];
-    this.data.shoppingCart.forEach(item=>{
+    this.data.shoppingCart.forEach(item => {
       var obj = {
         commodityId: item.commodityId,
-        quantity:item.quantity
+        quantity: item.quantity
       };
       orderToSend.push(obj);
     });
     wx.getStorage({
-      key:'token',
-      success:res=>{
+      key: 'token',
+      success: res => {
         let token = res.data;
         wx.request({
           url: 'http://49.232.136.246:8090/wx/order/insertorder',
@@ -323,21 +341,21 @@ Page({
           header: {
             token
           },
-          data:orderToSend ,
-          success: res=>{
-            console.log("订单提交成功!===>",res);
-          } ,
-          fail:err=> {
-            console.error("订单提交错误!==>",err);
+          data: orderToSend,
+          success: res => {
+            console.log("订单提交成功!===>", res);
+          },
+          fail: err => {
+            console.error("订单提交错误!==>", err);
           }
-        })    
+        })
       }
     });
   },
 
-  navigateToDetail: function(e) {
+  navigateToDetail: function (e) {
     var aimCommodityId = e.currentTarget.dataset.commodityId;
-    var aimCommodity = this.data.commodityNames.find(eachCommodity => eachCommodity.commodityId===aimCommodityId);
+    var aimCommodity = this.data.commodityNames.find(eachCommodity => eachCommodity.commodityId === aimCommodityId);
     wx.setStorage({
       key: "currentCommodity",
       data: {
@@ -354,6 +372,20 @@ Page({
 
       }
     });
-    
+  },
+
+  updateStepperValues() {
+    // 遍历购物车中的每个商品，找到并设置对应的 Stepper 值
+    this.data.shoppingCart.forEach(cartItem => {
+      const index = this.data.commodityNames.findIndex(item => item.commodityId === cartItem.commodityId);
+      if (index !== -1) {
+        // 更新 commodityNames 中对应商品的 quantity 值
+        const commodityNameKey = `commodityNames[${index}].quantity`;
+        this.setData({
+          [commodityNameKey]: cartItem.quantity
+        });
+      }
+    });
   }
+
 });
