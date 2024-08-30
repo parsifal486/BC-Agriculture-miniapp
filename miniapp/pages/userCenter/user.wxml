@@ -1,4 +1,4 @@
-<t-navbar class="usr-navibar" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" left-arrow>
+<t-navbar class="usr-navibar" t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" >
   <view slot="left" class="custom-title">个人中心</view>
 </t-navbar>
 
@@ -43,6 +43,3 @@
   
 </t-cell-group>
 
-<view class="button-example">
-  <t-button theme="primary" size="large" bind:tap="getWxcode">获取code</t-button>
-</view>

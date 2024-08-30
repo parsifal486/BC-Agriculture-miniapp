@@ -16,11 +16,12 @@ Page({
     const scanResult = wx.getStorageSync('scanResult');
     // console.log(scanResult);
     wx.getStorage({
-      key: 'token',
+      key:'token',
       success: res => {
+        let token = res.data;
         wx.request({
           url: `${scanResult}`,
-          header:{'token':res.data},
+          header:{token},
           success: res => {
             console.log(res.data.data.records)
             const record = res.data.data.records;

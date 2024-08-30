@@ -1,6 +1,6 @@
 <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content">
   <view slot="left" >
-    <t-image style="width: 70rpx; height: 70rpx;" src="/pages/img/icon/logo.png" aria-label="导航栏图片" />
+    <t-image style="width: 70rpx; height: 70rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/logo.png" aria-label="导航栏图片" />
   </view>
 </t-navbar>
 
@@ -11,21 +11,21 @@
 </swiper>
 
 <view class="gobuy" style="display: flex;flex-direction: row;">
-  <image style="border-radius: 15rpx;" src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
-  <image style="border-radius: 15rpx;" src="/pages/img/icon/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
+  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
+  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
 </view>
 
 
 
 <scroll-view scroll-x style="display:flex; white-space:nowrap;">
-  <image src="/pages/img/temp/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
-  <image src="/pages/img/temp/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
+  <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
 </scroll-view>
 
 <!-- <scroll-view scroll-x style="display:flex; white-space:nowrap;">
@@ -33,5 +33,5 @@
 </scroll-view> -->
 
 <view class="display-end">
-  <image style="width: 94%; margin: -2% 3%;" src="/pages/img/temp/homeintroduction.png" mode="aspectFit"></image>
+  <image style="width: 94%; margin: -2% 3%;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/homeintroduction.png" mode="aspectFit"></image>
 </view>

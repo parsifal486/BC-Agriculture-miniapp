@@ -13,7 +13,10 @@ Page({
     popVisible: false,
     totalPrice: 0,
     commodityRemark: "",
-    itemToCart: {}
+    itemToCart: {},
+    searchQuery: '',
+    filteredCommodities: [], //搜索 存储匹配到的商品
+    commodityNames: [], //搜索 所有商品
   },
 
 
@@ -386,6 +389,8 @@ Page({
         });
       }
     });
-  }
+  },
 
+  
 });
+

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postlist:["/pages/img/temp/post1.png","/pages/img/temp/post2.png","/pages/img/temp/post3.png"],
+    postlist:["https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/post1.png","https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/post2.png","https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/post3.png"],
   },
   
   

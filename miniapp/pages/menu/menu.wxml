@@ -1,16 +1,14 @@
 <view>
   <!-- 导航栏 -->
   <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" title="菜单">
-    <view slot="capsule" class="custom-capsule">
-      <t-icon size="20" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon back" />
-      <t-icon size="20" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon home" />
-    </view>
+
   </t-navbar>
 
   <!-- 搜索栏 -->
   <view class="search-bar">
-    <image class="icon-search" src="../img/icon/search.png"></image>
-    <input class="search-input" type="text" placeholder="输入搜索内容" />
+    <view class="example-search">
+      <t-search placeholder="鲜物一搜" shape="round" />
+    </view>
   </view>
 
   <view class="side-bar-wrapper" style="height: calc(100vh - {{navbarHeight}}px)">
@@ -23,8 +21,8 @@
           <block wx:for="{{commodityNames}}" wx:key="index" wx:for-item="commodity">
             <view class="view-right" data-commodityId="commodityId">
               <view style="margin-right: 20rpx;">
-                <navigator url="/pages/menu/product/product"  bindtap="navigateToDetail" data-commodity-id="{{commodity.commodityId}}" >
-                <image src="{{commodity.profileImage}}" style="border-radius: 10px; width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" lazy />
+                <navigator url="/pages/menu/product/product" bindtap="navigateToDetail" data-commodity-id="{{commodity.commodityId}}">
+                  <image src="{{commodity.profileImage}}" style="border-radius: 10px; width: 96rpx; height: 96rpx; border: 2rpx solid #e7e7e7;" lazy />
                 </navigator>
               </view>
               <view style="flex-grow: 1; ">
@@ -50,29 +48,29 @@
 
 
   <t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
-  <view class="cart-block">
-    <block wx:for="{{shoppingCart}}" wx:key="index" wx:for-item="cartCommodity">
-      <view class="classItem">
-        <image class="cart-item-image" src="{{cartCommodity.profileImage}}" />
-        <view class="cart-item-details">
-          <view class="cart-item-name">{{cartCommodity.commodityName}}</view>
-          <view class="cart-item-price">￥{{cartCommodity.commodityPrice}} X {{cartCommodity.quantity}}</view>
+    <view class="cart-block">
+      <block wx:for="{{shoppingCart}}" wx:key="index" wx:for-item="cartCommodity">
+        <view class="classItem">
+          <image class="cart-item-image" src="{{cartCommodity.profileImage}}" />
+          <view class="cart-item-details">
+            <view class="cart-item-name">{{cartCommodity.commodityName}}</view>
+            <view class="cart-item-price">￥{{cartCommodity.commodityPrice}} X {{cartCommodity.quantity}}</view>
+          </view>
         </view>
+      </block>
+    </view>
+    <t-divider />
+    <view class="summrization">
+      小计:￥{{totalPrice}}
+    </view>
+    <view class="cartOp">
+      <view class="clear-cart">
+        <t-button size="large" bind:tap="clearCart">清空购物车</t-button>
       </view>
-    </block>
-  </view>
-  <t-divider />
-  <view class="summrization">
-    小计:￥{{totalPrice}}
-  </view>
-  <view class="cartOp">
-    <view class="clear-cart">
-      <t-button  size="large" bind:tap="clearCart">清空购物车</t-button>
+      <view class="pay-cart">
+        <t-button theme="primary" size="large" bind:tap="checkOut">结账</t-button>
+      </view>
     </view>
-    <view class="pay-cart">
-      <t-button theme="primary" size="large" bind:tap="checkOut">结账</t-button>
-    </view>
-  </view>
-</t-popup>
+  </t-popup>
   <image src="../img/icon/ic-img-market.png" class="cart-icon" bind:tap="handlePopup" data-cart="shoppingCart"></image>
 </view>
