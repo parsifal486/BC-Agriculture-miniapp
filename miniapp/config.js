@@ -1,5 +1,5 @@
 
 module.exports = {
-  backendUrl: "http://49.232.136.246:8090/wx",
+  backendUrl: "https://www.maxthinking.cn/miniapp/wx",
 
 }

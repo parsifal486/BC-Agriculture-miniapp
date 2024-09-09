@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    order:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    const order  = JSON.parse(decodeURIComponent(options.order));
+    console.log("option==>",order )
+    this.setData({
+      order
+    })
   },
 
   /**

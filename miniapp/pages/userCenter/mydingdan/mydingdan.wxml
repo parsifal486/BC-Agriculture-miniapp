@@ -1,2 +1,17 @@
-<!--pages/userCenter/mydingdan/mydingdan.wxml-->
-<text>11111111</text>
+<view class="all">
+  <!-- //导航栏 -->
+  <view class="block">
+    <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="订单详情" left-arrow bind:go-back="handleback" />
+  </view>
+
+  <view class="container">
+    <view class="title">订单编号: {{order.createTime}} </view>
+    <view class="items-container" wx:for="{{order.list}}">
+      <image class= "items-img" src="{{item.profile}}" mode=""/>
+      <view class="item">
+       {{item.commodityName}} X {{item.quantity}}
+      </view>
+    </view>
+    <view class="title">共计: {{order.price}} </view>
+  </view>
+</view>

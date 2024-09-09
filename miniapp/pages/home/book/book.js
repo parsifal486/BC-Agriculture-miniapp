@@ -1,22 +1,18 @@
-// pages/userCenter/purchaseOrder/purchaseOrder.js
+// pages/home/book/book.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    orders : []
+    swiperList:['https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/newsletter-bg-1-1.png','https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/shop-bg-1.png']
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    const orders = wx.getStorageSync('userOrder');
-    const reversedList = orders.reverse();
-    this.setData({
-      "orders":reversedList
-    })
+
   },
 
   /**
@@ -66,12 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-  toMydingdan(e){
-    console.log("===>",e.currentTarget.dataset.order);
-    const order = e.currentTarget.dataset.order;
-    wx.navigateTo({
-      url: `/pages/userCenter/mydingdan/mydingdan?order=${encodeURIComponent(JSON.stringify(order))}`,
-    });
   }
 })

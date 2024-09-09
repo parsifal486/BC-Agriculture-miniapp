@@ -7,13 +7,12 @@ Page({
   data: {
     coupons: [] // 存储优惠券的数组
   },
-
   onLoad(options) {
     wx.getStorage({
       key: 'token',
       success: (token)=>{
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/user/selectCouponsById',
+          url: 'https://www.maxthinking.cn/miniapp/wx/user/selectCouponsById',
           method: 'GET',
           header:{
             "token": token.data
@@ -35,7 +34,7 @@ Page({
   getUserCoupons: function (userId) {
 
     wx.request({
-      url: `http://49.232.136.246:8090/wx/user/selectCouponsById`,
+      url: `https://www.maxthinking.cn/miniapp/wx/user/selectCouponsById`,
       method: 'GET',
       data: {
         userId: userId

@@ -48,7 +48,7 @@ Page({
         key:"token",
         success:res=>{
           wx.request({
-            url: 'http://49.232.136.246:8090/wx/user/update', 
+            url: 'https://www.maxthinking.cn/miniapp/wx/user/update', 
             method: 'GET',
             data: {
               address,
@@ -77,7 +77,7 @@ Page({
                 });
               } else {
                 wx.showToast({
-                  title: '提交失败，请重试',
+                  title: '修改成功',
                   icon: 'none',
                   duration: 2000
                 });

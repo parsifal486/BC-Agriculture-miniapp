@@ -1,1 +1,74 @@
-/* pages/userCenter/mydingdan/mydingdan.wxss */
+/* pages/userCenter/discountTicket/discountTicket.wxss */
+.custom-capsule {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-capsule__icon {
+  flex: 1;
+  position: relative;
+}
+
+.custom-capsule__icon.home:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: #7ac987;
+}
+.card {
+  background-color: #FFFFFF; /* 卡片的背景颜色 */
+  border-radius: 20rpx; /* 圆角 */
+  padding: 40rpx; /* 内边距 */
+  margin:20rpx 20rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* 卡片的阴影效果 */
+}
+.title {
+  font-size: 40rpx; /* 字体大小 */
+  color: #333333; /* 字体颜色 */
+  margin-bottom: 20rpx; /* 标题与下方文字的间距 */
+}
+
+.sub-title {
+  font-size: 30rpx; /* 字体大小 */
+  color: #666666; /* 字体颜色 */
+  margin-bottom: 10rpx; /* 每个副标题之间的间距 */
+}
+
+page {
+  background-color: var(--main--gray--bg);
+}
+
+.itemName{
+  font-weight: bold;
+  font-size: 35rpx;
+}
+
+.itemPrice{
+  font-size: 30rpx;
+  color: #666666;
+}
+
+.title{
+  margin: 30rpx;
+}
+
+.items-container{
+  background-color: #FFFFFF; /* 卡片的背景颜色 */
+  border-radius: 20rpx; /* 圆角 */
+  padding: 40rpx; /* 内边距 */
+  margin:20rpx 20rpx;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1); /* 卡片的阴影效果 */
+}
+
+.items-img{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 15rpx;
+}

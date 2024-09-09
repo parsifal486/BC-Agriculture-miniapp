@@ -122,7 +122,7 @@ Page({
       success:res=>{
         let token = res.data;
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/order/insertorder',
+          url: 'https://www.maxthinking.cn/miniapp/wx/order/insertorder',
           method: 'post',
           header: {
             token

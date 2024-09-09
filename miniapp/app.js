@@ -32,7 +32,7 @@ App(
         console.log("code: ",res.code);
         //传给后台
         wx.request({
-          url: `http://49.232.136.246:8090/wx/user/login`,
+          url: `https://www.maxthinking.cn/miniapp/wx/user/login`,
           method: 'get',
           data:{
             code: res.code

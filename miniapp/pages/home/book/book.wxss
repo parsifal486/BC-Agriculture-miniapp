@@ -1,0 +1,35 @@
+/* Container styling */
+.container {
+  padding: 20px;
+  background-image: url('https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/newsletter-bg-1-1.png');
+}
+
+/* Title styling */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+}

@@ -1,7 +1,7 @@
 
-<t-tab-bar class="custom-tab-bar" class="custom-tar-bar" t-class="t-tab-bar"  split="{{false}}"  bindchange="handleChange">
+<t-tab-bar value="{{value}}" class="custom-tab-bar" class="custom-tar-bar" t-class="t-tab-bar"  split="{{false}}"  bindchange="onChange">
     <t-tab-bar-item class='custom-tar-bar-item' wx:for="{{list}}" wx:key="index" badge-props="{{ item.props }}"  
-    icon="{{item.icon}}" data-path="{{item.path}}" data-value="{{item.value}}">
+    icon="{{item.icon}}" data-path="{{item.path}}" data-value="{{item.value}}" value="{{item.value}}">
       {{item.label}}
     </t-tab-bar-item>
 </t-tab-bar>

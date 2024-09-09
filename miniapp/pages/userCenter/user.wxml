@@ -13,8 +13,8 @@
 </view>
 
 <view class="order-panel">
-  <t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon>
-    <t-collapse-panel header="我的订单" value="{{0}}">
+  <t-collapse theme="card" defaultValue="{{[0]}}" expandMutex expandIcon >
+    <t-collapse-panel header="我的订单" value="{{0}}" bind:tap="toOrders">
       <view class="orders-panel" wx:for="{{recentOrder}}" wx:key="index">
         <view class="commodity-title">
           {{item.commodityName}}:

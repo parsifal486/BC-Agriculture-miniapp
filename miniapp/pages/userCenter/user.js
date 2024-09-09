@@ -27,7 +27,7 @@ Page({
         
         //获取用户资料
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/user/userInformation',
+          url: 'https://www.maxthinking.cn/miniapp/wx/user/userInformation',
           method: 'get',
           header:{'token':token},
           success:res=>{
@@ -46,7 +46,7 @@ Page({
 
         //获取订单信息
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/order/selectorder',
+          url: 'https://www.maxthinking.cn/miniapp/wx/order/selectorder',
           method: 'get',
           header:{'token':token},
           data:{
@@ -96,9 +96,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
-    
-    
+    this.getTabBar().init();
+    console.log("当前tabbar内value是====>",this.getTabBar().data.value);
     
   },
 
@@ -149,6 +148,19 @@ Page({
     const { avatarUrl } = e.detail 
     this.setData({
       avatar:avatarUrl,
+    })
+  },
+
+  toOrders(){
+    wx.navigateTo({
+      url: '/pages/userCenter/purchaseOrder/purchaseOrder',
+    })
+  },
+
+  setTabBar(pageValue){
+    console.log("homePage==>",pageValue)
+    this.getTabBar().setData({
+      value: pageValue
     })
   }
 })

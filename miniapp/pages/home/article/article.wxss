@@ -1,6 +1,6 @@
 .container {
   padding: 20px;
-  background-color: #f5f5f5;
+  background-image: url("https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/post2.png");
 }
 
 .article-header {

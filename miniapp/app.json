@@ -10,7 +10,8 @@
     "pages/userCenter/devTeam/devTeam",
     "pages/userCenter/mydingdan/mydingdan",
     "pages/QRcode/QRcode",
-    "pages/home/article/article"
+    "pages/home/article/article",
+    "pages/home/book/book"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -26,17 +27,34 @@
   },
   "lazyCodeLoading": "requiredComponents",
   "tabBar": {
-    "custom": true,
+    "custom": false,
+    "color": "#000000",
+    "selectedColor": "#121511",
+    "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/home/home"
+        "pagePath": "pages/home/home",
+        "iconPath": "pages/img/icon/broccoli.png",
+        "selectedIconPath": "pages/img/icon/broccoli-s.png",
+        "text":"首页"
       },
       {
-        "pagePath": "pages/menu/menu"
+        "pagePath": "pages/menu/menu",
+        "iconPath": "pages/img/icon/map-edit.png",
+        "selectedIconPath": "pages/img/icon/map-edit-s.png",
+        "text":"菜单"
       },
       {
-        "pagePath": "pages/userCenter/user"
+        "pagePath": "pages/userCenter/user",
+        "iconPath": "pages/img/icon/user2.png",
+        "selectedIconPath": "pages/img/icon/user2-s.png",
+        "text":"用户"
       }
-    ]
+    ],
+    "usingComponents": {
+      "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+      "t-tab-bar-item": "tdesign-miniprogram/tab-bar/tab-bar-item"
+    }
+    
   }
 }

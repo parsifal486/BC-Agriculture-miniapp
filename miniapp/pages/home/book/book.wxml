@@ -1,0 +1,66 @@
+<view class="block">
+  <t-navbar t-class-placeholder="t-navbar-placeholder" t-class-content="t-navbar-content" class="block" title="项目简介" left-arrow bind:go-back="handleback" />
+</view>
+
+<view class="container">
+
+  
+  <!-- Title -->
+  <view class="title">中国居民平衡膳食宝塔</view>
+
+  <!-- Introduction Section -->
+  <view class="section">
+    <view class="section-title">简介</view>
+    <text class="paragraph">
+      中国居民平衡膳食宝塔（Chinese Food Guide Pagoda，以下简称“宝塔”）是根据《中国居民膳食指南（2022）》的准则和核心推荐，把平衡膳食原则转化为各类食物的数量和所占比例的图形化表示。
+    </text>
+  </view>
+
+  <!-- Section 1: Grain and Potato -->
+  <view class="section">
+    <view class="section-title">第一层：谷薯类食物</view>
+    <text class="paragraph">
+      谷薯类是膳食能量的主要来源（碳水化合物提供总能量的50%~65%），也是多种微量营养素和膳食纤维的良好来源。膳食指南中推荐2岁以上健康人群的膳食应做到食物多样、合理搭配。
+    </text>
+  </view>
+
+  <!-- Section 2: Vegetables and Fruits -->
+  <view class="section">
+    <view class="section-title">第二层：蔬菜水果</view>
+    <text class="paragraph">
+      蔬菜水果是膳食指南中鼓励多摄入的两类食物。在1600~2400kcal能量需要量水平下，推荐成年人每天蔬菜摄入量至少达到300g，水果200~350g。
+    </text>
+  </view>
+
+  <!-- Section 3: Fish, Meat, and Eggs -->
+  <view class="section">
+    <view class="section-title">第三层：鱼、禽、肉、蛋等动物性食物</view>
+    <text class="paragraph">
+      鱼、禽、肉、蛋等动物性食物是膳食指南推荐适量食用的食物。在1600~2400kcal能量需要量水平下，推荐每天鱼、禽、肉、蛋摄入量共计120~200g。
+    </text>
+  </view>
+
+  <!-- Section 4: Dairy, Soy, and Nuts -->
+  <view class="section">
+    <view class="section-title">第四层：奶类、大豆和坚果</view>
+    <text class="paragraph">
+      奶类和豆类是鼓励多摄入的食物。奶类、大豆和坚果是蛋白质和钙的良好来源，营养素密度高。
+    </text>
+  </view>
+
+  <!-- Section 5: Cooking Oil and Salt -->
+  <view class="section">
+    <view class="section-title">第五层：烹调油和盐</view>
+    <text class="paragraph">
+      油盐作为烹饪调料必不可少，但建议尽量少用。推荐成年人平均每天烹调油不超过25~30g，食盐摄入量不超过5g。
+    </text>
+  </view>
+
+  <!-- Conclusion: Physical Activity and Water -->
+  <view class="section">
+    <view class="section-title">身体活动和饮水</view>
+    <text class="paragraph">
+      身体活动和水的图示仍包含在可视化图形中，强调增加身体活动和足量饮水的重要性。水是膳食的重要组成部分，是一切生命活动必需的物质。
+    </text>
+  </view>
+</view>

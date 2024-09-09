@@ -19,9 +19,10 @@ Page({
       key:'token',
       success: res => {
         let token = res.data;
+        console.log("res.token",token)
         wx.request({
           url: `${scanResult}`,
-          header:{token},
+          header:{"token":token},
           success: res => {
             console.log(res.data.data.records)
             const record = res.data.data.records;
@@ -40,7 +41,8 @@ Page({
             }
 
             wx.request({
-              url: 'http://49.232.136.246:8090/wx/commodity/selectImgById',
+              url: 'https://www.maxthinking.cn/miniapp/wx/commodity/selectImgById',
+              header:{token},
               data: {
                 commodityId: this.data.product.productNumber // 使用传递的 commodityId
                 // commodityId:102900011006998

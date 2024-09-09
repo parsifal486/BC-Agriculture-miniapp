@@ -16,7 +16,7 @@
       <t-side-bar-item wx:for="{{categories}}" wx:key="index" value="{{index}}" label="{{item.label}}" />
     </t-side-bar>
     <view class="content" style="transform: translateY(-{{sideBarIndex * 100}})">
-      <scroll-view class="section" wx:for="{{categories}}" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation show-scrollbar="{{false}}">
+      <scroll-view class="section" wx:for="{{categories}}" wx:key="index" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation show-scrollbar="{{false}}">
         <view>
           <block wx:for="{{commodityNames}}" wx:key="index" wx:for-item="commodity">
             <view class="view-right" data-commodityId="commodityId">

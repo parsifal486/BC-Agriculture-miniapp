@@ -31,7 +31,7 @@
 </view>
 
   <view class="container">
-    <image class="local-image" src="../img/temp/good.png" mode="aspectFill"></image>
+    <image class="local-image" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/good.png" mode="aspectFill"></image>
 </view>
 <view class="product-card">
   <image class="product-image" src="{{product.imageUrl}}" mode="aspectFill"></image>
@@ -66,7 +66,7 @@
     </view>
   </view>
   <view class="container">
-    <image class="local-image2" src="../img/temp/introduction.png" mode="aspectFill"></image>
+    <image class="local-image2" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/introduction.png" mode="aspectFill"></image>
 </view>
 </view>
 

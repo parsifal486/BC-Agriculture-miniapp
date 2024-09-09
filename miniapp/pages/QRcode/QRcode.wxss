@@ -39,7 +39,7 @@
   flex-direction: column;
   border-radius: 12px;
   overflow: hidden;
-  margin: -90px 20px 0px 20px; /* 上边距增大，底部边距减少 */
+  margin: -80px 20px 0px 20px; /* 上边距增大，底部边距减少 */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #f8f8f8;
   /* position: relative; 

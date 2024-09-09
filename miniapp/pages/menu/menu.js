@@ -26,7 +26,7 @@ Page({
       success: res => {
         let token = res.data;
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/commodity/queryAllType',
+          url: 'https://www.maxthinking.cn/miniapp/wx/commodity/queryAllType',
           method: 'get',
           header: {
             'token': token
@@ -71,7 +71,8 @@ Page({
       });
       this.calculateTotalPrice();
       this.updateStepperValues();
-    }
+    };
+    this.getTabBar().myInit(1);
   },
 
   getCustomNavbarHeight() {
@@ -110,7 +111,7 @@ Page({
       success: res => {
         let token = res.data;
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/commodity/queryCommodityByType',
+          url: 'https://www.maxthinking.cn/miniapp/wx/commodity/queryCommodityByType',
           method: 'GET',
           header: {
             token
@@ -149,7 +150,7 @@ Page({
   getAllCommodity() {
     //发请求
     wx.request({
-      url: 'http://49.232.136.246:8090/wx/commodity/queryAllCommodity',
+      url: 'https://www.maxthinking.cn/miniapp/wx/commodity/queryAllCommodity',
       success: (res) => {
         var commodity = [];
         res.data.data.records.forEach(item => {
@@ -232,6 +233,15 @@ Page({
       commodity
     } = e.currentTarget.dataset;
     const count = e.detail.value;
+    
+    //更新字面值
+    let commoditys = this.data.commodityNames;
+    const commodityIndex = commoditys.findIndex(item=> item.commodityId === commodity.commodityId);
+    commoditys[commodityIndex].quantity = count; 
+    console.log("commodityNames[commodityIndex].quantity==>",commoditys[commodityIndex].quantity);
+    this.setData({
+      commodityNames:commoditys
+    })
 
     //购物车当前状态
     let shoppingCart = this.data.shoppingCart;
@@ -257,7 +267,10 @@ Page({
         this.calculateTotalPrice();
       }
     }
+
+
   },
+
   handlePopup() {
     this.setData({
       visible: true,
@@ -339,7 +352,7 @@ Page({
       success: res => {
         let token = res.data;
         wx.request({
-          url: 'http://49.232.136.246:8090/wx/order/insertorder',
+          url: 'https://www.maxthinking.cn/miniapp/wx/order/insertorder',
           method: 'post',
           header: {
             token
@@ -381,6 +394,7 @@ Page({
     // 遍历购物车中的每个商品，找到并设置对应的 Stepper 值
     this.data.shoppingCart.forEach(cartItem => {
       const index = this.data.commodityNames.findIndex(item => item.commodityId === cartItem.commodityId);
+      console.log("index==>",index)
       if (index !== -1) {
         // 更新 commodityNames 中对应商品的 quantity 值
         const commodityNameKey = `commodityNames[${index}].quantity`;
@@ -391,6 +405,12 @@ Page({
     });
   },
 
+  setTabBar(pageValue){
+    console.log("homePage==>",pageValue)
+    this.getTabBar().setData({
+      value: pageValue
+    })
+  }
   
 });
 

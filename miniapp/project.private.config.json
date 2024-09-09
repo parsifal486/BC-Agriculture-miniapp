@@ -4,6 +4,20 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/userCenter/purchaseOrder/purchaseOrder",
+          "pathName": "pages/userCenter/purchaseOrder/purchaseOrder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/home/book/book",
+          "pathName": "pages/home/book/book",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/userCenter/editProfile/editProfile",
           "pathName": "pages/userCenter/editProfile/editProfile",
           "query": "",
@@ -77,7 +91,7 @@
     }
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "compileHotReLoad": true
   },
   "libVersion": "3.5.3",

@@ -10,14 +10,14 @@
   </swiper-item>
 </swiper>
 
-<view class="gobuy" style="display: flex;flex-direction: row;">
-  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/btnhome-goshop.png" mode="widthFix" bind:tap="goShop"></image>
-  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/btnhome-goshop.png" mode="widthFix" bind:tap="QRscan"></image>
+<view class="gobuy" style=" display: flex;flex-direction: row; ">
+  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/shop.png" mode="widthFix" bind:tap="goShop"></image>
+  <image style="border-radius: 15rpx;" src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/scan.png" mode="widthFix" bind:tap="QRscan"></image>
 </view>
 
 
 
-<scroll-view scroll-x style="display:flex; white-space:nowrap;">
+<scroll-view scroll-x style="display:flex; white-space:nowrap;" bind:tap="gotoBook">
   <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
   <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book2.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
   <image src="https://tax-test.oss-cn-qingdao.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/book1.png" style="display: inline-block; border-radius: 10rpx;" mode="heightFix"></image>
